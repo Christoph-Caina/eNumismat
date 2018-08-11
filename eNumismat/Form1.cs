@@ -20,6 +20,8 @@ namespace eNumismat
         SaveFileDialog saveFile;
         OpenFileDialog openFile;
         FolderBrowserDialog folderBrowser;
+        AddressBook adrBook;
+        SwapMonitor swapList;
 
         public string[] args = Environment.GetCommandLineArgs();
 
@@ -114,6 +116,20 @@ namespace eNumismat
             }
             else
             { }
+        }
+
+        //=============================================================================================================
+        private void adressbuchToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            adrBook = new AddressBook();
+            adrBook.Show();
+        }
+
+        //=============================================================================================================
+        private void tauschmonitorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            swapList = new SwapMonitor();
+            swapList.Show();
         }
     }
 }

@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adressbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neueDatenbankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datenbankÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.einstellungenBearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adressbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adressbuchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tauschmonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,14 +55,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 592);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(860, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
             // dateiToolStripMenuItem
             // 
             this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -73,28 +65,6 @@
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
             this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.dateiToolStripMenuItem.Text = "Datei";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // einstellungenToolStripMenuItem
-            // 
-            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.einstellungenBearbeitenToolStripMenuItem});
-            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.einstellungenToolStripMenuItem.Text = "Einstellungen";
-            // 
-            // adressbuchToolStripMenuItem
-            // 
-            this.adressbuchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adressbuchToolStripMenuItem1,
-            this.tauschmonitorToolStripMenuItem});
-            this.adressbuchToolStripMenuItem.Name = "adressbuchToolStripMenuItem";
-            this.adressbuchToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.adressbuchToolStripMenuItem.Text = "Extras";
             // 
             // neueDatenbankToolStripMenuItem
             // 
@@ -111,12 +81,25 @@
             this.datenbankÖffnenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.datenbankÖffnenToolStripMenuItem.Text = "Datenbank öffnen";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.door_in;
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
             this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
+            // 
+            // einstellungenToolStripMenuItem
+            // 
+            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.einstellungenBearbeitenToolStripMenuItem});
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.einstellungenToolStripMenuItem.Text = "Einstellungen";
             // 
             // einstellungenBearbeitenToolStripMenuItem
             // 
@@ -126,12 +109,22 @@
             this.einstellungenBearbeitenToolStripMenuItem.Text = "Einstellungen Bearbeiten";
             this.einstellungenBearbeitenToolStripMenuItem.Click += new System.EventHandler(this.EinstellungenBearbeitenToolStripMenuItem_Click);
             // 
+            // adressbuchToolStripMenuItem
+            // 
+            this.adressbuchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adressbuchToolStripMenuItem1,
+            this.tauschmonitorToolStripMenuItem});
+            this.adressbuchToolStripMenuItem.Name = "adressbuchToolStripMenuItem";
+            this.adressbuchToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.adressbuchToolStripMenuItem.Text = "Extras";
+            // 
             // adressbuchToolStripMenuItem1
             // 
             this.adressbuchToolStripMenuItem1.Image = global::eNumismat.Properties.Resources.book_addresses;
             this.adressbuchToolStripMenuItem1.Name = "adressbuchToolStripMenuItem1";
             this.adressbuchToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.adressbuchToolStripMenuItem1.Text = "Adressbuch";
+            this.adressbuchToolStripMenuItem1.Click += new System.EventHandler(this.adressbuchToolStripMenuItem1_Click);
             // 
             // tauschmonitorToolStripMenuItem
             // 
@@ -139,6 +132,15 @@
             this.tauschmonitorToolStripMenuItem.Name = "tauschmonitorToolStripMenuItem";
             this.tauschmonitorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tauschmonitorToolStripMenuItem.Text = "Tauschmonitor";
+            this.tauschmonitorToolStripMenuItem.Click += new System.EventHandler(this.tauschmonitorToolStripMenuItem_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 592);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(860, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // Form1
             // 
