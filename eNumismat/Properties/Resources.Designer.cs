@@ -63,6 +63,16 @@ namespace eNumismat.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_addresses {
+            get {
+                object obj = ResourceManager.GetObject("book_addresses", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap database_add {
             get {
                 object obj = ResourceManager.GetObject("database_add", resourceCulture);
@@ -96,6 +106,16 @@ namespace eNumismat.Properties {
         internal static System.Drawing.Bitmap page_white_gear {
             get {
                 object obj = ResourceManager.GetObject("page_white_gear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap table_refresh {
+            get {
+                object obj = ResourceManager.GetObject("table_refresh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

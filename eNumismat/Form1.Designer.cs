@@ -33,10 +33,13 @@
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adressbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tauschmonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neueDatenbankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datenbankÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.einstellungenBearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adressbuchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +47,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
-            this.einstellungenToolStripMenuItem});
+            this.einstellungenToolStripMenuItem,
+            this.adressbuchToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(694, 24);
@@ -83,6 +87,22 @@
             this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.einstellungenToolStripMenuItem.Text = "Einstellungen";
             // 
+            // adressbuchToolStripMenuItem
+            // 
+            this.adressbuchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adressbuchToolStripMenuItem1,
+            this.tauschmonitorToolStripMenuItem});
+            this.adressbuchToolStripMenuItem.Name = "adressbuchToolStripMenuItem";
+            this.adressbuchToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.adressbuchToolStripMenuItem.Text = "Extras";
+            // 
+            // tauschmonitorToolStripMenuItem
+            // 
+            this.tauschmonitorToolStripMenuItem.Image = global::eNumismat.Properties.Resources.table_refresh;
+            this.tauschmonitorToolStripMenuItem.Name = "tauschmonitorToolStripMenuItem";
+            this.tauschmonitorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tauschmonitorToolStripMenuItem.Text = "Tauschmonitor";
+            // 
             // neueDatenbankToolStripMenuItem
             // 
             this.neueDatenbankToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_add;
@@ -111,6 +131,13 @@
             this.einstellungenBearbeitenToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.einstellungenBearbeitenToolStripMenuItem.Text = "Einstellungen Bearbeiten";
             this.einstellungenBearbeitenToolStripMenuItem.Click += new System.EventHandler(this.einstellungenBearbeitenToolStripMenuItem_Click);
+            // 
+            // adressbuchToolStripMenuItem1
+            // 
+            this.adressbuchToolStripMenuItem1.Image = global::eNumismat.Properties.Resources.book_addresses;
+            this.adressbuchToolStripMenuItem1.Name = "adressbuchToolStripMenuItem1";
+            this.adressbuchToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.adressbuchToolStripMenuItem1.Text = "Adressbuch";
             // 
             // Form1
             // 
@@ -143,6 +170,9 @@
         private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem einstellungenBearbeitenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adressbuchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adressbuchToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tauschmonitorToolStripMenuItem;
     }
 }
 
