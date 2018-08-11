@@ -10,6 +10,7 @@ namespace eNumismat
     {
         string[] ContactDetails = new string[] { };
 
+        //=============================================================================================================
         public void SetContactDetails(String name, String surename, String gender = null, String birthdate = null, String street = null, String zipcode = null, String city = null, String country = null, String phone = null, String mobilephone = null, String email = null)
         {
             ContactDetails[0]  = name;
@@ -25,6 +26,7 @@ namespace eNumismat
             ContactDetails[10] = email;
         }
 
+        //=============================================================================================================
         public String[] GetContactDetails()
         {
             return ContactDetails;
