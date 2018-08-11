@@ -8,7 +8,6 @@ namespace eNumismat
 {
     class LogHandler
     {
-        
 
     }
 }

@@ -14,9 +14,9 @@ namespace eNumismat
 {
     public partial class Form1 : Form
     {
-        ConfigHandler cfgHandler; //= new ConfigHandler();
-        LogHandler logHandler; //= new LogHandler();
-        DBActions dbAction; //= new DBActions();
+        ConfigHandler cfgHandler;
+        LogHandler logHandler;
+        DBActions dbAction;
         SaveFileDialog saveFile;
         OpenFileDialog openFile;
         FolderBrowserDialog folderBrowser;
@@ -108,7 +108,6 @@ namespace eNumismat
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                //MessageBox.Show(saveFile.FileName);
                 Globals.DBFile = saveFile.FileName;
 
                 dbAction = new DBActions();
