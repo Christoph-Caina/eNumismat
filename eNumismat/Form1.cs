@@ -79,8 +79,10 @@ namespace eNumismat
 
         }
 
+        //=============================================================================================================
         private void einstellungenBearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Show Settings Dialog
             SettingsDialog settings = new SettingsDialog();
             settings.ShowDialog();
         }

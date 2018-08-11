@@ -15,14 +15,26 @@ namespace eNumismat
         ConfigHandler cfgHandler = new ConfigHandler();
         LogHandler logHandler = new LogHandler();
 
+        //=============================================================================================================
         public SettingsDialog()
         {
             InitializeComponent();
+
+            // First of all, Read the Configuration
+            cfgHandler.ReadXmlConf();
+
+            // We need to define, what should be possible within the settings dialog.
+            // Change LastDBFileName?
+            // Change Default SAVE / OPEN Dialog Boxes?
+            // Move Default AppDataPath?
+            // Change other Parameters for the Database?
+            // Change Collection Parameters - like Country, etc.?
         }
 
+        //=============================================================================================================
         private void SettingsDialog_Load(object sender, EventArgs e)
         {
-            cfgHandler.ReadXmlConf();
+            
         }
     }
 }
