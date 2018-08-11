@@ -53,6 +53,7 @@
     <Compile Include="Coin.cs" />
     <Compile Include="Collection.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="DBActions.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Handlers\ConfigHandler.cs" />
     <Compile Include="Form1.cs">
@@ -128,6 +129,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\table_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

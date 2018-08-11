@@ -14,8 +14,12 @@ namespace eNumismat
 {
     public partial class Form1 : Form
     {
-        ConfigHandler cfgHandler = new ConfigHandler();
-        LogHandler logHandler = new LogHandler();
+        ConfigHandler cfgHandler; //= new ConfigHandler();
+        LogHandler logHandler; //= new LogHandler();
+        DBActions dbAction; //= new DBActions();
+        SaveFileDialog saveFile;
+        OpenFileDialog openFile;
+        FolderBrowserDialog folderBrowser;
 
         public string[] args = Environment.GetCommandLineArgs();
 
@@ -23,6 +27,9 @@ namespace eNumismat
         public Form1()
         {
             InitializeComponent();
+
+            cfgHandler = new ConfigHandler();
+            logHandler = new LogHandler();
 
             Globals.LogLevel = "WARN";
 
@@ -80,11 +87,33 @@ namespace eNumismat
         }
 
         //=============================================================================================================
-        private void einstellungenBearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EinstellungenBearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Show Settings Dialog
             SettingsDialog settings = new SettingsDialog();
             settings.ShowDialog();
+        }
+
+        //=============================================================================================================
+        private void NeueDatenbankToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFile = new SaveFileDialog();
+            saveFile.DefaultExt = "*.enc"; // enc = eNumismatCollection
+            saveFile.AddExtension = true;
+            // Only, if no other path is specified in the Config
+            saveFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments);
+            saveFile.Filter = "eNumismatCollection (*.enc) | *.enc";
+
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                //MessageBox.Show(saveFile.FileName);
+                Globals.DBFile = saveFile.FileName;
+
+                dbAction = new DBActions();
+                dbAction.CreateNew();
+            }
+            else
+            { }
         }
     }
 }
