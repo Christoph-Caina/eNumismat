@@ -30,7 +30,6 @@ namespace eNumismat
 
             treeView1.Nodes.Clear();
 
-            //dbAction.CounterContacts();
             int ContactCounter = dbAction.CounterContacts();
 
             if (ContactCounter == 0)
@@ -78,16 +77,20 @@ namespace eNumismat
             {
                 string ChildNode = drChilds[0] + ", " + drChilds[1];
 
-                int ImageIndex = 0;
+                int ImageIndex;
                 
                 switch (drChilds[2])
                 {
                     case "male":
-                        ImageIndex = 2;
+                        ImageIndex = 1;
                         break;
 
                     case "female":
-                        ImageIndex = 1;
+                        ImageIndex = 2;
+                        break;
+
+                    default:
+                        ImageIndex = 3;
                         break;
                 }
 
