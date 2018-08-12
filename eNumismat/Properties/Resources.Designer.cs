@@ -81,7 +81,28 @@ namespace eNumismat.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die CREATE TABLE IF NOT EXISTS `contacts`
+        ///(
+        ///	`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        ///	`name` TEXT NOT NULL,
+        ///	`surename` TEXT NOT NULL,
+        ///    `gender` TEXT,
+        ///    `birthdate` TEXT,
+        ///    `street` TEXT,
+        ///    `zip_code` INTEGER,
+        ///    `city` TEXT,
+        ///    `country` TEXT,
+        ///    `phone` TEXT,
+        ///    `mobile` TEXT,
+        ///    `email` TEXT
+        ///);
+        ///
+        ///CREATE TABLE IF NOT EXISTS `swaplist`
+        ///(
+        ///	`id`INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        ///	`contacts_id` INTEGER NOT NULL,
+        ///	`date` NUMERIC NOT NULL,
+        ///	`swapdetails_id` INTEGE [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         internal static string CreateTables {
             get {
@@ -125,6 +146,16 @@ namespace eNumismat.Properties {
         internal static System.Drawing.Bitmap find {
             get {
                 object obj = ResourceManager.GetObject("find", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap group {
+            get {
+                object obj = ResourceManager.GetObject("group", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

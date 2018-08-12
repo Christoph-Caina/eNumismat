@@ -55,63 +55,45 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void LoadTreeViewParents()
         {
-            //using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + globals.DbFile))
-            //{
-                //dbConnection.Open();
+            TreeNode parents = null;
 
-                //string SQL =
-                    //"SELECT substr(name, 1, 1) FROM contacts GROUP by substr(name, 1, 1)";
+            foreach (DataRow drParents in dbAction.GetContacts("parents").Rows)
+            {
+                parents = treeView1.Nodes.Add(drParents[0].ToString());
+                LoadTreeViewChilds(parents);
 
-                //using (SQLiteDataAdapter daParents = new SQLiteDataAdapter(SQL, dbConnection))
-                //{
-                    //DataTable dtParents = new DataTable();
-
-                    //daParents.Fill(dtParents);
-
-                    //TreeNode parentNode = null;
-
-                    //foreach (DataRow drParents in dtParents.Rows)
-                    //{
-                        // Parent Nodes in TreeView
-                        //parentNode = treeView1.Nodes.Add(drParents[0].ToString());
-                        //LoadTreeViewChilds(parentNode);
-
-                        //_unselectableNodes.Add(parentNode);
-                    //}
-                    //treeView1.ExpandAll();
-                //}
-                //dbConnection.Close();
-            //}
+                _unselectableNodes.Add(parents);
+            }
+            treeView1.ExpandAll();
         }
 
         //=====================================================================================================================================================================
         private void LoadTreeViewChilds(TreeNode parentNode)
         {
-            //using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + globals.DbFile))
-            //{
-                //dbConnection.Open();
+            TreeNode childs;
 
-                //string Nodes = parentNode.ToString().Remove(0, 10);
+            // Remove String "TreeNode: " from the selected ParentNode
+            string Nodes = parentNode.ToString().Remove(0, 10);
 
-                //string SQL =
-                    //"SELECT name, surename FROM contacts WHERE name LIKE '" + Nodes + "%'";
+            foreach (DataRow drChilds in dbAction.GetContacts("childs", Nodes).Rows)
+            {
+                string ChildNode = drChilds[0] + ", " + drChilds[1];
 
-                //using (SQLiteDataAdapter daChilds = new SQLiteDataAdapter(SQL, dbConnection))
-                //{
-                    //DataTable dtChilds = new DataTable();
+                int ImageIndex = 0;
+                
+                switch (drChilds[2])
+                {
+                    case "male":
+                        ImageIndex = 2;
+                        break;
 
-                    //daChilds.Fill(dtChilds);
+                    case "female":
+                        ImageIndex = 1;
+                        break;
+                }
 
-                    //TreeNode childNode;
-
-                    //foreach (DataRow drChilds in dtChilds.Rows)
-                    //{
-                        //string ChildNode = drChilds[0] + ", " + drChilds[1];
-                        //childNode = parentNode.Nodes.Add(ChildNode);
-                    //}
-                //}
-                //dbConnection.Close();
-            //}
+                childs = parentNode.Nodes.Add(null, ChildNode, ImageIndex, ImageIndex);
+            }
         }
 
         //=====================================================================================================================================================================
@@ -159,37 +141,6 @@ namespace eNumismat
             // Funktioniert auch, wenn Outlook geschlossen ist.
             // eine Überprüfung, ob Outlook installiert ist - und vor allem, ob es auch mit anderen Versionen von Outlook kompatibel ist, wäre Sinnvoll.
             // ggf. "outlook" als art AddIn bereitstellen?
-        }
-
-        //=============================================================================================================
-        private void OutlookToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            /*
-            Outlook.MAPIFolder fldContacts =
-            (Outlook.MAPIFolder)outlookObj.Session.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderContacts);
-
-            foreach (Microsoft.Office.Interop.Outlook._ContactItem contactItem in fldContacts.Items)
-            {
-                contact = new MyContact();
-
-                contact.FirstName = (contactItem.FirstName == null) ? string.Empty :
-
-                                               contactItem.FirstName;
-
-                contact.LastName = (contactItem.LastName == null) ? string.Empty :
-
-                                              contactItem.LastName;
-
-                contact.EmailAddress = contactItem.Email1Address;
-
-                contact.Phone = contactItem.Business2TelephoneNumber;
-
-                contact.Address = contactItem.BusinessAddress;
-
-                contacts.Add(contact);
-
-            }
-            */
         }
     }
 }

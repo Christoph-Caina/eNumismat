@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SQLite;
 
 
@@ -82,9 +83,38 @@ namespace eNumismat
                     catch (Exception ex)
                     {
                         return _rowCounter;
-                        //dLog.Write("[8]", ex.Message);
-                        //MessageBox.Show(ex.Message);
                     }
+                }
+            }
+        }
+
+        //=====================================================================================================================================================================
+        public DataTable GetContacts(string content, string FirstLetter = null)
+        {
+            DataTable Contacts = new DataTable();
+
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+            {
+                dbConnection.Open();
+
+                string SQL = null;
+
+                if (content == "parents")
+                {
+                    SQL =
+                        "SELECT substr(name, 1, 1) FROM contacts GROUP by substr(name, 1, 1)";
+                }
+                else if (content == "childs")
+                {
+                    SQL =
+                        "SELECT name, surename, gender FROM contacts WHERE name LIKE '" + FirstLetter + "%' ORDER BY surename ASC";
+                }
+
+                using (SQLiteDataAdapter daParents = new SQLiteDataAdapter(SQL, dbConnection))
+                {
+                    daParents.Fill(Contacts);
+
+                    return Contacts;
                 }
             }
         }
