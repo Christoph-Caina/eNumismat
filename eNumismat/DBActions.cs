@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SQLite;
+using System.Windows.Forms;
 
 
 namespace eNumismat
@@ -63,8 +64,6 @@ namespace eNumismat
                 catch (Exception ex)
                 {
                     return _rowCounter;
-                    //dLog.Write("[8]", ex.Message);
-                    //MessageBox.Show(ex.Message);
                 }
 
                 string SQL =
@@ -89,7 +88,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        public DataTable GetContacts(string content, string FirstLetter = null)
+        public DataTable GetContacts(string content, string FirstLetter = null, string[] contactname = null)
         {
             DataTable Contacts = new DataTable();
 
@@ -109,10 +108,20 @@ namespace eNumismat
                     SQL =
                         "SELECT name, surename, gender FROM contacts WHERE name LIKE '" + FirstLetter + "%' ORDER BY surename ASC";
                 }
-
-                using (SQLiteDataAdapter daParents = new SQLiteDataAdapter(SQL, dbConnection))
+                else if (content == "details" && contactname != null)
                 {
-                    daParents.Fill(Contacts);
+                    SQL =
+                        "SELECT * FROM contacts WHERE name = '" + contactname[0] + "', surename = '" + contactname[1] + "' LIMIT 1";
+                }
+                else if (content == "details" && contactname == null)
+                {
+                    SQL =
+                        "SELECT * FROM contacts ORDER BY name, surename LIMIT 1";
+                }
+
+                using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(SQL, dbConnection))
+                {
+                    daContacts.Fill(Contacts);
 
                     return Contacts;
                 }

@@ -27,13 +27,11 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void AddressBook_Show(object sender, EventArgs e)
         {
-            if (Globals.AddressBookFormMode == "new")
+            if (Globals.AddressBookFormMode == "create")
             {
                 splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
                 splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
                 PanelEditContactDetails.Dock = DockStyle.Fill;
-
-                // show Empty formular
             }
 
             else if (Globals.AddressBookFormMode == "show")
@@ -41,12 +39,6 @@ namespace eNumismat
                 splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
                 splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
                 PanelShowContactDetails.Dock = DockStyle.Fill;
-                // show Contact Details
-            }
-
-            else if (Globals.AddressBookFormMode == "update")
-            {
-                // show Prefilled formular
             }
         }
 
@@ -62,7 +54,7 @@ namespace eNumismat
             if (ContactCounter == 0)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
-                Globals.AddressBookFormMode = "new";
+                Globals.AddressBookFormMode = "create";
                 //BuildFrm("edit");
             }
             else if (ContactCounter == 1)
@@ -70,6 +62,7 @@ namespace eNumismat
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakt vorhanden";
                 LoadTreeViewParents();
                 Globals.AddressBookFormMode = "show";
+                GetContact();
                 //BuildFrm("view");
             }
             else
@@ -77,10 +70,11 @@ namespace eNumismat
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
                 LoadTreeViewParents();
                 Globals.AddressBookFormMode = "show";
+                GetContact();
                 //BuildFrm("view");
             }
 
-            MessageBox.Show(Globals.AddressBookFormMode);
+            
         }
 
         //=====================================================================================================================================================================
@@ -139,7 +133,7 @@ namespace eNumismat
             if (_unselectableNodes.Contains(e.Node))
             {
                 e.Cancel = true;
-            }
+            }   
         }
 
         //=====================================================================================================================================================================
@@ -152,9 +146,13 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void GetContactDetails(string[] contact)
+        private void GetContact(string[] contact = null)
         {
-            //dbAction.GetContacts("details", Name, surename)
+            foreach (DataRow drContactDetails in dbAction.GetContacts("details").Rows)
+            {
+                label_name.Text = drContactDetails[1].ToString();
+                label_surename.Text = drContactDetails[2].ToString();
+            }
         }
 
         // Outlook-Test

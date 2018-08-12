@@ -81,6 +81,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label_name = new System.Windows.Forms.Label();
+            this.label_surename = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -92,6 +94,7 @@
             this.PanelEditContactDetails.SuspendLayout();
             this.PanelShowContactDetails.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -544,6 +547,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label_surename);
+            this.tabPage1.Controls.Add(this.label_name);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -561,6 +566,26 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label_name
+            // 
+            this.label_name.AutoSize = true;
+            this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_name.Location = new System.Drawing.Point(6, 3);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(59, 16);
+            this.label_name.TabIndex = 0;
+            this.label_name.Text = "label12";
+            // 
+            // label_surename
+            // 
+            this.label_surename.AutoSize = true;
+            this.label_surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_surename.Location = new System.Drawing.Point(6, 19);
+            this.label_surename.Name = "label_surename";
+            this.label_surename.Size = new System.Drawing.Size(59, 16);
+            this.label_surename.TabIndex = 1;
+            this.label_surename.Text = "label13";
             // 
             // AddressBook
             // 
@@ -589,6 +614,8 @@
             this.PanelEditContactDetails.PerformLayout();
             this.PanelShowContactDetails.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,5 +674,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label_surename;
+        private System.Windows.Forms.Label label_name;
     }
 }
