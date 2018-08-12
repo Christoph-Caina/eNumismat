@@ -111,7 +111,7 @@ namespace eNumismat
                 else if (content == "details" && contactname != null)
                 {
                     SQL =
-                        "SELECT * FROM contacts WHERE name = '" + contactname[0] + "', surename = '" + contactname[1] + "' LIMIT 1";
+                        "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' LIMIT 1";
                 }
                 else if (content == "details" && contactname == null)
                 {

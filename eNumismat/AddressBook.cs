@@ -22,11 +22,7 @@ namespace eNumismat
         private void AddressBook_Load(object sender, EventArgs e)
         {
             GetContactsCount();
-        }
 
-        //=====================================================================================================================================================================
-        private void AddressBook_Show(object sender, EventArgs e)
-        {
             if (Globals.AddressBookFormMode == "create")
             {
                 splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
@@ -40,6 +36,12 @@ namespace eNumismat
                 splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
                 PanelShowContactDetails.Dock = DockStyle.Fill;
             }
+        }
+
+        //=====================================================================================================================================================================
+        private void AddressBook_Show(object sender, EventArgs e)
+        {
+            
         }
 
         //=====================================================================================================================================================================
@@ -139,16 +141,19 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
+            //MessageBox.Show(names[0] + "::" + names[1]);
             //btn_contact_delete.Enabled = true;
             //löschenToolStripMenuItem.Enabled = true;
             //btn_contact_edit.Enabled = true;
             //bearbeitenToolStripMenuItem.Enabled = true;
+            GetContact(names);
         }
 
         //=====================================================================================================================================================================
         private void GetContact(string[] contact = null)
         {
-            foreach (DataRow drContactDetails in dbAction.GetContacts("details").Rows)
+            foreach (DataRow drContactDetails in dbAction.GetContacts("details", null, contact).Rows)
             {
                 label_name.Text = drContactDetails[1].ToString();
                 label_surename.Text = drContactDetails[2].ToString();
