@@ -51,7 +51,7 @@ namespace eNumismat
         //}
 
         //=====================================================================================================================================================================
-        public int CounterContacts()
+        public int ContactsCount()
         {
             int _rowCounter = 0;
 
@@ -127,5 +127,79 @@ namespace eNumismat
                 }
             }
         }
+
+        //=====================================================================================================================================================================
+        public int SwapCount()
+        {
+            int _rowCounter = 0;
+
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+            {
+                try
+                {
+                    dbConnection.Open();
+                }
+                catch (Exception ex)
+                {
+                    return _rowCounter;
+                }
+
+                string SQL =
+                    "SELECT COUNT (*) FROM `swaplist`";
+
+                using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
+                {
+                    try
+                    {
+                        _rowCounter = Convert.ToInt32(command.ExecuteScalar());
+                        dbConnection.Close();
+                        dbConnection.Dispose();
+
+                        return _rowCounter;
+                    }
+                    catch (Exception ex)
+                    {
+                        return _rowCounter;
+                    }
+                }
+            }
+        }
+
+        //=====================================================================================================================================================================
+        public DataTable GetSwapListDetails(string content, string[] contactname = null)
+        {
+            DataTable SwapListDetails = new DataTable();
+
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+            {
+                dbConnection.Open();
+
+                string SQL = null;
+
+                if (content == "parents")
+                {
+                    SQL =
+                        "SELECT contacts.name, contacts.surename FROM swaplist LEFT JOIN contacts ON contacts.id = swaplist.contacts_id GROUP BY contacts.name, contacts.surename";
+                }
+                else if (content == "childs")
+                {
+                    SQL =
+                        "SELECT swaplist.date, swaplist.swapstatus, swaplist.tracking_code_out FROM swaplist LEFT JOIN contacts ON contacts.id = swaplist.contacts_id WHERE contacts.name = '" + contactname[0] + "' AND contacts.surename = '" + contactname[1] + "'";
+                }
+
+                using (SQLiteDataAdapter daSwaps = new SQLiteDataAdapter(SQL, dbConnection))
+                {
+                    daSwaps.Fill(SwapListDetails);
+
+                    return SwapListDetails;
+                }
+            }
+        }
+        //=====================================================================================================================================================================
+        //public DataTable GetSwapList()
+        //{
+        //    DataTable Swaps = new DataTable();
+
+        //}
     }
 }

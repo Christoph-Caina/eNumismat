@@ -32,10 +32,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -44,6 +46,8 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 508);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
@@ -86,21 +90,14 @@
             this.treeView1.Size = new System.Drawing.Size(266, 484);
             this.treeView1.TabIndex = 0;
             // 
-            // listView1
+            // label2
             // 
-            this.listView1.Location = new System.Drawing.Point(11, 313);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(507, 168);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView2
-            // 
-            this.listView2.Location = new System.Drawing.Point(11, 111);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(507, 168);
-            this.listView2.TabIndex = 1;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 297);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Gesendete Münzen";
             // 
             // label1
             // 
@@ -111,14 +108,27 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Erhaltene Münzen";
             // 
-            // label2
+            // listView2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 297);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Gesendete Münzen";
+            this.listView2.Location = new System.Drawing.Point(11, 111);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(507, 168);
+            this.listView2.TabIndex = 1;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(11, 313);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(507, 168);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // SwapMonitor
             // 
@@ -131,6 +141,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SwapMonitor";
             this.Text = "SwapMonitor";
+            this.Load += new System.EventHandler(this.SwapMonitor_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `swaplist`
 (
 	`id`INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 	`contacts_id` INTEGER NOT NULL,
-	`date` NUMERIC NOT NULL,
+	`date` TEXT NOT NULL,
 	`swapdetails_id` INTEGER NOT NULL,
 	`tracking_code_in` TEXT,
 	`tracking_code_out` TEXT,

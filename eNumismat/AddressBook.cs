@@ -51,7 +51,7 @@ namespace eNumismat
 
             treeView1.Nodes.Clear();
 
-            int ContactCounter = dbAction.CounterContacts();
+            int ContactCounter = dbAction.ContactsCount();
 
             if (ContactCounter == 0)
             {
