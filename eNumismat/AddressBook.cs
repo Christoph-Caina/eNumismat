@@ -59,7 +59,7 @@ namespace eNumismat
 
             foreach (DataRow drParents in dbAction.GetContacts("parents").Rows)
             {
-                parents = treeView1.Nodes.Add(drParents[0].ToString());
+                parents = treeView1.Nodes.Add(drParents[1].ToString() + " [" + drParents[0] + "]");
                 LoadTreeViewChilds(parents);
 
                 _unselectableNodes.Add(parents);
@@ -72,10 +72,9 @@ namespace eNumismat
         {
             TreeNode childs;
 
-            // Remove String "TreeNode: " from the selected ParentNode
-            string Nodes = parentNode.ToString().Remove(0, 10);
+            string[] Nodes = parentNode.ToString().Split(' ');
 
-            foreach (DataRow drChilds in dbAction.GetContacts("childs", Nodes).Rows)
+            foreach (DataRow drChilds in dbAction.GetContacts("childs", Nodes[1]).Rows)
             {
                 string ChildNode = drChilds[0] + ", " + drChilds[1];
 

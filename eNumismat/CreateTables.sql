@@ -11,7 +11,8 @@
     `country` TEXT,
     `phone` TEXT,
     `mobile` TEXT,
-    `email` TEXT
+    `email` TEXT,
+	`notes` TEXT
 );
 
 CREATE TABLE IF NOT EXISTS `swaplist`

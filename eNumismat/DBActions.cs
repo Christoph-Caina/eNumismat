@@ -102,7 +102,7 @@ namespace eNumismat
                 if (content == "parents")
                 {
                     SQL =
-                        "SELECT substr(name, 1, 1) FROM contacts GROUP by substr(name, 1, 1)";
+                        "SELECT count(name), substr(name, 1, 1) FROM contacts GROUP by substr(name, 1, 1)";
                 }
                 else if (content == "childs")
                 {
