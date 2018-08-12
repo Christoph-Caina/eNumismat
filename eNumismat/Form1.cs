@@ -104,7 +104,7 @@ namespace eNumismat
             saveFile.AddExtension = true;
             // Only, if no other path is specified in the Config
             saveFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments);
-            saveFile.Filter = "eNumismatCollection (*.enc) | *.enc";
+            saveFile.Filter = "eNumismatCollection File(*.enc) | *.enc";
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
@@ -118,17 +118,35 @@ namespace eNumismat
         }
 
         //=============================================================================================================
-        private void adressbuchToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void datenbankÖffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFile = new OpenFileDialog();
+            openFile.DefaultExt = "*.enc"; // enc = eNumismatCollection
+            openFile.AddExtension = true;
+
+            openFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments);
+            openFile.Filter = "eNumismatCollection File (*.enc) | *.enc";
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                Globals.DBFile = openFile.FileName;
+            }
+        }
+
+        //=============================================================================================================
+        private void AdressbuchToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             adrBook = new AddressBook();
             adrBook.Show();
         }
 
         //=============================================================================================================
-        private void tauschmonitorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TauschmonitorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             swapList = new SwapMonitor();
             swapList.Show();
         }
+
+        
     }
 }

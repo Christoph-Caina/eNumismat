@@ -30,22 +30,24 @@
         {
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.adressenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.neuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.kontaktImportierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowsCONTACTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.outlookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kontaktExportierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vCardvcfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowsKontaktcontactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.microsoftOutlookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.adressenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.neuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.kontaktImportierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kontaktExportierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.windowsCONTACTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vCardvcfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.windowsKontaktcontactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.outlookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.microsoftOutlookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -56,6 +58,8 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 540);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(698, 22);
@@ -71,6 +75,86 @@
             this.menuStrip1.Size = new System.Drawing.Size(698, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // adressenToolStripMenuItem
+            // 
+            this.adressenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.neuToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.kontaktImportierenToolStripMenuItem,
+            this.kontaktExportierenToolStripMenuItem});
+            this.adressenToolStripMenuItem.Name = "adressenToolStripMenuItem";
+            this.adressenToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.adressenToolStripMenuItem.Text = "Adressen";
+            // 
+            // neuToolStripMenuItem
+            // 
+            this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
+            this.neuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neuToolStripMenuItem.Text = "Neuer Kontakt";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // kontaktImportierenToolStripMenuItem
+            // 
+            this.kontaktImportierenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vCardToolStripMenuItem,
+            this.windowsCONTACTToolStripMenuItem,
+            this.outlookToolStripMenuItem});
+            this.kontaktImportierenToolStripMenuItem.Name = "kontaktImportierenToolStripMenuItem";
+            this.kontaktImportierenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kontaktImportierenToolStripMenuItem.Text = "Kontakt Importieren";
+            // 
+            // vCardToolStripMenuItem
+            // 
+            this.vCardToolStripMenuItem.Name = "vCardToolStripMenuItem";
+            this.vCardToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.vCardToolStripMenuItem.Text = "vCard (*.vcf)";
+            // 
+            // windowsCONTACTToolStripMenuItem
+            // 
+            this.windowsCONTACTToolStripMenuItem.Name = "windowsCONTACTToolStripMenuItem";
+            this.windowsCONTACTToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.windowsCONTACTToolStripMenuItem.Text = "Windows Kontakt (*.contact)";
+            // 
+            // outlookToolStripMenuItem
+            // 
+            this.outlookToolStripMenuItem.Name = "outlookToolStripMenuItem";
+            this.outlookToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.outlookToolStripMenuItem.Text = "Microsoft Outlook";
+            this.outlookToolStripMenuItem.Click += new System.EventHandler(this.OutlookToolStripMenuItem_Click);
+            // 
+            // kontaktExportierenToolStripMenuItem
+            // 
+            this.kontaktExportierenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vCardvcfToolStripMenuItem,
+            this.windowsKontaktcontactToolStripMenuItem,
+            this.microsoftOutlookToolStripMenuItem});
+            this.kontaktExportierenToolStripMenuItem.Name = "kontaktExportierenToolStripMenuItem";
+            this.kontaktExportierenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kontaktExportierenToolStripMenuItem.Text = "Kontakt Exportieren";
+            // 
+            // vCardvcfToolStripMenuItem
+            // 
+            this.vCardvcfToolStripMenuItem.Name = "vCardvcfToolStripMenuItem";
+            this.vCardvcfToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.vCardvcfToolStripMenuItem.Text = "vCard (*.vcf)";
+            // 
+            // windowsKontaktcontactToolStripMenuItem
+            // 
+            this.windowsKontaktcontactToolStripMenuItem.Name = "windowsKontaktcontactToolStripMenuItem";
+            this.windowsKontaktcontactToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.windowsKontaktcontactToolStripMenuItem.Text = "Windows Kontakt (*.contact)";
+            // 
+            // microsoftOutlookToolStripMenuItem
+            // 
+            this.microsoftOutlookToolStripMenuItem.Name = "microsoftOutlookToolStripMenuItem";
+            this.microsoftOutlookToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.microsoftOutlookToolStripMenuItem.Text = "Microsoft Outlook";
+            this.microsoftOutlookToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftOutlookToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
@@ -128,85 +212,11 @@
             this.tabPage2.Text = "Tauschübersicht";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // adressenToolStripMenuItem
+            // toolStripStatusLabel1
             // 
-            this.adressenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.neuToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.kontaktImportierenToolStripMenuItem,
-            this.kontaktExportierenToolStripMenuItem});
-            this.adressenToolStripMenuItem.Name = "adressenToolStripMenuItem";
-            this.adressenToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.adressenToolStripMenuItem.Text = "Adressen";
-            // 
-            // neuToolStripMenuItem
-            // 
-            this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
-            this.neuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.neuToolStripMenuItem.Text = "Neuer Kontakt";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // kontaktImportierenToolStripMenuItem
-            // 
-            this.kontaktImportierenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vCardToolStripMenuItem,
-            this.windowsCONTACTToolStripMenuItem,
-            this.outlookToolStripMenuItem});
-            this.kontaktImportierenToolStripMenuItem.Name = "kontaktImportierenToolStripMenuItem";
-            this.kontaktImportierenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kontaktImportierenToolStripMenuItem.Text = "Kontakt Importieren";
-            // 
-            // kontaktExportierenToolStripMenuItem
-            // 
-            this.kontaktExportierenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vCardvcfToolStripMenuItem,
-            this.windowsKontaktcontactToolStripMenuItem,
-            this.microsoftOutlookToolStripMenuItem});
-            this.kontaktExportierenToolStripMenuItem.Name = "kontaktExportierenToolStripMenuItem";
-            this.kontaktExportierenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kontaktExportierenToolStripMenuItem.Text = "Kontakt Exportieren";
-            // 
-            // vCardToolStripMenuItem
-            // 
-            this.vCardToolStripMenuItem.Name = "vCardToolStripMenuItem";
-            this.vCardToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.vCardToolStripMenuItem.Text = "vCard (*.vcf)";
-            // 
-            // windowsCONTACTToolStripMenuItem
-            // 
-            this.windowsCONTACTToolStripMenuItem.Name = "windowsCONTACTToolStripMenuItem";
-            this.windowsCONTACTToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.windowsCONTACTToolStripMenuItem.Text = "Windows Kontakt (*.contact)";
-            // 
-            // vCardvcfToolStripMenuItem
-            // 
-            this.vCardvcfToolStripMenuItem.Name = "vCardvcfToolStripMenuItem";
-            this.vCardvcfToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.vCardvcfToolStripMenuItem.Text = "vCard (*.vcf)";
-            // 
-            // windowsKontaktcontactToolStripMenuItem
-            // 
-            this.windowsKontaktcontactToolStripMenuItem.Name = "windowsKontaktcontactToolStripMenuItem";
-            this.windowsKontaktcontactToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.windowsKontaktcontactToolStripMenuItem.Text = "Windows Kontakt (*.contact)";
-            // 
-            // outlookToolStripMenuItem
-            // 
-            this.outlookToolStripMenuItem.Name = "outlookToolStripMenuItem";
-            this.outlookToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.outlookToolStripMenuItem.Text = "Microsoft Outlook";
-            this.outlookToolStripMenuItem.Click += new System.EventHandler(this.outlookToolStripMenuItem_Click);
-            // 
-            // microsoftOutlookToolStripMenuItem
-            // 
-            this.microsoftOutlookToolStripMenuItem.Name = "microsoftOutlookToolStripMenuItem";
-            this.microsoftOutlookToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.microsoftOutlookToolStripMenuItem.Text = "Microsoft Outlook";
-            this.microsoftOutlookToolStripMenuItem.Click += new System.EventHandler(this.microsoftOutlookToolStripMenuItem_Click);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // AddressBook
             // 
@@ -220,6 +230,8 @@
             this.Name = "AddressBook";
             this.Text = "AddressBook";
             this.Load += new System.EventHandler(this.AddressBook_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -252,5 +264,6 @@
         private System.Windows.Forms.ToolStripMenuItem windowsKontaktcontactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outlookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem microsoftOutlookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

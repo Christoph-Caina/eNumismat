@@ -80,6 +80,7 @@
             this.datenbankÖffnenToolStripMenuItem.Name = "datenbankÖffnenToolStripMenuItem";
             this.datenbankÖffnenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.datenbankÖffnenToolStripMenuItem.Text = "Datenbank öffnen";
+            this.datenbankÖffnenToolStripMenuItem.Click += new System.EventHandler(this.datenbankÖffnenToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -122,17 +123,17 @@
             // 
             this.adressbuchToolStripMenuItem1.Image = global::eNumismat.Properties.Resources.book_addresses;
             this.adressbuchToolStripMenuItem1.Name = "adressbuchToolStripMenuItem1";
-            this.adressbuchToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.adressbuchToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
             this.adressbuchToolStripMenuItem1.Text = "Adressbuch";
-            this.adressbuchToolStripMenuItem1.Click += new System.EventHandler(this.adressbuchToolStripMenuItem1_Click);
+            this.adressbuchToolStripMenuItem1.Click += new System.EventHandler(this.AdressbuchToolStripMenuItem1_Click);
             // 
             // tauschmonitorToolStripMenuItem
             // 
             this.tauschmonitorToolStripMenuItem.Image = global::eNumismat.Properties.Resources.table_refresh;
             this.tauschmonitorToolStripMenuItem.Name = "tauschmonitorToolStripMenuItem";
-            this.tauschmonitorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tauschmonitorToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.tauschmonitorToolStripMenuItem.Text = "Tauschmonitor";
-            this.tauschmonitorToolStripMenuItem.Click += new System.EventHandler(this.tauschmonitorToolStripMenuItem_Click);
+            this.tauschmonitorToolStripMenuItem.Click += new System.EventHandler(this.TauschmonitorToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
