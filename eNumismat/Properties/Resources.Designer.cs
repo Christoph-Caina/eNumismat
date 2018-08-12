@@ -63,9 +63,29 @@ namespace eNumismat.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap accept {
+            get {
+                object obj = ResourceManager.GetObject("accept", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_addresses {
             get {
                 object obj = ResourceManager.GetObject("book_addresses", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel {
+            get {
+                object obj = ResourceManager.GetObject("cancel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -94,7 +114,8 @@ namespace eNumismat.Properties {
         ///    `country` TEXT,
         ///    `phone` TEXT,
         ///    `mobile` TEXT,
-        ///    `email` TEXT
+        ///    `email` TEXT,
+        ///	`notes` TEXT
         ///);
         ///
         ///CREATE TABLE IF NOT EXISTS `swaplist`
@@ -102,7 +123,7 @@ namespace eNumismat.Properties {
         ///	`id`INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
         ///	`contacts_id` INTEGER NOT NULL,
         ///	`date` NUMERIC NOT NULL,
-        ///	`swapdetails_id` INTEGE [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        ///	`swapde [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         internal static string CreateTables {
             get {
@@ -176,6 +197,36 @@ namespace eNumismat.Properties {
         internal static System.Drawing.Bitmap table_refresh {
             get {
                 object obj = ResourceManager.GetObject("table_refresh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_add {
+            get {
+                object obj = ResourceManager.GetObject("user_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_delete {
+            get {
+                object obj = ResourceManager.GetObject("user_delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_edit {
+            get {
+                object obj = ResourceManager.GetObject("user_edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

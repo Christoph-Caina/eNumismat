@@ -27,5 +27,7 @@ namespace eNumismat
             /// A condition that indicates something has gone wrong with the system
         /// </summary>
         public static string LogLevel { get; set; }
+
+        public static string AddressBookFormMode { get; set; }
     }
 }

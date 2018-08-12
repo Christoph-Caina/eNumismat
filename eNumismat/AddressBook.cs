@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace eNumismat
@@ -11,16 +12,42 @@ namespace eNumismat
     {
         DBActions dbAction;
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         public AddressBook()
         {
             InitializeComponent();
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void AddressBook_Load(object sender, EventArgs e)
         {
             GetContactsCount();
+        }
+
+        //=====================================================================================================================================================================
+        private void AddressBook_Show(object sender, EventArgs e)
+        {
+            if (Globals.AddressBookFormMode == "new")
+            {
+                splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
+                splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
+                PanelEditContactDetails.Dock = DockStyle.Fill;
+
+                // show Empty formular
+            }
+
+            else if (Globals.AddressBookFormMode == "show")
+            {
+                splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
+                splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
+                PanelShowContactDetails.Dock = DockStyle.Fill;
+                // show Contact Details
+            }
+
+            else if (Globals.AddressBookFormMode == "update")
+            {
+                // show Prefilled formular
+            }
         }
 
         //=====================================================================================================================================================================
@@ -35,20 +62,25 @@ namespace eNumismat
             if (ContactCounter == 0)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
+                Globals.AddressBookFormMode = "new";
                 //BuildFrm("edit");
             }
             else if (ContactCounter == 1)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakt vorhanden";
                 LoadTreeViewParents();
+                Globals.AddressBookFormMode = "show";
                 //BuildFrm("view");
             }
             else
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
                 LoadTreeViewParents();
+                Globals.AddressBookFormMode = "show";
                 //BuildFrm("view");
             }
+
+            MessageBox.Show(Globals.AddressBookFormMode);
         }
 
         //=====================================================================================================================================================================
@@ -117,9 +149,12 @@ namespace eNumismat
             //löschenToolStripMenuItem.Enabled = true;
             //btn_contact_edit.Enabled = true;
             //bearbeitenToolStripMenuItem.Enabled = true;
+        }
 
-            //CreateFormElements("view", treeView1.SelectedNode.ToString());
-            // ACTION AFTER NODE SELECT
+        //=====================================================================================================================================================================
+        private void GetContactDetails(string[] contact)
+        {
+            //dbAction.GetContacts("details", Name, surename)
         }
 
         // Outlook-Test
@@ -144,5 +179,7 @@ namespace eNumismat
             // eine Überprüfung, ob Outlook installiert ist - und vor allem, ob es auch mit anderen Versionen von Outlook kompatibel ist, wäre Sinnvoll.
             // ggf. "outlook" als art AddIn bereitstellen?
         }
+
+
     }
 }
