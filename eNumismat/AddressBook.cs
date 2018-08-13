@@ -11,12 +11,14 @@ namespace eNumismat
     {
         DBActions dbAction;
 
+        public int ContactID = 0;
+        public string[] ContactNames = null;
+        public string WindowMode = null;
+
         //=====================================================================================================================================================================
         public AddressBook()
         {
             InitializeComponent();
-            Globals.AddressBookFormMode = null;
-            //Btn_Cancel.Enabled = false;
         }
 
         //=====================================================================================================================================================================
@@ -35,7 +37,9 @@ namespace eNumismat
         private void GetContactsCount()
         {
             dbAction = new DBActions();
+
             int ContactCounter = dbAction.ContactsCount();
+
             DrawForm(ContactCounter);
         }
 
@@ -45,7 +49,7 @@ namespace eNumismat
             if (ContactsCount == 0)
             {
                 toolStripStatusLabel1.Text = ContactsCount.ToString() + " Kontakte vorhanden";
-                Globals.AddressBookFormMode = "create";
+                WindowMode = "create";
 
                 Btn_Cancel.Enabled = false;
             }
@@ -53,7 +57,7 @@ namespace eNumismat
             else if (ContactsCount == 1)
             {
                 toolStripStatusLabel1.Text = ContactsCount.ToString() + " Kontakt vorhanden";
-                Globals.AddressBookFormMode = "show";
+                WindowMode = "show";
 
                 Btn_Cancel.Enabled = true;
             }
@@ -61,13 +65,13 @@ namespace eNumismat
             else
             {
                 toolStripStatusLabel1.Text = ContactsCount.ToString() + " Kontakte vorhanden";
-                Globals.AddressBookFormMode = "show";
+                WindowMode = "show";
 
                 Btn_Cancel.Enabled = true;
             }
 
 
-            if (Globals.AddressBookFormMode == "show")
+            if (WindowMode == "show")
             {
                 splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
                 splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
@@ -78,10 +82,9 @@ namespace eNumismat
                 Btn_CreateContact.Enabled = true;
 
                 LoadTreeViewParents();
-                GetContact();
             }
 
-            else if (Globals.AddressBookFormMode == "update")
+            else if (WindowMode == "update")
             {
                 splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
                 splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
@@ -95,7 +98,7 @@ namespace eNumismat
                 LoadTreeViewParents();
             }
 
-            else if (Globals.AddressBookFormMode == "create")
+            else if (WindowMode == "create")
             {
                 splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
                 splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
@@ -106,6 +109,8 @@ namespace eNumismat
                 Btn_CreateContact.Enabled = false;
                 Btn_UpdateContact.Enabled = false;
             }
+
+            GetContact();
         }
 
         //=====================================================================================================================================================================
@@ -172,96 +177,81 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
+            ContactNames = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
 
             Btn_DeleteContact.Enabled = true;
             Btn_UpdateContact.Enabled = true;
 
-            GetContact(names);
+            GetContact(ContactNames);
         }
 
         //=====================================================================================================================================================================
         private void GetContact(string[] contact = null)
         {
-            if (Globals.AddressBookFormMode == "show")
-            {
-                foreach (DataRow drContactDetails in dbAction.GetContacts("details", null, contact).Rows)
-                {
-                    label_ID.Text = drContactDetails[0].ToString();
-                    label_name.Text = drContactDetails[1].ToString();
-                    label_surename.Text = drContactDetails[2].ToString();
-
-                }
-            }
-
-            else if (Globals.AddressBookFormMode == "update")
-            {
-                foreach (DataRow drContactDetails in dbAction.GetContacts("details", null, contact).Rows)
-                {
-                    tb_name.Text = drContactDetails[1].ToString();
-                    tb_surename.Text = drContactDetails[2].ToString();
-                    cb_gender.Text = drContactDetails[3].ToString();
-
-                    if (String.IsNullOrEmpty(drContactDetails[4].ToString()))
-                    {
-                        dtp_birthdate.Text = DateTime.Now.ToString("dd.MM.yyyy");
-                    }
-                    else
-                    {
-                        dtp_birthdate.Text = drContactDetails[4].ToString();
-                    }
-                }
-            }
+            
         }
 
         //=====================================================================================================================================================================
         private void SetContact()
         {
-            if (Globals.AddressBookFormMode == "create")
+            List<string> ContactDetails = new List<string>();
+
+            ContactDetails.Add(tb_name.Text);
+            ContactDetails.Add(tb_surename.Text);
+            ContactDetails.Add(cb_gender.Text);
+            ContactDetails.Add(dtp_birthdate.Text);
+            ContactDetails.Add(tb_street.Text);
+            ContactDetails.Add(tb_zipcode.Text);
+            ContactDetails.Add(tb_city.Text);
+            ContactDetails.Add(tb_country.Text);
+            ContactDetails.Add(tb_phone.Text);
+            ContactDetails.Add(tb_mobile.Text);
+            ContactDetails.Add(tb_mail.Text);
+            ContactDetails.Add(rtb_notes.Text);
+
+            if (WindowMode == "create")
             {
-                MessageBox.Show("INSERT INTO");
-                /*if (dbAction.CreateContact())
+
+                //MessageBox.Show("INSERT INTO");
+                if (dbAction.CreateOrUpdateContact(ContactDetails))
                 {
-					ID of shown CONTACT
                     GetContactsCount();
-                }*/
+                }
             }
 
-            else if (Globals.AddressBookFormMode == "update")
+            else if (WindowMode == "update")
             {
-                MessageBox.Show("UPDATE");
-                /*if (dbAction.UpdateContact())
+                //MessageBox.Show("UPDATE");
+                if (dbAction.CreateOrUpdateContact(ContactDetails, ContactID))
                 {
-					ID of shown CONTACT
                     GetContactsCount();
-                }*/
+                }
             }
-
-            Globals.AddressBookFormMode = "show";
+            WindowsMode = "show";
         }
 
         //=====================================================================================================================================================================
         private void Btn_CreateContact_Click(object sender, EventArgs e)
         {
-            // DO Work
+
         }
 
         //=====================================================================================================================================================================
         private void Btn_DeleteContact_Click(object sender, EventArgs e)
         {
-            // DO Work
+            
         }
 
         //=====================================================================================================================================================================
         private void Btn_EditContact_Click(object sender, EventArgs e)
         {
-            // DO Work
+            
         }
 
         //=====================================================================================================================================================================
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
-            // DO Work
+            
         }
 
         //=====================================================================================================================================================================
@@ -273,7 +263,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void AddressBook_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Globals.AddressBookFormMode = null;
+            WindowMode = null;
         }
 
 

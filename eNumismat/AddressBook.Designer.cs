@@ -84,6 +84,8 @@
             this.label_name = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label_ID = new System.Windows.Forms.Label();
+            this.tb_zipcode = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -300,6 +302,8 @@
             // 
             // PanelEditContactDetails
             // 
+            this.PanelEditContactDetails.Controls.Add(this.label12);
+            this.PanelEditContactDetails.Controls.Add(this.tb_zipcode);
             this.PanelEditContactDetails.Controls.Add(this.Btn_Cancel);
             this.PanelEditContactDetails.Controls.Add(this.Btn_Save);
             this.PanelEditContactDetails.Controls.Add(this.label11);
@@ -332,17 +336,17 @@
             // Btn_Cancel
             // 
             this.Btn_Cancel.Image = global::eNumismat.Properties.Resources.cancel;
-            this.Btn_Cancel.Location = new System.Drawing.Point(267, 467);
+            this.Btn_Cancel.Location = new System.Drawing.Point(267, 478);
             this.Btn_Cancel.Name = "Btn_Cancel";
             this.Btn_Cancel.Size = new System.Drawing.Size(32, 32);
-            this.Btn_Cancel.TabIndex = 11;
+            this.Btn_Cancel.TabIndex = 13;
             this.Btn_Cancel.UseVisualStyleBackColor = true;
             this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
             // Btn_Save
             // 
             this.Btn_Save.Image = global::eNumismat.Properties.Resources.accept;
-            this.Btn_Save.Location = new System.Drawing.Point(305, 467);
+            this.Btn_Save.Location = new System.Drawing.Point(305, 478);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(32, 32);
             this.Btn_Save.TabIndex = 12;
@@ -352,7 +356,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(101, 338);
+            this.label11.Location = new System.Drawing.Point(101, 346);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(46, 13);
             this.label11.TabIndex = 21;
@@ -360,16 +364,16 @@
             // 
             // rtb_notes
             // 
-            this.rtb_notes.Location = new System.Drawing.Point(153, 335);
+            this.rtb_notes.Location = new System.Drawing.Point(153, 346);
             this.rtb_notes.Name = "rtb_notes";
             this.rtb_notes.Size = new System.Drawing.Size(184, 126);
-            this.rtb_notes.TabIndex = 10;
+            this.rtb_notes.TabIndex = 11;
             this.rtb_notes.Text = "";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(108, 297);
+            this.label10.Location = new System.Drawing.Point(108, 308);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 19;
@@ -378,7 +382,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(112, 271);
+            this.label9.Location = new System.Drawing.Point(112, 282);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 18;
@@ -387,7 +391,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(101, 245);
+            this.label8.Location = new System.Drawing.Point(101, 256);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 17;
@@ -395,22 +399,22 @@
             // 
             // tb_mail
             // 
-            this.tb_mail.Location = new System.Drawing.Point(153, 294);
+            this.tb_mail.Location = new System.Drawing.Point(153, 305);
             this.tb_mail.Name = "tb_mail";
             this.tb_mail.Size = new System.Drawing.Size(184, 20);
-            this.tb_mail.TabIndex = 9;
+            this.tb_mail.TabIndex = 10;
             // 
             // tb_mobile
             // 
-            this.tb_mobile.Location = new System.Drawing.Point(153, 268);
+            this.tb_mobile.Location = new System.Drawing.Point(153, 279);
             this.tb_mobile.Name = "tb_mobile";
             this.tb_mobile.Size = new System.Drawing.Size(184, 20);
-            this.tb_mobile.TabIndex = 8;
+            this.tb_mobile.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(113, 198);
+            this.label7.Location = new System.Drawing.Point(113, 217);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 14;
@@ -419,7 +423,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(123, 172);
+            this.label6.Location = new System.Drawing.Point(123, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 13);
             this.label6.TabIndex = 13;
@@ -428,7 +432,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 146);
+            this.label5.Location = new System.Drawing.Point(56, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 12;
@@ -437,7 +441,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 105);
+            this.label4.Location = new System.Drawing.Point(71, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 11;
@@ -447,7 +451,7 @@
             // 
             this.dtp_birthdate.CustomFormat = "dd.MM.yyyy";
             this.dtp_birthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_birthdate.Location = new System.Drawing.Point(153, 99);
+            this.dtp_birthdate.Location = new System.Drawing.Point(153, 96);
             this.dtp_birthdate.Name = "dtp_birthdate";
             this.dtp_birthdate.Size = new System.Drawing.Size(91, 20);
             this.dtp_birthdate.TabIndex = 3;
@@ -455,7 +459,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 75);
+            this.label3.Location = new System.Drawing.Point(83, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 9;
@@ -467,7 +471,7 @@
             this.cb_gender.Items.AddRange(new object[] {
             "male",
             "female"});
-            this.cb_gender.Location = new System.Drawing.Point(153, 72);
+            this.cb_gender.Location = new System.Drawing.Point(153, 69);
             this.cb_gender.Name = "cb_gender";
             this.cb_gender.Size = new System.Drawing.Size(91, 21);
             this.cb_gender.TabIndex = 2;
@@ -492,28 +496,28 @@
             // 
             // tb_phone
             // 
-            this.tb_phone.Location = new System.Drawing.Point(153, 242);
+            this.tb_phone.Location = new System.Drawing.Point(153, 253);
             this.tb_phone.Name = "tb_phone";
             this.tb_phone.Size = new System.Drawing.Size(184, 20);
-            this.tb_phone.TabIndex = 7;
+            this.tb_phone.TabIndex = 8;
             // 
             // tb_country
             // 
-            this.tb_country.Location = new System.Drawing.Point(153, 195);
+            this.tb_country.Location = new System.Drawing.Point(153, 214);
             this.tb_country.Name = "tb_country";
             this.tb_country.Size = new System.Drawing.Size(184, 20);
-            this.tb_country.TabIndex = 6;
+            this.tb_country.TabIndex = 7;
             // 
             // tb_city
             // 
-            this.tb_city.Location = new System.Drawing.Point(153, 169);
+            this.tb_city.Location = new System.Drawing.Point(153, 188);
             this.tb_city.Name = "tb_city";
             this.tb_city.Size = new System.Drawing.Size(184, 20);
-            this.tb_city.TabIndex = 5;
+            this.tb_city.TabIndex = 6;
             // 
             // tb_street
             // 
-            this.tb_street.Location = new System.Drawing.Point(153, 143);
+            this.tb_street.Location = new System.Drawing.Point(153, 136);
             this.tb_street.Name = "tb_street";
             this.tb_street.Size = new System.Drawing.Size(184, 20);
             this.tb_street.TabIndex = 4;
@@ -600,6 +604,22 @@
             this.label_ID.Size = new System.Drawing.Size(0, 13);
             this.label_ID.TabIndex = 2;
             this.label_ID.Visible = false;
+            // 
+            // tb_zipcode
+            // 
+            this.tb_zipcode.Location = new System.Drawing.Point(153, 162);
+            this.tb_zipcode.Name = "tb_zipcode";
+            this.tb_zipcode.Size = new System.Drawing.Size(184, 20);
+            this.tb_zipcode.TabIndex = 5;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(117, 165);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(30, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "PLZ:";
             // 
             // AddressBook
             // 
@@ -692,5 +712,7 @@
         private System.Windows.Forms.Label label_surename;
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.Label label_ID;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tb_zipcode;
     }
 }

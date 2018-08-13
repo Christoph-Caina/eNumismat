@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 
 namespace eNumismat
@@ -122,10 +123,52 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        public bool CreateContact()
+        public bool CreateOrUpdateContact(List<string> contactDetails, int ID = 0)
         {
-            // Do Work
-            return true;
+            try
+            {
+                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+                {
+                    dbConnection.Open();
+                    string SQL = null;
+
+                    if (ID == 0)
+                    {
+                        SQL = "INSERT INTO `contacts`" +
+                            "(`name`, `surename`, `gender`, `birthdate`, `street`, `zipcode`, `city`, `country`, `phone`, `mobile`, `email`, `notes`)" +
+                            "VALUES" +
+                            "('"+ contactDetails[0] + "', '" + contactDetails[1] + "', '" + contactDetails[2] + "', '" + contactDetails[3] + "', '" + contactDetails[4] + "', '" + contactDetails[5] + "', '" + contactDetails[6] + "', '" + contactDetails[7] + "', '" + contactDetails[8] + "', '" + contactDetails[9] + "', '" + contactDetails[10] + "', '" + contactDetails[11] + "');";
+                    }
+                    else
+                    {
+                        SQL = "UPDATE `contacts`" +
+                            "SET" +
+                            " `name` = '" + contactDetails[0] + "', `surename` = '" + contactDetails[1] + "', `gender` = '" + contactDetails[2] + "', `birthdate` = '" + contactDetails[3] + "', `street` = '" + contactDetails[4] + "', `zipcode` = '" + contactDetails[5] + "', `city` = '" + contactDetails[6] + "', `country` = '" + contactDetails[7] + "', `phone` = '" + contactDetails[8] + "', `mobile` = '" + contactDetails[9] + "', `email` = '" + contactDetails[10] + "', `notes` = '" + contactDetails[11] + "';";
+
+                    }
+
+                    using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
+                    {
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            dbConnection.Close();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            dbConnection.Close();
+                            dbConnection.Dispose();
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         //=====================================================================================================================================================================
