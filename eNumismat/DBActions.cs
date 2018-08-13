@@ -195,11 +195,14 @@ namespace eNumismat
                 }
             }
         }
-        //=====================================================================================================================================================================
-        //public DataTable GetSwapList()
-        //{
-        //    DataTable Swaps = new DataTable();
-
-        //}
     }
 }
+
+
+/*
+ * COIN Übersicht
+ * 
+ *  SELECT coins.name, coins.year, coins.mint_sign, mint_types.name, qualities.short, coin_status.name FROM coins LEFT JOIN mint_types ON mint_types.id = coins.mint_type_id LEFT JOIN qualities ON qualities.id = coins.quality_id LEFT JOIN coin_status ON coin_status.id = coins.status_id
+ * 
+ * 
+ */
