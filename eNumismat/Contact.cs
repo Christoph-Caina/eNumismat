@@ -7,7 +7,7 @@ namespace eNumismat
     {
         public static Dictionary<string, string> ContactDetails = new Dictionary<string, string>();
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         public void SetContactDetails(String name, String surename, String gender = null, String birthdate = null, String street = null, String zipcode = null, String city = null, String country = null, String phone = null, String mobilephone = null, String email = null, String notes = null)
         {
             ContactDetails.Add("Name", name);
@@ -24,7 +24,7 @@ namespace eNumismat
             ContactDetails.Add("Notes", notes);
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         public Dictionary<string, string> GetContactDetails()
         {
             return ContactDetails;

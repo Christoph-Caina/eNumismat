@@ -202,33 +202,12 @@ namespace eNumismat.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die %PDF-1.4
-        ///%äãÏÒ
-        ///1 0 obj
-        ///[/PDF/ImageB/ImageC/ImageI/Text]
-        ///endobj
-        ///4 0 obj
-        ///&lt;&lt;/Length 5 0 R/Filter/FlateDecode&gt;&gt;
-        ///stream
-        ///˜)T{94(ç
-        ///endstream
-        ///endobj
-        ///5 0 obj
-        ///8
-        ///endobj
-        ///6 0 obj
-        ///&lt;&lt;/Type/XObject
-        ////Subtype/Form
-        ////FormType 1
-        ////Matrix[1 0 0 1 0 0]
-        ////BBox[0 0 612 792]
-        ////Resources 7 0 R/Filter/FlateDecode/Length 1478&gt;&gt;
-        ///stream
-        ///TfÓÏza5€Ê¢º&gt;‹ôž‘ÖÉyN¿Ã—¹mN¸[°l¦¡2oSz:*$–c%¶qÕ„M‚&quot;&amp;~ñò—äÍTªw¹~ähcô5¯°yAÍ–Þ¾˜-mÂòš—gÜã-«¬&amp;ù¨xæµ¼ÒïiR“pÚGü”ß@äˆôñH÷ŠãCŠUâI Ó ŒÍ@©:ÒÆFµ…m‡Ú        ///ˆÔe‚‡Åû&apos;        ///ÙKÞèÈº†ÅBÒZMY›Û.ð`Þa™Ö³ùÉÉáŠåådÖŸ¨“Ø@w [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
         /// </summary>
-        internal static string Unicode_Currencies {
+        internal static byte[] Unicode_Currencies {
             get {
-                return ResourceManager.GetString("Unicode_Currencies", resourceCulture);
+                object obj = ResourceManager.GetObject("Unicode_Currencies", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

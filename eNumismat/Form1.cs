@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
@@ -22,11 +23,10 @@ namespace eNumismat
         FolderBrowserDialog folderBrowser;
         AddressBook adrBook;
         SwapMonitor swapList;
-        DocBrowser docBrowser;
 
         public string[] args = Environment.GetCommandLineArgs();
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         public Form1()
         {
             InitializeComponent();
@@ -68,28 +68,28 @@ namespace eNumismat
                 // if Config Exist: Read Conf.File
                 cfgHandler.ReadXmlConf();
             }
-        }  
+        }
 
         // Default Event Functions Load, Show, Close
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void Form1_Load(object sender, EventArgs e)
         {
             
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void Form1_Show(object sender, EventArgs e)
         {
 
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void Form1_Close(object sender, FormClosingEventArgs e)
         {
 
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void EinstellungenBearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Show Settings Dialog
@@ -97,7 +97,7 @@ namespace eNumismat
             settings.ShowDialog();
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void NeueDatenbankToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFile = new SaveFileDialog();
@@ -118,7 +118,7 @@ namespace eNumismat
             { }
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void datenbankÖffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFile = new OpenFileDialog();
@@ -134,24 +134,33 @@ namespace eNumismat
             }
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void AdressbuchToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             adrBook = new AddressBook();
             adrBook.Show();
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void TauschmonitorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             swapList = new SwapMonitor();
             swapList.Show();
         }
 
+        //=====================================================================================================================================================================
         private void unicodeTabelleFürWährungssymboleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            docBrowser = new DocBrowser();
-            docBrowser.Show();
+            byte[] PDF = Properties.Resources.Unicode_Currencies;
+
+            MemoryStream ms = new MemoryStream(PDF);
+            FileStream f = new FileStream("unicodecurrencies.pdf", FileMode.OpenOrCreate);
+
+            ms.WriteTo(f);
+            f.Close();
+            ms.Close();
+
+            Process.Start("unicodecurrencies.pdf");
         }
     }
 }

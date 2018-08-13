@@ -6,9 +6,11 @@ namespace eNumismat
     class Globals
     {
         //  The default Path for Application Data (cfg, logs, etc.pp)
+        //=====================================================================================================================================================================
         public static string AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\" + Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace;
 
         // Get the DB File we want to work during the whole Runtime...
+        //=====================================================================================================================================================================
         public static string DBFile { get; set; }
 
         /// <summary>
@@ -26,8 +28,10 @@ namespace eNumismat
             /// ERROR
             /// A condition that indicates something has gone wrong with the system
         /// </summary>
+        //=====================================================================================================================================================================
         public static string LogLevel { get; set; }
 
+        //=====================================================================================================================================================================
         public static string AddressBookFormMode { get; set; }
     }
 }
