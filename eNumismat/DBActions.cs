@@ -17,7 +17,7 @@ namespace eNumismat
                 {
                     dbConnection.Open();
 
-                    string _sqlStatement = Properties.Resources.CreateTables.ToString();
+                    string _sqlStatement = Properties.Resources.SQL.ToString();
 
                     using (SQLiteCommand command = new SQLiteCommand(_sqlStatement, dbConnection))
                     {

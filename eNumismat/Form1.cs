@@ -74,7 +74,24 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            EnableOrDisableMenueItems();
+        }
+
+        //=====================================================================================================================================================================
+        private void EnableOrDisableMenueItems()
+        {
+            if (String.IsNullOrEmpty(Globals.DBFile))
+            {
+                ExtrasToolStripMenuItem.Enabled = false;
+                AdressbuchToolStripMenuItem.Enabled = false;
+                TauschmonitorToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                ExtrasToolStripMenuItem.Enabled = true;
+                AdressbuchToolStripMenuItem.Enabled = true;
+                TauschmonitorToolStripMenuItem.Enabled = true;
+            }
         }
 
         //=====================================================================================================================================================================
@@ -110,6 +127,7 @@ namespace eNumismat
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
                 Globals.DBFile = saveFile.FileName;
+                EnableOrDisableMenueItems();
 
                 dbAction = new DBActions();
                 dbAction.CreateNew();
@@ -119,7 +137,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void datenbankÖffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DatenbankOeffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFile = new OpenFileDialog();
             openFile.DefaultExt = "*.enc"; // enc = eNumismatCollection
@@ -131,11 +149,12 @@ namespace eNumismat
             if (openFile.ShowDialog() == DialogResult.OK)
             {
                 Globals.DBFile = openFile.FileName;
+                EnableOrDisableMenueItems();
             }
         }
 
         //=====================================================================================================================================================================
-        private void AdressbuchToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void AdressbuchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             adrBook = new AddressBook();
             adrBook.Show();
@@ -149,7 +168,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void unicodeTabelleFürWährungssymboleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UnicodeTabelleFuerWaehrungssymboleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             byte[] PDF = Properties.Resources.Unicode_Currencies;
 
@@ -161,6 +180,12 @@ namespace eNumismat
             ms.Close();
 
             Process.Start("unicodecurrencies.pdf");
+        }
+
+        //=====================================================================================================================================================================
+        private void BeendenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
