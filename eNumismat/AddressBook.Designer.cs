@@ -49,9 +49,9 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Btn_EditContact = new System.Windows.Forms.Button();
+            this.Btn_CreateContact = new System.Windows.Forms.Button();
+            this.Btn_DeleteContact = new System.Windows.Forms.Button();
             this.PanelEditContactDetails = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -80,9 +80,9 @@
             this.PanelShowContactDetails = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label_name = new System.Windows.Forms.Label();
             this.label_surename = new System.Windows.Forms.Label();
+            this.label_name = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -256,43 +256,46 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.Btn_EditContact);
+            this.panel1.Controls.Add(this.Btn_CreateContact);
+            this.panel1.Controls.Add(this.Btn_DeleteContact);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 477);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(216, 38);
             this.panel1.TabIndex = 1;
             // 
-            // button4
+            // Btn_EditContact
             // 
-            this.button4.Enabled = false;
-            this.button4.Image = global::eNumismat.Properties.Resources.user_edit;
-            this.button4.Location = new System.Drawing.Point(75, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 30);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
+            this.Btn_EditContact.Enabled = false;
+            this.Btn_EditContact.Image = global::eNumismat.Properties.Resources.user_edit;
+            this.Btn_EditContact.Location = new System.Drawing.Point(75, 3);
+            this.Btn_EditContact.Name = "Btn_EditContact";
+            this.Btn_EditContact.Size = new System.Drawing.Size(30, 30);
+            this.Btn_EditContact.TabIndex = 3;
+            this.Btn_EditContact.UseVisualStyleBackColor = true;
+            this.Btn_EditContact.Click += new System.EventHandler(this.Btn_EditContact_Click);
             // 
-            // button3
+            // Btn_CreateContact
             // 
-            this.button3.Image = global::eNumismat.Properties.Resources.user_add;
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 30);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            this.Btn_CreateContact.Image = global::eNumismat.Properties.Resources.user_add;
+            this.Btn_CreateContact.Location = new System.Drawing.Point(3, 3);
+            this.Btn_CreateContact.Name = "Btn_CreateContact";
+            this.Btn_CreateContact.Size = new System.Drawing.Size(30, 30);
+            this.Btn_CreateContact.TabIndex = 2;
+            this.Btn_CreateContact.UseVisualStyleBackColor = true;
+            this.Btn_CreateContact.Click += new System.EventHandler(this.Btn_CreateContact_Click);
             // 
-            // button2
+            // Btn_DeleteContact
             // 
-            this.button2.Enabled = false;
-            this.button2.Image = global::eNumismat.Properties.Resources.user_delete;
-            this.button2.Location = new System.Drawing.Point(39, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 30);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Btn_DeleteContact.Enabled = false;
+            this.Btn_DeleteContact.Image = global::eNumismat.Properties.Resources.user_delete;
+            this.Btn_DeleteContact.Location = new System.Drawing.Point(39, 3);
+            this.Btn_DeleteContact.Name = "Btn_DeleteContact";
+            this.Btn_DeleteContact.Size = new System.Drawing.Size(30, 30);
+            this.Btn_DeleteContact.TabIndex = 1;
+            this.Btn_DeleteContact.UseVisualStyleBackColor = true;
+            this.Btn_DeleteContact.Click += new System.EventHandler(this.Btn_DeleteContact_Click);
             // 
             // PanelEditContactDetails
             // 
@@ -557,15 +560,15 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // label_surename
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(454, 490);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.label_surename.AutoSize = true;
+            this.label_surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_surename.Location = new System.Drawing.Point(6, 19);
+            this.label_surename.Name = "label_surename";
+            this.label_surename.Size = new System.Drawing.Size(59, 16);
+            this.label_surename.TabIndex = 1;
+            this.label_surename.Text = "label13";
             // 
             // label_name
             // 
@@ -577,15 +580,15 @@
             this.label_name.TabIndex = 0;
             this.label_name.Text = "label12";
             // 
-            // label_surename
+            // tabPage2
             // 
-            this.label_surename.AutoSize = true;
-            this.label_surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_surename.Location = new System.Drawing.Point(6, 19);
-            this.label_surename.Name = "label_surename";
-            this.label_surename.Size = new System.Drawing.Size(59, 16);
-            this.label_surename.TabIndex = 1;
-            this.label_surename.Text = "label13";
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(454, 490);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // AddressBook
             // 
@@ -642,9 +645,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Btn_EditContact;
+        private System.Windows.Forms.Button Btn_CreateContact;
+        private System.Windows.Forms.Button Btn_DeleteContact;
         private System.Windows.Forms.Panel PanelShowContactDetails;
         private System.Windows.Forms.Panel PanelEditContactDetails;
         private System.Windows.Forms.TextBox textBox6;

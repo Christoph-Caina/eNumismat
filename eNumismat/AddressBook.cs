@@ -21,26 +21,12 @@ namespace eNumismat
         private void AddressBook_Load(object sender, EventArgs e)
         {
             GetContactsCount();
-
-            if (Globals.AddressBookFormMode == "create")
-            {
-                splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
-                splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
-                PanelEditContactDetails.Dock = DockStyle.Fill;
-            }
-
-            else if (Globals.AddressBookFormMode == "show")
-            {
-                splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
-                splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
-                PanelShowContactDetails.Dock = DockStyle.Fill;
-            }
         }
 
         //=====================================================================================================================================================================
         private void AddressBook_Show(object sender, EventArgs e)
         {
-            
+            DrawForm();
         }
 
         //=====================================================================================================================================================================
@@ -55,27 +41,71 @@ namespace eNumismat
             if (ContactCounter == 0)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
-                Globals.AddressBookFormMode = "create";
-                //BuildFrm("edit");
+
+                if (String.IsNullOrEmpty(Globals.AddressBookFormMode))
+                {
+                    Globals.AddressBookFormMode = "create";
+                }
             }
             else if (ContactCounter == 1)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakt vorhanden";
                 LoadTreeViewParents();
-                Globals.AddressBookFormMode = "show";
-                GetContact();
+
+                if (String.IsNullOrEmpty(Globals.AddressBookFormMode))
+                {
+                    Globals.AddressBookFormMode = "show";
+                }
+
+                //GetContact();
                 //BuildFrm("view");
             }
             else
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
                 LoadTreeViewParents();
-                Globals.AddressBookFormMode = "show";
-                GetContact();
+
+                if (String.IsNullOrEmpty(Globals.AddressBookFormMode))
+                {
+                    Globals.AddressBookFormMode = "show";
+                }
+
+                //GetContact();
                 //BuildFrm("view");
             }
 
-            
+            DrawForm();
+
+            //MessageBox.Show(Globals.AddressBookFormMode);
+        }
+
+        //=====================================================================================================================================================================
+        private void DrawForm()
+        {
+            if (Globals.AddressBookFormMode == "create")
+            {
+                splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
+                splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
+                PanelEditContactDetails.Dock = DockStyle.Fill;
+            }
+
+            else if (Globals.AddressBookFormMode == "update")
+            {
+                splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
+                splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
+                PanelEditContactDetails.Dock = DockStyle.Fill;
+
+                GetContact();
+            }
+
+            else if (Globals.AddressBookFormMode == "show")
+            {
+                splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
+                splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
+                PanelShowContactDetails.Dock = DockStyle.Fill;
+
+                GetContact();
+            }
         }
 
         //=====================================================================================================================================================================
@@ -142,9 +172,9 @@ namespace eNumismat
         {
             string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
             //MessageBox.Show(names[0] + "::" + names[1]);
-            //btn_contact_delete.Enabled = true;
             //löschenToolStripMenuItem.Enabled = true;
-            //btn_contact_edit.Enabled = true;
+            Btn_DeleteContact.Enabled = true;
+            Btn_EditContact.Enabled = true;
             //bearbeitenToolStripMenuItem.Enabled = true;
             GetContact(names);
         }
@@ -152,11 +182,39 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void GetContact(string[] contact = null)
         {
-            foreach (DataRow drContactDetails in dbAction.GetContacts("details", null, contact).Rows)
+            if (Globals.AddressBookFormMode == "show")
             {
-                label_name.Text = drContactDetails[1].ToString();
-                label_surename.Text = drContactDetails[2].ToString();
+                foreach (DataRow drContactDetails in dbAction.GetContacts("details", null, contact).Rows)
+                {
+                    label_name.Text = drContactDetails[1].ToString();
+                    label_surename.Text = drContactDetails[2].ToString();
+                }
             }
+
+            else if (Globals.AddressBookFormMode == "update")
+            {
+                foreach (DataRow drContactDetails in dbAction.GetContacts("details", null, contact).Rows)
+                {
+                    // FILL TEXTBOX WITH VALUES...
+                    SetContact();
+                }
+            }
+        }
+
+        //=====================================================================================================================================================================
+        private void SetContact()
+        {
+            if (Globals.AddressBookFormMode == "create")
+            {
+                // SET BUTTON SAVE = INSERT INTO
+            }
+
+            else if (Globals.AddressBookFormMode == "update")
+            {
+                // SET BUTTON SAVE = UPDATE
+            }
+
+            Globals.AddressBookFormMode = "show";
         }
 
         // Outlook-Test
@@ -182,6 +240,23 @@ namespace eNumismat
             // ggf. "outlook" als art AddIn bereitstellen?
         }
 
+        //=============================================================================================================
+        private void Btn_CreateContact_Click(object sender, EventArgs e)
+        {
+            Globals.AddressBookFormMode = "create";
+            GetContactsCount();
+        }
 
+        //=============================================================================================================
+        private void Btn_DeleteContact_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //=============================================================================================================
+        private void Btn_EditContact_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
