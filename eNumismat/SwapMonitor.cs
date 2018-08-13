@@ -25,10 +25,6 @@ namespace eNumismat
         private void SwapMonitor_Load(object sender, EventArgs e)
         {
             GetSwapCount();
-            // Get all Swaps from SwapList...
-            // TreeView:
-                // Show: Contact
-                    // Swap #
         }
 
         //=====================================================================================================================================================================
@@ -43,19 +39,16 @@ namespace eNumismat
             if (SwapCounter == 0)
             {
                 toolStripStatusLabel1.Text = SwapCounter.ToString() + " Swaps vorhanden";
-                //BuildFrm("edit");
             }
             else if (SwapCounter == 1)
             {
                 toolStripStatusLabel1.Text = SwapCounter.ToString() + " Swap vorhanden";
                 LoadTreeViewParents();
-                //BuildFrm("view");
             }
             else
             {
                 toolStripStatusLabel1.Text = SwapCounter.ToString() + " Swaps vorhanden";
                 LoadTreeViewParents();
-                //BuildFrm("view");
             }
         }
 
@@ -67,13 +60,10 @@ namespace eNumismat
             int i = 0;
             foreach (DataRow drParents in dbAction.GetSwapListDetails("parents").Rows)
             {
-                //MessageBox.Show(drParents[i].ToString());
-
-                //i++;
                 parents = treeView1.Nodes.Add(drParents[0].ToString() + ", " + drParents[1]);
                 LoadTreeViewChilds(parents);
 
-                //_unselectableNodes.Add(parents);
+                _unselectableNodes.Add(parents);
             }
             treeView1.ExpandAll();
         }
@@ -82,11 +72,8 @@ namespace eNumismat
         private void LoadTreeViewChilds(TreeNode parentNode)
         {
             TreeNode childs;
-
-            //MessageBox.Show(parentNode.ToString());
-
+           
             string[] names = Regex.Split(parentNode.ToString().Remove(0, 10), ", ");
-            //string[] Nodes = parentNode.ToString().Split(' ');
 
             int i = 0;
             foreach (DataRow drChilds in dbAction.GetSwapListDetails("childs", names).Rows)
@@ -99,6 +86,24 @@ namespace eNumismat
 
             childs = parentNode.Nodes.Add(ChildNode);
             }
+        }
+
+        //=====================================================================================================================================================================
+        private List<TreeNode> _unselectableNodes = new List<TreeNode>();
+
+        //=====================================================================================================================================================================
+        private void TreeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            if (_unselectableNodes.Contains(e.Node))
+            {
+                e.Cancel = true;
+            }
+        }
+
+        //=====================================================================================================================================================================
+        private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
     }
 }
