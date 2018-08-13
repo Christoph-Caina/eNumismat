@@ -49,40 +49,41 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Btn_EditContact = new System.Windows.Forms.Button();
+            this.Btn_UpdateContact = new System.Windows.Forms.Button();
             this.Btn_CreateContact = new System.Windows.Forms.Button();
             this.Btn_DeleteContact = new System.Windows.Forms.Button();
             this.PanelEditContactDetails = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Cancel = new System.Windows.Forms.Button();
+            this.Btn_Save = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtb_notes = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tb_mail = new System.Windows.Forms.TextBox();
+            this.tb_mobile = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_birthdate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_gender = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_phone = new System.Windows.Forms.TextBox();
+            this.tb_country = new System.Windows.Forms.TextBox();
+            this.tb_city = new System.Windows.Forms.TextBox();
+            this.tb_street = new System.Windows.Forms.TextBox();
+            this.tb_surename = new System.Windows.Forms.TextBox();
+            this.tb_name = new System.Windows.Forms.TextBox();
             this.PanelShowContactDetails = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label_surename = new System.Windows.Forms.Label();
             this.label_name = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label_ID = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -256,7 +257,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.Btn_EditContact);
+            this.panel1.Controls.Add(this.Btn_UpdateContact);
             this.panel1.Controls.Add(this.Btn_CreateContact);
             this.panel1.Controls.Add(this.Btn_DeleteContact);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -265,16 +266,16 @@
             this.panel1.Size = new System.Drawing.Size(216, 38);
             this.panel1.TabIndex = 1;
             // 
-            // Btn_EditContact
+            // Btn_UpdateContact
             // 
-            this.Btn_EditContact.Enabled = false;
-            this.Btn_EditContact.Image = global::eNumismat.Properties.Resources.user_edit;
-            this.Btn_EditContact.Location = new System.Drawing.Point(75, 3);
-            this.Btn_EditContact.Name = "Btn_EditContact";
-            this.Btn_EditContact.Size = new System.Drawing.Size(30, 30);
-            this.Btn_EditContact.TabIndex = 3;
-            this.Btn_EditContact.UseVisualStyleBackColor = true;
-            this.Btn_EditContact.Click += new System.EventHandler(this.Btn_EditContact_Click);
+            this.Btn_UpdateContact.Enabled = false;
+            this.Btn_UpdateContact.Image = global::eNumismat.Properties.Resources.user_edit;
+            this.Btn_UpdateContact.Location = new System.Drawing.Point(75, 3);
+            this.Btn_UpdateContact.Name = "Btn_UpdateContact";
+            this.Btn_UpdateContact.Size = new System.Drawing.Size(30, 30);
+            this.Btn_UpdateContact.TabIndex = 3;
+            this.Btn_UpdateContact.UseVisualStyleBackColor = true;
+            this.Btn_UpdateContact.Click += new System.EventHandler(this.Btn_EditContact_Click);
             // 
             // Btn_CreateContact
             // 
@@ -299,52 +300,54 @@
             // 
             // PanelEditContactDetails
             // 
-            this.PanelEditContactDetails.Controls.Add(this.button5);
-            this.PanelEditContactDetails.Controls.Add(this.button1);
+            this.PanelEditContactDetails.Controls.Add(this.Btn_Cancel);
+            this.PanelEditContactDetails.Controls.Add(this.Btn_Save);
             this.PanelEditContactDetails.Controls.Add(this.label11);
-            this.PanelEditContactDetails.Controls.Add(this.richTextBox1);
+            this.PanelEditContactDetails.Controls.Add(this.rtb_notes);
             this.PanelEditContactDetails.Controls.Add(this.label10);
             this.PanelEditContactDetails.Controls.Add(this.label9);
             this.PanelEditContactDetails.Controls.Add(this.label8);
-            this.PanelEditContactDetails.Controls.Add(this.textBox8);
-            this.PanelEditContactDetails.Controls.Add(this.textBox7);
+            this.PanelEditContactDetails.Controls.Add(this.tb_mail);
+            this.PanelEditContactDetails.Controls.Add(this.tb_mobile);
             this.PanelEditContactDetails.Controls.Add(this.label7);
             this.PanelEditContactDetails.Controls.Add(this.label6);
             this.PanelEditContactDetails.Controls.Add(this.label5);
             this.PanelEditContactDetails.Controls.Add(this.label4);
-            this.PanelEditContactDetails.Controls.Add(this.dateTimePicker1);
+            this.PanelEditContactDetails.Controls.Add(this.dtp_birthdate);
             this.PanelEditContactDetails.Controls.Add(this.label3);
-            this.PanelEditContactDetails.Controls.Add(this.comboBox1);
+            this.PanelEditContactDetails.Controls.Add(this.cb_gender);
             this.PanelEditContactDetails.Controls.Add(this.label2);
             this.PanelEditContactDetails.Controls.Add(this.label1);
-            this.PanelEditContactDetails.Controls.Add(this.textBox6);
-            this.PanelEditContactDetails.Controls.Add(this.textBox5);
-            this.PanelEditContactDetails.Controls.Add(this.textBox4);
-            this.PanelEditContactDetails.Controls.Add(this.textBox3);
-            this.PanelEditContactDetails.Controls.Add(this.textBox2);
-            this.PanelEditContactDetails.Controls.Add(this.textBox1);
+            this.PanelEditContactDetails.Controls.Add(this.tb_phone);
+            this.PanelEditContactDetails.Controls.Add(this.tb_country);
+            this.PanelEditContactDetails.Controls.Add(this.tb_city);
+            this.PanelEditContactDetails.Controls.Add(this.tb_street);
+            this.PanelEditContactDetails.Controls.Add(this.tb_surename);
+            this.PanelEditContactDetails.Controls.Add(this.tb_name);
             this.PanelEditContactDetails.Location = new System.Drawing.Point(922, 0);
             this.PanelEditContactDetails.Name = "PanelEditContactDetails";
             this.PanelEditContactDetails.Size = new System.Drawing.Size(446, 516);
             this.PanelEditContactDetails.TabIndex = 1;
             // 
-            // button5
+            // Btn_Cancel
             // 
-            this.button5.Image = global::eNumismat.Properties.Resources.cancel;
-            this.button5.Location = new System.Drawing.Point(267, 467);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(32, 32);
-            this.button5.TabIndex = 11;
-            this.button5.UseVisualStyleBackColor = true;
+            this.Btn_Cancel.Image = global::eNumismat.Properties.Resources.cancel;
+            this.Btn_Cancel.Location = new System.Drawing.Point(267, 467);
+            this.Btn_Cancel.Name = "Btn_Cancel";
+            this.Btn_Cancel.Size = new System.Drawing.Size(32, 32);
+            this.Btn_Cancel.TabIndex = 11;
+            this.Btn_Cancel.UseVisualStyleBackColor = true;
+            this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
-            // button1
+            // Btn_Save
             // 
-            this.button1.Image = global::eNumismat.Properties.Resources.accept;
-            this.button1.Location = new System.Drawing.Point(305, 467);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 32);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_Save.Image = global::eNumismat.Properties.Resources.accept;
+            this.Btn_Save.Location = new System.Drawing.Point(305, 467);
+            this.Btn_Save.Name = "Btn_Save";
+            this.Btn_Save.Size = new System.Drawing.Size(32, 32);
+            this.Btn_Save.TabIndex = 12;
+            this.Btn_Save.UseVisualStyleBackColor = true;
+            this.Btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
             // label11
             // 
@@ -355,13 +358,13 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "Notizen:";
             // 
-            // richTextBox1
+            // rtb_notes
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(153, 335);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(184, 126);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "";
+            this.rtb_notes.Location = new System.Drawing.Point(153, 335);
+            this.rtb_notes.Name = "rtb_notes";
+            this.rtb_notes.Size = new System.Drawing.Size(184, 126);
+            this.rtb_notes.TabIndex = 10;
+            this.rtb_notes.Text = "";
             // 
             // label10
             // 
@@ -390,19 +393,19 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Telefon:";
             // 
-            // textBox8
+            // tb_mail
             // 
-            this.textBox8.Location = new System.Drawing.Point(153, 294);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(184, 20);
-            this.textBox8.TabIndex = 9;
+            this.tb_mail.Location = new System.Drawing.Point(153, 294);
+            this.tb_mail.Name = "tb_mail";
+            this.tb_mail.Size = new System.Drawing.Size(184, 20);
+            this.tb_mail.TabIndex = 9;
             // 
-            // textBox7
+            // tb_mobile
             // 
-            this.textBox7.Location = new System.Drawing.Point(153, 268);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(184, 20);
-            this.textBox7.TabIndex = 8;
+            this.tb_mobile.Location = new System.Drawing.Point(153, 268);
+            this.tb_mobile.Name = "tb_mobile";
+            this.tb_mobile.Size = new System.Drawing.Size(184, 20);
+            this.tb_mobile.TabIndex = 8;
             // 
             // label7
             // 
@@ -440,14 +443,14 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Geburtsdatum:";
             // 
-            // dateTimePicker1
+            // dtp_birthdate
             // 
-            this.dateTimePicker1.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(153, 99);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(91, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtp_birthdate.CustomFormat = "dd.MM.yyyy";
+            this.dtp_birthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_birthdate.Location = new System.Drawing.Point(153, 99);
+            this.dtp_birthdate.Name = "dtp_birthdate";
+            this.dtp_birthdate.Size = new System.Drawing.Size(91, 20);
+            this.dtp_birthdate.TabIndex = 3;
             // 
             // label3
             // 
@@ -458,16 +461,16 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Geschlecht:";
             // 
-            // comboBox1
+            // cb_gender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_gender.FormattingEnabled = true;
+            this.cb_gender.Items.AddRange(new object[] {
             "male",
             "female"});
-            this.comboBox1.Location = new System.Drawing.Point(153, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cb_gender.Location = new System.Drawing.Point(153, 72);
+            this.cb_gender.Name = "cb_gender";
+            this.cb_gender.Size = new System.Drawing.Size(91, 21);
+            this.cb_gender.TabIndex = 2;
             // 
             // label2
             // 
@@ -487,47 +490,47 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Name:";
             // 
-            // textBox6
+            // tb_phone
             // 
-            this.textBox6.Location = new System.Drawing.Point(153, 242);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(184, 20);
-            this.textBox6.TabIndex = 7;
+            this.tb_phone.Location = new System.Drawing.Point(153, 242);
+            this.tb_phone.Name = "tb_phone";
+            this.tb_phone.Size = new System.Drawing.Size(184, 20);
+            this.tb_phone.TabIndex = 7;
             // 
-            // textBox5
+            // tb_country
             // 
-            this.textBox5.Location = new System.Drawing.Point(153, 195);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(184, 20);
-            this.textBox5.TabIndex = 6;
+            this.tb_country.Location = new System.Drawing.Point(153, 195);
+            this.tb_country.Name = "tb_country";
+            this.tb_country.Size = new System.Drawing.Size(184, 20);
+            this.tb_country.TabIndex = 6;
             // 
-            // textBox4
+            // tb_city
             // 
-            this.textBox4.Location = new System.Drawing.Point(153, 169);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(184, 20);
-            this.textBox4.TabIndex = 5;
+            this.tb_city.Location = new System.Drawing.Point(153, 169);
+            this.tb_city.Name = "tb_city";
+            this.tb_city.Size = new System.Drawing.Size(184, 20);
+            this.tb_city.TabIndex = 5;
             // 
-            // textBox3
+            // tb_street
             // 
-            this.textBox3.Location = new System.Drawing.Point(153, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 20);
-            this.textBox3.TabIndex = 4;
+            this.tb_street.Location = new System.Drawing.Point(153, 143);
+            this.tb_street.Name = "tb_street";
+            this.tb_street.Size = new System.Drawing.Size(184, 20);
+            this.tb_street.TabIndex = 4;
             // 
-            // textBox2
+            // tb_surename
             // 
-            this.textBox2.Location = new System.Drawing.Point(153, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 20);
-            this.textBox2.TabIndex = 1;
+            this.tb_surename.Location = new System.Drawing.Point(153, 29);
+            this.tb_surename.Name = "tb_surename";
+            this.tb_surename.Size = new System.Drawing.Size(184, 20);
+            this.tb_surename.TabIndex = 1;
             // 
-            // textBox1
+            // tb_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 20);
-            this.textBox1.TabIndex = 0;
+            this.tb_name.Location = new System.Drawing.Point(153, 3);
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(184, 20);
+            this.tb_name.TabIndex = 0;
             // 
             // PanelShowContactDetails
             // 
@@ -550,6 +553,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label_ID);
             this.tabPage1.Controls.Add(this.label_surename);
             this.tabPage1.Controls.Add(this.label_name);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -566,9 +570,8 @@
             this.label_surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_surename.Location = new System.Drawing.Point(6, 19);
             this.label_surename.Name = "label_surename";
-            this.label_surename.Size = new System.Drawing.Size(59, 16);
+            this.label_surename.Size = new System.Drawing.Size(0, 16);
             this.label_surename.TabIndex = 1;
-            this.label_surename.Text = "label13";
             // 
             // label_name
             // 
@@ -576,9 +579,8 @@
             this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_name.Location = new System.Drawing.Point(6, 3);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(59, 16);
+            this.label_name.Size = new System.Drawing.Size(0, 16);
             this.label_name.TabIndex = 0;
-            this.label_name.Text = "label12";
             // 
             // tabPage2
             // 
@@ -589,6 +591,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label_ID
+            // 
+            this.label_ID.AutoSize = true;
+            this.label_ID.Location = new System.Drawing.Point(399, 10);
+            this.label_ID.Name = "label_ID";
+            this.label_ID.Size = new System.Drawing.Size(0, 13);
+            this.label_ID.TabIndex = 2;
+            this.label_ID.Visible = false;
             // 
             // AddressBook
             // 
@@ -601,6 +612,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AddressBook";
             this.Text = "AddressBook";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddressBook_FormClosed);
             this.Load += new System.EventHandler(this.AddressBook_Load);
             this.Shown += new System.EventHandler(this.AddressBook_Show);
             this.statusStrip1.ResumeLayout(false);
@@ -645,39 +657,40 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button Btn_EditContact;
+        private System.Windows.Forms.Button Btn_UpdateContact;
         private System.Windows.Forms.Button Btn_CreateContact;
         private System.Windows.Forms.Button Btn_DeleteContact;
         private System.Windows.Forms.Panel PanelShowContactDetails;
         private System.Windows.Forms.Panel PanelEditContactDetails;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_phone;
+        private System.Windows.Forms.TextBox tb_country;
+        private System.Windows.Forms.TextBox tb_city;
+        private System.Windows.Forms.TextBox tb_street;
+        private System.Windows.Forms.TextBox tb_surename;
+        private System.Windows.Forms.TextBox tb_name;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_birthdate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_gender;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtb_notes;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tb_mail;
+        private System.Windows.Forms.TextBox tb_mobile;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Btn_Save;
+        private System.Windows.Forms.Button Btn_Cancel;
         private System.Windows.Forms.Label label_surename;
         private System.Windows.Forms.Label label_name;
+        private System.Windows.Forms.Label label_ID;
     }
 }
