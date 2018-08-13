@@ -9,14 +9,9 @@ namespace eNumismat
 {
     public partial class AddressBook : Form
     {
+        private List<TreeNode> _unselectableNodes = new List<TreeNode>();
 
-        // NEEDS TO BE REWRITTEN!
-
-        DBActions dbAction;
-
-        public int ContactID = 0;
-        public string[] ContactNames = null;
-        public string WindowMode = null;
+        DBActions dbAction = new DBActions();
 
         //=====================================================================================================================================================================
         public AddressBook()
@@ -28,98 +23,33 @@ namespace eNumismat
         private void AddressBook_Load(object sender, EventArgs e)
         {
             GetContactsCount();
-        }
-
-        //=====================================================================================================================================================================
-        private void AddressBook_Show(object sender, EventArgs e)
-        {
-            GetContactsCount();
+            LoadTreeViewParents();
         }
 
         //=====================================================================================================================================================================
         private void GetContactsCount()
         {
-            dbAction = new DBActions();
+            treeView1.Nodes.Clear();
 
             int ContactCounter = dbAction.ContactsCount();
 
-            DrawForm(ContactCounter);
-        }
-
-        //=====================================================================================================================================================================
-        private void DrawForm(int ContactsCount)
-        {
-            if (ContactsCount == 0)
+            if (ContactCounter == 0)
             {
-                toolStripStatusLabel1.Text = ContactsCount.ToString() + " Kontakte vorhanden";
-                WindowMode = "create";
-
-                Btn_Cancel.Enabled = false;
+                toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
             }
-
-            else if (ContactsCount == 1)
+            else if (ContactCounter == 1)
             {
-                toolStripStatusLabel1.Text = ContactsCount.ToString() + " Kontakt vorhanden";
-                WindowMode = "show";
-
-                Btn_Cancel.Enabled = true;
+                toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakt vorhanden";
             }
-
             else
             {
-                toolStripStatusLabel1.Text = ContactsCount.ToString() + " Kontakte vorhanden";
-                WindowMode = "show";
-
-                Btn_Cancel.Enabled = true;
+                toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
             }
-
-            if (WindowMode == "show")
-            {
-                splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
-                splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
-
-                PanelShowContactDetails.Dock = DockStyle.Fill;
-
-                treeView1.Enabled = true;
-                Btn_CreateContact.Enabled = true;
-
-                LoadTreeViewParents();
-            }
-
-            else if (WindowMode == "update")
-            {
-                splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
-                splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
-
-                PanelEditContactDetails.Dock = DockStyle.Fill;
-
-                treeView1.Enabled = false;
-                Btn_CreateContact.Enabled = false;
-                Btn_UpdateContact.Enabled = false;
-
-                LoadTreeViewParents();
-            }
-
-            else if (WindowMode == "create")
-            {
-                splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
-                splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
-
-                PanelEditContactDetails.Dock = DockStyle.Fill;
-
-                treeView1.Enabled = false;
-                Btn_CreateContact.Enabled = false;
-                Btn_UpdateContact.Enabled = false;
-            }
-
-            GetContact();
         }
 
         //=====================================================================================================================================================================
         private void LoadTreeViewParents()
         {
-            treeView1.Nodes.Clear();
-
             TreeNode parents = null;
 
             foreach (DataRow drParents in dbAction.GetContacts("parents").Rows)
@@ -165,9 +95,6 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private List<TreeNode> _unselectableNodes = new List<TreeNode>();
-
-        //=====================================================================================================================================================================
         private void TreeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)
         {
             if (_unselectableNodes.Contains(e.Node))
@@ -179,96 +106,14 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            ContactNames = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
-
-            Btn_DeleteContact.Enabled = true;
-            Btn_UpdateContact.Enabled = true;
-
-            GetContact(ContactNames);
+            string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
         }
 
+
+        //
         //=====================================================================================================================================================================
-        private void GetContact(string[] contact = null)
-        {
-            
-        }
-
         //=====================================================================================================================================================================
-        private void SetContact()
-        {
-            List<string> ContactDetails = new List<string>();
-
-            ContactDetails.Add(tb_name.Text);
-            ContactDetails.Add(tb_surename.Text);
-            ContactDetails.Add(cb_gender.Text);
-            ContactDetails.Add(dtp_birthdate.Text);
-            ContactDetails.Add(tb_street.Text);
-            ContactDetails.Add(tb_zipcode.Text);
-            ContactDetails.Add(tb_city.Text);
-            ContactDetails.Add(tb_country.Text);
-            ContactDetails.Add(tb_phone.Text);
-            ContactDetails.Add(tb_mobile.Text);
-            ContactDetails.Add(tb_mail.Text);
-            ContactDetails.Add(rtb_notes.Text);
-
-            if (WindowMode == "create")
-            {
-
-                //MessageBox.Show("INSERT INTO");
-                if (dbAction.CreateOrUpdateContact(ContactDetails))
-                {
-                    GetContactsCount();
-                }
-            }
-
-            else if (WindowMode == "update")
-            {
-                //MessageBox.Show("UPDATE");
-                if (dbAction.CreateOrUpdateContact(ContactDetails, ContactID))
-                {
-                    GetContactsCount();
-                }
-            }
-            WindowsMode = "show";
-        }
-
-        //=====================================================================================================================================================================
-        private void Btn_CreateContact_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //=====================================================================================================================================================================
-        private void Btn_DeleteContact_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        //=====================================================================================================================================================================
-        private void Btn_EditContact_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        //=====================================================================================================================================================================
-        private void Btn_Cancel_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        //=====================================================================================================================================================================
-        private void Btn_Save_Click(object sender, EventArgs e)
-        {
-            SetContact();
-        }
-
-        //=====================================================================================================================================================================
-        private void AddressBook_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            WindowMode = null;
-        }
-
-
+        //
 
         // Outlook-Test
         //=====================================================================================================================================================================

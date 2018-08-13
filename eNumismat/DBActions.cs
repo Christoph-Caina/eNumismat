@@ -82,7 +82,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        public DataTable GetContacts(string content, string FirstLetter = null, string[] contactname = null)
+        public DataTable GetContacts(string content, string FirstLetter = null, string[] contactname = null, int contactId = 0)
         {
             DataTable Contacts = new DataTable();
 
@@ -102,15 +102,20 @@ namespace eNumismat
                     SQL =
                         "SELECT name, surename, gender FROM contacts WHERE name LIKE '" + FirstLetter + "%' ORDER BY surename ASC";
                 }
+                else if (content == "details" && contactname == null && contactId == 0)
+                {
+                    SQL =
+                        "SELECT * FROM contacts ORDER BY name, surename LIMIT 1";
+                }
                 else if (content == "details" && contactname != null)
                 {
                     SQL =
                         "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' LIMIT 1";
                 }
-                else if (content == "details" && contactname == null)
+                else if (content == "details" && contactId != 0)
                 {
                     SQL =
-                        "SELECT * FROM contacts ORDER BY name, surename LIMIT 1";
+                        "SELECT * FROM contacts WHERE id '" + contactId + "'";
                 }
 
                 using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(SQL, dbConnection))

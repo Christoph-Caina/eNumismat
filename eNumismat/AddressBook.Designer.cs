@@ -277,7 +277,6 @@
             this.Btn_UpdateContact.Size = new System.Drawing.Size(30, 30);
             this.Btn_UpdateContact.TabIndex = 3;
             this.Btn_UpdateContact.UseVisualStyleBackColor = true;
-            this.Btn_UpdateContact.Click += new System.EventHandler(this.Btn_EditContact_Click);
             // 
             // Btn_CreateContact
             // 
@@ -287,7 +286,6 @@
             this.Btn_CreateContact.Size = new System.Drawing.Size(30, 30);
             this.Btn_CreateContact.TabIndex = 2;
             this.Btn_CreateContact.UseVisualStyleBackColor = true;
-            this.Btn_CreateContact.Click += new System.EventHandler(this.Btn_CreateContact_Click);
             // 
             // Btn_DeleteContact
             // 
@@ -298,7 +296,6 @@
             this.Btn_DeleteContact.Size = new System.Drawing.Size(30, 30);
             this.Btn_DeleteContact.TabIndex = 1;
             this.Btn_DeleteContact.UseVisualStyleBackColor = true;
-            this.Btn_DeleteContact.Click += new System.EventHandler(this.Btn_DeleteContact_Click);
             // 
             // PanelEditContactDetails
             // 
@@ -341,7 +338,6 @@
             this.Btn_Cancel.Size = new System.Drawing.Size(32, 32);
             this.Btn_Cancel.TabIndex = 13;
             this.Btn_Cancel.UseVisualStyleBackColor = true;
-            this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
             // Btn_Save
             // 
@@ -351,7 +347,6 @@
             this.Btn_Save.Size = new System.Drawing.Size(32, 32);
             this.Btn_Save.TabIndex = 12;
             this.Btn_Save.UseVisualStyleBackColor = true;
-            this.Btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
             // label11
             // 
@@ -632,9 +627,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AddressBook";
             this.Text = "AddressBook";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddressBook_FormClosed);
             this.Load += new System.EventHandler(this.AddressBook_Load);
-            this.Shown += new System.EventHandler(this.AddressBook_Show);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
