@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
 using System.Text.RegularExpressions;
 using Outlook = Microsoft.Office.Interop.Outlook;
 
