@@ -29,6 +29,7 @@ namespace eNumismat
                         }
                         catch (Exception ex)
                         {
+                            MessageBox.Show(ex.Message);
                             dbConnection.Close();
                             dbConnection.Dispose();
                             return false;
