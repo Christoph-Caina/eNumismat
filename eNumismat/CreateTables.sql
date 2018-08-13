@@ -61,6 +61,9 @@ VALUES
 	('Reichsmark', 'RM', 'ℛℳ'),
 	('Mark', null,'ℳ'),
 	('Dollar', null, '$'),
+	('Dollar (US)', 'USD', 'US$'),
+	('Dollar (CAN)', 'CAD', 'CA$'),
+	('Dollar (AUS)', 'AUD', 'AU$'),
 	('Pfund', null,'£'),
 	('Lira', null,'₤'),
 	('Yen', null,'¥'),
@@ -68,7 +71,7 @@ VALUES
 	('Colón', null,'₡'),
 	('Franc', null,'₣'),
 	('Rubel', null,'₽'),
-	('Drachme', null, '₯')
+	('Drachme', null, '₯'),
 	('Indische Rupie', null, '₹'),
 	('Türkische Lira', null, '₺');
 
