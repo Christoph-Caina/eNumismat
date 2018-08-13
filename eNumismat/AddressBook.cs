@@ -9,6 +9,9 @@ namespace eNumismat
 {
     public partial class AddressBook : Form
     {
+
+        // NEEDS TO BE REWRITTEN!
+
         DBActions dbAction;
 
         public int ContactID = 0;
@@ -69,7 +72,6 @@ namespace eNumismat
 
                 Btn_Cancel.Enabled = true;
             }
-
 
             if (WindowMode == "show")
             {
