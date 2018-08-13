@@ -22,6 +22,7 @@ namespace eNumismat
         FolderBrowserDialog folderBrowser;
         AddressBook adrBook;
         SwapMonitor swapList;
+        DocBrowser docBrowser;
 
         public string[] args = Environment.GetCommandLineArgs();
 
@@ -147,6 +148,10 @@ namespace eNumismat
             swapList.Show();
         }
 
-        
+        private void unicodeTabelleFürWährungssymboleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            docBrowser = new DocBrowser();
+            docBrowser.Show();
+        }
     }
 }

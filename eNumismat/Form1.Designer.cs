@@ -40,6 +40,9 @@
             this.adressbuchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tauschmonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nachUpdatesSuchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unicodeTabelleFürWährungssymboleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +51,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
             this.einstellungenToolStripMenuItem,
-            this.adressbuchToolStripMenuItem});
+            this.adressbuchToolStripMenuItem,
+            this.hilfeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(860, 24);
@@ -143,6 +147,28 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // hilfeToolStripMenuItem
+            // 
+            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nachUpdatesSuchenToolStripMenuItem,
+            this.unicodeTabelleFürWährungssymboleToolStripMenuItem});
+            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
+            this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.hilfeToolStripMenuItem.Text = "Hilfe";
+            // 
+            // nachUpdatesSuchenToolStripMenuItem
+            // 
+            this.nachUpdatesSuchenToolStripMenuItem.Name = "nachUpdatesSuchenToolStripMenuItem";
+            this.nachUpdatesSuchenToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+            this.nachUpdatesSuchenToolStripMenuItem.Text = "nach Updates suchen";
+            // 
+            // unicodeTabelleFürWährungssymboleToolStripMenuItem
+            // 
+            this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Name = "unicodeTabelleFürWährungssymboleToolStripMenuItem";
+            this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+            this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Text = "Unicode Tabelle für Währungssymbole";
+            this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Click += new System.EventHandler(this.unicodeTabelleFürWährungssymboleToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +203,9 @@
         private System.Windows.Forms.ToolStripMenuItem adressbuchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adressbuchToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tauschmonitorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nachUpdatesSuchenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unicodeTabelleFürWährungssymboleToolStripMenuItem;
     }
 }
 
