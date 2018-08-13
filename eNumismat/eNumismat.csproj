@@ -139,6 +139,7 @@
     <EmbeddedResource Include="SwapMonitor.resx">
       <DependentUpon>SwapMonitor.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DBTableLayout.pdf" />
     <None Include="eNumismat.ruleset" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
