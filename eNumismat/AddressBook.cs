@@ -171,11 +171,10 @@ namespace eNumismat
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
-            //MessageBox.Show(names[0] + "::" + names[1]);
-            //löschenToolStripMenuItem.Enabled = true;
+
             Btn_DeleteContact.Enabled = true;
             Btn_EditContact.Enabled = true;
-            //bearbeitenToolStripMenuItem.Enabled = true;
+
             GetContact(names);
         }
 
@@ -218,7 +217,7 @@ namespace eNumismat
         }
 
         // Outlook-Test
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void MicrosoftOutlookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Outlook._Application outlookObj = new Outlook.Application();
@@ -240,20 +239,20 @@ namespace eNumismat
             // ggf. "outlook" als art AddIn bereitstellen?
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void Btn_CreateContact_Click(object sender, EventArgs e)
         {
             Globals.AddressBookFormMode = "create";
             GetContactsCount();
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void Btn_DeleteContact_Click(object sender, EventArgs e)
         {
 
         }
 
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void Btn_EditContact_Click(object sender, EventArgs e)
         {
 
