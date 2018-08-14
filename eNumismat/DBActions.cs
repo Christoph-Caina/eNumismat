@@ -124,7 +124,7 @@ namespace eNumismat
                         break;
                 }
 
-                MessageBox.Show(SQL);
+                //MessageBox.Show(SQL);
 
                 using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(SQL, dbConnection))
                 {

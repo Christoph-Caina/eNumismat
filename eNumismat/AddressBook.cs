@@ -61,7 +61,11 @@ namespace eNumismat
             DataTable _ContactDetails = new DataTable();
             List<string> ContactDetails = new List<string>();
 
-            if (ContactName != null && ContactId == 0)
+            if (ContactName == null && ContactId == 0)
+            {
+                _ContactDetails = dbAction.GetContacts("details");
+            }
+            else if (ContactName != null && ContactId == 0)
             {
                 _ContactDetails = dbAction.GetContacts("details", null, ContactName);
             }
@@ -76,9 +80,8 @@ namespace eNumismat
 
             int DataTableCounter = _ContactDetails.Columns.Count;
             int i = 0;
-            MessageBox.Show(DataTableCounter.ToString());
-
-            while(i <= DataTableCounter)
+            
+            while(i < DataTableCounter)
             {
                 foreach (DataRow drDetails in _ContactDetails.Rows)
                 {
@@ -94,10 +97,20 @@ namespace eNumismat
                 splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
                 PanelEditContactDetails.Dock = DockStyle.Fill;
 
-                if(Type == "edit")
+                if(Type == "edit" && ContactDetails.Count != 0)
                 {
-                    
-
+                    tb_name.Text = ContactDetails[1];
+                    tb_surename.Text = ContactDetails[2];
+                    cb_gender.Text = ContactDetails[3];
+                    dtp_birthdate.Text = ContactDetails[4];
+                    tb_street.Text = ContactDetails[5];
+                    tb_zipcode.Text = ContactDetails[6];
+                    tb_city.Text = ContactDetails[7];
+                    tb_country.Text = ContactDetails[8];
+                    tb_phone.Text = ContactDetails[9];
+                    tb_mobile.Text = ContactDetails[10];
+                    tb_mail.Text = ContactDetails[11];
+                    rtb_notes.Text = ContactDetails[12];
                 }
             }
             else if (Type == "view")
@@ -106,7 +119,21 @@ namespace eNumismat
                 splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
                 PanelShowContactDetails.Dock = DockStyle.Fill;
 
-                
+                if(ContactDetails.Count != 0)
+                {
+                    label_name.Text = ContactDetails[1];
+                    label_surename.Text = ContactDetails[2];
+                    //label_gender.Text = ContactDetails[3];
+                    //dtp_birthdate.Text = ContactDetails[4];
+                    //tb_street.Text = ContactDetails[5];
+                    //tb_zipcode.Text = ContactDetails[6];
+                    //tb_city.Text = ContactDetails[7];
+                    //tb_country.Text = ContactDetails[8];
+                    //tb_phone.Text = ContactDetails[9];
+                    //tb_mobile.Text = ContactDetails[10];
+                    //tb_mail.Text = ContactDetails[11];
+                    //rtb_notes.Text = ContactDetails[12];
+                }
             }
         }
 
