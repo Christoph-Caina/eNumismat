@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
 using System.Text.RegularExpressions;
 using Outlook = Microsoft.Office.Interop.Outlook;
 
@@ -10,7 +9,9 @@ namespace eNumismat
 {
     public partial class AddressBook : Form
     {
-        DBActions dbAction;
+        private List<TreeNode> _unselectableNodes = new List<TreeNode>();
+
+        DBActions dbAction = new DBActions();
 
         //=====================================================================================================================================================================
         public AddressBook()
@@ -21,67 +22,125 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void AddressBook_Load(object sender, EventArgs e)
         {
-            GetContactsCount();
+            GenerateAdrBookForm();
 
-            if (Globals.AddressBookFormMode == "create")
-            {
-                splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
-                splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
-                PanelEditContactDetails.Dock = DockStyle.Fill;
-            }
-
-            else if (Globals.AddressBookFormMode == "show")
-            {
-                splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
-                splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
-                PanelShowContactDetails.Dock = DockStyle.Fill;
-            }
+            LoadTreeViewParents();
         }
 
         //=====================================================================================================================================================================
-        private void AddressBook_Show(object sender, EventArgs e)
+        private void GenerateAdrBookForm(string[] ContactName = null, int ContactId = 0)
         {
-
-        }
-
-        //=====================================================================================================================================================================
-        private void GetContactsCount()
-        {
-            dbAction = new DBActions();
-
-            treeView1.Nodes.Clear();
-
-            int ContactCounter = dbAction.CounterContacts();
+            int ContactCounter = GetContactsCount();
 
             if (ContactCounter == 0)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
-                Globals.AddressBookFormMode = "create";
-                //BuildFrm("edit");
+                LoadContactMain("new");
             }
             else if (ContactCounter == 1)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakt vorhanden";
-                LoadTreeViewParents();
-                Globals.AddressBookFormMode = "show";
-                GetContact();
-                //BuildFrm("view");
+                LoadContactMain("view");
             }
-            else
+            else if (ContactCounter > 1)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
-                LoadTreeViewParents();
-                Globals.AddressBookFormMode = "show";
-                GetContact();
-                //BuildFrm("view");
+                LoadContactMain("view");
+            }
+        }
+
+        //=====================================================================================================================================================================
+        private int GetContactsCount()
+        {
+            return dbAction.ContactsCount();
+        }
+
+        //=====================================================================================================================================================================
+        private void LoadContactMain(string Type, string[] ContactName = null, int ContactId = 0)
+        {
+            DataTable _ContactDetails = new DataTable();
+            List<string> ContactDetails = new List<string>();
+
+            if (ContactName == null && ContactId == 0)
+            {
+                _ContactDetails = dbAction.GetContacts("details");
+            }
+            else if (ContactName != null && ContactId == 0)
+            {
+                _ContactDetails = dbAction.GetContacts("details", null, ContactName);
+            }
+            else if (ContactName == null && ContactId != 0)
+            {
+                _ContactDetails = dbAction.GetContacts("details", null, null, ContactId);
+            }
+            else if (ContactName != null && ContactId != 0)
+            {
+                _ContactDetails = dbAction.GetContacts("details", null, ContactName, ContactId);
             }
 
+            int DataTableCounter = _ContactDetails.Columns.Count;
+            int i = 0;
+            
+            while(i < DataTableCounter)
+            {
+                foreach (DataRow drDetails in _ContactDetails.Rows)
+                {
+                    ContactDetails.Add(drDetails[i].ToString());
+                }
 
+                i++;
+            }
+
+            if (Type == "new" || Type == "edit")
+            {
+                splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
+                splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
+                PanelEditContactDetails.Dock = DockStyle.Fill;
+
+                if(Type == "edit" && ContactDetails.Count != 0)
+                {
+                    tb_name.Text = ContactDetails[1];
+                    tb_surename.Text = ContactDetails[2];
+                    cb_gender.Text = ContactDetails[3];
+                    dtp_birthdate.Text = ContactDetails[4];
+                    tb_street.Text = ContactDetails[5];
+                    tb_zipcode.Text = ContactDetails[6];
+                    tb_city.Text = ContactDetails[7];
+                    tb_country.Text = ContactDetails[8];
+                    tb_phone.Text = ContactDetails[9];
+                    tb_mobile.Text = ContactDetails[10];
+                    tb_mail.Text = ContactDetails[11];
+                    rtb_notes.Text = ContactDetails[12];
+                }
+            }
+            else if (Type == "view")
+            {
+                splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
+                splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
+                PanelShowContactDetails.Dock = DockStyle.Fill;
+
+                if(ContactDetails.Count != 0)
+                {
+                    label_name.Text = ContactDetails[1];
+                    label_surename.Text = ContactDetails[2];
+                    //label_gender.Text = ContactDetails[3];
+                    //dtp_birthdate.Text = ContactDetails[4];
+                    //tb_street.Text = ContactDetails[5];
+                    //tb_zipcode.Text = ContactDetails[6];
+                    //tb_city.Text = ContactDetails[7];
+                    //tb_country.Text = ContactDetails[8];
+                    //tb_phone.Text = ContactDetails[9];
+                    //tb_mobile.Text = ContactDetails[10];
+                    //tb_mail.Text = ContactDetails[11];
+                    //rtb_notes.Text = ContactDetails[12];
+                }
+            }
         }
 
         //=====================================================================================================================================================================
         private void LoadTreeViewParents()
         {
+            treeView1.Nodes.Clear();
             TreeNode parents = null;
 
             foreach (DataRow drParents in dbAction.GetContacts("parents").Rows)
@@ -127,9 +186,6 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private List<TreeNode> _unselectableNodes = new List<TreeNode>();
-
-        //=====================================================================================================================================================================
         private void TreeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)
         {
             if (_unselectableNodes.Contains(e.Node))
@@ -142,26 +198,17 @@ namespace eNumismat
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
-            //MessageBox.Show(names[0] + "::" + names[1]);
-            //btn_contact_delete.Enabled = true;
-            //löschenToolStripMenuItem.Enabled = true;
-            //btn_contact_edit.Enabled = true;
-            //bearbeitenToolStripMenuItem.Enabled = true;
-            GetContact(names);
+            LoadContactMain("view", names);
         }
 
+
+        //
         //=====================================================================================================================================================================
-        private void GetContact(string[] contact = null)
-        {
-            foreach (DataRow drContactDetails in dbAction.GetContacts("details", null, contact).Rows)
-            {
-                label_name.Text = drContactDetails[1].ToString();
-                label_surename.Text = drContactDetails[2].ToString();
-            }
-        }
+        //=====================================================================================================================================================================
+        //
 
         // Outlook-Test
-        //=============================================================================================================
+        //=====================================================================================================================================================================
         private void MicrosoftOutlookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Outlook._Application outlookObj = new Outlook.Application();
