@@ -92,31 +92,39 @@ namespace eNumismat
 
                 string SQL = null;
 
-                if (content == "parents")
+                switch(content)
                 {
-                    SQL =
-                        "SELECT count(name), substr(name, 1, 1) FROM contacts GROUP by substr(name, 1, 1)";
+                    case "parents":
+                        SQL = "SELECT count(name), substr(name, 1, 1) FROM contacts GROUP by substr(name, 1, 1)";
+                        break;
+
+                    case "childs":
+                        SQL = "SELECT name, surename, gender FROM contacts WHERE name LIKE '" + FirstLetter + "%' ORDER BY surename ASC";
+                        break;
+
+                    case "details":
+
+                        if (contactname == null && contactId == 0)
+                        {
+                            SQL = "SELECT * FROM contacts ORDER BY name, surename LIMIT 1";
+                        }
+                        else if (contactname != null && contactId == 0)
+                        {
+                            SQL = "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' LIMIT 1";
+                        }
+                        else if (contactname == null && contactId != 0)
+                        {
+                            SQL = "SELECT * FROM contacts WHERE id '" + contactId + "'";
+                        }
+                        else if (contactname != null && contactId != 0)
+                        {
+                            SQL = "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' AND `id`= '" + contactId + "' LIMIT 1";
+                        }
+
+                        break;
                 }
-                else if (content == "childs")
-                {
-                    SQL =
-                        "SELECT name, surename, gender FROM contacts WHERE name LIKE '" + FirstLetter + "%' ORDER BY surename ASC";
-                }
-                else if (content == "details" && contactname == null && contactId == 0)
-                {
-                    SQL =
-                        "SELECT * FROM contacts ORDER BY name, surename LIMIT 1";
-                }
-                else if (content == "details" && contactname != null)
-                {
-                    SQL =
-                        "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' LIMIT 1";
-                }
-                else if (content == "details" && contactId != 0)
-                {
-                    SQL =
-                        "SELECT * FROM contacts WHERE id '" + contactId + "'";
-                }
+
+                MessageBox.Show(SQL);
 
                 using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(SQL, dbConnection))
                 {

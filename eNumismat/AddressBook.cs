@@ -22,34 +22,98 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void AddressBook_Load(object sender, EventArgs e)
         {
-            GetContactsCount();
+            GenerateAdrBookForm();
+
             LoadTreeViewParents();
         }
 
         //=====================================================================================================================================================================
-        private void GetContactsCount()
+        private void GenerateAdrBookForm(string[] ContactName = null, int ContactId = 0)
         {
-            treeView1.Nodes.Clear();
-
-            int ContactCounter = dbAction.ContactsCount();
+            int ContactCounter = GetContactsCount();
 
             if (ContactCounter == 0)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
+                LoadContactMain("new");
             }
             else if (ContactCounter == 1)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakt vorhanden";
+                LoadContactMain("view");
             }
-            else
+            else if (ContactCounter > 1)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
+                LoadContactMain("view");
+            }
+        }
+
+        //=====================================================================================================================================================================
+        private int GetContactsCount()
+        {
+            return dbAction.ContactsCount();
+        }
+
+        //=====================================================================================================================================================================
+        private void LoadContactMain(string Type, string[] ContactName = null, int ContactId = 0)
+        {
+            DataTable _ContactDetails = new DataTable();
+            List<string> ContactDetails = new List<string>();
+
+            if (ContactName != null && ContactId == 0)
+            {
+                _ContactDetails = dbAction.GetContacts("details", null, ContactName);
+            }
+            else if (ContactName == null && ContactId != 0)
+            {
+                _ContactDetails = dbAction.GetContacts("details", null, null, ContactId);
+            }
+            else if (ContactName != null && ContactId != 0)
+            {
+                _ContactDetails = dbAction.GetContacts("details", null, ContactName, ContactId);
+            }
+
+            int DataTableCounter = _ContactDetails.Columns.Count;
+            int i = 0;
+            MessageBox.Show(DataTableCounter.ToString());
+
+            while(i <= DataTableCounter)
+            {
+                foreach (DataRow drDetails in _ContactDetails.Rows)
+                {
+                    ContactDetails.Add(drDetails[i].ToString());
+                }
+
+                i++;
+            }
+
+            if (Type == "new" || Type == "edit")
+            {
+                splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
+                splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
+                PanelEditContactDetails.Dock = DockStyle.Fill;
+
+                if(Type == "edit")
+                {
+                    
+
+                }
+            }
+            else if (Type == "view")
+            {
+                splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
+                splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
+                PanelShowContactDetails.Dock = DockStyle.Fill;
+
+                
             }
         }
 
         //=====================================================================================================================================================================
         private void LoadTreeViewParents()
         {
+            treeView1.Nodes.Clear();
             TreeNode parents = null;
 
             foreach (DataRow drParents in dbAction.GetContacts("parents").Rows)
@@ -107,6 +171,7 @@ namespace eNumismat
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
+            LoadContactMain("view", names);
         }
 
 
