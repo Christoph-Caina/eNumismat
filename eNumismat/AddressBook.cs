@@ -112,6 +112,11 @@ namespace eNumismat
                     tb_mail.Text = ContactDetails[11];
                     rtb_notes.Text = ContactDetails[12];
                 }
+
+                Btn_CreateContact.Enabled = false;
+                Btn_DeleteContact.Enabled = false;
+                Btn_UpdateContact.Enabled = false;
+
             }
             else if (Type == "view")
             {
@@ -142,6 +147,10 @@ namespace eNumismat
                         pb_gender.BackgroundImage = Properties.Resources.female;
                     }   
                 }
+
+                Btn_CreateContact.Enabled = true;
+                Btn_UpdateContact.Enabled = true;
+                Btn_DeleteContact.Enabled = true;
             }
         }
 
