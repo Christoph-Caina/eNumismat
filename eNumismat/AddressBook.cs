@@ -247,7 +247,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void neuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void NeuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ContactID = 0;
             LoadContactMain("new");
@@ -271,21 +271,22 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Btn_Save_Click(object sender, EventArgs e)
         {
-            List<string> DBContactDetails = new List<string>();
+            List<string> DBContactDetails = new List<string>
+            {
+                tb_name.Text,
+                tb_surename.Text,
+                cb_gender.Text,
+                dtp_birthdate.Text,
+                tb_street.Text,
+                tb_zipcode.Text,
+                tb_city.Text,
+                tb_country.Text,
+                tb_phone.Text,
+                tb_mobile.Text,
+                tb_mail.Text,
+                rtb_notes.Text
+            };
 
-            DBContactDetails.Add(tb_name.Text);
-            DBContactDetails.Add(tb_surename.Text);
-            DBContactDetails.Add(cb_gender.Text);
-            DBContactDetails.Add(dtp_birthdate.Text);
-            DBContactDetails.Add(tb_street.Text);
-            DBContactDetails.Add(tb_zipcode.Text);
-            DBContactDetails.Add(tb_city.Text);
-            DBContactDetails.Add(tb_country.Text);
-            DBContactDetails.Add(tb_phone.Text);
-            DBContactDetails.Add(tb_mobile.Text);
-            DBContactDetails.Add(tb_mail.Text);
-            DBContactDetails.Add(rtb_notes.Text);
-            
             string[] names = { tb_name.Text, tb_surename.Text };
 
             if (ValidateTextInputs() == true)
@@ -304,13 +305,13 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void tbName_TextChanged(object sender, EventArgs e)
+        private void TbName_TextChanged(object sender, EventArgs e)
         {
             tb_name.BackColor = Color.White;
         }
 
         //=====================================================================================================================================================================
-        private void tbSurename_TextChanged(object sender, EventArgs e)
+        private void TbSurename_TextChanged(object sender, EventArgs e)
         {
             tb_surename.BackColor = Color.White;
         }

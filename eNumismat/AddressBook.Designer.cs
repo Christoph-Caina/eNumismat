@@ -161,7 +161,7 @@
             this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
             this.neuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.neuToolStripMenuItem.Text = "Neuer Kontakt";
-            this.neuToolStripMenuItem.Click += new System.EventHandler(this.neuToolStripMenuItem_Click);
+            this.neuToolStripMenuItem.Click += new System.EventHandler(this.NeuToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -557,7 +557,7 @@
             this.tb_surename.Name = "tb_surename";
             this.tb_surename.Size = new System.Drawing.Size(184, 20);
             this.tb_surename.TabIndex = 1;
-            this.tb_surename.TextChanged += new System.EventHandler(this.tbSurename_TextChanged);
+            this.tb_surename.TextChanged += new System.EventHandler(this.TbSurename_TextChanged);
             // 
             // tb_name
             // 
@@ -565,7 +565,7 @@
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(184, 20);
             this.tb_name.TabIndex = 0;
-            this.tb_name.TextChanged += new System.EventHandler(this.tbName_TextChanged);
+            this.tb_name.TextChanged += new System.EventHandler(this.TbName_TextChanged);
             // 
             // PanelShowContactDetails
             // 

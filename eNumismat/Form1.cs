@@ -110,12 +110,14 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void NeueDatenbankToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFile = new SaveFileDialog();
-            saveFile.DefaultExt = "*.enc"; // enc = eNumismatCollection
-            saveFile.AddExtension = true;
-            // Only, if no other path is specified in the Config
-            saveFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments);
-            saveFile.Filter = "eNumismatCollection File(*.enc) | *.enc";
+            saveFile = new SaveFileDialog
+            {
+                DefaultExt = "*.enc", // enc = eNumismatCollection
+                AddExtension = true,
+                // Only, if no other path is specified in the Config
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments),
+                Filter = "eNumismatCollection File(*.enc) | *.enc"
+            };
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
@@ -132,12 +134,15 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void DatenbankOeffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFile = new OpenFileDialog();
-            openFile.DefaultExt = "*.enc"; // enc = eNumismatCollection
-            openFile.AddExtension = true;
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                DefaultExt = "*.enc", // enc = eNumismatCollection
+                AddExtension = true,
 
-            openFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments);
-            openFile.Filter = "eNumismatCollection File (*.enc) | *.enc";
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments),
+                Filter = "eNumismatCollection File (*.enc) | *.enc"
+            };
+            openFile = openFileDialog;
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
