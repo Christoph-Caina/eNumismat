@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text.RegularExpressions;
 using Outlook = Microsoft.Office.Interop.Outlook;
+using System.Drawing;
 
 namespace eNumismat
 {
@@ -246,6 +247,13 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
+        private void neuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ContactID = 0;
+            LoadContactMain("new");
+        }
+
+        //=====================================================================================================================================================================
         private void Btn_UpdateContact_Click(object sender, EventArgs e)
         {
             LoadContactMain("edit", null, ContactID);
@@ -280,25 +288,52 @@ namespace eNumismat
             
             string[] names = { tb_name.Text, tb_surename.Text };
 
-            if (dbAction.CreateOrUpdateContact(DBContactDetails, ContactID))
+            if (ValidateTextInputs() == true)
             {
-                GenerateAdrBookForm(names, ContactID);
+                if (dbAction.CreateOrUpdateContact(DBContactDetails, ContactID))
+                {
+                    GenerateAdrBookForm(names, ContactID);
+                }
             }
-
-            //if (ContactID != 0)
-            //{
-            //    MessageBox.Show("Save: Modus - Update" + Environment.NewLine + "ID: " + ContactID);
-            //}
-            //else
-            //{ 
-            //    MessageBox.Show("Save: Modus - Create");
-            //}
         }
 
         //=====================================================================================================================================================================
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
             LoadContactMain("view", null, ContactID);
+        }
+
+        //=====================================================================================================================================================================
+        private void tbName_TextChanged(object sender, EventArgs e)
+        {
+            tb_name.BackColor = Color.White;
+        }
+
+        //=====================================================================================================================================================================
+        private void tbSurename_TextChanged(object sender, EventArgs e)
+        {
+            tb_surename.BackColor = Color.White;
+        }
+
+        //=====================================================================================================================================================================
+        private bool ValidateTextInputs()
+        {
+            if (String.IsNullOrEmpty(tb_name.Text))
+            {
+                MessageBox.Show("Der Name darf nicht leer sein!");
+                tb_name.BackColor = Color.MistyRose;
+                tb_name.Select();
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(tb_surename.Text))
+            {
+                MessageBox.Show("Der Vorname darf nicht leer sein!");
+                tb_surename.BackColor = Color.MistyRose;
+                tb_surename.Select();
+                return false;
+            }
+            return true;
         }
 
         //

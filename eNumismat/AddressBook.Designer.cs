@@ -54,7 +54,6 @@
             this.Btn_DeleteContact = new System.Windows.Forms.Button();
             this.PanelEditContactDetails = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.tb_zipcode = new System.Windows.Forms.TextBox();
             this.Btn_Cancel = new System.Windows.Forms.Button();
             this.Btn_Save = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -104,6 +103,7 @@
             this.label_surename = new System.Windows.Forms.Label();
             this.label_name = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tb_zipcode = new System.Windows.Forms.MaskedTextBox();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -161,6 +161,7 @@
             this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
             this.neuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.neuToolStripMenuItem.Text = "Neuer Kontakt";
+            this.neuToolStripMenuItem.Click += new System.EventHandler(this.neuToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -321,8 +322,8 @@
             // 
             // PanelEditContactDetails
             // 
-            this.PanelEditContactDetails.Controls.Add(this.label12);
             this.PanelEditContactDetails.Controls.Add(this.tb_zipcode);
+            this.PanelEditContactDetails.Controls.Add(this.label12);
             this.PanelEditContactDetails.Controls.Add(this.Btn_Cancel);
             this.PanelEditContactDetails.Controls.Add(this.Btn_Save);
             this.PanelEditContactDetails.Controls.Add(this.label11);
@@ -360,13 +361,6 @@
             this.label12.Size = new System.Drawing.Size(30, 13);
             this.label12.TabIndex = 23;
             this.label12.Text = "PLZ:";
-            // 
-            // tb_zipcode
-            // 
-            this.tb_zipcode.Location = new System.Drawing.Point(153, 162);
-            this.tb_zipcode.Name = "tb_zipcode";
-            this.tb_zipcode.Size = new System.Drawing.Size(184, 20);
-            this.tb_zipcode.TabIndex = 5;
             // 
             // Btn_Cancel
             // 
@@ -563,6 +557,7 @@
             this.tb_surename.Name = "tb_surename";
             this.tb_surename.Size = new System.Drawing.Size(184, 20);
             this.tb_surename.TabIndex = 1;
+            this.tb_surename.TextChanged += new System.EventHandler(this.tbSurename_TextChanged);
             // 
             // tb_name
             // 
@@ -570,6 +565,7 @@
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(184, 20);
             this.tb_name.TabIndex = 0;
+            this.tb_name.TextChanged += new System.EventHandler(this.tbName_TextChanged);
             // 
             // PanelShowContactDetails
             // 
@@ -815,6 +811,14 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tb_zipcode
+            // 
+            this.tb_zipcode.Location = new System.Drawing.Point(153, 162);
+            this.tb_zipcode.Mask = "00000";
+            this.tb_zipcode.Name = "tb_zipcode";
+            this.tb_zipcode.Size = new System.Drawing.Size(112, 20);
+            this.tb_zipcode.TabIndex = 5;
+            // 
             // AddressBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -906,7 +910,6 @@
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.Label label_ID;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox tb_zipcode;
         private System.Windows.Forms.PictureBox pb_gender;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label_mail;
@@ -925,5 +928,6 @@
         private System.Windows.Forms.Label label_city;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.RichTextBox rtb_notesDisplay;
+        private System.Windows.Forms.MaskedTextBox tb_zipcode;
     }
 }
