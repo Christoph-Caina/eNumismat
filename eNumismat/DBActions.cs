@@ -185,16 +185,56 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        public bool UpdateContact()
+        public bool DeleteContact(string[] names = null, int id = 0)
         {
-            // Do Work
-            return true;
-        }
+            try
+            {
+                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+                {
+                    dbConnection.Open();
+                    string SQL = null;
 
-        public bool DeleteContact()
-        {
-            // Do Work
-            return true;
+                    if (names == null && id == 0)
+                    {
+                        MessageBox.Show("Can't delete \"nothing\"");
+
+                        return false;
+                    }
+                    else if (names != null && id == 0)
+                    {
+                        SQL = "DELETE FROM contacts WHERE `name` = '" + names[0] + "' AND `surename` = '" + names[1] + "'";
+                    }
+                    else if (names == null && id != 0)
+                    {
+                        SQL = "DELETE FROM contacts WHERE id = " + id + "";
+                    }
+                    else if (names != null && id != 0)
+                    {
+                        SQL = "DELETE FROM contacts WHERE `name` = '" + names[0] + "' AND `surename` = '" + names[1] + "' AND `id`= " + id + "";
+                    }
+
+                    using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
+                    {
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            dbConnection.Close();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            dbConnection.Close();
+                            dbConnection.Dispose();
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
         //=====================================================================================================================================================================
         public int SwapCount()

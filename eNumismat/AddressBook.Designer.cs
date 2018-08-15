@@ -82,11 +82,9 @@
             this.PanelShowContactDetails = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pb_gender = new System.Windows.Forms.PictureBox();
-            this.label_ID = new System.Windows.Forms.Label();
-            this.label_surename = new System.Windows.Forms.Label();
-            this.label_name = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.rtb_notesDisplay = new System.Windows.Forms.RichTextBox();
+            this.label_city = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label_mail = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -101,9 +99,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label_phone = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label_city = new System.Windows.Forms.Label();
-            this.rtb_notesDisplay = new System.Windows.Forms.RichTextBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.pb_gender = new System.Windows.Forms.PictureBox();
+            this.label_ID = new System.Windows.Forms.Label();
+            this.label_surename = new System.Windows.Forms.Label();
+            this.label_name = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -296,6 +296,7 @@
             this.Btn_UpdateContact.Size = new System.Drawing.Size(30, 30);
             this.Btn_UpdateContact.TabIndex = 3;
             this.Btn_UpdateContact.UseVisualStyleBackColor = true;
+            this.Btn_UpdateContact.Click += new System.EventHandler(this.Btn_UpdateContact_Click);
             // 
             // Btn_CreateContact
             // 
@@ -305,6 +306,7 @@
             this.Btn_CreateContact.Size = new System.Drawing.Size(30, 30);
             this.Btn_CreateContact.TabIndex = 2;
             this.Btn_CreateContact.UseVisualStyleBackColor = true;
+            this.Btn_CreateContact.Click += new System.EventHandler(this.Btn_CreateContact_Click);
             // 
             // Btn_DeleteContact
             // 
@@ -315,6 +317,7 @@
             this.Btn_DeleteContact.Size = new System.Drawing.Size(30, 30);
             this.Btn_DeleteContact.TabIndex = 1;
             this.Btn_DeleteContact.UseVisualStyleBackColor = true;
+            this.Btn_DeleteContact.Click += new System.EventHandler(this.Btn_DeleteContact_Click);
             // 
             // PanelEditContactDetails
             // 
@@ -616,50 +619,31 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // pb_gender
+            // label20
             // 
-            this.pb_gender.Location = new System.Drawing.Point(431, 6);
-            this.pb_gender.Name = "pb_gender";
-            this.pb_gender.Size = new System.Drawing.Size(16, 16);
-            this.pb_gender.TabIndex = 3;
-            this.pb_gender.TabStop = false;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(98, 324);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(46, 13);
+            this.label20.TabIndex = 65;
+            this.label20.Text = "Notizen:";
             // 
-            // label_ID
+            // rtb_notesDisplay
             // 
-            this.label_ID.AutoSize = true;
-            this.label_ID.Location = new System.Drawing.Point(399, 10);
-            this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(0, 13);
-            this.label_ID.TabIndex = 2;
-            this.label_ID.Visible = false;
+            this.rtb_notesDisplay.Enabled = false;
+            this.rtb_notesDisplay.Location = new System.Drawing.Point(165, 321);
+            this.rtb_notesDisplay.Name = "rtb_notesDisplay";
+            this.rtb_notesDisplay.Size = new System.Drawing.Size(282, 127);
+            this.rtb_notesDisplay.TabIndex = 64;
+            this.rtb_notesDisplay.Text = "";
             // 
-            // label_surename
+            // label_city
             // 
-            this.label_surename.AutoSize = true;
-            this.label_surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_surename.Location = new System.Drawing.Point(6, 19);
-            this.label_surename.Name = "label_surename";
-            this.label_surename.Size = new System.Drawing.Size(0, 16);
-            this.label_surename.TabIndex = 1;
-            // 
-            // label_name
-            // 
-            this.label_name.AutoSize = true;
-            this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_name.Location = new System.Drawing.Point(6, 3);
-            this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(0, 16);
-            this.label_name.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(454, 490);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.label_city.AutoSize = true;
+            this.label_city.Location = new System.Drawing.Point(216, 137);
+            this.label_city.Name = "label_city";
+            this.label_city.Size = new System.Drawing.Size(0, 13);
+            this.label_city.TabIndex = 63;
             // 
             // label13
             // 
@@ -784,31 +768,50 @@
             this.label19.TabIndex = 51;
             this.label19.Text = "Land:";
             // 
-            // label_city
+            // pb_gender
             // 
-            this.label_city.AutoSize = true;
-            this.label_city.Location = new System.Drawing.Point(216, 137);
-            this.label_city.Name = "label_city";
-            this.label_city.Size = new System.Drawing.Size(0, 13);
-            this.label_city.TabIndex = 63;
+            this.pb_gender.Location = new System.Drawing.Point(431, 6);
+            this.pb_gender.Name = "pb_gender";
+            this.pb_gender.Size = new System.Drawing.Size(16, 16);
+            this.pb_gender.TabIndex = 3;
+            this.pb_gender.TabStop = false;
             // 
-            // rtb_notesDisplay
+            // label_ID
             // 
-            this.rtb_notesDisplay.Enabled = false;
-            this.rtb_notesDisplay.Location = new System.Drawing.Point(165, 321);
-            this.rtb_notesDisplay.Name = "rtb_notesDisplay";
-            this.rtb_notesDisplay.Size = new System.Drawing.Size(282, 127);
-            this.rtb_notesDisplay.TabIndex = 64;
-            this.rtb_notesDisplay.Text = "";
+            this.label_ID.AutoSize = true;
+            this.label_ID.Location = new System.Drawing.Point(399, 10);
+            this.label_ID.Name = "label_ID";
+            this.label_ID.Size = new System.Drawing.Size(0, 13);
+            this.label_ID.TabIndex = 2;
+            this.label_ID.Visible = false;
             // 
-            // label20
+            // label_surename
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(98, 324);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(46, 13);
-            this.label20.TabIndex = 65;
-            this.label20.Text = "Notizen:";
+            this.label_surename.AutoSize = true;
+            this.label_surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_surename.Location = new System.Drawing.Point(6, 19);
+            this.label_surename.Name = "label_surename";
+            this.label_surename.Size = new System.Drawing.Size(0, 16);
+            this.label_surename.TabIndex = 1;
+            // 
+            // label_name
+            // 
+            this.label_name.AutoSize = true;
+            this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_name.Location = new System.Drawing.Point(6, 3);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(0, 16);
+            this.label_name.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(454, 490);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // AddressBook
             // 

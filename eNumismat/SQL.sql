@@ -135,14 +135,12 @@ CREATE TABLE IF NOT EXISTS `CONTACTS`
   `notes` TEXT
 );
 
-/*
 INSERT INTO `CONTACTS`
 	(`name`, `surename`, `gender`, `birthdate`, `street`, `zipcode`, `city`, `country`, `phone`, `mobile`, `email`, `notes`)
 VALUES
 	('Mustermann', 'Max', 'male', null, 'Musterstraße 23', '12345', 'Musterdorf', 'Deutschland', null, null, null, null),
 	('Mustermann', 'Marta', 'female', null, 'Musterstraße 23', '12345', 'Musterdorf', 'Deutschland', null, null, null, null),
 	('Caina', 'Christoph', 'male', '25.03.1986', 'Quellenstraße 21', '71272', 'Renningen', 'Deutschland', null, null, 'christoph@caina.de', 'Developer of eNumismat');
-*/
 
 CREATE TABLE IF NOT EXISTS `SWAPDETAILS`
 (

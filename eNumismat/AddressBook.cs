@@ -10,6 +10,7 @@ namespace eNumismat
     public partial class AddressBook : Form
     {
         private List<TreeNode> _unselectableNodes = new List<TreeNode>();
+        int ContactID = 0;
 
         DBActions dbAction = new DBActions();
 
@@ -24,7 +25,7 @@ namespace eNumismat
         {
             GenerateAdrBookForm();
 
-            LoadTreeViewParents();
+            
         }
 
         //=====================================================================================================================================================================
@@ -47,6 +48,8 @@ namespace eNumismat
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
                 LoadContactMain("view");
             }
+
+            LoadTreeViewParents();
         }
 
         //=====================================================================================================================================================================
@@ -126,6 +129,8 @@ namespace eNumismat
 
                 if(ContactDetails.Count != 0)
                 {
+                    ContactID = Convert.ToInt32(ContactDetails[0]);
+
                     label_name.Text = ContactDetails[1];
                     label_surename.Text = ContactDetails[2];
                     label_birthdate.Text = ContactDetails[4];
@@ -136,7 +141,7 @@ namespace eNumismat
                     label_phone.Text = ContactDetails[9];
                     label_mobile.Text = ContactDetails[10];
                     label_mail.Text = ContactDetails[11];
-                    rtb_notesDisplay.AppendText(ContactDetails[12]);
+                    rtb_notesDisplay.Text = ContactDetails[12];
 
                     if (ContactDetails[3] == "male")
                     {
@@ -147,6 +152,8 @@ namespace eNumismat
                         pb_gender.BackgroundImage = Properties.Resources.female;
                     }   
                 }
+
+                MessageBox.Show(ContactId.ToString());
 
                 Btn_CreateContact.Enabled = true;
                 Btn_UpdateContact.Enabled = true;
@@ -218,6 +225,26 @@ namespace eNumismat
             LoadContactMain("view", names);
         }
 
+        //=====================================================================================================================================================================
+        private void Btn_CreateContact_Click(object sender, EventArgs e)
+        {
+            LoadContactMain("new");
+        }
+
+        //=====================================================================================================================================================================
+        private void Btn_UpdateContact_Click(object sender, EventArgs e)
+        {
+            LoadContactMain("edit", null, ContactID);
+        }
+
+        //=====================================================================================================================================================================
+        private void Btn_DeleteContact_Click(object sender, EventArgs e)
+        {
+            if (dbAction.DeleteContact(null, ContactID))
+            {
+                GenerateAdrBookForm();
+            }
+        }
 
         //
         //=====================================================================================================================================================================
