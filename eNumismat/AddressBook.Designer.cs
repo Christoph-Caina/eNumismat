@@ -376,6 +376,7 @@
             this.Btn_Cancel.Size = new System.Drawing.Size(32, 32);
             this.Btn_Cancel.TabIndex = 13;
             this.Btn_Cancel.UseVisualStyleBackColor = true;
+            this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
             // Btn_Save
             // 
@@ -385,6 +386,7 @@
             this.Btn_Save.Size = new System.Drawing.Size(32, 32);
             this.Btn_Save.TabIndex = 12;
             this.Btn_Save.UseVisualStyleBackColor = true;
+            this.Btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
             // label11
             // 

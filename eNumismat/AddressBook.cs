@@ -10,6 +10,7 @@ namespace eNumismat
     public partial class AddressBook : Form
     {
         private List<TreeNode> _unselectableNodes = new List<TreeNode>();
+        
         int ContactID = 0;
 
         DBActions dbAction = new DBActions();
@@ -24,8 +25,6 @@ namespace eNumismat
         private void AddressBook_Load(object sender, EventArgs e)
         {
             GenerateAdrBookForm();
-
-            
         }
 
         //=====================================================================================================================================================================
@@ -41,12 +40,12 @@ namespace eNumismat
             else if (ContactCounter == 1)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakt vorhanden";
-                LoadContactMain("view");
+                LoadContactMain("view", ContactName, ContactId);
             }
             else if (ContactCounter > 1)
             {
                 toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
-                LoadContactMain("view");
+                LoadContactMain("view", ContactName, ContactId);
             }
 
             LoadTreeViewParents();
@@ -102,6 +101,8 @@ namespace eNumismat
 
                 if(Type == "edit" && ContactDetails.Count != 0)
                 {
+                    ContactID = Convert.ToInt32(ContactDetails[0]);
+
                     tb_name.Text = ContactDetails[1];
                     tb_surename.Text = ContactDetails[2];
                     cb_gender.Text = ContactDetails[3];
@@ -114,6 +115,21 @@ namespace eNumismat
                     tb_mobile.Text = ContactDetails[10];
                     tb_mail.Text = ContactDetails[11];
                     rtb_notes.Text = ContactDetails[12];
+                }
+                else
+                {
+                    tb_name.Text = null;
+                    tb_surename.Text = null;
+                    cb_gender.Text = null;
+                    dtp_birthdate.Text = DateTime.Now.ToString("dd.MM.yyyy");
+                    tb_street.Text = null;
+                    tb_zipcode.Text = null;
+                    tb_city.Text = null;
+                    tb_country.Text = null;
+                    tb_phone.Text = null;
+                    tb_mobile.Text = null;
+                    tb_mail.Text = null;
+                    rtb_notes.Text = null;
                 }
 
                 Btn_CreateContact.Enabled = false;
@@ -152,9 +168,6 @@ namespace eNumismat
                         pb_gender.BackgroundImage = Properties.Resources.female;
                     }   
                 }
-
-                MessageBox.Show(ContactId.ToString());
-
                 Btn_CreateContact.Enabled = true;
                 Btn_UpdateContact.Enabled = true;
                 Btn_DeleteContact.Enabled = true;
@@ -228,6 +241,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Btn_CreateContact_Click(object sender, EventArgs e)
         {
+            ContactID = 0;
             LoadContactMain("new");
         }
 
@@ -244,6 +258,47 @@ namespace eNumismat
             {
                 GenerateAdrBookForm();
             }
+        }
+
+        //=====================================================================================================================================================================
+        private void Btn_Save_Click(object sender, EventArgs e)
+        {
+            List<string> DBContactDetails = new List<string>();
+
+            DBContactDetails.Add(tb_name.Text);
+            DBContactDetails.Add(tb_surename.Text);
+            DBContactDetails.Add(cb_gender.Text);
+            DBContactDetails.Add(dtp_birthdate.Text);
+            DBContactDetails.Add(tb_street.Text);
+            DBContactDetails.Add(tb_zipcode.Text);
+            DBContactDetails.Add(tb_city.Text);
+            DBContactDetails.Add(tb_country.Text);
+            DBContactDetails.Add(tb_phone.Text);
+            DBContactDetails.Add(tb_mobile.Text);
+            DBContactDetails.Add(tb_mail.Text);
+            DBContactDetails.Add(rtb_notes.Text);
+            
+            string[] names = { tb_name.Text, tb_surename.Text };
+
+            if (dbAction.CreateOrUpdateContact(DBContactDetails, ContactID))
+            {
+                GenerateAdrBookForm(names, ContactID);
+            }
+
+            //if (ContactID != 0)
+            //{
+            //    MessageBox.Show("Save: Modus - Update" + Environment.NewLine + "ID: " + ContactID);
+            //}
+            //else
+            //{ 
+            //    MessageBox.Show("Save: Modus - Create");
+            //}
+        }
+
+        //=====================================================================================================================================================================
+        private void Btn_Cancel_Click(object sender, EventArgs e)
+        {
+            LoadContactMain("view", null, ContactID);
         }
 
         //

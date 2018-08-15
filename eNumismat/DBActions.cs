@@ -114,11 +114,11 @@ namespace eNumismat
                         }
                         else if (contactname == null && contactId != 0)
                         {
-                            SQL = "SELECT * FROM contacts WHERE id '" + contactId + "'";
+                            SQL = "SELECT * FROM contacts WHERE id = '" + contactId + "'";
                         }
                         else if (contactname != null && contactId != 0)
                         {
-                            SQL = "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' AND `id`= '" + contactId + "' LIMIT 1";
+                            SQL = "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' AND `id` = '" + contactId + "' LIMIT 1";
                         }
 
                         break;
@@ -156,7 +156,7 @@ namespace eNumismat
                     {
                         SQL = "UPDATE `contacts`" +
                             "SET" +
-                            " `name` = '" + contactDetails[0] + "', `surename` = '" + contactDetails[1] + "', `gender` = '" + contactDetails[2] + "', `birthdate` = '" + contactDetails[3] + "', `street` = '" + contactDetails[4] + "', `zipcode` = '" + contactDetails[5] + "', `city` = '" + contactDetails[6] + "', `country` = '" + contactDetails[7] + "', `phone` = '" + contactDetails[8] + "', `mobile` = '" + contactDetails[9] + "', `email` = '" + contactDetails[10] + "', `notes` = '" + contactDetails[11] + "';";
+                            " `name` = '" + contactDetails[0] + "', `surename` = '" + contactDetails[1] + "', `gender` = '" + contactDetails[2] + "', `birthdate` = '" + contactDetails[3] + "', `street` = '" + contactDetails[4] + "', `zipcode` = '" + contactDetails[5] + "', `city` = '" + contactDetails[6] + "', `country` = '" + contactDetails[7] + "', `phone` = '" + contactDetails[8] + "', `mobile` = '" + contactDetails[9] + "', `email` = '" + contactDetails[10] + "', `notes` = '" + contactDetails[11] + "' WHERE `id` = " + ID + " ;";
 
                     }
 
@@ -210,7 +210,7 @@ namespace eNumismat
                     }
                     else if (names != null && id != 0)
                     {
-                        SQL = "DELETE FROM contacts WHERE `name` = '" + names[0] + "' AND `surename` = '" + names[1] + "' AND `id`= " + id + "";
+                        SQL = "DELETE FROM contacts WHERE `name` = '" + names[0] + "' AND `surename` = '" + names[1] + "' AND `id` = " + id + "";
                     }
 
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
