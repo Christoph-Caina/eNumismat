@@ -123,16 +123,24 @@ namespace eNumismat
                 {
                     label_name.Text = ContactDetails[1];
                     label_surename.Text = ContactDetails[2];
-                    //label_gender.Text = ContactDetails[3];
-                    //dtp_birthdate.Text = ContactDetails[4];
-                    //tb_street.Text = ContactDetails[5];
-                    //tb_zipcode.Text = ContactDetails[6];
-                    //tb_city.Text = ContactDetails[7];
-                    //tb_country.Text = ContactDetails[8];
-                    //tb_phone.Text = ContactDetails[9];
-                    //tb_mobile.Text = ContactDetails[10];
-                    //tb_mail.Text = ContactDetails[11];
-                    //rtb_notes.Text = ContactDetails[12];
+                    label_birthdate.Text = ContactDetails[4];
+                    label_street.Text = ContactDetails[5];
+                    label_zip.Text = ContactDetails[6];
+                    label_city.Text = ContactDetails[7];
+                    label_country.Text = ContactDetails[8];
+                    label_phone.Text = ContactDetails[9];
+                    label_mobile.Text = ContactDetails[10];
+                    label_mail.Text = ContactDetails[11];
+                    rtb_notesDisplay.AppendText(ContactDetails[12]);
+
+                    if (ContactDetails[3] == "male")
+                    {
+                        pb_gender.BackgroundImage = Properties.Resources.male;
+                    }
+                    else if (ContactDetails[3] == "female")
+                    {
+                        pb_gender.BackgroundImage = Properties.Resources.female;
+                    }   
                 }
             }
         }
