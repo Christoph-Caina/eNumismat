@@ -91,15 +91,19 @@ namespace eNumismat
                 dbConnection.Open();
 
                 string SQL = null;
+                
 
-                switch(content)
+                switch (content)
                 {
-                    case "parents":
+                    case "parents": 
                         SQL = "SELECT count(name), substr(name, 1, 1) FROM contacts GROUP by substr(name, 1, 1)";
+                        //SQLCommand = new SQLiteCommand(SQL, dbConnection);
                         break;
 
                     case "childs":
-                        SQL = "SELECT name, surename, gender FROM contacts WHERE name LIKE '" + FirstLetter + "%' ORDER BY surename ASC";
+                        SQL = "SELECT name, surename, gender FROM contacts WHERE name LIKE @FirstLetter% ORDER BY surename ASC";
+                        //SQLCommand = new SQLiteCommand(SQL, dbConnection);
+                        //SQLCommand.Parameters.AddWithValue("@name", FirstLetter);
                         break;
 
                     case "details":
@@ -107,31 +111,64 @@ namespace eNumismat
                         if (contactname == null && contactId == 0)
                         {
                             SQL = "SELECT * FROM contacts ORDER BY name, surename LIMIT 1";
+                            //SQLCommand = new SQLiteCommand(SQL, dbConnection);
                         }
                         else if (contactname != null && contactId == 0)
                         {
-                            SQL = "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' LIMIT 1";
+                            SQL = "SELECT * FROM contacts WHERE `name` = @ContactName AND `surename` = '@ContactSureName' LIMIT 1";
+                            //SQLCommand = new SQLiteCommand(SQL, dbConnection);
+                            //SQLCommand.Parameters.AddWithValue("@ContactName", contactname[0]);
+                            //SQLCommand.Parameters.AddWithValue("@ContactSureName", contactname[1]);
                         }
                         else if (contactname == null && contactId != 0)
                         {
-                            SQL = "SELECT * FROM contacts WHERE id = '" + contactId + "'";
+                            SQL = "SELECT * FROM contacts WHERE id = @ContactID";
+                            //SQLCommand = new SQLiteCommand(SQL, dbConnection);
+                            //SQLCommand.Parameters.AddWithValue("@ContactID", contactId);
                         }
                         else if (contactname != null && contactId != 0)
                         {
-                            SQL = "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' AND `id` = '" + contactId + "' LIMIT 1";
+                            SQL = "SELECT * FROM contacts WHERE `name` = @ContactName AND `surename` = @ContactSureName AND `id` = @ContactID LIMIT 1";
+                            //SQLCommand = new SQLiteCommand(SQL, dbConnection);
                         }
 
                         break;
                 }
 
-                //MessageBox.Show(SQL);
+                SQLiteCommand SQLCommand = new SQLiteCommand(SQL, dbConnection);
 
-                using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(SQL, dbConnection))
+                if (FirstLetter != null)
                 {
-                    daContacts.Fill(Contacts);
+                    SQLCommand.Parameters.AddWithValue("@FirstLetter", FirstLetter);
+                }
 
+                if (contactname != null)
+                {
+                    SQLCommand.Parameters.AddWithValue("@ContactName", contactname[0]);
+                    SQLCommand.Parameters.AddWithValue("@ContactSureName", contactname[1]);
+                }
+
+                if (contactId != 0)
+                {
+                    SQLCommand.Parameters.AddWithValue("@ContactID", contactId);
+                }
+
+                MessageBox.Show(SQLCommand.CommandText);
+
+                using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(SQLCommand))
+                {
+                    try
+                    {
+                        daContacts.Fill(Contacts);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + Environment.NewLine + SQLCommand);
+                    }
+                    dbConnection.Close();
                     return Contacts;
                 }
+
             }
         }
 
@@ -150,18 +187,35 @@ namespace eNumismat
                         SQL = "INSERT INTO `contacts`" +
                             "(`name`, `surename`, `gender`, `birthdate`, `street`, `zipcode`, `city`, `country`, `phone`, `mobile`, `email`, `notes`)" +
                             "VALUES" +
-                            "('"+ contactDetails[0] + "', '" + contactDetails[1] + "', '" + contactDetails[2] + "', '" + contactDetails[3] + "', '" + contactDetails[4] + "', '" + contactDetails[5] + "', '" + contactDetails[6] + "', '" + contactDetails[7] + "', '" + contactDetails[8] + "', '" + contactDetails[9] + "', '" + contactDetails[10] + "', '" + contactDetails[11] + "');";
+                            "(@Name, @SureName, @Gender, @BirthDate, @Street, @ZipCode, @City, @Country, @Phone, @Mobile, @email, @Notes);";
+                        //SQLCommand = new SQLiteCommand(SQL, dbConnection);
+
                     }
                     else
                     {
                         SQL = "UPDATE `contacts`" +
                             "SET" +
-                            " `name` = '" + contactDetails[0] + "', `surename` = '" + contactDetails[1] + "', `gender` = '" + contactDetails[2] + "', `birthdate` = '" + contactDetails[3] + "', `street` = '" + contactDetails[4] + "', `zipcode` = '" + contactDetails[5] + "', `city` = '" + contactDetails[6] + "', `country` = '" + contactDetails[7] + "', `phone` = '" + contactDetails[8] + "', `mobile` = '" + contactDetails[9] + "', `email` = '" + contactDetails[10] + "', `notes` = '" + contactDetails[11] + "' WHERE `id` = " + ID + " ;";
-
+                            " `name` = @Name, `surename` = @SureName, `gender` = @Gender, `birthdate` = @BirthDate, `street` = @Street, `zipcode` = @ZipCode, `city` = @City, `country` = @Country, `phone` = @Phone, `mobile` = @Mobile, `email` = @email, `notes` = @Notes WHERE `id` = @ID ;";
+                        //SQLCommand = new SQLiteCommand(SQL, dbConnection);
+                            
                     }
 
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                     {
+                        command.Parameters.AddWithValue("@Name", contactDetails[0]);
+                        command.Parameters.AddWithValue("@SureName", contactDetails[1]);
+                        command.Parameters.AddWithValue("@Gender", contactDetails[2]);
+                        command.Parameters.AddWithValue("@BirthDate", contactDetails[3]);
+                        command.Parameters.AddWithValue("@Street", contactDetails[4]);
+                        command.Parameters.AddWithValue("@ZipCode", contactDetails[5]);
+                        command.Parameters.AddWithValue("@City", contactDetails[6]);
+                        command.Parameters.AddWithValue("@Country", contactDetails[7]);
+                        command.Parameters.AddWithValue("@Phone", contactDetails[8]);
+                        command.Parameters.AddWithValue("@Mobile", contactDetails[9]);
+                        command.Parameters.AddWithValue("@email", contactDetails[10]);
+                        command.Parameters.AddWithValue("@Notes", contactDetails[11]);
+                        command.Parameters.AddWithValue("@ID", ID);
+
                         try
                         {
                             command.ExecuteNonQuery();
@@ -176,6 +230,7 @@ namespace eNumismat
                             return false;
                         }
                     }
+                    
                 }
             }
             catch (Exception ex)
@@ -193,6 +248,7 @@ namespace eNumismat
                 {
                     dbConnection.Open();
                     string SQL = null;
+                    //SQLiteCommand SQLCommand = new SQLiteCommand();
 
                     if (names == null && id == 0)
                     {
@@ -202,19 +258,23 @@ namespace eNumismat
                     }
                     else if (names != null && id == 0)
                     {
-                        SQL = "DELETE FROM contacts WHERE `name` = '" + names[0] + "' AND `surename` = '" + names[1] + "'";
+                        SQL = "DELETE FROM contacts WHERE `name` = @Name AND `surename` = @SureName";                        
                     }
                     else if (names == null && id != 0)
                     {
-                        SQL = "DELETE FROM contacts WHERE id = " + id + "";
+                        SQL = "DELETE FROM contacts WHERE id = @ID";
                     }
                     else if (names != null && id != 0)
                     {
-                        SQL = "DELETE FROM contacts WHERE `name` = '" + names[0] + "' AND `surename` = '" + names[1] + "' AND `id` = " + id + "";
+                        SQL = "DELETE FROM contacts WHERE `name` = @Name AND `surename` = @SureName AND `id` = @ID";
                     }
 
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                     {
+                        command.Parameters.AddWithValue("@Name", names[0]);
+                        command.Parameters.AddWithValue("@SureName", names[1]);
+                        command.Parameters.AddWithValue("@ID", id);
+
                         try
                         {
                             command.ExecuteNonQuery();
@@ -283,16 +343,21 @@ namespace eNumismat
                 dbConnection.Open();
 
                 string SQL = null;
+                SQLiteCommand SQLCommand = new SQLiteCommand();
 
                 if (content == "parents")
                 {
                     SQL =
                         "SELECT contacts.name, contacts.surename FROM swaplist LEFT JOIN contacts ON contacts.id = swaplist.contacts_id GROUP BY contacts.name, contacts.surename";
+                    SQLCommand = new SQLiteCommand(SQL, dbConnection);
                 }
                 else if (content == "childs")
                 {
                     SQL =
-                        "SELECT swaplist.date, swaplist.swapstatus, swaplist.tracking_code_out FROM swaplist LEFT JOIN contacts ON contacts.id = swaplist.contacts_id WHERE contacts.name = '" + contactname[0] + "' AND contacts.surename = '" + contactname[1] + "'";
+                        "SELECT swaplist.date, swaplist.swapstatus, swaplist.tracking_code_out FROM swaplist LEFT JOIN contacts ON contacts.id = swaplist.contacts_id WHERE contacts.name = @ContactName AND contacts.surename = @ContactSureName";
+                    SQLCommand = new SQLiteCommand(SQL, dbConnection);
+                    SQLCommand.Parameters.AddWithValue("@ContactName", contactname[0]);
+                    SQLCommand.Parameters.AddWithValue("@ContactSureName", contactname[1]);
                 }
 
                 using (SQLiteDataAdapter daSwaps = new SQLiteDataAdapter(SQL, dbConnection))

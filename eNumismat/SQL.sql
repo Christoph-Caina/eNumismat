@@ -6,6 +6,7 @@
   `symbol` TEXT(3)
 );
 
+BEGIN;
 INSERT INTO `CURRENCIES`
 	(`name`, `short`, `symbol`)
   VALUES
@@ -31,6 +32,7 @@ INSERT INTO `CURRENCIES`
 	('Bath (Thailand)', null, '฿'),
 	('Cruzeiro (Brasilien)', null, '₢'),
 	('Peso (Spanien)', null, '₱');
+COMMIT;
 
 CREATE TABLE IF NOT EXISTS `COINTYPES`
 (
@@ -104,6 +106,7 @@ CREATE TABLE IF NOT EXISTS `COUNTRIES`
   `name` TEXT(45) NOT NULL
 );
 
+BEGIN;
 INSERT INTO `COUNTRIES`
 	(`name`)
 VALUES
@@ -117,6 +120,7 @@ VALUES
 	('Russland'),
 	('Kanada'),
 	('Australien');
+COMMIT;
 
 CREATE TABLE IF NOT EXISTS `CONTACTS`
 (
@@ -135,12 +139,14 @@ CREATE TABLE IF NOT EXISTS `CONTACTS`
   `notes` TEXT
 );
 
+BEGIN;
 INSERT INTO `CONTACTS`
 	(`name`, `surename`, `gender`, `birthdate`, `street`, `zipcode`, `city`, `country`, `phone`, `mobile`, `email`, `notes`)
 VALUES
 	('Mustermann', 'Max', 'male', null, 'Musterstraße 23', '12345', 'Musterdorf', 'Deutschland', null, null, null, null),
 	('Mustermann', 'Marta', 'female', null, 'Musterstraße 23', '12345', 'Musterdorf', 'Deutschland', null, null, null, null),
 	('Caina', 'Christoph', 'male', '25.03.1986', 'Quellenstraße 21', '71272', 'Renningen', 'Deutschland', null, null, 'christoph@caina.de', 'Developer of eNumismat');
+COMMIT;
 
 CREATE TABLE IF NOT EXISTS `SWAPDETAILS`
 (
