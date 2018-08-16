@@ -7,6 +7,7 @@ namespace eNumismat
 {
     class FileBackup
     {
+        //=====================================================================================================================================================================
         public void RunBackup()
         {
             if (Directory.Exists(Globals.AppDataPath + @"\DBBackUps\"))
@@ -25,7 +26,7 @@ namespace eNumismat
             }
         }
 
-
+        //=====================================================================================================================================================================
         private void ExcecuteBackup()
         {
             string SourceFile = Path.Combine(Globals.FileBrowserInitDir, Globals.DBFile);
