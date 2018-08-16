@@ -13,7 +13,7 @@ namespace eNumismat
         DBActions dbAction;
         SaveFileDialog saveFile;
         OpenFileDialog openFile;
-        FolderBrowserDialog folderBrowser;
+        //FolderBrowserDialog folderBrowser;
         AddressBook adrBook;
         SwapMonitor swapList;
 
@@ -67,23 +67,55 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Form1_Load(object sender, EventArgs e)
         {
-            EnableOrDisableMenueItems();
+            CheckIfDBFileExists();
+            //EnableOrDisableMenueItems();
+            UpdateStatusText();
         }
 
         //=====================================================================================================================================================================
-        private void EnableOrDisableMenueItems()
+        private void UpdateStatusText()
         {
-            if (String.IsNullOrEmpty(Globals.DBFile))
+            
+        }
+        //=====================================================================================================================================================================
+        private void CheckIfDBFileExists()
+        {
+            if (!String.IsNullOrEmpty(Globals.DBFile))
+            {
+                //if(File.Exists(Globals.FileBrowserInitDir + "\\" + Globals.DBFile))
+                //{
+                    ExtrasToolStripMenuItem.Enabled = true;
+                    AdressbuchToolStripMenuItem.Enabled = true;
+                    TauschmonitorToolStripMenuItem.Enabled = true;
+                    toolStripStatusLabel1.Image = Properties.Resources.connect;
+                    toolStripStatusLabel1.Text = Globals.DBFile;
+                //}
+                //else
+                //{
+                //    ErrorDialog ErrDiag = new ErrorDialog();
+                //    ErrDiag.DialogTitle = "ERROR";
+                //    ErrDiag.ErrText =
+                //        "Error: The file " +
+                //        Globals.DBFile +
+                //        " does not exist in the given Directory!" +
+                //        Environment.NewLine +
+                //        Globals.FileBrowserInitDir +
+                //        Environment.NewLine +
+                //        Environment.NewLine +
+                //        "Would you like to open another File, or do you want to create a new one?";
+                //    ErrDiag.Btn1_Text = "Open other File";
+                //    ErrDiag.Btn2_Text = "Create New File";
+                //    ErrDiag.Btn3_Text = "Cancel";
+                //
+                 //   ErrDiag.ShowDialog();
+                //}
+            }
+            else
             {
                 ExtrasToolStripMenuItem.Enabled = false;
                 AdressbuchToolStripMenuItem.Enabled = false;
                 TauschmonitorToolStripMenuItem.Enabled = false;
-            }
-            else
-            {
-                ExtrasToolStripMenuItem.Enabled = true;
-                AdressbuchToolStripMenuItem.Enabled = true;
-                TauschmonitorToolStripMenuItem.Enabled = true;
+                toolStripStatusLabel1.Image = Properties.Resources.disconnect;
             }
         }
 
@@ -166,9 +198,7 @@ namespace eNumismat
             cfgHandler.UpdateXmlConf("Database", "LastDBFile", FileData[0]);
             cfgHandler.UpdateXmlConf("Database", "LastDBFilePath", FileData[1]);
 
-            Globals.DBFile = FileData[1] + "\\" + FileData[0];
-
-            EnableOrDisableMenueItems();
+            //Globals.DBFile = FileData[1] + "\\" + FileData[0];
         }
 
         //=====================================================================================================================================================================

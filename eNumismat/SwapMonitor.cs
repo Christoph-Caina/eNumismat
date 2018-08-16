@@ -52,7 +52,6 @@ namespace eNumismat
         {
             TreeNode parents = null;
 
-            int i = 0;
             foreach (DataRow drParents in dbAction.GetSwapListDetails("parents").Rows)
             {
                 parents = treeView1.Nodes.Add(drParents[0].ToString() + ", " + drParents[1]);

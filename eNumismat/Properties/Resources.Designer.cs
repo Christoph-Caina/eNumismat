@@ -63,6 +63,16 @@ namespace eNumismat.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _64x64 {
+            get {
+                object obj = ResourceManager.GetObject("64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap accept {
             get {
                 object obj = ResourceManager.GetObject("accept", resourceCulture);
@@ -96,6 +106,16 @@ namespace eNumismat.Properties {
         internal static System.Drawing.Bitmap cog {
             get {
                 object obj = ResourceManager.GetObject("cog", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connect {
+            get {
+                object obj = ResourceManager.GetObject("connect", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -154,9 +174,29 @@ namespace eNumismat.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap disconnect {
+            get {
+                object obj = ResourceManager.GetObject("disconnect", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap door_in {
             get {
                 object obj = ResourceManager.GetObject("door_in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exclamation {
+            get {
+                object obj = ResourceManager.GetObject("exclamation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -220,6 +260,7 @@ namespace eNumismat.Properties {
         ///  `symbol` TEXT(3)
         ///);
         ///
+        ///BEGIN;
         ///INSERT INTO `CURRENCIES`
         ///	(`name`, `short`, `symbol`)
         ///  VALUES
@@ -232,7 +273,7 @@ namespace eNumismat.Properties {
         ///	(&apos;Dollar (CAN)&apos;, &apos;CAD&apos;, &apos;CA$&apos;),
         ///	(&apos;Dollar (AUS)&apos;, &apos;AUD&apos;, &apos;AU$&apos;),
         ///	(&apos;Pfund&apos;, null,&apos;£&apos;),
-        ///	(&apos;Lira&apos;, null,&apos;₤ [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        ///	(&apos;Lira&apos;, [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         internal static string SQL {
             get {

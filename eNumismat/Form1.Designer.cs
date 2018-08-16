@@ -43,7 +43,9 @@
             this.nachUpdatesSuchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unicodeTabelleFürWährungssymboleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -74,7 +76,7 @@
             // 
             this.neueDatenbankToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_add;
             this.neueDatenbankToolStripMenuItem.Name = "neueDatenbankToolStripMenuItem";
-            this.neueDatenbankToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neueDatenbankToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.neueDatenbankToolStripMenuItem.Text = "Neue Datenbank";
             this.neueDatenbankToolStripMenuItem.Click += new System.EventHandler(this.NeueDatenbankToolStripMenuItem_Click);
             // 
@@ -82,20 +84,20 @@
             // 
             this.datenbankÖffnenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_connect;
             this.datenbankÖffnenToolStripMenuItem.Name = "datenbankÖffnenToolStripMenuItem";
-            this.datenbankÖffnenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.datenbankÖffnenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.datenbankÖffnenToolStripMenuItem.Text = "Datenbank öffnen";
             this.datenbankÖffnenToolStripMenuItem.Click += new System.EventHandler(this.DatenbankOeffnenToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(166, 6);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.door_in;
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.BeendenToolStripMenuItem_Click);
             // 
@@ -128,7 +130,7 @@
             // 
             this.AdressbuchToolStripMenuItem.Image = global::eNumismat.Properties.Resources.book_addresses;
             this.AdressbuchToolStripMenuItem.Name = "AdressbuchToolStripMenuItem";
-            this.AdressbuchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AdressbuchToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.AdressbuchToolStripMenuItem.Text = "Adressbuch";
             this.AdressbuchToolStripMenuItem.Click += new System.EventHandler(this.AdressbuchToolStripMenuItem_Click);
             // 
@@ -136,7 +138,7 @@
             // 
             this.TauschmonitorToolStripMenuItem.Image = global::eNumismat.Properties.Resources.table_refresh;
             this.TauschmonitorToolStripMenuItem.Name = "TauschmonitorToolStripMenuItem";
-            this.TauschmonitorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.TauschmonitorToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.TauschmonitorToolStripMenuItem.Text = "Tauschmonitor";
             this.TauschmonitorToolStripMenuItem.Click += new System.EventHandler(this.TauschmonitorToolStripMenuItem_Click);
             // 
@@ -164,11 +166,19 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 592);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(860, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // Form1
             // 
@@ -185,6 +195,8 @@
             this.Shown += new System.EventHandler(this.Form1_Show);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,6 +219,7 @@
         private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nachUpdatesSuchenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unicodeTabelleFürWährungssymboleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

@@ -9,12 +9,14 @@ namespace eNumismat
 {
     class DBActions
     {
+        string _DBFile = Globals.FileBrowserInitDir + "\\" + Globals.DBFile;
+
         //=====================================================================================================================================================================
         public bool CreateNew()
         {
             try
             {
-                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
                 {
                     dbConnection.Open();
 
@@ -49,7 +51,7 @@ namespace eNumismat
         {
             int _rowCounter = 0;
 
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
             {
                 try
                 {
@@ -84,9 +86,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public DataTable GetContacts(string content, string FirstLetter = null, string[] contactDetails = null, int ID = 0)
         {
-            DataTable Contacts = new DataTable();
-
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
             {
                 dbConnection.Open();
 
@@ -142,13 +142,13 @@ namespace eNumismat
 
                     using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(command))
                     {
+                        DataTable Contacts = new DataTable();
+                        
                         daContacts.Fill(Contacts);
 
                         return Contacts;
                     }
                 }
-
-                
             }
         }
 
@@ -157,7 +157,7 @@ namespace eNumismat
         {
             try
             {
-                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
                 {
                     dbConnection.Open();
                     string SQL = null;
@@ -219,7 +219,7 @@ namespace eNumismat
         {
             try
             {
-                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
                 {
                     dbConnection.Open();
                     string SQL = null;
@@ -275,7 +275,7 @@ namespace eNumismat
         {
             int _rowCounter = 0;
 
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
             {
                 try
                 {
@@ -310,9 +310,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public DataTable GetSwapListDetails(string content, string[] ContactDetails = null)
         {
-            DataTable SwapListDetails = new DataTable();
-
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + Globals.DBFile))
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
             {
                 dbConnection.Open();
 
@@ -333,8 +331,10 @@ namespace eNumismat
                     command.Parameters.AddWithValue("@ContactName", ContactDetails[0]);
                     command.Parameters.AddWithValue("@ContactSureName", ContactDetails[1]);
                     
-                    using (SQLiteDataAdapter daSwaps = new SQLiteDataAdapter(SQL, dbConnection))
+                    using (SQLiteDataAdapter daSwaps = new SQLiteDataAdapter(command))
                     {
+                        DataTable SwapListDetails = new DataTable();
+
                         daSwaps.Fill(SwapListDetails);
 
                         return SwapListDetails;

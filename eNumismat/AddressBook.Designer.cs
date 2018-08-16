@@ -104,11 +104,11 @@
             this.label_surename = new System.Windows.Forms.Label();
             this.label_name = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.AddSwap = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -180,6 +180,7 @@
             this.vCardToolStripMenuItem,
             this.windowsCONTACTToolStripMenuItem,
             this.outlookToolStripMenuItem});
+            this.kontaktImportierenToolStripMenuItem.Enabled = false;
             this.kontaktImportierenToolStripMenuItem.Name = "kontaktImportierenToolStripMenuItem";
             this.kontaktImportierenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kontaktImportierenToolStripMenuItem.Text = "Kontakt Importieren";
@@ -208,6 +209,7 @@
             this.vCardvcfToolStripMenuItem,
             this.windowsKontaktcontactToolStripMenuItem,
             this.microsoftOutlookToolStripMenuItem});
+            this.kontaktExportierenToolStripMenuItem.Enabled = false;
             this.kontaktExportierenToolStripMenuItem.Name = "kontaktExportierenToolStripMenuItem";
             this.kontaktExportierenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kontaktExportierenToolStripMenuItem.Text = "Kontakt Exportieren";
@@ -830,15 +832,32 @@
             this.tabPage2.Text = "Tauschübersicht";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // AddSwap
             // 
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(6, 276);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(442, 179);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.AddSwap.Location = new System.Drawing.Point(376, 461);
+            this.AddSwap.Name = "AddSwap";
+            this.AddSwap.Size = new System.Drawing.Size(75, 23);
+            this.AddSwap.TabIndex = 4;
+            this.AddSwap.Text = "Neu";
+            this.AddSwap.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 260);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(64, 13);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "Ausgehend:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 34);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(61, 13);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "Eingehend:";
             // 
             // listView2
             // 
@@ -850,32 +869,15 @@
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
-            // label21
+            // listView1
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 34);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(61, 13);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "Eingehend:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 260);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(64, 13);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "Ausgehend:";
-            // 
-            // AddSwap
-            // 
-            this.AddSwap.Location = new System.Drawing.Point(376, 461);
-            this.AddSwap.Name = "AddSwap";
-            this.AddSwap.Size = new System.Drawing.Size(75, 23);
-            this.AddSwap.TabIndex = 4;
-            this.AddSwap.Text = "Neu";
-            this.AddSwap.UseVisualStyleBackColor = true;
+            this.listView1.FullRowSelect = true;
+            this.listView1.Location = new System.Drawing.Point(6, 276);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(442, 179);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // AddressBook
             // 

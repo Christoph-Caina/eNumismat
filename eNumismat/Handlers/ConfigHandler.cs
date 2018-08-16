@@ -11,6 +11,7 @@ namespace eNumismat
     class ConfigHandler
     {
         XmlDocument xConf;
+        string ConfFile = Globals.AppDataPath + @"\config.xml";
 
         //=====================================================================================================================================================================
         private bool CheckIfAppDataPathExists()
@@ -94,7 +95,7 @@ namespace eNumismat
         {
             xConf = new XmlDocument();
 
-            xConf.Load(Globals.AppDataPath + @"\config.xml");
+            xConf.Load(ConfFile);
 
             XmlNodeList DBConfNode;
             XmlNode root = xConf.DocumentElement;
@@ -116,7 +117,9 @@ namespace eNumismat
                     DBFilePath = DBConf.InnerText;
                 }
             }
-            Globals.DBFile = DBFilePath + "\\" + DBFileName;
+
+            Globals.DBFile = DBFileName;
+            Globals.FileBrowserInitDir = DBFilePath;
         }
 
         //=====================================================================================================================================================================
@@ -124,7 +127,7 @@ namespace eNumismat
         {
             xConf = new XmlDocument();
 
-            xConf.Load(Globals.AppDataPath + @"\config.xml");
+            xConf.Load(ConfFile);
 
             XmlNode xConfNode = xConf.DocumentElement;
             xConfNode.SelectNodes("descendant::configuration");
@@ -149,7 +152,7 @@ namespace eNumismat
 
             try
             {
-                xConf.Save(Globals.AppDataPath + @"\config.xml");
+                xConf.Save(ConfFile);
             }
             catch (Exception ex)
             {

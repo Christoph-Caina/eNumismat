@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS `COINTYPES`
     ON UPDATE NO ACTION
 );
 
+BEGIN;
 INSERT INTO `COINTYPES`
 	(`name`, `diameter`, `thickness`, `weight`, `CURRENCIES_id`)
   VALUES
@@ -64,7 +65,7 @@ INSERT INTO `COINTYPES`
 	('25 € Gedenkmünze "925er Silber"', '32,5 mm', null, null, 1),
 	('2 € Gedenkmünze', null, null, null, 1),
 	('5 € Sammlermünze', null, null, null, 1);
-
+COMMIT;
 
 CREATE TABLE IF NOT EXISTS `COINSTATUS`
 (
