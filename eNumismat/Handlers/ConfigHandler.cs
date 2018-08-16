@@ -115,25 +115,25 @@ namespace eNumismat
 
             xConf.Load(Globals.AppDataPath + @"\config.xml");
 
-            XmlNodeList aNodes;
-            XmlNode root = xConf.DocumentElement;
+            XmlNode xConfNode = xConf.DocumentElement;
+            xConfNode.SelectNodes("descendant::configuration");
 
-            aNodes = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
-
-            foreach (XmlNode aNode in aNodes)
+            foreach (XmlNode xConfN in xConfNode)
             {
-                if (aNode.Attributes["name"].Value == ParamName)
-                {
-                    aNode.InnerText = ParamValue;
-                }
+                xConfN.Attributes["LastModified"].Value = DateTime.Now.ToString(@"yyyy/MM/dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
             }
 
-            XmlNode Conf = xConf.DocumentElement;
-            Conf.SelectNodes("descendant::configuration");
+            XmlNodeList DBConfNode;
+            XmlNode root = xConf.DocumentElement;
 
-            foreach (XmlNode _Conf in Conf)
+            DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+
+            foreach (XmlNode DBConf in DBConfNode)
             {
-                _Conf.Attributes["LastModified"].Value = DateTime.Now.ToString(@"yyyy/MM/dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
+                if (DBConf.Attributes["name"].Value == ParamName)
+                {
+                    DBConf.InnerText = ParamValue;
+                }
             }
 
             try
