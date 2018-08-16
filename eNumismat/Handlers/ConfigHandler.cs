@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Xml;
 using System.Reflection;
 using System.Windows.Forms;
@@ -40,16 +42,25 @@ namespace eNumismat
             xConf = new XmlDocument();
             XmlAttribute attr;
 
-            XmlNode docType = xConf.CreateXmlDeclaration("1.0", "UTF-8", null);
+            XmlDeclaration docType = xConf.CreateXmlDeclaration("1.0", "UTF-8", null);
             xConf.AppendChild(docType);
 
             XmlNode NameSpace = xConf.CreateElement(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace);
             xConf.AppendChild(NameSpace);
 
             XmlNode ConfigNode = xConf.CreateElement("configuration");
+            attr = xConf.CreateAttribute("CreationTimeStamp");
+            attr.Value = DateTime.Now.ToString(@"yyyy/MM/dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
+            ConfigNode.Attributes.Append(attr);
+            attr = xConf.CreateAttribute("LastModified");
+            attr.Value = DateTime.Now.ToString(@"yyyy/MM/dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
+            ConfigNode.Attributes.Append(attr);
             NameSpace.AppendChild(ConfigNode);
 
-            XmlNode DBConf = xConf.CreateElement("DataBase");
+            XmlNode DBConf = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "Database";
+            DBConf.Attributes.Append(attr);
             ConfigNode.AppendChild(DBConf);
 
             XmlNode LastDBFileName = xConf.CreateElement("parameter");
@@ -81,12 +92,50 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public void ReadXmlConf()
         {
+            xConf = new XmlDocument();
 
+            xConf.Load(Globals.AppDataPath + @"\config.xml");
+
+            XmlNodeList aNodes;
+            XmlNode root = xConf.DocumentElement;
+
+            aNodes = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+
+            foreach (XmlNode aNode in aNodes)
+            {
+                //Do Work :)
+                //MessageBox.Show(aNode.InnerText);
+            }
         }
 
         //=====================================================================================================================================================================
-        public void UpdateXmlConf()
+        public void UpdateXmlConf(string GroupName, string ParamName, string ParamValue)
         {
+            xConf = new XmlDocument();
+
+            xConf.Load(Globals.AppDataPath + @"\config.xml");
+
+            XmlNodeList aNodes;
+            XmlNode root = xConf.DocumentElement;
+
+            aNodes = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+
+            foreach (XmlNode aNode in aNodes)
+            {
+                if (aNode.Attributes["name"].Value == ParamName)
+                {
+                    aNode.InnerText = ParamValue;
+                }
+            }
+
+            try
+            {
+                xConf.Save(Globals.AppDataPath + @"\config.xml");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

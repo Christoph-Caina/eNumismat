@@ -121,6 +121,8 @@ namespace eNumismat
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
+                //cfgHandler.UpdateXmlConf();
+
                 Globals.DBFile = saveFile.FileName;
                 EnableOrDisableMenueItems();
 
@@ -146,6 +148,11 @@ namespace eNumismat
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
+                string FileName = openFile.SafeFileName;
+                string FilePath = Path.GetDirectoryName(openFile.FileName);
+                //MessageBox.Show(FilePath + " // " + FileName);
+                cfgHandler.UpdateXmlConf("Database", "LastDBFile", FileName);
+                cfgHandler.UpdateXmlConf("Database", "LastDBFilePath", FilePath);
                 Globals.DBFile = openFile.FileName;
                 EnableOrDisableMenueItems();
             }

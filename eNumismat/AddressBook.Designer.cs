@@ -53,6 +53,7 @@
             this.Btn_CreateContact = new System.Windows.Forms.Button();
             this.Btn_DeleteContact = new System.Windows.Forms.Button();
             this.PanelEditContactDetails = new System.Windows.Forms.Panel();
+            this.tb_zipcode = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Btn_Cancel = new System.Windows.Forms.Button();
             this.Btn_Save = new System.Windows.Forms.Button();
@@ -103,7 +104,11 @@
             this.label_surename = new System.Windows.Forms.Label();
             this.label_name = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tb_zipcode = new System.Windows.Forms.MaskedTextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.AddSwap = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -117,6 +122,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_gender)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -352,6 +358,14 @@
             this.PanelEditContactDetails.Name = "PanelEditContactDetails";
             this.PanelEditContactDetails.Size = new System.Drawing.Size(446, 516);
             this.PanelEditContactDetails.TabIndex = 1;
+            // 
+            // tb_zipcode
+            // 
+            this.tb_zipcode.Location = new System.Drawing.Point(153, 162);
+            this.tb_zipcode.Mask = "00000";
+            this.tb_zipcode.Name = "tb_zipcode";
+            this.tb_zipcode.Size = new System.Drawing.Size(112, 20);
+            this.tb_zipcode.TabIndex = 5;
             // 
             // label12
             // 
@@ -614,7 +628,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(454, 490);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Kontaktdaten";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label20
@@ -803,21 +817,65 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.AddSwap);
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.listView2);
+            this.tabPage2.Controls.Add(this.listView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(454, 490);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Tauschübersicht";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tb_zipcode
+            // listView1
             // 
-            this.tb_zipcode.Location = new System.Drawing.Point(153, 162);
-            this.tb_zipcode.Mask = "00000";
-            this.tb_zipcode.Name = "tb_zipcode";
-            this.tb_zipcode.Size = new System.Drawing.Size(112, 20);
-            this.tb_zipcode.TabIndex = 5;
+            this.listView1.FullRowSelect = true;
+            this.listView1.Location = new System.Drawing.Point(6, 276);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(442, 179);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // listView2
+            // 
+            this.listView2.FullRowSelect = true;
+            this.listView2.Location = new System.Drawing.Point(6, 50);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(442, 179);
+            this.listView2.TabIndex = 1;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 34);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(61, 13);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "Eingehend:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 260);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(64, 13);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "Ausgehend:";
+            // 
+            // AddSwap
+            // 
+            this.AddSwap.Location = new System.Drawing.Point(376, 461);
+            this.AddSwap.Name = "AddSwap";
+            this.AddSwap.Size = new System.Drawing.Size(75, 23);
+            this.AddSwap.TabIndex = 4;
+            this.AddSwap.Text = "Neu";
+            this.AddSwap.UseVisualStyleBackColor = true;
             // 
             // AddressBook
             // 
@@ -827,8 +885,10 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AddressBook";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "AddressBook";
             this.Load += new System.EventHandler(this.AddressBook_Load);
             this.statusStrip1.ResumeLayout(false);
@@ -848,6 +908,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_gender)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -929,5 +991,10 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.RichTextBox rtb_notesDisplay;
         private System.Windows.Forms.MaskedTextBox tb_zipcode;
+        private System.Windows.Forms.Button AddSwap;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listView1;
     }
 }
