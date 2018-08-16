@@ -75,7 +75,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::eNumismat.Properties.Resources._64x64;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
