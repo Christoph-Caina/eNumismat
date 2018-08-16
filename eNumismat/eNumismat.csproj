@@ -114,12 +114,6 @@
     <Compile Include="Collection.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="DBActions.cs" />
-    <Compile Include="ErrorDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ErrorDialog.Designer.cs">
-      <DependentUpon>ErrorDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="Handlers\ConfigHandler.cs" />
     <Compile Include="Form1.cs">
@@ -146,9 +140,6 @@
     </Compile>
     <EmbeddedResource Include="AddressBook.resx">
       <DependentUpon>AddressBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ErrorDialog.resx">
-      <DependentUpon>ErrorDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -284,9 +275,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exclamation.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\64x64.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\database_save.png" />

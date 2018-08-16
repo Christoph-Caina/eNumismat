@@ -240,10 +240,7 @@ namespace eNumismat
         {
             FileBackup fBackup = new FileBackup();
 
-            if (fBackup.RunBackup())
-            {
-                MessageBox.Show("Backup erfolgreich");
-            }
+            fBackup.RunBackup();
         }
     }
 }

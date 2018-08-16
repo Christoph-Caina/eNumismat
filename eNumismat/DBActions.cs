@@ -3,13 +3,14 @@ using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.IO;
 
 
 namespace eNumismat
 {
     class DBActions
     {
-        string _DBFile = Globals.FileBrowserInitDir + "\\" + Globals.DBFile;
+        string _DBFile = Path.Combine(Globals.FileBrowserInitDir, Globals.DBFile);
 
         //=====================================================================================================================================================================
         public bool CreateNew()

@@ -11,7 +11,7 @@ namespace eNumismat
     class ConfigHandler
     {
         XmlDocument xConf;
-        string ConfFile = Globals.AppDataPath + @"\config.xml";
+        string ConfFile = Path.Combine(Globals.AppDataPath, @"config.xml");
 
         //=====================================================================================================================================================================
         private bool CheckIfAppDataPathExists()
