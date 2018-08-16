@@ -124,8 +124,6 @@ namespace eNumismat
                         break;
                 }
 
-                //MessageBox.Show(SQL);
-
                 using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                 {
                     if (FirstLetter != null)
@@ -170,14 +168,12 @@ namespace eNumismat
                             "(`name`, `surename`, `gender`, `birthdate`, `street`, `zipcode`, `city`, `country`, `phone`, `mobile`, `email`, `notes`)" +
                             "VALUES" +
                             "(@ContactName, @ContactSureName, @ContactGender, @ContactBirthdate, @ContactStreet, @ContactZipCode, @ContactCity, @ContactCountry, @ContactPhone, @ContactMobile, @ContactMail, @ContactNotes);";
-
                     }
                     else
                     {
                         SQL = "UPDATE `contacts`" +
                             "SET" +
                             " `name` = @ContactName, `surename` = @ContactSureName, `gender` = @ContactGender, `birthdate` = @ContactBirthdate, `street` = @ContactStreet, `zipcode` = @ContactZipCode, `city` = @ContactCity, `country` = @ContactCountry, `phone` = @ContactPhone, `mobile` = @ContactMobile, `email` = @ContactMail, `notes` = @ContactNotes WHERE `id` = @ContactID ;";
-
                     }
 
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
@@ -247,8 +243,6 @@ namespace eNumismat
                         SQL = "DELETE FROM contacts WHERE `name` = @ContactName AND `surename` = @ContactSureName AND `id` = @ContactID";
                     }
 
-
-
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                     {
                         command.Parameters.AddWithValue("@ContactName", contactDetails[0]);
@@ -314,7 +308,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        public DataTable GetSwapListDetails(string content, string[] contactname = null)
+        public DataTable GetSwapListDetails(string content, string[] ContactDetails = null)
         {
             DataTable SwapListDetails = new DataTable();
 
@@ -332,14 +326,19 @@ namespace eNumismat
                 else if (content == "childs")
                 {
                     SQL =
-                        "SELECT swaplist.date, swaplist.swapstatus, swaplist.tracking_code_out FROM swaplist LEFT JOIN contacts ON contacts.id = swaplist.contacts_id WHERE contacts.name = '" + contactname[0] + "' AND contacts.surename = '" + contactname[1] + "'";
+                        "SELECT swaplist.date, swaplist.swapstatus, swaplist.tracking_code_out FROM swaplist LEFT JOIN contacts ON contacts.id = swaplist.contacts_id WHERE contacts.name = @ContactName AND contacts.surename = @ContactSureName";
                 }
-
-                using (SQLiteDataAdapter daSwaps = new SQLiteDataAdapter(SQL, dbConnection))
+                using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                 {
-                    daSwaps.Fill(SwapListDetails);
+                    command.Parameters.AddWithValue("@ContactName", ContactDetails[0]);
+                    command.Parameters.AddWithValue("@ContactSureName", ContactDetails[1]);
+                    
+                    using (SQLiteDataAdapter daSwaps = new SQLiteDataAdapter(SQL, dbConnection))
+                    {
+                        daSwaps.Fill(SwapListDetails);
 
-                    return SwapListDetails;
+                        return SwapListDetails;
+                    }
                 }
             }
         }
