@@ -44,6 +44,8 @@
             this.unicodeTabelleFürWährungssymboleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.datenbankSichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +68,8 @@
             this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.neueDatenbankToolStripMenuItem,
             this.datenbankÖffnenToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.datenbankSichernToolStripMenuItem,
             this.toolStripSeparator1,
             this.beendenToolStripMenuItem});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
@@ -76,7 +80,7 @@
             // 
             this.neueDatenbankToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_add;
             this.neueDatenbankToolStripMenuItem.Name = "neueDatenbankToolStripMenuItem";
-            this.neueDatenbankToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.neueDatenbankToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.neueDatenbankToolStripMenuItem.Text = "Neue Datenbank";
             this.neueDatenbankToolStripMenuItem.Click += new System.EventHandler(this.NeueDatenbankToolStripMenuItem_Click);
             // 
@@ -84,20 +88,20 @@
             // 
             this.datenbankÖffnenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_connect;
             this.datenbankÖffnenToolStripMenuItem.Name = "datenbankÖffnenToolStripMenuItem";
-            this.datenbankÖffnenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.datenbankÖffnenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.datenbankÖffnenToolStripMenuItem.Text = "Datenbank öffnen";
             this.datenbankÖffnenToolStripMenuItem.Click += new System.EventHandler(this.DatenbankOeffnenToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(166, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.door_in;
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.BeendenToolStripMenuItem_Click);
             // 
@@ -180,6 +184,19 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // datenbankSichernToolStripMenuItem
+            // 
+            this.datenbankSichernToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_save;
+            this.datenbankSichernToolStripMenuItem.Name = "datenbankSichernToolStripMenuItem";
+            this.datenbankSichernToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.datenbankSichernToolStripMenuItem.Text = "Datenbank Sichern";
+            this.datenbankSichernToolStripMenuItem.Click += new System.EventHandler(this.DatenbankSichernToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +237,8 @@
         private System.Windows.Forms.ToolStripMenuItem nachUpdatesSuchenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unicodeTabelleFürWährungssymboleToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem datenbankSichernToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

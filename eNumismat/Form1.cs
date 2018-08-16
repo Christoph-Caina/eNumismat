@@ -235,5 +235,15 @@ namespace eNumismat
         {
             this.Close();
         }
+
+        private void DatenbankSichernToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FileBackup fBackup = new FileBackup();
+
+            if (fBackup.RunBackup())
+            {
+                MessageBox.Show("Backup erfolgreich");
+            }
+        }
     }
 }

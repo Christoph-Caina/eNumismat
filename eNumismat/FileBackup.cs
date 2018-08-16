@@ -7,7 +7,7 @@ namespace eNumismat
     {
         public bool RunBackup()
         {
-            /*using (var source = new SQLiteConnection("Data Source=" + Globals.FileBrowserInitDir + @"\" + Globals.DBFile))
+            using (var source = new SQLiteConnection("Data Source=" + Globals.FileBrowserInitDir + @"\" + Globals.DBFile))
             {
                 using (var destination = new SQLiteConnection("Data Source=" + Globals.AppDataPath + @"\DBBackUps\" + DateTime.Now.ToString("yyyy_MM_dd-HH:mm") + ".encBack"))
                 {
@@ -24,7 +24,7 @@ namespace eNumismat
 
                     return true;
                 }
-            }*/
+            }
             return true;
         }
     }
