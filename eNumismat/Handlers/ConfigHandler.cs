@@ -128,6 +128,14 @@ namespace eNumismat
                 }
             }
 
+            XmlNode Conf = xConf.DocumentElement;
+            Conf.SelectNodes("descendant::configuration");
+
+            foreach (XmlNode _Conf in Conf)
+            {
+                _Conf.Attributes["LastModified"].Value = DateTime.Now.ToString(@"yyyy/MM/dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
+            }
+
             try
             {
                 xConf.Save(Globals.AppDataPath + @"\config.xml");
