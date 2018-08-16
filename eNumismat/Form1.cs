@@ -121,10 +121,16 @@ namespace eNumismat
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                //cfgHandler.UpdateXmlConf();
+                //MessageBox.Show(saveFile.FileName);
 
-                Globals.DBFile = saveFile.FileName;
-                EnableOrDisableMenueItems();
+                string[] FileData = { Path.GetFileName(saveFile.FileName), Path.GetDirectoryName(saveFile.FileName) };
+
+                //MessageBox.Show(FileData[0]);
+
+                WriteDBFileToConf(FileData);
+
+                //Globals.DBFile = saveFile.;
+                //EnableOrDisableMenueItems();
 
                 dbAction = new DBActions();
                 dbAction.CreateNew();
@@ -148,14 +154,21 @@ namespace eNumismat
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                string FileName = openFile.SafeFileName;
-                string FilePath = Path.GetDirectoryName(openFile.FileName);
-                //MessageBox.Show(FilePath + " // " + FileName);
-                cfgHandler.UpdateXmlConf("Database", "LastDBFile", FileName);
-                cfgHandler.UpdateXmlConf("Database", "LastDBFilePath", FilePath);
-                Globals.DBFile = openFile.FileName;
-                EnableOrDisableMenueItems();
+                string[] FileData = { Path.GetFileName(openFile.FileName), Path.GetDirectoryName(openFile.FileName) };
+
+                WriteDBFileToConf(FileData);
             }
+        }
+
+        //=====================================================================================================================================================================
+        private void WriteDBFileToConf(string[] FileData)
+        {
+            cfgHandler.UpdateXmlConf("Database", "LastDBFile", FileData[0]);
+            cfgHandler.UpdateXmlConf("Database", "LastDBFilePath", FileData[1]);
+
+            Globals.DBFile = FileData[1] + "\\" + FileData[0];
+
+            EnableOrDisableMenueItems();
         }
 
         //=====================================================================================================================================================================

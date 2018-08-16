@@ -96,16 +96,27 @@ namespace eNumismat
 
             xConf.Load(Globals.AppDataPath + @"\config.xml");
 
-            XmlNodeList aNodes;
+            XmlNodeList DBConfNode;
             XmlNode root = xConf.DocumentElement;
 
-            aNodes = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+            DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
 
-            foreach (XmlNode aNode in aNodes)
+            string DBFileName = null;
+            string DBFilePath = null;
+
+            foreach (XmlNode DBConf in DBConfNode)
             {
-                //Do Work :)
-                //MessageBox.Show(aNode.InnerText);
+                if (DBConf.Attributes["name"].Value == "LastDBFile")
+                {
+                    DBFileName = DBConf.InnerText;
+                }
+
+                if (DBConf.Attributes["name"].Value == "LastDBFilePath")
+                {
+                    DBFilePath = DBConf.InnerText;
+                }
             }
+            Globals.DBFile = DBFilePath + "\\" + DBFileName;
         }
 
         //=====================================================================================================================================================================
