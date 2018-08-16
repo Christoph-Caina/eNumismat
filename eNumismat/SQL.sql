@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `COINTYPES`
   `name` TEXT(45) NOT NULL,
   `diameter` TEXT(45),
   `thickness` TEXT(45),
+  `weight` TEXT(45),
   `CURRENCIES_id` INTEGER NOT NULL,
   CONSTRAINT `fk_COINTYPES_CURRENCIES1`
     FOREIGN KEY (`CURRENCIES_id`)
@@ -45,6 +46,23 @@ CREATE TABLE IF NOT EXISTS `COINTYPES`
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
+
+INSERT INTO `COINTYPES`
+	(`name`, `diameter`, `thickness`, `weight`, `CURRENCIES_id`)
+  VALUES
+	('5 DM Gedenkmünze', null, null, null, 2),
+	('5 DM Umlaufmünze \"Silberadler\"', null, null, null, 2),
+	('5 DM Umlaufmünze', null, null, '15,5 g', 2),
+	('10 DM Gedenkmünze \"925er Silber\"', '32,5 mm', null, null, 2),
+	('10 DM Gedenkmünze \"625er Silber\"', '32,5 mm', null, null, 2),
+	('10 € Gedenkmünze \"925er Silber\"', '32,5 mm', null, null, 1), 
+	('10 € Gedenkmünze \"625er Silber\"', '32,5 mm', null, null, 1),
+	('10 € Gedenkmünze', '32,5 mm', null, null, 1),
+	('20 € Gedenkmünze \"925er Silber\"', '32,5 mm', null, null, 1),
+	('25 € Gedenkmünze \"925er Silber\"', '32,5 mm', null, null, 1),
+	('2 € Gedenkmünze', null, null, null, 1),
+	('5 € Sammlermünze', null, null, null, 1);
+
 
 CREATE TABLE IF NOT EXISTS `COINSTATUS`
 (
