@@ -29,6 +29,7 @@ namespace eNumismat
                         {
                             command.ExecuteNonQuery();
                             dbConnection.Close();
+                            dbConnection.Dispose();
                             return true;
                         }
                         catch (Exception ex)
@@ -78,6 +79,9 @@ namespace eNumismat
                     }
                     catch (Exception ex)
                     {
+                        dbConnection.Close();
+                        dbConnection.Dispose();
+
                         return _rowCounter;
                     }
                 }
@@ -87,14 +91,17 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public DataTable GetContacts(string content, string FirstLetter = null, string[] contactDetails = null, int ID = 0)
         {
+            
             using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
             {
                 dbConnection.Open();
-
+                
+                
                 string SQL = null;
 
-                switch(content)
-                {
+                 
+                switch (content)
+                {                    
                     case "parents":
                         SQL = "SELECT count(name), substr(name, 1, 1) FROM contacts GROUP by substr(name, 1, 1)";
                         break;
@@ -121,31 +128,44 @@ namespace eNumismat
                         {
                             SQL = "SELECT * FROM contacts WHERE `name` = @ContactName[0] AND `surename` = @ContactSureName AND `id` = @ContactID LIMIT 1";
                         }
-
                         break;
                 }
 
                 using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                 {
+
                     if (FirstLetter != null)
                     {
                         command.Parameters.AddWithValue("@FirstLetter", FirstLetter + "%");
                     }
+
                     if (contactDetails != null)
                     {
                         command.Parameters.AddWithValue("@ContactName", contactDetails[0]);
                         command.Parameters.AddWithValue("@ContactSureName", contactDetails[1]);
                     }
+
                     if (ID != 0)
                     {
                         command.Parameters.AddWithValue("@ContactID", ID);
                     }
 
+
                     using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(command))
-                    {
+                    { 
                         DataTable Contacts = new DataTable();
-                        
-                        daContacts.Fill(Contacts);
+
+                        try
+                        {
+                            daContacts.Fill(Contacts);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+
+                        dbConnection.Close();
+                        dbConnection.Dispose();
 
                         return Contacts;
                     }
@@ -197,6 +217,7 @@ namespace eNumismat
                         {
                             command.ExecuteNonQuery();
                             dbConnection.Close();
+                            dbConnection.Dispose();
                             return true;
                         }
                         catch (Exception ex)
@@ -246,14 +267,21 @@ namespace eNumismat
 
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                     {
-                        command.Parameters.AddWithValue("@ContactName", contactDetails[0]);
-                        command.Parameters.AddWithValue("@ContactSureName", contactDetails[1]);
-                        command.Parameters.AddWithValue("@ContactID", ID);
+                        if (contactDetails != null)
+                        {
+                            command.Parameters.AddWithValue("@ContactName", contactDetails[0]);
+                            command.Parameters.AddWithValue("@ContactSureName", contactDetails[1]);
+                        }
+                        if (ID != 0)
+                        {
+                            command.Parameters.AddWithValue("@ContactID", ID);
+                        }
 
                         try
                         {
                             command.ExecuteNonQuery();
                             dbConnection.Close();
+                            dbConnection.Dispose();
                             return true;
                         }
                         catch (Exception ex)
@@ -268,6 +296,7 @@ namespace eNumismat
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }
@@ -302,6 +331,9 @@ namespace eNumismat
                     }
                     catch (Exception ex)
                     {
+                        dbConnection.Close();
+                        dbConnection.Dispose();
+
                         return _rowCounter;
                     }
                 }
@@ -337,6 +369,9 @@ namespace eNumismat
                         DataTable SwapListDetails = new DataTable();
 
                         daSwaps.Fill(SwapListDetails);
+
+                        dbConnection.Close();
+                        dbConnection.Dispose();
 
                         return SwapListDetails;
                     }

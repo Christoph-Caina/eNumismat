@@ -144,7 +144,7 @@ namespace eNumismat
                 splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
                 PanelShowContactDetails.Dock = DockStyle.Fill;
 
-                if(ContactDetails.Count != 0)
+                if (ContactDetails.Count != 0)
                 {
                     ContactID = Convert.ToInt32(ContactDetails[0]);
 
