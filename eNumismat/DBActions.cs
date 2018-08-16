@@ -143,6 +143,7 @@ namespace eNumismat
                     {
                         command.Parameters.AddWithValue("@ContactName", contactDetails[0]);
                         command.Parameters.AddWithValue("@ContactSureName", contactDetails[1]);
+                        MessageBox.Show(contactDetails[0] + ", " + contactDetails[1]);
                     }
 
                     if (ID != 0)
