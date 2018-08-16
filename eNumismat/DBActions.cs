@@ -82,7 +82,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        public DataTable GetContacts(string content, string FirstLetter = null, string[] contactname = null, int contactId = 0)
+        public DataTable GetContacts(string content, string FirstLetter = null, string[] contactDetails = null, int ID = 0)
         {
             DataTable Contacts = new DataTable();
 
@@ -99,26 +99,26 @@ namespace eNumismat
                         break;
 
                     case "childs":
-                        SQL = "SELECT name, surename, gender FROM contacts WHERE name LIKE '" + FirstLetter + "%' ORDER BY surename ASC";
+                        SQL = "SELECT name, surename, gender FROM contacts WHERE name LIKE @FirstLEtter ORDER BY surename ASC";
                         break;
 
                     case "details":
 
-                        if (contactname == null && contactId == 0)
+                        if (contactDetails == null && ID == 0)
                         {
                             SQL = "SELECT * FROM contacts ORDER BY name, surename LIMIT 1";
                         }
-                        else if (contactname != null && contactId == 0)
+                        else if (contactDetails != null && ID == 0)
                         {
-                            SQL = "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' LIMIT 1";
+                            SQL = "SELECT * FROM contacts WHERE `name` = @ContactName AND `surename` = @ContactSureName LIMIT 1";
                         }
-                        else if (contactname == null && contactId != 0)
+                        else if (contactDetails == null && ID != 0)
                         {
-                            SQL = "SELECT * FROM contacts WHERE id = '" + contactId + "'";
+                            SQL = "SELECT * FROM contacts WHERE id = '" + ID + "'";
                         }
-                        else if (contactname != null && contactId != 0)
+                        else if (contactDetails != null && ID != 0)
                         {
-                            SQL = "SELECT * FROM contacts WHERE `name` = '" + contactname[0] + "' AND `surename` = '" + contactname[1] + "' AND `id` = '" + contactId + "' LIMIT 1";
+                            SQL = "SELECT * FROM contacts WHERE `name` = @ContactName[0] AND `surename` = @ContactSureName AND `id` = @ContactID LIMIT 1";
                         }
 
                         break;
@@ -126,12 +126,31 @@ namespace eNumismat
 
                 //MessageBox.Show(SQL);
 
-                using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(SQL, dbConnection))
+                using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                 {
-                    daContacts.Fill(Contacts);
+                    if (FirstLetter != null)
+                    {
+                        command.Parameters.AddWithValue("@FirstLetter", FirstLetter + "%");
+                    }
+                    if (contactDetails != null)
+                    {
+                        command.Parameters.AddWithValue("@ContactName", contactDetails[0]);
+                        command.Parameters.AddWithValue("@ContactSureName", contactDetails[1]);
+                    }
+                    if (ID != 0)
+                    {
+                        command.Parameters.AddWithValue("@ContactID", ID);
+                    }
 
-                    return Contacts;
+                    using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(command))
+                    {
+                        daContacts.Fill(Contacts);
+
+                        return Contacts;
+                    }
                 }
+
+                
             }
         }
 
@@ -150,18 +169,33 @@ namespace eNumismat
                         SQL = "INSERT INTO `contacts`" +
                             "(`name`, `surename`, `gender`, `birthdate`, `street`, `zipcode`, `city`, `country`, `phone`, `mobile`, `email`, `notes`)" +
                             "VALUES" +
-                            "('"+ contactDetails[0] + "', '" + contactDetails[1] + "', '" + contactDetails[2] + "', '" + contactDetails[3] + "', '" + contactDetails[4] + "', '" + contactDetails[5] + "', '" + contactDetails[6] + "', '" + contactDetails[7] + "', '" + contactDetails[8] + "', '" + contactDetails[9] + "', '" + contactDetails[10] + "', '" + contactDetails[11] + "');";
+                            "(@ContactName, @ContactSureName, @ContactGender, @ContactBirthdate, @ContactStreet, @ContactZipCode, @ContactCity, @ContactCountry, @ContactPhone, @ContactMobile, @ContactMail, @ContactNotes);";
+
                     }
                     else
                     {
                         SQL = "UPDATE `contacts`" +
                             "SET" +
-                            " `name` = '" + contactDetails[0] + "', `surename` = '" + contactDetails[1] + "', `gender` = '" + contactDetails[2] + "', `birthdate` = '" + contactDetails[3] + "', `street` = '" + contactDetails[4] + "', `zipcode` = '" + contactDetails[5] + "', `city` = '" + contactDetails[6] + "', `country` = '" + contactDetails[7] + "', `phone` = '" + contactDetails[8] + "', `mobile` = '" + contactDetails[9] + "', `email` = '" + contactDetails[10] + "', `notes` = '" + contactDetails[11] + "' WHERE `id` = " + ID + " ;";
+                            " `name` = @ContactName, `surename` = @ContactSureName, `gender` = @ContactGender, `birthdate` = @ContactBirthdate, `street` = @ContactStreet, `zipcode` = @ContactZipCode, `city` = @ContactCity, `country` = @ContactCountry, `phone` = @ContactPhone, `mobile` = @ContactMobile, `email` = @ContactMail, `notes` = @ContactNotes WHERE `id` = @ContactID ;";
 
                     }
 
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                     {
+                        command.Parameters.AddWithValue("@ContactName", contactDetails[0]);
+                        command.Parameters.AddWithValue("@ContactSureName", contactDetails[1]);
+                        command.Parameters.AddWithValue("@ContactGender", contactDetails[2]);
+                        command.Parameters.AddWithValue("@ContactBirthdate", contactDetails[3]);
+                        command.Parameters.AddWithValue("@ContactStreet", contactDetails[4]);
+                        command.Parameters.AddWithValue("@ContactZipCode", contactDetails[5]);
+                        command.Parameters.AddWithValue("@ContactCity", contactDetails[6]);
+                        command.Parameters.AddWithValue("@ContactCountry", contactDetails[7]);
+                        command.Parameters.AddWithValue("@ContactPhone", contactDetails[8]);
+                        command.Parameters.AddWithValue("@ContactMobile", contactDetails[9]);
+                        command.Parameters.AddWithValue("@ContactMail", contactDetails[10]);
+                        command.Parameters.AddWithValue("@ContactNotes", contactDetails[11]);
+                        command.Parameters.AddWithValue("@ContactID", ID);
+
                         try
                         {
                             command.ExecuteNonQuery();
@@ -185,7 +219,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        public bool DeleteContact(string[] names = null, int id = 0)
+        public bool DeleteContact(string[] contactDetails = null, int ID = 0)
         {
             try
             {
@@ -194,27 +228,33 @@ namespace eNumismat
                     dbConnection.Open();
                     string SQL = null;
 
-                    if (names == null && id == 0)
+                    if (contactDetails == null && ID == 0)
                     {
                         MessageBox.Show("Can't delete \"nothing\"");
 
                         return false;
                     }
-                    else if (names != null && id == 0)
+                    else if (contactDetails != null && ID == 0)
                     {
-                        SQL = "DELETE FROM contacts WHERE `name` = '" + names[0] + "' AND `surename` = '" + names[1] + "'";
+                        SQL = "DELETE FROM contacts WHERE `name` = @ContactName AND `surename` = @ContactSureName";
                     }
-                    else if (names == null && id != 0)
+                    else if (contactDetails == null && ID != 0)
                     {
-                        SQL = "DELETE FROM contacts WHERE id = " + id + "";
+                        SQL = "DELETE FROM contacts WHERE id = @ContactID";
                     }
-                    else if (names != null && id != 0)
+                    else if (contactDetails != null && ID != 0)
                     {
-                        SQL = "DELETE FROM contacts WHERE `name` = '" + names[0] + "' AND `surename` = '" + names[1] + "' AND `id` = " + id + "";
+                        SQL = "DELETE FROM contacts WHERE `name` = @ContactName AND `surename` = @ContactSureName AND `id` = @ContactID";
                     }
+
+
 
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                     {
+                        command.Parameters.AddWithValue("@ContactName", contactDetails[0]);
+                        command.Parameters.AddWithValue("@ContactSureName", contactDetails[1]);
+                        command.Parameters.AddWithValue("@ContactID", ID);
+
                         try
                         {
                             command.ExecuteNonQuery();
