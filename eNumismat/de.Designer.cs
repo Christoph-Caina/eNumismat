@@ -169,6 +169,24 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kontaktdaten.
+        /// </summary>
+        internal static string _addr_tab_contactDetails {
+            get {
+                return ResourceManager.GetString("_addr_tab_contactDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tauschübersicht.
+        /// </summary>
+        internal static string _addr_tab_swaps {
+            get {
+                return ResourceManager.GetString("_addr_tab_swaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PLZ.
         /// </summary>
         internal static string _addr_zipCode {

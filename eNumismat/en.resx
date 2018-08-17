@@ -156,6 +156,12 @@
   <data name="_addr_SureName" xml:space="preserve">
     <value>Surename</value>
   </data>
+  <data name="_addr_tab_contactDetails" xml:space="preserve">
+    <value>Contact Details</value>
+  </data>
+  <data name="_addr_tab_swaps" xml:space="preserve">
+    <value>Exchanges</value>
+  </data>
   <data name="_addr_zipCode" xml:space="preserve">
     <value>Zip Code</value>
   </data>

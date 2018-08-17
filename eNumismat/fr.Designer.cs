@@ -61,7 +61,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Anniversaire.
         /// </summary>
         internal static string _addr_birthdate {
             get {
@@ -70,7 +70,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Ville.
         /// </summary>
         internal static string _addr_city {
             get {
@@ -79,7 +79,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Pays.
         /// </summary>
         internal static string _addr_country {
             get {
@@ -88,7 +88,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Sexe.
         /// </summary>
         internal static string _addr_gender {
             get {
@@ -97,7 +97,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Numéro de la maison.
         /// </summary>
         internal static string _addr_hnumber {
             get {
@@ -106,7 +106,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to E-mail.
         /// </summary>
         internal static string _addr_mail {
             get {
@@ -115,7 +115,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Mobile.
         /// </summary>
         internal static string _addr_mobile {
             get {
@@ -124,7 +124,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Nom de famille.
         /// </summary>
         internal static string _addr_Name {
             get {
@@ -133,7 +133,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Notes.
         /// </summary>
         internal static string _addr_notes {
             get {
@@ -142,7 +142,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Téléphone.
         /// </summary>
         internal static string _addr_phone {
             get {
@@ -151,7 +151,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Rue.
         /// </summary>
         internal static string _addr_street {
             get {
@@ -160,7 +160,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Prénom.
         /// </summary>
         internal static string _addr_SureName {
             get {
@@ -169,7 +169,25 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Détails de contact.
+        /// </summary>
+        internal static string _addr_tab_contactDetails {
+            get {
+                return ResourceManager.GetString("_addr_tab_contactDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Liste d&apos;échange.
+        /// </summary>
+        internal static string _addr_tab_swaps {
+            get {
+                return ResourceManager.GetString("_addr_tab_swaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code postal.
         /// </summary>
         internal static string _addr_zipCode {
             get {

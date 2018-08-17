@@ -30,15 +30,32 @@ namespace eNumismat
             adressenToolStripMenuItem.Text = res_man.GetString("_addrBook");
             neuToolStripMenuItem.Text = res_man.GetString("_newContact");
 
+            tabPage1.Text = res_man.GetString("_addr_tab_contactDetails");
+            tabPage2.Text = res_man.GetString("_addr_tab_swaps");
+
             label1.Text = res_man.GetString("_addr_Name") + ":";
             label2.Text = res_man.GetString("_addr_SureName") + ":";
             label3.Text = res_man.GetString("_addr_gender") + ":";
-            label4.Text = res_man.GetString("_addr_birthdate") + ":"; ;
+            label4.Text = res_man.GetString("_addr_birthdate") + ":";
             label5.Text = res_man.GetString("_addr_street") + " / " + res_man.GetString("_addr_hnumber") + ":";
-            //label6.Text = res_man.GetString() + ":"; ;
-            //label7.Text = res_man.GetString() + ":"; ;
-            //label8.Text = res_man.GetString() + ":"; ;
-            // label9.Text = res_man.GetString();
+            label6.Text = res_man.GetString("_addr_zipCode") + ":";
+            label7.Text = res_man.GetString("_addr_city") + ":";
+            label8.Text = res_man.GetString("_addr_country") + ":";
+            label9.Text = res_man.GetString("_addr_phone") + ":";
+            label10.Text = res_man.GetString("_addr_mobile") + ":";
+            label11.Text = res_man.GetString("_addr_mail") + ":";
+            label12.Text = res_man.GetString("_addr_notes") + ":";
+
+            label13.Text = res_man.GetString("_addr_mail") + ":";
+            label14.Text = res_man.GetString("_addr_street") + " / " + res_man.GetString("_addr_hnumber") + ":";
+            label15.Text = res_man.GetString("_addr_birthdate") + ":";
+            label16.Text = res_man.GetString("_addr_mobile") + ":";
+            label17.Text = res_man.GetString("_addr_zipCode") + " / " + res_man.GetString("_addr_city") + ":";
+            label18.Text = res_man.GetString("_addr_phone") + ":";
+            label19.Text = res_man.GetString("_addr_country") + ":";
+            label20.Text = res_man.GetString("_addr_notes") + ":";
+
+
         }
 
         //=====================================================================================================================================================================

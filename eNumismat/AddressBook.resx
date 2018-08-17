@@ -198,7 +198,7 @@
     <value>0</value>
   </data>
   <data name="treeView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 477</value>
+    <value>216, 473</value>
   </data>
   <data name="treeView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -222,7 +222,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 477</value>
+    <value>216, 473</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -312,7 +312,7 @@
     <value>Bottom</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 477</value>
+    <value>0, 473</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 38</value>
@@ -368,20 +368,17 @@
   <data name="&gt;&gt;tb_zipcode.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 165</value>
+    <value>41, 346</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>PLZ:</value>
+  <data name="label12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
@@ -437,20 +434,17 @@
   <data name="&gt;&gt;Btn_Save.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 346</value>
+    <value>41, 305</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>Notizen:</value>
+  <data name="label11.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label11.Name" xml:space="preserve">
     <value>label11</value>
@@ -488,20 +482,17 @@
   <data name="&gt;&gt;rtb_notes.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 308</value>
+    <value>41, 279</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>E-Mail:</value>
+  <data name="label10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label10.Name" xml:space="preserve">
     <value>label10</value>
@@ -515,20 +506,17 @@
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 282</value>
+    <value>41, 253</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Mobil:</value>
+  <data name="label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
@@ -542,20 +530,17 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 256</value>
+    <value>41, 214</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Telefon:</value>
+  <data name="label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
@@ -611,20 +596,17 @@
   <data name="&gt;&gt;tb_mobile.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 217</value>
+    <value>41, 188</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Land:</value>
+  <data name="label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
@@ -638,20 +620,17 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 191</value>
+    <value>41, 162</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Ort:</value>
+  <data name="label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
@@ -665,20 +644,17 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 139</value>
+    <value>41, 136</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Straße / HausNr.:</value>
+  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
@@ -692,20 +668,17 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 102</value>
+    <value>41, 99</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Geburtsdatum:</value>
+  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -744,7 +717,7 @@
     <value>15</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 72</value>
+    <value>41, 69</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 18</value>
@@ -753,7 +726,7 @@
     <value>9</value>
   </data>
   <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -795,7 +768,7 @@
     <value>17</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 31</value>
+    <value>41, 29</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 18</value>
@@ -804,7 +777,7 @@
     <value>7</value>
   </data>
   <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -819,7 +792,7 @@
     <value>18</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 5</value>
+    <value>41, 3</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 18</value>
@@ -828,7 +801,7 @@
     <value>6</value>
   </data>
   <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -989,20 +962,17 @@
   <data name="&gt;&gt;PanelEditContactDetails.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 324</value>
+    <value>53, 321</value>
   </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label20.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
-  <data name="label20.Text" xml:space="preserve">
-    <value>Notizen:</value>
+  <data name="label20.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label20.Name" xml:space="preserve">
     <value>label20</value>
@@ -1067,20 +1037,17 @@
   <data name="&gt;&gt;label_city.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 284</value>
+    <value>53, 281</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>E-Mail:</value>
+  <data name="label13.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label13.Name" xml:space="preserve">
     <value>label13</value>
@@ -1098,7 +1065,7 @@
     <value>True</value>
   </data>
   <data name="label_mail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 284</value>
+    <value>165, 286</value>
   </data>
   <data name="label_mail.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -1118,23 +1085,20 @@
   <data name="&gt;&gt;label_mail.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 114</value>
+    <value>53, 111</value>
   </data>
   <data name="label14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 10</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>Straße / Nr.:</value>
+  <data name="label14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>
@@ -1152,7 +1116,7 @@
     <value>True</value>
   </data>
   <data name="label_zip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 137</value>
+    <value>165, 141</value>
   </data>
   <data name="label_zip.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -1172,20 +1136,17 @@
   <data name="&gt;&gt;label_zip.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 205</value>
+    <value>53, 202</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
   </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>Geburtstag:</value>
+  <data name="label15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
@@ -1203,7 +1164,7 @@
     <value>True</value>
   </data>
   <data name="label_country.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 160</value>
+    <value>165, 164</value>
   </data>
   <data name="label_country.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -1223,23 +1184,20 @@
   <data name="&gt;&gt;label_country.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 261</value>
+    <value>53, 257</value>
   </data>
   <data name="label16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 10</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
   </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Mobil:</value>
+  <data name="label16.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label16.Name" xml:space="preserve">
     <value>label16</value>
@@ -1257,7 +1215,7 @@
     <value>True</value>
   </data>
   <data name="label_mobile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 261</value>
+    <value>165, 263</value>
   </data>
   <data name="label_mobile.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -1277,23 +1235,20 @@
   <data name="&gt;&gt;label_mobile.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 137</value>
+    <value>53, 134</value>
   </data>
   <data name="label17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 10</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label17.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="label17.Text" xml:space="preserve">
-    <value>PLZ / Ort:</value>
+  <data name="label17.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label17.Name" xml:space="preserve">
     <value>label17</value>
@@ -1311,7 +1266,7 @@
     <value>True</value>
   </data>
   <data name="label_street.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 114</value>
+    <value>165, 118</value>
   </data>
   <data name="label_street.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -1335,7 +1290,7 @@
     <value>True</value>
   </data>
   <data name="label_birthdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 205</value>
+    <value>165, 209</value>
   </data>
   <data name="label_birthdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -1355,23 +1310,20 @@
   <data name="&gt;&gt;label_birthdate.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 238</value>
+    <value>53, 235</value>
   </data>
   <data name="label18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 10</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label18.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
   </data>
-  <data name="label18.Text" xml:space="preserve">
-    <value>Telefon:</value>
+  <data name="label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label18.Name" xml:space="preserve">
     <value>label18</value>
@@ -1389,7 +1341,7 @@
     <value>True</value>
   </data>
   <data name="label_phone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 238</value>
+    <value>165, 240</value>
   </data>
   <data name="label_phone.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -1409,20 +1361,17 @@
   <data name="&gt;&gt;label_phone.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 160</value>
+    <value>53, 157</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
+    <value>106, 18</value>
   </data>
   <data name="label19.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
-  <data name="label19.Text" xml:space="preserve">
-    <value>Land:</value>
+  <data name="label19.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;label19.Name" xml:space="preserve">
     <value>label19</value>
@@ -1770,7 +1719,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1557, 515</value>
+    <value>680, 511</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>216</value>
@@ -1800,10 +1749,10 @@
     <value>toolStripStatusLabel1</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 539</value>
+    <value>0, 535</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1557, 22</value>
+    <value>680, 22</value>
   </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1899,7 +1848,7 @@
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1557, 24</value>
+    <value>680, 24</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1929,7 +1878,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1557, 561</value>
+    <value>680, 557</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AddressBook</value>
