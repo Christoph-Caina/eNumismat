@@ -147,7 +147,7 @@ namespace eNumismat
                     }
                     else
                     {
-                        //dtp_birthdate.Value;
+                        dtp_birthdate.Text = "";
                     }
                     tb_street.Text = ContactDetails[5];
                     tb_zipcode.Text = ContactDetails[6];
@@ -163,7 +163,7 @@ namespace eNumismat
                     tb_name.Text = null;
                     tb_surename.Text = null;
                     cb_gender.Text = null;
-                    dtp_birthdate.Text = DateTime.Now.ToString();
+                    dtp_birthdate.Text = null;
                     tb_street.Text = null;
                     tb_zipcode.Text = null;
                     tb_city.Text = null;
