@@ -61,7 +61,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Birthdate ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Birthdate: ähnelt.
         /// </summary>
         internal static string _addr_birthdate {
             get {
@@ -70,7 +70,43 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die City ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Shows an empty formular for creating a new contact ähnelt.
+        /// </summary>
+        internal static string _addr_btnCreate {
+            get {
+                return ResourceManager.GetString("_addr_btnCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die deletes the current selected contact ähnelt.
+        /// </summary>
+        internal static string _addr_btnDelete {
+            get {
+                return ResourceManager.GetString("_addr_btnDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Shows a formular, prefilled with the data of the selected contact to edit the values ähnelt.
+        /// </summary>
+        internal static string _addr_btnEdit {
+            get {
+                return ResourceManager.GetString("_addr_btnEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Cancel ähnelt.
+        /// </summary>
+        internal static string _addr_cancel {
+            get {
+                return ResourceManager.GetString("_addr_cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die City: ähnelt.
         /// </summary>
         internal static string _addr_city {
             get {
@@ -79,7 +115,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Country ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Country: ähnelt.
         /// </summary>
         internal static string _addr_country {
             get {
@@ -88,7 +124,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Gender ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gender: ähnelt.
         /// </summary>
         internal static string _addr_gender {
             get {
@@ -97,7 +133,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die No. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die No.: ähnelt.
         /// </summary>
         internal static string _addr_hnumber {
             get {
@@ -106,7 +142,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die eMail ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die eMail: ähnelt.
         /// </summary>
         internal static string _addr_mail {
             get {
@@ -115,7 +151,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Mobile ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Mobile: ähnelt.
         /// </summary>
         internal static string _addr_mobile {
             get {
@@ -124,7 +160,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Name ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Name: ähnelt.
         /// </summary>
         internal static string _addr_Name {
             get {
@@ -133,7 +169,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Notes ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Notes: ähnelt.
         /// </summary>
         internal static string _addr_notes {
             get {
@@ -142,11 +178,20 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Phone ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Phone: ähnelt.
         /// </summary>
         internal static string _addr_phone {
             get {
                 return ResourceManager.GetString("_addr_phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Save ähnelt.
+        /// </summary>
+        internal static string _addr_save {
+            get {
+                return ResourceManager.GetString("_addr_save", resourceCulture);
             }
         }
         
@@ -160,7 +205,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Surename ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Surename: ähnelt.
         /// </summary>
         internal static string _addr_SureName {
             get {
@@ -187,7 +232,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Zip Code ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Zip Code: ähnelt.
         /// </summary>
         internal static string _addr_zipCode {
             get {
@@ -196,11 +241,29 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Addressbook ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Addressbook: ähnelt.
         /// </summary>
         internal static string _addrBook {
             get {
                 return ResourceManager.GetString("_addrBook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The field &quot;Name&quot; can&apos;t be empty! ähnelt.
+        /// </summary>
+        internal static string _addrBook_Validation_Name {
+            get {
+                return ResourceManager.GetString("_addrBook_Validation_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The field &quot;Surename&quot; can&apos;t be empty! ähnelt.
+        /// </summary>
+        internal static string _addrBook_Validation_SureName {
+            get {
+                return ResourceManager.GetString("_addrBook_Validation_SureName", resourceCulture);
             }
         }
         
@@ -228,6 +291,24 @@ namespace eNumismat {
         internal static string _compressDataBase {
             get {
                 return ResourceManager.GetString("_compressDataBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contact available ähnelt.
+        /// </summary>
+        internal static string _contactAvailable {
+            get {
+                return ResourceManager.GetString("_contactAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contacts available ähnelt.
+        /// </summary>
+        internal static string _contactsAvailable {
+            get {
+                return ResourceManager.GetString("_contactsAvailable", resourceCulture);
             }
         }
         
@@ -336,6 +417,24 @@ namespace eNumismat {
         internal static string _settings {
             get {
                 return ResourceManager.GetString("_settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Incomming: ähnelt.
+        /// </summary>
+        internal static string _swap_incomming {
+            get {
+                return ResourceManager.GetString("_swap_incomming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Outgoing: ähnelt.
+        /// </summary>
+        internal static string _swap_Outgoing {
+            get {
+                return ResourceManager.GetString("_swap_Outgoing", resourceCulture);
             }
         }
         

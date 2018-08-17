@@ -33,27 +33,37 @@ namespace eNumismat
             tabPage1.Text = res_man.GetString("_addr_tab_contactDetails");
             tabPage2.Text = res_man.GetString("_addr_tab_swaps");
 
-            label1.Text = res_man.GetString("_addr_Name") + ":";
-            label2.Text = res_man.GetString("_addr_SureName") + ":";
-            label3.Text = res_man.GetString("_addr_gender") + ":";
-            label4.Text = res_man.GetString("_addr_birthdate") + ":";
-            label5.Text = res_man.GetString("_addr_street") + " / " + res_man.GetString("_addr_hnumber") + ":";
-            label6.Text = res_man.GetString("_addr_zipCode") + ":";
-            label7.Text = res_man.GetString("_addr_city") + ":";
-            label8.Text = res_man.GetString("_addr_country") + ":";
-            label9.Text = res_man.GetString("_addr_phone") + ":";
-            label10.Text = res_man.GetString("_addr_mobile") + ":";
-            label11.Text = res_man.GetString("_addr_mail") + ":";
-            label12.Text = res_man.GetString("_addr_notes") + ":";
+            label1.Text = res_man.GetString("_addr_Name");
+            label2.Text = res_man.GetString("_addr_SureName");
+            label3.Text = res_man.GetString("_addr_gender");
+            label4.Text = res_man.GetString("_addr_birthdate");
+            label5.Text = res_man.GetString("_addr_street") + " / " + res_man.GetString("_addr_hnumber");
+            label6.Text = res_man.GetString("_addr_zipCode");
+            label7.Text = res_man.GetString("_addr_city");
+            label8.Text = res_man.GetString("_addr_country");
+            label9.Text = res_man.GetString("_addr_phone");
+            label10.Text = res_man.GetString("_addr_mobile");
+            label11.Text = res_man.GetString("_addr_mail");
+            label12.Text = res_man.GetString("_addr_notes");
 
-            label13.Text = res_man.GetString("_addr_mail") + ":";
-            label14.Text = res_man.GetString("_addr_street") + " / " + res_man.GetString("_addr_hnumber") + ":";
-            label15.Text = res_man.GetString("_addr_birthdate") + ":";
-            label16.Text = res_man.GetString("_addr_mobile") + ":";
-            label17.Text = res_man.GetString("_addr_zipCode") + " / " + res_man.GetString("_addr_city") + ":";
-            label18.Text = res_man.GetString("_addr_phone") + ":";
-            label19.Text = res_man.GetString("_addr_country") + ":";
-            label20.Text = res_man.GetString("_addr_notes") + ":";
+            label13.Text = res_man.GetString("_addr_mail");
+            label14.Text = res_man.GetString("_addr_street") + " / " + res_man.GetString("_addr_hnumber");
+            label15.Text = res_man.GetString("_addr_birthdate");
+            label16.Text = res_man.GetString("_addr_mobile");
+            label17.Text = res_man.GetString("_addr_zipCode") + " / " + res_man.GetString("_addr_city");
+            label18.Text = res_man.GetString("_addr_phone");
+            label19.Text = res_man.GetString("_addr_country");
+            label20.Text = res_man.GetString("_addr_notes");
+
+            label21.Text = res_man.GetString("_swap_incomming");
+            label22.Text = res_man.GetString("_swap_outgoing");
+
+            toolTip1.SetToolTip(Btn_CreateContact, res_man.GetString("_addr_btnCreate"));
+            toolTip1.SetToolTip(Btn_DeleteContact, res_man.GetString("_addr_btnDelete"));
+            toolTip1.SetToolTip(Btn_UpdateContact, res_man.GetString("_addr_btnEdit"));
+
+            toolTip1.SetToolTip(Btn_Save, res_man.GetString("_addr_save"));
+            toolTip1.SetToolTip(Btn_Cancel, res_man.GetString("_addr_cancel"));
         }
 
         //=====================================================================================================================================================================
@@ -69,17 +79,17 @@ namespace eNumismat
 
             if (ContactCounter == 0)
             {
-                toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
+                toolStripStatusLabel1.Text = ContactCounter.ToString() + " " + res_man.GetString("_contactsAvailable");
                 LoadContactMain("new");
             }
             else if (ContactCounter == 1)
             {
-                toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakt vorhanden";
+                toolStripStatusLabel1.Text = ContactCounter.ToString() + " " + res_man.GetString("_contactAvailable");
                 LoadContactMain("view", ContactName, ContactId);
             }
             else if (ContactCounter > 1)
             {
-                toolStripStatusLabel1.Text = ContactCounter.ToString() + " Kontakte vorhanden";
+                toolStripStatusLabel1.Text = ContactCounter.ToString() + " " + res_man.GetString("_contactsAvailable");
                 LoadContactMain("view", ContactName, ContactId);
             }
 
@@ -193,6 +203,7 @@ namespace eNumismat
 
                     label_name.Text = ContactDetails[1];
                     label_surename.Text = ContactDetails[2];
+
                     if (!String.IsNullOrEmpty(ContactDetails[4]))
                     {
                         label_birthdate.Text = Convert.ToDateTime(ContactDetails[4]).ToString("d");
@@ -201,6 +212,7 @@ namespace eNumismat
                     {
                         label_birthdate.Text = null;
                     }
+
                     label_street.Text = ContactDetails[5];
                     label_zip.Text = ContactDetails[6];
                     label_city.Text = ContactDetails[7];
@@ -378,7 +390,7 @@ namespace eNumismat
         {
             if (String.IsNullOrEmpty(tb_name.Text))
             {
-                MessageBox.Show("Der Name darf nicht leer sein!");
+                MessageBox.Show(res_man.GetString("_addrBook_Validation_Name"));
                 tb_name.BackColor = Color.MistyRose;
                 tb_name.Select();
                 return false;
@@ -386,7 +398,7 @@ namespace eNumismat
 
             if (String.IsNullOrEmpty(tb_surename.Text))
             {
-                MessageBox.Show("Der Vorname darf nicht leer sein!");
+                MessageBox.Show(res_man.GetString("_addrBook_Validation_SureName"));
                 tb_surename.BackColor = Color.MistyRose;
                 tb_surename.Select();
                 return false;
