@@ -120,8 +120,14 @@
   <data name="_backupDataBase" xml:space="preserve">
     <value>Datenbank sichern</value>
   </data>
+  <data name="_compressDataBase" xml:space="preserve">
+    <value>Datenbank komprimieren</value>
+  </data>
   <data name="_createNewDataBase" xml:space="preserve">
     <value>Neue Datenbank</value>
+  </data>
+  <data name="_exitApplication" xml:space="preserve">
+    <value>Beenden</value>
   </data>
   <data name="_file" xml:space="preserve">
     <value>Datei</value>

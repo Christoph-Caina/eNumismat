@@ -70,11 +70,29 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Datenbank komprimieren.
+        /// </summary>
+        internal static string _compressDataBase {
+            get {
+                return ResourceManager.GetString("_compressDataBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Neue Datenbank.
         /// </summary>
         internal static string _createNewDataBase {
             get {
                 return ResourceManager.GetString("_createNewDataBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beenden.
+        /// </summary>
+        internal static string _exitApplication {
+            get {
+                return ResourceManager.GetString("_exitApplication", resourceCulture);
             }
         }
         
