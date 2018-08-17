@@ -25,7 +25,7 @@ namespace eNumismat
         {
             InitializeComponent();
 
-            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
+            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
             adressenToolStripMenuItem.Text = res_man.GetString("_addrBook");
             neuToolStripMenuItem.Text = res_man.GetString("_newContact");
@@ -54,8 +54,6 @@ namespace eNumismat
             label18.Text = res_man.GetString("_addr_phone") + ":";
             label19.Text = res_man.GetString("_addr_country") + ":";
             label20.Text = res_man.GetString("_addr_notes") + ":";
-
-
         }
 
         //=====================================================================================================================================================================

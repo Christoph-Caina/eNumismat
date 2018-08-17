@@ -129,18 +129,18 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\LogHandler.cs" />
-    <Compile Include="de.Designer.cs">
-      <DependentUpon>de.resx</DependentUpon>
+    <Compile Include="deu.Designer.cs">
+      <DependentUpon>deu.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="en.Designer.cs">
-      <DependentUpon>en.resx</DependentUpon>
+    <Compile Include="eng.Designer.cs">
+      <DependentUpon>eng.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="fr.Designer.cs">
-      <DependentUpon>fr.resx</DependentUpon>
+    <Compile Include="fra.Designer.cs">
+      <DependentUpon>fra.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -177,17 +177,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="de.resx">
+    <EmbeddedResource Include="deu.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>de.Designer.cs</LastGenOutput>
+      <LastGenOutput>deu.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="en.resx">
+    <EmbeddedResource Include="eng.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>en.Designer.cs</LastGenOutput>
+      <LastGenOutput>eng.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="fr.resx">
+    <EmbeddedResource Include="fra.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>fr.Designer.cs</LastGenOutput>
+      <LastGenOutput>fra.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
