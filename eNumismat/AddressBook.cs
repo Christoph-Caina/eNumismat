@@ -156,7 +156,7 @@ namespace eNumismat
                     tb_name.Text = null;
                     tb_surename.Text = null;
                     cb_gender.Text = null;
-                    dtp_birthdate.Text = DateTime.Now.ToString("dd.MM.yyyy");
+                    dtp_birthdate.Text = DateTime.Now.ToString();
                     tb_street.Text = null;
                     tb_zipcode.Text = null;
                     tb_city.Text = null;

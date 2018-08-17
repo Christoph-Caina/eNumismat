@@ -311,7 +311,7 @@
             // dtp_birthdate
             // 
             resources.ApplyResources(this.dtp_birthdate, "dtp_birthdate");
-            this.dtp_birthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_birthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_birthdate.Name = "dtp_birthdate";
             // 
             // label3
