@@ -27,6 +27,7 @@ namespace eNumismat
 
             res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
+            adressenToolStripMenuItem.Text = res_man.GetString("_addrBook");
             neuToolStripMenuItem.Text = res_man.GetString("_newContact");
         }
 
