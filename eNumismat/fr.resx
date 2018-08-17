@@ -120,6 +120,45 @@
   <data name="_addrBook" xml:space="preserve">
     <value>Carnet d'adresses</value>
   </data>
+  <data name="_addr_birthdate" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_city" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_country" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_gender" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_hnumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_mail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_mobile" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_notes" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_phone" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_street" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_SureName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_addr_zipCode" xml:space="preserve">
+    <value />
+  </data>
   <data name="_backupDataBase" xml:space="preserve">
     <value>Enregistrer la base de données</value>
   </data>

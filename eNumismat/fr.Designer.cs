@@ -61,6 +61,123 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_birthdate {
+            get {
+                return ResourceManager.GetString("_addr_birthdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_city {
+            get {
+                return ResourceManager.GetString("_addr_city", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_country {
+            get {
+                return ResourceManager.GetString("_addr_country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_gender {
+            get {
+                return ResourceManager.GetString("_addr_gender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_hnumber {
+            get {
+                return ResourceManager.GetString("_addr_hnumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_mail {
+            get {
+                return ResourceManager.GetString("_addr_mail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_mobile {
+            get {
+                return ResourceManager.GetString("_addr_mobile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_Name {
+            get {
+                return ResourceManager.GetString("_addr_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_notes {
+            get {
+                return ResourceManager.GetString("_addr_notes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_phone {
+            get {
+                return ResourceManager.GetString("_addr_phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_street {
+            get {
+                return ResourceManager.GetString("_addr_street", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_SureName {
+            get {
+                return ResourceManager.GetString("_addr_SureName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string _addr_zipCode {
+            get {
+                return ResourceManager.GetString("_addr_zipCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Carnet d&apos;adresses.
         /// </summary>
         internal static string _addrBook {

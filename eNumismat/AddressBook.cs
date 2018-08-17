@@ -29,6 +29,16 @@ namespace eNumismat
 
             adressenToolStripMenuItem.Text = res_man.GetString("_addrBook");
             neuToolStripMenuItem.Text = res_man.GetString("_newContact");
+
+            label1.Text = res_man.GetString("_addr_Name") + ":";
+            label2.Text = res_man.GetString("_addr_SureName") + ":";
+            label3.Text = res_man.GetString("_addr_gender") + ":";
+            label4.Text = res_man.GetString("_addr_birthdate") + ":"; ;
+            label5.Text = res_man.GetString("_addr_street") + " / " + res_man.GetString("_addr_hnumber") + ":";
+            //label6.Text = res_man.GetString() + ":"; ;
+            //label7.Text = res_man.GetString() + ":"; ;
+            //label8.Text = res_man.GetString() + ":"; ;
+            // label9.Text = res_man.GetString();
         }
 
         //=====================================================================================================================================================================

@@ -120,6 +120,45 @@
   <data name="_addrBook" xml:space="preserve">
     <value>Addressbook</value>
   </data>
+  <data name="_addr_birthdate" xml:space="preserve">
+    <value>Birthdate</value>
+  </data>
+  <data name="_addr_city" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="_addr_country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="_addr_gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="_addr_hnumber" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="_addr_mail" xml:space="preserve">
+    <value>eMail</value>
+  </data>
+  <data name="_addr_mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="_addr_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="_addr_notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="_addr_phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="_addr_street" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="_addr_SureName" xml:space="preserve">
+    <value>Surename</value>
+  </data>
+  <data name="_addr_zipCode" xml:space="preserve">
+    <value>Zip Code</value>
+  </data>
   <data name="_backupDataBase" xml:space="preserve">
     <value>Backup Database</value>
   </data>

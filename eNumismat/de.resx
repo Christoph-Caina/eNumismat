@@ -120,6 +120,45 @@
   <data name="_addrBook" xml:space="preserve">
     <value>Adressbuch</value>
   </data>
+  <data name="_addr_birthdate" xml:space="preserve">
+    <value>Geburtstag</value>
+  </data>
+  <data name="_addr_city" xml:space="preserve">
+    <value>Ort</value>
+  </data>
+  <data name="_addr_country" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="_addr_gender" xml:space="preserve">
+    <value>Geschlecht</value>
+  </data>
+  <data name="_addr_hnumber" xml:space="preserve">
+    <value>Hausnummer</value>
+  </data>
+  <data name="_addr_mail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="_addr_mobile" xml:space="preserve">
+    <value>Mobil</value>
+  </data>
+  <data name="_addr_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="_addr_notes" xml:space="preserve">
+    <value>Notizen</value>
+  </data>
+  <data name="_addr_phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="_addr_street" xml:space="preserve">
+    <value>Straße</value>
+  </data>
+  <data name="_addr_SureName" xml:space="preserve">
+    <value>Vorname</value>
+  </data>
+  <data name="_addr_zipCode" xml:space="preserve">
+    <value>PLZ</value>
+  </data>
   <data name="_backupDataBase" xml:space="preserve">
     <value>Datenbank sichern</value>
   </data>
