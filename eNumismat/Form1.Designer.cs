@@ -45,6 +45,8 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nachUpdatesSuchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unicodeTabelleFürWährungssymboleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.überENumismatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hilfeZuENumismatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
@@ -175,13 +177,17 @@
             // 
             this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nachUpdatesSuchenToolStripMenuItem,
-            this.unicodeTabelleFürWährungssymboleToolStripMenuItem});
+            this.unicodeTabelleFürWährungssymboleToolStripMenuItem,
+            this.überENumismatToolStripMenuItem,
+            this.hilfeZuENumismatToolStripMenuItem});
+            this.hilfeToolStripMenuItem.Image = global::eNumismat.Properties.Resources.help;
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
-            this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.hilfeToolStripMenuItem.Text = "Hilfe";
             // 
             // nachUpdatesSuchenToolStripMenuItem
             // 
+            this.nachUpdatesSuchenToolStripMenuItem.Enabled = false;
             this.nachUpdatesSuchenToolStripMenuItem.Name = "nachUpdatesSuchenToolStripMenuItem";
             this.nachUpdatesSuchenToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
             this.nachUpdatesSuchenToolStripMenuItem.Text = "nach Updates suchen";
@@ -192,6 +198,20 @@
             this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
             this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Text = "Unicode Tabelle für Währungssymbole";
             this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Click += new System.EventHandler(this.UnicodeTabelleFuerWaehrungssymboleToolStripMenuItem_Click);
+            // 
+            // überENumismatToolStripMenuItem
+            // 
+            this.überENumismatToolStripMenuItem.Name = "überENumismatToolStripMenuItem";
+            this.überENumismatToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+            this.überENumismatToolStripMenuItem.Text = "Über eNumismat";
+            this.überENumismatToolStripMenuItem.Click += new System.EventHandler(this.überENumismatToolStripMenuItem_Click);
+            // 
+            // hilfeZuENumismatToolStripMenuItem
+            // 
+            this.hilfeZuENumismatToolStripMenuItem.Image = global::eNumismat.Properties.Resources.help;
+            this.hilfeZuENumismatToolStripMenuItem.Name = "hilfeZuENumismatToolStripMenuItem";
+            this.hilfeZuENumismatToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+            this.hilfeZuENumismatToolStripMenuItem.Text = "Hilfe zu eNumismat";
             // 
             // statusStrip1
             // 
@@ -259,6 +279,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.ToolStripMenuItem datenbankKomprimierenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem überENumismatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hilfeZuENumismatToolStripMenuItem;
     }
 }
 
