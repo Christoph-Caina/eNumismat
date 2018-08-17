@@ -129,27 +129,20 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 539);
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(684, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adressenToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(684, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // adressenToolStripMenuItem
             // 
@@ -159,20 +152,18 @@
             this.kontaktImportierenToolStripMenuItem,
             this.kontaktExportierenToolStripMenuItem});
             this.adressenToolStripMenuItem.Name = "adressenToolStripMenuItem";
-            this.adressenToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.adressenToolStripMenuItem.Text = "Adressen";
+            resources.ApplyResources(this.adressenToolStripMenuItem, "adressenToolStripMenuItem");
             // 
             // neuToolStripMenuItem
             // 
             this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
-            this.neuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.neuToolStripMenuItem.Text = "Neuer Kontakt";
+            resources.ApplyResources(this.neuToolStripMenuItem, "neuToolStripMenuItem");
             this.neuToolStripMenuItem.Click += new System.EventHandler(this.NeuToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // kontaktImportierenToolStripMenuItem
             // 
@@ -180,28 +171,23 @@
             this.vCardToolStripMenuItem,
             this.windowsCONTACTToolStripMenuItem,
             this.outlookToolStripMenuItem});
-            this.kontaktImportierenToolStripMenuItem.Enabled = false;
+            resources.ApplyResources(this.kontaktImportierenToolStripMenuItem, "kontaktImportierenToolStripMenuItem");
             this.kontaktImportierenToolStripMenuItem.Name = "kontaktImportierenToolStripMenuItem";
-            this.kontaktImportierenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kontaktImportierenToolStripMenuItem.Text = "Kontakt Importieren";
             // 
             // vCardToolStripMenuItem
             // 
             this.vCardToolStripMenuItem.Name = "vCardToolStripMenuItem";
-            this.vCardToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.vCardToolStripMenuItem.Text = "vCard (*.vcf)";
+            resources.ApplyResources(this.vCardToolStripMenuItem, "vCardToolStripMenuItem");
             // 
             // windowsCONTACTToolStripMenuItem
             // 
             this.windowsCONTACTToolStripMenuItem.Name = "windowsCONTACTToolStripMenuItem";
-            this.windowsCONTACTToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.windowsCONTACTToolStripMenuItem.Text = "Windows Kontakt (*.contact)";
+            resources.ApplyResources(this.windowsCONTACTToolStripMenuItem, "windowsCONTACTToolStripMenuItem");
             // 
             // outlookToolStripMenuItem
             // 
             this.outlookToolStripMenuItem.Name = "outlookToolStripMenuItem";
-            this.outlookToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.outlookToolStripMenuItem.Text = "Microsoft Outlook";
+            resources.ApplyResources(this.outlookToolStripMenuItem, "outlookToolStripMenuItem");
             // 
             // kontaktExportierenToolStripMenuItem
             // 
@@ -209,36 +195,29 @@
             this.vCardvcfToolStripMenuItem,
             this.windowsKontaktcontactToolStripMenuItem,
             this.microsoftOutlookToolStripMenuItem});
-            this.kontaktExportierenToolStripMenuItem.Enabled = false;
+            resources.ApplyResources(this.kontaktExportierenToolStripMenuItem, "kontaktExportierenToolStripMenuItem");
             this.kontaktExportierenToolStripMenuItem.Name = "kontaktExportierenToolStripMenuItem";
-            this.kontaktExportierenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kontaktExportierenToolStripMenuItem.Text = "Kontakt Exportieren";
             // 
             // vCardvcfToolStripMenuItem
             // 
             this.vCardvcfToolStripMenuItem.Name = "vCardvcfToolStripMenuItem";
-            this.vCardvcfToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.vCardvcfToolStripMenuItem.Text = "vCard (*.vcf)";
+            resources.ApplyResources(this.vCardvcfToolStripMenuItem, "vCardvcfToolStripMenuItem");
             // 
             // windowsKontaktcontactToolStripMenuItem
             // 
             this.windowsKontaktcontactToolStripMenuItem.Name = "windowsKontaktcontactToolStripMenuItem";
-            this.windowsKontaktcontactToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.windowsKontaktcontactToolStripMenuItem.Text = "Windows Kontakt (*.contact)";
+            resources.ApplyResources(this.windowsKontaktcontactToolStripMenuItem, "windowsKontaktcontactToolStripMenuItem");
             // 
             // microsoftOutlookToolStripMenuItem
             // 
             this.microsoftOutlookToolStripMenuItem.Name = "microsoftOutlookToolStripMenuItem";
-            this.microsoftOutlookToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.microsoftOutlookToolStripMenuItem.Text = "Microsoft Outlook";
+            resources.ApplyResources(this.microsoftOutlookToolStripMenuItem, "microsoftOutlookToolStripMenuItem");
             this.microsoftOutlookToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftOutlookToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -250,29 +229,18 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.PanelEditContactDetails);
             this.splitContainer1.Panel2.Controls.Add(this.PanelShowContactDetails);
-            this.splitContainer1.Size = new System.Drawing.Size(684, 515);
-            this.splitContainer1.SplitterDistance = 216;
-            this.splitContainer1.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.treeView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(216, 477);
-            this.panel2.TabIndex = 2;
             // 
             // treeView1
             // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.ImageIndex = 0;
+            resources.ApplyResources(this.treeView1, "treeView1");
             this.treeView1.ImageList = this.imageList1;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(216, 477);
-            this.treeView1.TabIndex = 0;
             this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.TreeView1_BeforeSelect);
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1_AfterSelect);
             // 
@@ -290,41 +258,30 @@
             this.panel1.Controls.Add(this.Btn_UpdateContact);
             this.panel1.Controls.Add(this.Btn_CreateContact);
             this.panel1.Controls.Add(this.Btn_DeleteContact);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 477);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 38);
-            this.panel1.TabIndex = 1;
             // 
             // Btn_UpdateContact
             // 
-            this.Btn_UpdateContact.Enabled = false;
+            resources.ApplyResources(this.Btn_UpdateContact, "Btn_UpdateContact");
             this.Btn_UpdateContact.Image = global::eNumismat.Properties.Resources.user_edit;
-            this.Btn_UpdateContact.Location = new System.Drawing.Point(75, 3);
             this.Btn_UpdateContact.Name = "Btn_UpdateContact";
-            this.Btn_UpdateContact.Size = new System.Drawing.Size(30, 30);
-            this.Btn_UpdateContact.TabIndex = 3;
             this.Btn_UpdateContact.UseVisualStyleBackColor = true;
             this.Btn_UpdateContact.Click += new System.EventHandler(this.Btn_UpdateContact_Click);
             // 
             // Btn_CreateContact
             // 
             this.Btn_CreateContact.Image = global::eNumismat.Properties.Resources.user_add;
-            this.Btn_CreateContact.Location = new System.Drawing.Point(3, 3);
+            resources.ApplyResources(this.Btn_CreateContact, "Btn_CreateContact");
             this.Btn_CreateContact.Name = "Btn_CreateContact";
-            this.Btn_CreateContact.Size = new System.Drawing.Size(30, 30);
-            this.Btn_CreateContact.TabIndex = 2;
             this.Btn_CreateContact.UseVisualStyleBackColor = true;
             this.Btn_CreateContact.Click += new System.EventHandler(this.Btn_CreateContact_Click);
             // 
             // Btn_DeleteContact
             // 
-            this.Btn_DeleteContact.Enabled = false;
+            resources.ApplyResources(this.Btn_DeleteContact, "Btn_DeleteContact");
             this.Btn_DeleteContact.Image = global::eNumismat.Properties.Resources.user_delete;
-            this.Btn_DeleteContact.Location = new System.Drawing.Point(39, 3);
             this.Btn_DeleteContact.Name = "Btn_DeleteContact";
-            this.Btn_DeleteContact.Size = new System.Drawing.Size(30, 30);
-            this.Btn_DeleteContact.TabIndex = 1;
             this.Btn_DeleteContact.UseVisualStyleBackColor = true;
             this.Btn_DeleteContact.Click += new System.EventHandler(this.Btn_DeleteContact_Click);
             // 
@@ -356,251 +313,165 @@
             this.PanelEditContactDetails.Controls.Add(this.tb_street);
             this.PanelEditContactDetails.Controls.Add(this.tb_surename);
             this.PanelEditContactDetails.Controls.Add(this.tb_name);
-            this.PanelEditContactDetails.Location = new System.Drawing.Point(934, 0);
+            resources.ApplyResources(this.PanelEditContactDetails, "PanelEditContactDetails");
             this.PanelEditContactDetails.Name = "PanelEditContactDetails";
-            this.PanelEditContactDetails.Size = new System.Drawing.Size(446, 516);
-            this.PanelEditContactDetails.TabIndex = 1;
             // 
             // tb_zipcode
             // 
-            this.tb_zipcode.Location = new System.Drawing.Point(153, 162);
-            this.tb_zipcode.Mask = "00000";
+            resources.ApplyResources(this.tb_zipcode, "tb_zipcode");
             this.tb_zipcode.Name = "tb_zipcode";
-            this.tb_zipcode.Size = new System.Drawing.Size(112, 20);
-            this.tb_zipcode.TabIndex = 5;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(117, 165);
+            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 13);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "PLZ:";
             // 
             // Btn_Cancel
             // 
             this.Btn_Cancel.Image = global::eNumismat.Properties.Resources.cancel;
-            this.Btn_Cancel.Location = new System.Drawing.Point(267, 478);
+            resources.ApplyResources(this.Btn_Cancel, "Btn_Cancel");
             this.Btn_Cancel.Name = "Btn_Cancel";
-            this.Btn_Cancel.Size = new System.Drawing.Size(32, 32);
-            this.Btn_Cancel.TabIndex = 13;
             this.Btn_Cancel.UseVisualStyleBackColor = true;
             this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
             // Btn_Save
             // 
             this.Btn_Save.Image = global::eNumismat.Properties.Resources.accept;
-            this.Btn_Save.Location = new System.Drawing.Point(305, 478);
+            resources.ApplyResources(this.Btn_Save, "Btn_Save");
             this.Btn_Save.Name = "Btn_Save";
-            this.Btn_Save.Size = new System.Drawing.Size(32, 32);
-            this.Btn_Save.TabIndex = 12;
             this.Btn_Save.UseVisualStyleBackColor = true;
             this.Btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(101, 346);
+            resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Notizen:";
             // 
             // rtb_notes
             // 
-            this.rtb_notes.Location = new System.Drawing.Point(153, 346);
+            resources.ApplyResources(this.rtb_notes, "rtb_notes");
             this.rtb_notes.Name = "rtb_notes";
-            this.rtb_notes.Size = new System.Drawing.Size(184, 126);
-            this.rtb_notes.TabIndex = 11;
-            this.rtb_notes.Text = "";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(108, 308);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "E-Mail:";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(112, 282);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Mobil:";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(101, 256);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Telefon:";
             // 
             // tb_mail
             // 
-            this.tb_mail.Location = new System.Drawing.Point(153, 305);
+            resources.ApplyResources(this.tb_mail, "tb_mail");
             this.tb_mail.Name = "tb_mail";
-            this.tb_mail.Size = new System.Drawing.Size(184, 20);
-            this.tb_mail.TabIndex = 10;
             // 
             // tb_mobile
             // 
-            this.tb_mobile.Location = new System.Drawing.Point(153, 279);
+            resources.ApplyResources(this.tb_mobile, "tb_mobile");
             this.tb_mobile.Name = "tb_mobile";
-            this.tb_mobile.Size = new System.Drawing.Size(184, 20);
-            this.tb_mobile.TabIndex = 9;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(113, 217);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Land:";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(123, 191);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Ort:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 139);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Straße / HausNr.:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 102);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Geburtsdatum:";
             // 
             // dtp_birthdate
             // 
-            this.dtp_birthdate.CustomFormat = "dd.MM.yyyy";
+            resources.ApplyResources(this.dtp_birthdate, "dtp_birthdate");
             this.dtp_birthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_birthdate.Location = new System.Drawing.Point(153, 96);
             this.dtp_birthdate.Name = "dtp_birthdate";
-            this.dtp_birthdate.Size = new System.Drawing.Size(91, 20);
-            this.dtp_birthdate.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 72);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Geschlecht:";
             // 
             // cb_gender
             // 
             this.cb_gender.FormattingEnabled = true;
             this.cb_gender.Items.AddRange(new object[] {
-            "male",
-            "female"});
-            this.cb_gender.Location = new System.Drawing.Point(153, 69);
+            resources.GetString("cb_gender.Items"),
+            resources.GetString("cb_gender.Items1")});
+            resources.ApplyResources(this.cb_gender, "cb_gender");
             this.cb_gender.Name = "cb_gender";
-            this.cb_gender.Size = new System.Drawing.Size(91, 21);
-            this.cb_gender.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 32);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Vorname:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(109, 6);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Name:";
             // 
             // tb_phone
             // 
-            this.tb_phone.Location = new System.Drawing.Point(153, 253);
+            resources.ApplyResources(this.tb_phone, "tb_phone");
             this.tb_phone.Name = "tb_phone";
-            this.tb_phone.Size = new System.Drawing.Size(184, 20);
-            this.tb_phone.TabIndex = 8;
             // 
             // tb_country
             // 
-            this.tb_country.Location = new System.Drawing.Point(153, 214);
+            resources.ApplyResources(this.tb_country, "tb_country");
             this.tb_country.Name = "tb_country";
-            this.tb_country.Size = new System.Drawing.Size(184, 20);
-            this.tb_country.TabIndex = 7;
             // 
             // tb_city
             // 
-            this.tb_city.Location = new System.Drawing.Point(153, 188);
+            resources.ApplyResources(this.tb_city, "tb_city");
             this.tb_city.Name = "tb_city";
-            this.tb_city.Size = new System.Drawing.Size(184, 20);
-            this.tb_city.TabIndex = 6;
             // 
             // tb_street
             // 
-            this.tb_street.Location = new System.Drawing.Point(153, 136);
+            resources.ApplyResources(this.tb_street, "tb_street");
             this.tb_street.Name = "tb_street";
-            this.tb_street.Size = new System.Drawing.Size(184, 20);
-            this.tb_street.TabIndex = 4;
             // 
             // tb_surename
             // 
-            this.tb_surename.Location = new System.Drawing.Point(153, 29);
+            resources.ApplyResources(this.tb_surename, "tb_surename");
             this.tb_surename.Name = "tb_surename";
-            this.tb_surename.Size = new System.Drawing.Size(184, 20);
-            this.tb_surename.TabIndex = 1;
             this.tb_surename.TextChanged += new System.EventHandler(this.TbSurename_TextChanged);
             // 
             // tb_name
             // 
-            this.tb_name.Location = new System.Drawing.Point(153, 3);
+            resources.ApplyResources(this.tb_name, "tb_name");
             this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(184, 20);
-            this.tb_name.TabIndex = 0;
             this.tb_name.TextChanged += new System.EventHandler(this.TbName_TextChanged);
             // 
             // PanelShowContactDetails
             // 
             this.PanelShowContactDetails.Controls.Add(this.tabControl1);
-            this.PanelShowContactDetails.Location = new System.Drawing.Point(466, 0);
+            resources.ApplyResources(this.PanelShowContactDetails, "PanelShowContactDetails");
             this.PanelShowContactDetails.Name = "PanelShowContactDetails";
-            this.PanelShowContactDetails.Size = new System.Drawing.Size(462, 516);
-            this.PanelShowContactDetails.TabIndex = 0;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(462, 516);
-            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -625,197 +496,115 @@
             this.tabPage1.Controls.Add(this.label_ID);
             this.tabPage1.Controls.Add(this.label_surename);
             this.tabPage1.Controls.Add(this.label_name);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(454, 490);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Kontaktdaten";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(98, 324);
+            resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(46, 13);
-            this.label20.TabIndex = 65;
-            this.label20.Text = "Notizen:";
             // 
             // rtb_notesDisplay
             // 
-            this.rtb_notesDisplay.Enabled = false;
-            this.rtb_notesDisplay.Location = new System.Drawing.Point(165, 321);
+            resources.ApplyResources(this.rtb_notesDisplay, "rtb_notesDisplay");
             this.rtb_notesDisplay.Name = "rtb_notesDisplay";
-            this.rtb_notesDisplay.Size = new System.Drawing.Size(282, 127);
-            this.rtb_notesDisplay.TabIndex = 64;
-            this.rtb_notesDisplay.Text = "";
             // 
             // label_city
             // 
-            this.label_city.AutoSize = true;
-            this.label_city.Location = new System.Drawing.Point(216, 137);
+            resources.ApplyResources(this.label_city, "label_city");
             this.label_city.Name = "label_city";
-            this.label_city.Size = new System.Drawing.Size(0, 13);
-            this.label_city.TabIndex = 63;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(105, 284);
+            resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 13);
-            this.label13.TabIndex = 57;
-            this.label13.Text = "E-Mail:";
             // 
             // label_mail
             // 
-            this.label_mail.AutoSize = true;
-            this.label_mail.Location = new System.Drawing.Point(162, 284);
+            resources.ApplyResources(this.label_mail, "label_mail");
             this.label_mail.Name = "label_mail";
-            this.label_mail.Size = new System.Drawing.Size(0, 13);
-            this.label_mail.TabIndex = 62;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(78, 114);
-            this.label14.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 13);
-            this.label14.TabIndex = 49;
-            this.label14.Text = "Straße / Nr.:";
             // 
             // label_zip
             // 
-            this.label_zip.AutoSize = true;
-            this.label_zip.Location = new System.Drawing.Point(162, 137);
+            resources.ApplyResources(this.label_zip, "label_zip");
             this.label_zip.Name = "label_zip";
-            this.label_zip.Size = new System.Drawing.Size(0, 13);
-            this.label_zip.TabIndex = 53;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(82, 205);
+            resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 13);
-            this.label15.TabIndex = 58;
-            this.label15.Text = "Geburtstag:";
             // 
             // label_country
             // 
-            this.label_country.AutoSize = true;
-            this.label_country.Location = new System.Drawing.Point(162, 160);
+            resources.ApplyResources(this.label_country, "label_country");
             this.label_country.Name = "label_country";
-            this.label_country.Size = new System.Drawing.Size(0, 13);
-            this.label_country.TabIndex = 54;
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(109, 261);
-            this.label16.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 13);
-            this.label16.TabIndex = 56;
-            this.label16.Text = "Mobil:";
             // 
             // label_mobile
             // 
-            this.label_mobile.AutoSize = true;
-            this.label_mobile.Location = new System.Drawing.Point(162, 261);
+            resources.ApplyResources(this.label_mobile, "label_mobile");
             this.label_mobile.Name = "label_mobile";
-            this.label_mobile.Size = new System.Drawing.Size(0, 13);
-            this.label_mobile.TabIndex = 61;
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(89, 137);
-            this.label17.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 13);
-            this.label17.TabIndex = 50;
-            this.label17.Text = "PLZ / Ort:";
             // 
             // label_street
             // 
-            this.label_street.AutoSize = true;
-            this.label_street.Location = new System.Drawing.Point(162, 114);
+            resources.ApplyResources(this.label_street, "label_street");
             this.label_street.Name = "label_street";
-            this.label_street.Size = new System.Drawing.Size(0, 13);
-            this.label_street.TabIndex = 52;
             // 
             // label_birthdate
             // 
-            this.label_birthdate.AutoSize = true;
-            this.label_birthdate.Location = new System.Drawing.Point(162, 205);
+            resources.ApplyResources(this.label_birthdate, "label_birthdate");
             this.label_birthdate.Name = "label_birthdate";
-            this.label_birthdate.Size = new System.Drawing.Size(0, 13);
-            this.label_birthdate.TabIndex = 59;
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(98, 238);
-            this.label18.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 13);
-            this.label18.TabIndex = 55;
-            this.label18.Text = "Telefon:";
             // 
             // label_phone
             // 
-            this.label_phone.AutoSize = true;
-            this.label_phone.Location = new System.Drawing.Point(162, 238);
+            resources.ApplyResources(this.label_phone, "label_phone");
             this.label_phone.Name = "label_phone";
-            this.label_phone.Size = new System.Drawing.Size(0, 13);
-            this.label_phone.TabIndex = 60;
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(110, 160);
+            resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 13);
-            this.label19.TabIndex = 51;
-            this.label19.Text = "Land:";
             // 
             // pb_gender
             // 
-            this.pb_gender.Location = new System.Drawing.Point(431, 6);
+            resources.ApplyResources(this.pb_gender, "pb_gender");
             this.pb_gender.Name = "pb_gender";
-            this.pb_gender.Size = new System.Drawing.Size(16, 16);
-            this.pb_gender.TabIndex = 3;
             this.pb_gender.TabStop = false;
             // 
             // label_ID
             // 
-            this.label_ID.AutoSize = true;
-            this.label_ID.Location = new System.Drawing.Point(399, 10);
+            resources.ApplyResources(this.label_ID, "label_ID");
             this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(0, 13);
-            this.label_ID.TabIndex = 2;
-            this.label_ID.Visible = false;
             // 
             // label_surename
             // 
-            this.label_surename.AutoSize = true;
-            this.label_surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_surename.Location = new System.Drawing.Point(6, 19);
+            resources.ApplyResources(this.label_surename, "label_surename");
             this.label_surename.Name = "label_surename";
-            this.label_surename.Size = new System.Drawing.Size(0, 16);
-            this.label_surename.TabIndex = 1;
             // 
             // label_name
             // 
-            this.label_name.AutoSize = true;
-            this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_name.Location = new System.Drawing.Point(6, 3);
+            resources.ApplyResources(this.label_name, "label_name");
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(0, 16);
-            this.label_name.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -824,66 +613,46 @@
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.listView2);
             this.tabPage2.Controls.Add(this.listView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(454, 490);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tauschübersicht";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // AddSwap
             // 
-            this.AddSwap.Location = new System.Drawing.Point(376, 461);
+            resources.ApplyResources(this.AddSwap, "AddSwap");
             this.AddSwap.Name = "AddSwap";
-            this.AddSwap.Size = new System.Drawing.Size(75, 23);
-            this.AddSwap.TabIndex = 4;
-            this.AddSwap.Text = "Neu";
             this.AddSwap.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 260);
+            resources.ApplyResources(this.label22, "label22");
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(64, 13);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "Ausgehend:";
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 34);
+            resources.ApplyResources(this.label21, "label21");
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(61, 13);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "Eingehend:";
             // 
             // listView2
             // 
             this.listView2.FullRowSelect = true;
-            this.listView2.Location = new System.Drawing.Point(6, 50);
+            resources.ApplyResources(this.listView2, "listView2");
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(442, 179);
-            this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // listView1
             // 
             this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(6, 276);
+            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(442, 179);
-            this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // AddressBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 561);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -891,7 +660,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AddressBook";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "AddressBook";
             this.Load += new System.EventHandler(this.AddressBook_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
