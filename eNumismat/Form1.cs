@@ -3,11 +3,16 @@ using System.Linq;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
+using System.Globalization;
+using System.Resources;
+using System.Reflection;
 
 namespace eNumismat
 {
     public partial class Form1 : Form
     {
+        ResourceManager res_man;
+        
         ConfigHandler cfgHandler;
         LogHandler logHandler;
         DBActions dbAction;
@@ -19,11 +24,14 @@ namespace eNumismat
         FileBackup fBackup;
 
         public string[] args = Environment.GetCommandLineArgs();
+        public string language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
         //=====================================================================================================================================================================
         public Form1()
         {
             InitializeComponent();
+            
+            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
             cfgHandler = new ConfigHandler();
             logHandler = new LogHandler();
@@ -62,7 +70,11 @@ namespace eNumismat
                 // if Config Exist: Read Conf.File
                 cfgHandler.ReadXmlConf();
             }
+
+            dateiToolStripMenuItem.Text = res_man.GetString("_file");
         }
+
+        
 
         // Default Event Functions Load, Show, Close
         //=====================================================================================================================================================================

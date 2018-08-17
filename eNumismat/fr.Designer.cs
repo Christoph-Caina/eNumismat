@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eNumismat.Resources.languages {
+namespace eNumismat {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace eNumismat.Resources.languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class en_EN {
+    internal class fr {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal en_EN() {
+        internal fr() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace eNumismat.Resources.languages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("eNumismat.Resources.languages.en_EN", typeof(en_EN).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("eNumismat.fr", typeof(fr).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace eNumismat.Resources.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Backup Database.
+        ///   Looks up a localized string similar to Enregistrer la base de données.
         /// </summary>
         internal static string _backupDataBase {
             get {
@@ -70,7 +70,7 @@ namespace eNumismat.Resources.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create Database.
+        ///   Looks up a localized string similar to Nouvelle base de données.
         /// </summary>
         internal static string _createNewDataBase {
             get {
@@ -79,7 +79,7 @@ namespace eNumismat.Resources.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File.
+        ///   Looks up a localized string similar to Fichier.
         /// </summary>
         internal static string _file {
             get {
@@ -88,7 +88,7 @@ namespace eNumismat.Resources.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open Database.
+        ///   Looks up a localized string similar to Base de données ouverte.
         /// </summary>
         internal static string _openExistingDataBase {
             get {
