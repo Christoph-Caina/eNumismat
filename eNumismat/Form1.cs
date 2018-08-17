@@ -35,8 +35,6 @@ namespace eNumismat
 
             string lang = CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName;
 
-            MessageBox.Show(lang);
-
             if (lang == "deu" || lang == "ger")
             {
                 toolStripStatusLabel2.Image = Properties.Resources.flag_germany;

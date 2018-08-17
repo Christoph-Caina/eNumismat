@@ -321,12 +321,19 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Btn_Save_Click(object sender, EventArgs e)
         {
+            string birthdate = null;
+
+            if(dtp_birthdate.Value.ToString("yyyy-MM-dd") != "1900-01-01")
+            {
+                birthdate = dtp_birthdate.Value.ToString("yyyy-MM-dd");
+            }
+
             List<string> DBContactDetails = new List<string>
             {
                 tb_name.Text,
                 tb_surename.Text,
                 cb_gender.Text,
-                dtp_birthdate.Value.ToString("yyyy-MM-dd"),
+                birthdate,
                 tb_street.Text,
                 tb_zipcode.Text,
                 tb_city.Text,
