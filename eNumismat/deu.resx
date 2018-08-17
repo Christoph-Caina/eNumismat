@@ -246,4 +246,7 @@
   <data name="_swap_outgoing" xml:space="preserve">
     <value>Ausgehend:</value>
   </data>
+  <data name="_dialog_DBBackupSuccessful" xml:space="preserve">
+    <value>Die Sicherung wurde erfolgreich durchgeführt!</value>
+  </data>
 </root>

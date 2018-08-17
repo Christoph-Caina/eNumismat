@@ -322,6 +322,15 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The Backup was successful ähnelt.
+        /// </summary>
+        internal static string _dialog_DBBackupSuccessful {
+            get {
+                return ResourceManager.GetString("_dialog_DBBackupSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Edit Settings ähnelt.
         /// </summary>
         internal static string _editSettings {
