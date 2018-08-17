@@ -61,11 +61,29 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adressbuch.
+        /// </summary>
+        internal static string _addrBook {
+            get {
+                return ResourceManager.GetString("_addrBook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Datenbank sichern.
         /// </summary>
         internal static string _backupDataBase {
             get {
                 return ResourceManager.GetString("_backupDataBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sprache ändern.
+        /// </summary>
+        internal static string _changeLanguage {
+            get {
+                return ResourceManager.GetString("_changeLanguage", resourceCulture);
             }
         }
         
@@ -88,11 +106,29 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Einstellungen bearbeiten.
+        /// </summary>
+        internal static string _editSettings {
+            get {
+                return ResourceManager.GetString("_editSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Beenden.
         /// </summary>
         internal static string _exitApplication {
             get {
                 return ResourceManager.GetString("_exitApplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extras.
+        /// </summary>
+        internal static string _extras {
+            get {
+                return ResourceManager.GetString("_extras", resourceCulture);
             }
         }
         
@@ -106,11 +142,56 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Englisch.
+        /// </summary>
+        internal static string _langEnglish {
+            get {
+                return ResourceManager.GetString("_langEnglish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Französisch.
+        /// </summary>
+        internal static string _langFrench {
+            get {
+                return ResourceManager.GetString("_langFrench", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deutsch.
+        /// </summary>
+        internal static string _langGerman {
+            get {
+                return ResourceManager.GetString("_langGerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Datenbank öffnen.
         /// </summary>
         internal static string _openExistingDataBase {
             get {
                 return ResourceManager.GetString("_openExistingDataBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Einstellungen.
+        /// </summary>
+        internal static string _settings {
+            get {
+                return ResourceManager.GetString("_settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tauschmonitor.
+        /// </summary>
+        internal static string _swapMonitor {
+            get {
+                return ResourceManager.GetString("_swapMonitor", resourceCulture);
             }
         }
     }

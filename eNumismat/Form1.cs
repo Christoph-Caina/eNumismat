@@ -41,6 +41,17 @@ namespace eNumismat
             datenbankKomprimierenToolStripMenuItem.Text = res_man.GetString("_compressDataBase");
             beendenToolStripMenuItem.Text = res_man.GetString("_exitApplication");
 
+            einstellungenToolStripMenuItem.Text = res_man.GetString("_settings");
+            einstellungenBearbeitenToolStripMenuItem.Text = res_man.GetString("_editSettings");
+            spracheÄndernToolStripMenuItem.Text = res_man.GetString("_changeLanguage");
+            deutschToolStripMenuItem.Text = res_man.GetString("_langGerman");
+            englischToolStripMenuItem.Text = res_man.GetString("_langEnglish");
+            französischToolStripMenuItem.Text = res_man.GetString("_langFrench");
+
+            ExtrasToolStripMenuItem.Text = res_man.GetString("_extras");
+            AdressbuchToolStripMenuItem.Text = res_man.GetString("_addrBook");
+            TauschmonitorToolStripMenuItem.Text = res_man.GetString("_swapMonitor");
+
 
             cfgHandler = new ConfigHandler();
             logHandler = new LogHandler();
