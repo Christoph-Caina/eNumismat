@@ -96,10 +96,8 @@ namespace eNumismat
             {
                 dbConnection.Open();
                 
-                
                 string SQL = null;
 
-                 
                 switch (content)
                 {                    
                     case "parents":
@@ -126,14 +124,13 @@ namespace eNumismat
                         }
                         else if (contactDetails != null && ID != 0)
                         {
-                            SQL = "SELECT * FROM contacts WHERE `name` = @ContactName[0] AND `surename` = @ContactSureName AND `id` = @ContactID LIMIT 1";
+                            SQL = "SELECT * FROM contacts WHERE `name` = @ContactName AND `surename` = @ContactSureName AND `id` = @ContactID LIMIT 1";
                         }
                         break;
                 }
 
                 using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                 {
-
                     if (FirstLetter != null)
                     {
                         command.Parameters.AddWithValue("@FirstLetter", FirstLetter + "%");
@@ -143,14 +140,12 @@ namespace eNumismat
                     {
                         command.Parameters.AddWithValue("@ContactName", contactDetails[0]);
                         command.Parameters.AddWithValue("@ContactSureName", contactDetails[1]);
-                        MessageBox.Show(contactDetails[0] + ", " + contactDetails[1]);
                     }
 
                     if (ID != 0)
                     {
                         command.Parameters.AddWithValue("@ContactID", ID);
                     }
-
 
                     using (SQLiteDataAdapter daContacts = new SQLiteDataAdapter(command))
                     { 
