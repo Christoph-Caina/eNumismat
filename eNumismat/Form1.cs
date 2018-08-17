@@ -90,11 +90,7 @@ namespace eNumismat
                 // if Config Exist: Read Conf.File
                 cfgHandler.ReadXmlConf();
             }
-
-            
         }
-
-        
 
         // Default Event Functions Load, Show, Close
         //=====================================================================================================================================================================
@@ -115,33 +111,11 @@ namespace eNumismat
         {
             if (!String.IsNullOrEmpty(Globals.DBFile))
             {
-                //if(File.Exists(Globals.FileBrowserInitDir + "\\" + Globals.DBFile))
-                //{
-                    ExtrasToolStripMenuItem.Enabled = true;
-                    AdressbuchToolStripMenuItem.Enabled = true;
-                    TauschmonitorToolStripMenuItem.Enabled = true;
-                    toolStripStatusLabel1.Image = Properties.Resources.connect;
-                    toolStripStatusLabel1.Text = Globals.DBFile;
-                //}
-                //else
-                //{
-                //    ErrorDialog ErrDiag = new ErrorDialog();
-                //    ErrDiag.DialogTitle = "ERROR";
-                //    ErrDiag.ErrText =
-                //        "Error: The file " +
-                //        Globals.DBFile +
-                //        " does not exist in the given Directory!" +
-                //        Environment.NewLine +
-                //        Globals.FileBrowserInitDir +
-                //        Environment.NewLine +
-                //        Environment.NewLine +
-                //        "Would you like to open another File, or do you want to create a new one?";
-                //    ErrDiag.Btn1_Text = "Open other File";
-                //    ErrDiag.Btn2_Text = "Create New File";
-                //    ErrDiag.Btn3_Text = "Cancel";
-                //
-                 //   ErrDiag.ShowDialog();
-                //}
+                ExtrasToolStripMenuItem.Enabled = true;
+                AdressbuchToolStripMenuItem.Enabled = true;
+                TauschmonitorToolStripMenuItem.Enabled = true;
+                toolStripStatusLabel1.Image = Properties.Resources.connect;
+                toolStripStatusLabel1.Text = Globals.DBFile;
             }
             else
             {
@@ -179,26 +153,19 @@ namespace eNumismat
             {
                 DefaultExt = "*.enc", // enc = eNumismatCollection
                 AddExtension = true,
-                // Only, if no other path is specified in the Config
+
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments),
                 Filter = "eNumismatCollection File(*.enc) | *.enc"
             };
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                //MessageBox.Show(saveFile.FileName);
-
                 string[] FileData = { Path.GetFileName(saveFile.FileName), Path.GetDirectoryName(saveFile.FileName) };
-
-                //MessageBox.Show(FileData[0]);
-
-                WriteDBFileToConf(FileData);
-
-                //Globals.DBFile = saveFile.;
-                //EnableOrDisableMenueItems();
 
                 dbAction = new DBActions();
                 dbAction.CreateNew();
+
+                WriteDBFileToConf(FileData);
             }
             else
             { }
@@ -207,7 +174,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void DatenbankOeffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog
+            openFile = new OpenFileDialog
             {
                 DefaultExt = "*.enc", // enc = eNumismatCollection
                 AddExtension = true,
@@ -215,7 +182,6 @@ namespace eNumismat
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments),
                 Filter = "eNumismatCollection File (*.enc) | *.enc"
             };
-            openFile = openFileDialog;
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
@@ -230,8 +196,6 @@ namespace eNumismat
         {
             cfgHandler.UpdateXmlConf("Database", "LastDBFile", FileData[0]);
             cfgHandler.UpdateXmlConf("Database", "LastDBFilePath", FileData[1]);
-
-            //Globals.DBFile = FileData[1] + "\\" + FileData[0];
         }
 
         //=====================================================================================================================================================================

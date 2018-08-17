@@ -169,6 +169,15 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nouveau contact.
+        /// </summary>
+        internal static string _newContact {
+            get {
+                return ResourceManager.GetString("_newContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Base de données ouverte.
         /// </summary>
         internal static string _openExistingDataBase {

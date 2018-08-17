@@ -153,6 +153,9 @@
   <data name="_langGerman" xml:space="preserve">
     <value>German</value>
   </data>
+  <data name="_newContact" xml:space="preserve">
+    <value>New Contact</value>
+  </data>
   <data name="_openExistingDataBase" xml:space="preserve">
     <value>Open Database</value>
   </data>
