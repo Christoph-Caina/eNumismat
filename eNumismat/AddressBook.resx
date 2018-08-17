@@ -143,7 +143,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        CgAAAk1TRnQBSQFMAgEBBAEAAcgBAAHIAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CgAAAk1TRnQBSQFMAgEBBAEAAdABAAHQAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -345,7 +345,7 @@
     <value>0</value>
   </data>
   <data name="tb_zipcode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 162</value>
+    <value>208, 162</value>
   </data>
   <data name="tb_zipcode.Mask" xml:space="preserve">
     <value>00000</value>
@@ -372,7 +372,7 @@
     <value>41, 346</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -393,7 +393,7 @@
     <value>1</value>
   </data>
   <data name="Btn_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 478</value>
+    <value>322, 478</value>
   </data>
   <data name="Btn_Cancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
@@ -414,7 +414,7 @@
     <value>2</value>
   </data>
   <data name="Btn_Save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 478</value>
+    <value>360, 478</value>
   </data>
   <data name="Btn_Save.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
@@ -438,7 +438,7 @@
     <value>41, 305</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -459,7 +459,7 @@
     <value>4</value>
   </data>
   <data name="rtb_notes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 346</value>
+    <value>208, 346</value>
   </data>
   <data name="rtb_notes.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 126</value>
@@ -486,7 +486,7 @@
     <value>41, 279</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -510,7 +510,7 @@
     <value>41, 253</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -534,7 +534,7 @@
     <value>41, 214</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -555,7 +555,7 @@
     <value>8</value>
   </data>
   <data name="tb_mail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 305</value>
+    <value>208, 305</value>
   </data>
   <data name="tb_mail.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -576,7 +576,7 @@
     <value>9</value>
   </data>
   <data name="tb_mobile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 279</value>
+    <value>208, 279</value>
   </data>
   <data name="tb_mobile.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -600,7 +600,7 @@
     <value>41, 188</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -624,7 +624,7 @@
     <value>41, 162</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -645,10 +645,10 @@
     <value>12</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 136</value>
+    <value>18, 136</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>184, 18</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -672,7 +672,7 @@
     <value>41, 99</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -696,7 +696,7 @@
     <value />
   </data>
   <data name="dtp_birthdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 96</value>
+    <value>208, 96</value>
   </data>
   <data name="dtp_birthdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 20</value>
@@ -720,7 +720,7 @@
     <value>41, 69</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -747,7 +747,7 @@
     <value>female</value>
   </data>
   <data name="cb_gender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 69</value>
+    <value>208, 69</value>
   </data>
   <data name="cb_gender.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 21</value>
@@ -771,7 +771,7 @@
     <value>41, 29</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -795,7 +795,7 @@
     <value>41, 3</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 18</value>
+    <value>161, 18</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -816,7 +816,7 @@
     <value>19</value>
   </data>
   <data name="tb_phone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 253</value>
+    <value>208, 253</value>
   </data>
   <data name="tb_phone.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -837,7 +837,7 @@
     <value>20</value>
   </data>
   <data name="tb_country.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 214</value>
+    <value>208, 214</value>
   </data>
   <data name="tb_country.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -858,7 +858,7 @@
     <value>21</value>
   </data>
   <data name="tb_city.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 188</value>
+    <value>208, 188</value>
   </data>
   <data name="tb_city.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -879,7 +879,7 @@
     <value>22</value>
   </data>
   <data name="tb_street.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 136</value>
+    <value>208, 136</value>
   </data>
   <data name="tb_street.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -900,7 +900,7 @@
     <value>23</value>
   </data>
   <data name="tb_surename.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 29</value>
+    <value>208, 29</value>
   </data>
   <data name="tb_surename.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -921,7 +921,7 @@
     <value>24</value>
   </data>
   <data name="tb_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 3</value>
+    <value>208, 3</value>
   </data>
   <data name="tb_name.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
