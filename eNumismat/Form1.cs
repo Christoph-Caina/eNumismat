@@ -33,7 +33,14 @@ namespace eNumismat
             
             res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
-            cfgHandler = new ConfigHandler();
+            //localization
+                dateiToolStripMenuItem.Text = res_man.GetString("_file");
+                    neueDatenbankToolStripMenuItem.Text = res_man.GetString("_createNewDataBase");
+                    datenbankÖffnenToolStripMenuItem.Text = res_man.GetString("_openExistingDataBase");
+                    datenbankSichernToolStripMenuItem.Text = res_man.GetString("_backupDataBase");
+
+
+    cfgHandler = new ConfigHandler();
             logHandler = new LogHandler();
 
             Globals.LogLevel = "WARN";
@@ -71,7 +78,7 @@ namespace eNumismat
                 cfgHandler.ReadXmlConf();
             }
 
-            dateiToolStripMenuItem.Text = res_man.GetString("_file");
+            
         }
 
         
