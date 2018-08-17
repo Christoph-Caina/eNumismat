@@ -40,6 +40,9 @@
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.einstellungenBearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spracheÄndernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExtrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AdressbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TauschmonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,9 +54,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.spracheÄndernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.französischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -61,16 +62,17 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
             this.einstellungenToolStripMenuItem,
             this.ExtrasToolStripMenuItem,
             this.hilfeToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // dateiToolStripMenuItem
             // 
+            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
             this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.neueDatenbankToolStripMenuItem,
             this.datenbankÖffnenToolStripMenuItem,
@@ -80,92 +82,111 @@
             this.toolStripSeparator1,
             this.beendenToolStripMenuItem});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
             // 
             // neueDatenbankToolStripMenuItem
             // 
+            resources.ApplyResources(this.neueDatenbankToolStripMenuItem, "neueDatenbankToolStripMenuItem");
             this.neueDatenbankToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_add;
             this.neueDatenbankToolStripMenuItem.Name = "neueDatenbankToolStripMenuItem";
-            resources.ApplyResources(this.neueDatenbankToolStripMenuItem, "neueDatenbankToolStripMenuItem");
             this.neueDatenbankToolStripMenuItem.Click += new System.EventHandler(this.NeueDatenbankToolStripMenuItem_Click);
             // 
             // datenbankÖffnenToolStripMenuItem
             // 
+            resources.ApplyResources(this.datenbankÖffnenToolStripMenuItem, "datenbankÖffnenToolStripMenuItem");
             this.datenbankÖffnenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_connect;
             this.datenbankÖffnenToolStripMenuItem.Name = "datenbankÖffnenToolStripMenuItem";
-            resources.ApplyResources(this.datenbankÖffnenToolStripMenuItem, "datenbankÖffnenToolStripMenuItem");
             this.datenbankÖffnenToolStripMenuItem.Click += new System.EventHandler(this.DatenbankOeffnenToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
             // 
             // datenbankSichernToolStripMenuItem
             // 
+            resources.ApplyResources(this.datenbankSichernToolStripMenuItem, "datenbankSichernToolStripMenuItem");
             this.datenbankSichernToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_save;
             this.datenbankSichernToolStripMenuItem.Name = "datenbankSichernToolStripMenuItem";
-            resources.ApplyResources(this.datenbankSichernToolStripMenuItem, "datenbankSichernToolStripMenuItem");
             this.datenbankSichernToolStripMenuItem.Click += new System.EventHandler(this.DatenbankSichernToolStripMenuItem_Click);
             // 
             // datenbankKomprimierenToolStripMenuItem
             // 
+            resources.ApplyResources(this.datenbankKomprimierenToolStripMenuItem, "datenbankKomprimierenToolStripMenuItem");
             this.datenbankKomprimierenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.compress;
             this.datenbankKomprimierenToolStripMenuItem.Name = "datenbankKomprimierenToolStripMenuItem";
-            resources.ApplyResources(this.datenbankKomprimierenToolStripMenuItem, "datenbankKomprimierenToolStripMenuItem");
             this.datenbankKomprimierenToolStripMenuItem.Click += new System.EventHandler(this.datenbankKomprimierenToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // beendenToolStripMenuItem
             // 
+            resources.ApplyResources(this.beendenToolStripMenuItem, "beendenToolStripMenuItem");
             this.beendenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.door_in;
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            resources.ApplyResources(this.beendenToolStripMenuItem, "beendenToolStripMenuItem");
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.BeendenToolStripMenuItem_Click);
             // 
             // einstellungenToolStripMenuItem
             // 
+            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
             this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.einstellungenBearbeitenToolStripMenuItem,
             this.spracheÄndernToolStripMenuItem});
             this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
             // 
             // einstellungenBearbeitenToolStripMenuItem
             // 
+            resources.ApplyResources(this.einstellungenBearbeitenToolStripMenuItem, "einstellungenBearbeitenToolStripMenuItem");
             this.einstellungenBearbeitenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.cog;
             this.einstellungenBearbeitenToolStripMenuItem.Name = "einstellungenBearbeitenToolStripMenuItem";
-            resources.ApplyResources(this.einstellungenBearbeitenToolStripMenuItem, "einstellungenBearbeitenToolStripMenuItem");
             this.einstellungenBearbeitenToolStripMenuItem.Click += new System.EventHandler(this.EinstellungenBearbeitenToolStripMenuItem_Click);
+            // 
+            // spracheÄndernToolStripMenuItem
+            // 
+            resources.ApplyResources(this.spracheÄndernToolStripMenuItem, "spracheÄndernToolStripMenuItem");
+            this.spracheÄndernToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deutschToolStripMenuItem,
+            this.englischToolStripMenuItem,
+            this.französischToolStripMenuItem});
+            this.spracheÄndernToolStripMenuItem.Name = "spracheÄndernToolStripMenuItem";
+            // 
+            // deutschToolStripMenuItem
+            // 
+            resources.ApplyResources(this.deutschToolStripMenuItem, "deutschToolStripMenuItem");
+            this.deutschToolStripMenuItem.Name = "deutschToolStripMenuItem";
+            // 
+            // englischToolStripMenuItem
+            // 
+            resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
+            this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
             // 
             // ExtrasToolStripMenuItem
             // 
+            resources.ApplyResources(this.ExtrasToolStripMenuItem, "ExtrasToolStripMenuItem");
             this.ExtrasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AdressbuchToolStripMenuItem,
             this.TauschmonitorToolStripMenuItem});
             this.ExtrasToolStripMenuItem.Name = "ExtrasToolStripMenuItem";
-            resources.ApplyResources(this.ExtrasToolStripMenuItem, "ExtrasToolStripMenuItem");
             // 
             // AdressbuchToolStripMenuItem
             // 
+            resources.ApplyResources(this.AdressbuchToolStripMenuItem, "AdressbuchToolStripMenuItem");
             this.AdressbuchToolStripMenuItem.Image = global::eNumismat.Properties.Resources.book_addresses;
             this.AdressbuchToolStripMenuItem.Name = "AdressbuchToolStripMenuItem";
-            resources.ApplyResources(this.AdressbuchToolStripMenuItem, "AdressbuchToolStripMenuItem");
             this.AdressbuchToolStripMenuItem.Click += new System.EventHandler(this.AdressbuchToolStripMenuItem_Click);
             // 
             // TauschmonitorToolStripMenuItem
             // 
+            resources.ApplyResources(this.TauschmonitorToolStripMenuItem, "TauschmonitorToolStripMenuItem");
             this.TauschmonitorToolStripMenuItem.Image = global::eNumismat.Properties.Resources.table_refresh;
             this.TauschmonitorToolStripMenuItem.Name = "TauschmonitorToolStripMenuItem";
-            resources.ApplyResources(this.TauschmonitorToolStripMenuItem, "TauschmonitorToolStripMenuItem");
             this.TauschmonitorToolStripMenuItem.Click += new System.EventHandler(this.TauschmonitorToolStripMenuItem_Click);
             // 
             // hilfeToolStripMenuItem
             // 
+            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nachUpdatesSuchenToolStripMenuItem,
             this.unicodeTabelleFürWährungssymboleToolStripMenuItem,
@@ -173,7 +194,6 @@
             this.hilfeZuENumismatToolStripMenuItem});
             this.hilfeToolStripMenuItem.Image = global::eNumismat.Properties.Resources.help;
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
-            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             // 
             // nachUpdatesSuchenToolStripMenuItem
             // 
@@ -182,56 +202,43 @@
             // 
             // unicodeTabelleFürWährungssymboleToolStripMenuItem
             // 
-            this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Name = "unicodeTabelleFürWährungssymboleToolStripMenuItem";
             resources.ApplyResources(this.unicodeTabelleFürWährungssymboleToolStripMenuItem, "unicodeTabelleFürWährungssymboleToolStripMenuItem");
+            this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Name = "unicodeTabelleFürWährungssymboleToolStripMenuItem";
             this.unicodeTabelleFürWährungssymboleToolStripMenuItem.Click += new System.EventHandler(this.UnicodeTabelleFuerWaehrungssymboleToolStripMenuItem_Click);
             // 
             // überENumismatToolStripMenuItem
             // 
-            this.überENumismatToolStripMenuItem.Name = "überENumismatToolStripMenuItem";
             resources.ApplyResources(this.überENumismatToolStripMenuItem, "überENumismatToolStripMenuItem");
+            this.überENumismatToolStripMenuItem.Name = "überENumismatToolStripMenuItem";
             this.überENumismatToolStripMenuItem.Click += new System.EventHandler(this.überENumismatToolStripMenuItem_Click);
             // 
             // hilfeZuENumismatToolStripMenuItem
             // 
+            resources.ApplyResources(this.hilfeZuENumismatToolStripMenuItem, "hilfeZuENumismatToolStripMenuItem");
             this.hilfeZuENumismatToolStripMenuItem.Image = global::eNumismat.Properties.Resources.help;
             this.hilfeZuENumismatToolStripMenuItem.Name = "hilfeZuENumismatToolStripMenuItem";
-            resources.ApplyResources(this.hilfeZuENumismatToolStripMenuItem, "hilfeZuENumismatToolStripMenuItem");
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // spracheÄndernToolStripMenuItem
+            // französischToolStripMenuItem
             // 
-            this.spracheÄndernToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deutschToolStripMenuItem,
-            this.englischToolStripMenuItem});
-            this.spracheÄndernToolStripMenuItem.Name = "spracheÄndernToolStripMenuItem";
-            resources.ApplyResources(this.spracheÄndernToolStripMenuItem, "spracheÄndernToolStripMenuItem");
-            // 
-            // deutschToolStripMenuItem
-            // 
-            this.deutschToolStripMenuItem.Name = "deutschToolStripMenuItem";
-            resources.ApplyResources(this.deutschToolStripMenuItem, "deutschToolStripMenuItem");
-            // 
-            // englischToolStripMenuItem
-            // 
-            this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
-            resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
+            resources.ApplyResources(this.französischToolStripMenuItem, "französischToolStripMenuItem");
+            this.französischToolStripMenuItem.Name = "französischToolStripMenuItem";
             // 
             // Form1
             // 
@@ -281,6 +288,7 @@
         private System.Windows.Forms.ToolStripMenuItem spracheÄndernToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deutschToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem englischToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem französischToolStripMenuItem;
     }
 }
 

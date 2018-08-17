@@ -86,14 +86,14 @@ namespace eNumismat
             attr = xConf.CreateAttribute("name");
             attr.Value = "Backup Database on Application Close";
             BackupOnAppExit.Attributes.Append(attr);
-            BackupOnAppExit.InnerText = "false";
+            BackupOnAppExit.InnerText = "true";
             BackupDBFile.AppendChild(BackupOnAppExit);
 
             XmlNode CompressBeforeBackup = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
             attr.Value = "Compress Database before Backup";
             CompressBeforeBackup.Attributes.Append(attr);
-            CompressBeforeBackup.InnerText = "false";
+            CompressBeforeBackup.InnerText = "true";
             BackupDBFile.AppendChild(CompressBeforeBackup);
 
             try
@@ -120,6 +120,7 @@ namespace eNumismat
             XmlNodeList DBConfNode;
             XmlNode root = xConf.DocumentElement;
 
+            //Read DataBase Config 
             DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
 
             string DBFileName = null;
@@ -140,6 +141,34 @@ namespace eNumismat
 
             Globals.DBFile = DBFileName;
             Globals.FileBrowserInitDir = DBFilePath;
+
+            DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
+
+            string BackupDBonAppClose = null;
+            string CompressDBbeforeBackup = null;
+
+            foreach (XmlNode DBConf in DBConfNode)
+            {
+                if (DBConf.Attributes["name"].Value == "Backup Database on Application Close")
+                {
+                    BackupDBonAppClose = DBConf.InnerText;
+                }
+
+                if (DBConf.Attributes["name"].Value == "Compress Database before Backup")
+                {
+                    CompressDBbeforeBackup = DBConf.InnerText;
+                }
+            }
+
+            if(BackupDBonAppClose == "true" || BackupDBonAppClose == "false" || BackupDBonAppClose == "1" || BackupDBonAppClose == "0")
+            {
+                Globals.BackupDBOnAppClose = Convert.ToBoolean(BackupDBonAppClose);
+            }
+
+            if(CompressDBbeforeBackup == "true" || CompressDBbeforeBackup == "false" || CompressDBbeforeBackup == "1" || CompressDBbeforeBackup == "0")
+            {
+                Globals.CompressDBBeforeBackup = Convert.ToBoolean(CompressDBbeforeBackup);
+            }
         }
 
         //=====================================================================================================================================================================

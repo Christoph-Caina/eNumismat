@@ -212,7 +212,7 @@
             // 
             this.microsoftOutlookToolStripMenuItem.Name = "microsoftOutlookToolStripMenuItem";
             resources.ApplyResources(this.microsoftOutlookToolStripMenuItem, "microsoftOutlookToolStripMenuItem");
-            this.microsoftOutlookToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftOutlookToolStripMenuItem_Click);
+            //this.microsoftOutlookToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftOutlookToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 

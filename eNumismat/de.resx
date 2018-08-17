@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="_addrBook" xml:space="preserve">
+    <value>Adressbuch</value>
+  </data>
   <data name="_backupDataBase" xml:space="preserve">
     <value>Datenbank sichern</value>
+  </data>
+  <data name="_changeLanguage" xml:space="preserve">
+    <value>Sprache ändern</value>
   </data>
   <data name="_compressDataBase" xml:space="preserve">
     <value>Datenbank komprimieren</value>
@@ -126,13 +132,37 @@
   <data name="_createNewDataBase" xml:space="preserve">
     <value>Neue Datenbank</value>
   </data>
+  <data name="_editSettings" xml:space="preserve">
+    <value>Einstellungen bearbeiten</value>
+  </data>
   <data name="_exitApplication" xml:space="preserve">
     <value>Beenden</value>
+  </data>
+  <data name="_extras" xml:space="preserve">
+    <value>Extras</value>
   </data>
   <data name="_file" xml:space="preserve">
     <value>Datei</value>
   </data>
+  <data name="_langEnglish" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
+  <data name="_langFrench" xml:space="preserve">
+    <value>Französisch</value>
+  </data>
+  <data name="_langGerman" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="_newContact" xml:space="preserve">
+    <value>Neuer Kontakt</value>
+  </data>
   <data name="_openExistingDataBase" xml:space="preserve">
     <value>Datenbank öffnen</value>
+  </data>
+  <data name="_settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="_swapMonitor" xml:space="preserve">
+    <value>Tauschmonitor</value>
   </data>
 </root>

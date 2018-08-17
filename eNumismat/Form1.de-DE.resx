@@ -117,52 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="_addrBook" xml:space="preserve">
-    <value>Carnet d'adresses</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="französischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 19</value>
   </data>
-  <data name="_backupDataBase" xml:space="preserve">
-    <value>Enregistrer la base de données</value>
+  <data name="französischToolStripMenuItem.Text" xml:space="preserve">
+    <value>Französisch</value>
   </data>
-  <data name="_changeLanguage" xml:space="preserve">
-    <value>Changer de langue</value>
+  <data name="AdressbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
-  <data name="_compressDataBase" xml:space="preserve">
-    <value>Base de données compacte</value>
-  </data>
-  <data name="_createNewDataBase" xml:space="preserve">
-    <value>Nouvelle base de données</value>
-  </data>
-  <data name="_editSettings" xml:space="preserve">
-    <value>Modifier les paramètres</value>
-  </data>
-  <data name="_exitApplication" xml:space="preserve">
-    <value>Laisser</value>
-  </data>
-  <data name="_extras" xml:space="preserve">
-    <value>Extras</value>
-  </data>
-  <data name="_file" xml:space="preserve">
-    <value>Fichier</value>
-  </data>
-  <data name="_langEnglish" xml:space="preserve">
-    <value>Anglais</value>
-  </data>
-  <data name="_langFrench" xml:space="preserve">
-    <value>Français</value>
-  </data>
-  <data name="_langGerman" xml:space="preserve">
-    <value>Allemand</value>
-  </data>
-  <data name="_newContact" xml:space="preserve">
-    <value>Nouveau contact</value>
-  </data>
-  <data name="_openExistingDataBase" xml:space="preserve">
-    <value>Base de données ouverte</value>
-  </data>
-  <data name="_settings" xml:space="preserve">
-    <value>Paramètres</value>
-  </data>
-  <data name="_swapMonitor" xml:space="preserve">
-    <value>Échange moniteur</value>
+  <data name="TauschmonitorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
 </root>

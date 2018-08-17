@@ -3,8 +3,11 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Data;
 using System.Text.RegularExpressions;
-using Outlook = Microsoft.Office.Interop.Outlook;
+//using Outlook = Microsoft.Office.Interop.Outlook;
 using System.Drawing;
+using System.Globalization;
+using System.Resources;
+using System.Reflection;
 
 namespace eNumismat
 {
@@ -15,11 +18,16 @@ namespace eNumismat
         int ContactID = 0;
 
         DBActions dbAction = new DBActions();
+        ResourceManager res_man;
 
         //=====================================================================================================================================================================
         public AddressBook()
         {
             InitializeComponent();
+
+            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
+
+            neuToolStripMenuItem.Text = res_man.GetString("_newContact");
         }
 
         //=====================================================================================================================================================================
@@ -344,7 +352,7 @@ namespace eNumismat
 
         // Outlook-Test
         //=====================================================================================================================================================================
-        private void MicrosoftOutlookToolStripMenuItem_Click(object sender, EventArgs e)
+        /*private void MicrosoftOutlookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Outlook._Application outlookObj = new Outlook.Application();
 
@@ -363,6 +371,6 @@ namespace eNumismat
             // Funktioniert auch, wenn Outlook geschlossen ist.
             // eine Überprüfung, ob Outlook installiert ist - und vor allem, ob es auch mit anderen Versionen von Outlook kompatibel ist, wäre Sinnvoll.
             // ggf. "outlook" als art AddIn bereitstellen?
-        }
+        }*/
     }
 }
