@@ -16,6 +16,7 @@ namespace eNumismat
         //FolderBrowserDialog folderBrowser;
         AddressBook adrBook;
         SwapMonitor swapList;
+        FileBackup fBackup;
 
         public string[] args = Environment.GetCommandLineArgs();
 
@@ -236,11 +237,20 @@ namespace eNumismat
             this.Close();
         }
 
+        //=====================================================================================================================================================================
         private void DatenbankSichernToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FileBackup fBackup = new FileBackup();
+            fBackup = new FileBackup();
 
             fBackup.RunBackup();
+        }
+
+        //=====================================================================================================================================================================
+        private void datenbankKomprimierenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fBackup = new FileBackup();
+
+            fBackup.CompactDatabase();
         }
     }
 }

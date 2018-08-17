@@ -39,7 +39,9 @@ namespace eNumismat
                     try
                     {
                         source.Open();
+                        CompactDatabase(source);
                         destination.Open();
+
                         source.BackupDatabase(destination, "main", "main", -1, null, 0);
 
                         MessageBox.Show("Backup erfolgreich erstellt!");
@@ -49,6 +51,22 @@ namespace eNumismat
                         MessageBox.Show(ex.Message);
                     }
                 }
+            }
+        }
+
+        //=====================================================================================================================================================================
+        public void CompactDatabase(SQLiteConnection Database = null)
+        {
+            if (Database == null)
+            {
+                string SourceFile = Path.Combine(Globals.FileBrowserInitDir, Globals.DBFile);
+                Database = new SQLiteConnection("DataSource=" + SourceFile);
+            }
+
+            using (SQLiteCommand cmd = Database.CreateCommand())
+            {
+                cmd.CommandText = "vacuum";
+                cmd.ExecuteNonQuery();
             }
         }
     }

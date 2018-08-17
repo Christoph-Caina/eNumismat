@@ -32,6 +32,9 @@
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neueDatenbankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datenbankÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.datenbankSichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datenbankKomprimierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,10 +47,10 @@
             this.unicodeTabelleFürWährungssymboleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.datenbankSichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -70,6 +73,7 @@
             this.datenbankÖffnenToolStripMenuItem,
             this.toolStripSeparator2,
             this.datenbankSichernToolStripMenuItem,
+            this.datenbankKomprimierenToolStripMenuItem,
             this.toolStripSeparator1,
             this.beendenToolStripMenuItem});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
@@ -80,7 +84,7 @@
             // 
             this.neueDatenbankToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_add;
             this.neueDatenbankToolStripMenuItem.Name = "neueDatenbankToolStripMenuItem";
-            this.neueDatenbankToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neueDatenbankToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.neueDatenbankToolStripMenuItem.Text = "Neue Datenbank";
             this.neueDatenbankToolStripMenuItem.Click += new System.EventHandler(this.NeueDatenbankToolStripMenuItem_Click);
             // 
@@ -88,20 +92,41 @@
             // 
             this.datenbankÖffnenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_connect;
             this.datenbankÖffnenToolStripMenuItem.Name = "datenbankÖffnenToolStripMenuItem";
-            this.datenbankÖffnenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.datenbankÖffnenToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.datenbankÖffnenToolStripMenuItem.Text = "Datenbank öffnen";
             this.datenbankÖffnenToolStripMenuItem.Click += new System.EventHandler(this.DatenbankOeffnenToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(206, 6);
+            // 
+            // datenbankSichernToolStripMenuItem
+            // 
+            this.datenbankSichernToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_save;
+            this.datenbankSichernToolStripMenuItem.Name = "datenbankSichernToolStripMenuItem";
+            this.datenbankSichernToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.datenbankSichernToolStripMenuItem.Text = "Datenbank Sichern";
+            this.datenbankSichernToolStripMenuItem.Click += new System.EventHandler(this.DatenbankSichernToolStripMenuItem_Click);
+            // 
+            // datenbankKomprimierenToolStripMenuItem
+            // 
+            this.datenbankKomprimierenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.compress;
+            this.datenbankKomprimierenToolStripMenuItem.Name = "datenbankKomprimierenToolStripMenuItem";
+            this.datenbankKomprimierenToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.datenbankKomprimierenToolStripMenuItem.Text = "Datenbank komprimieren";
+            this.datenbankKomprimierenToolStripMenuItem.Click += new System.EventHandler(this.datenbankKomprimierenToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(206, 6);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.door_in;
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.BeendenToolStripMenuItem_Click);
             // 
@@ -184,18 +209,10 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // datenbankSichernToolStripMenuItem
+            // fileSystemWatcher1
             // 
-            this.datenbankSichernToolStripMenuItem.Image = global::eNumismat.Properties.Resources.database_save;
-            this.datenbankSichernToolStripMenuItem.Name = "datenbankSichernToolStripMenuItem";
-            this.datenbankSichernToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.datenbankSichernToolStripMenuItem.Text = "Datenbank Sichern";
-            this.datenbankSichernToolStripMenuItem.Click += new System.EventHandler(this.DatenbankSichernToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // Form1
             // 
@@ -214,6 +231,7 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,6 +257,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem datenbankSichernToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.ToolStripMenuItem datenbankKomprimierenToolStripMenuItem;
     }
 }
 
