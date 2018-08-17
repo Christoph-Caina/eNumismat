@@ -225,6 +225,12 @@
   <data name="_addr_btnEdit" xml:space="preserve">
     <value>Shows a formular, prefilled with the data of the selected contact to edit the values</value>
   </data>
+  <data name="_addr_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="_addr_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="_contactAvailable" xml:space="preserve">
     <value>Contact available</value>
   </data>

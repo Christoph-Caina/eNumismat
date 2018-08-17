@@ -97,6 +97,15 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die abandonner ähnelt.
+        /// </summary>
+        internal static string _addr_cancel {
+            get {
+                return ResourceManager.GetString("_addr_cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ville: ähnelt.
         /// </summary>
         internal static string _addr_city {
@@ -174,6 +183,15 @@ namespace eNumismat {
         internal static string _addr_phone {
             get {
                 return ResourceManager.GetString("_addr_phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die sauver ähnelt.
+        /// </summary>
+        internal static string _addr_save {
+            get {
+                return ResourceManager.GetString("_addr_save", resourceCulture);
             }
         }
         

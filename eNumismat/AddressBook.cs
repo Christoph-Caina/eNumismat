@@ -61,6 +61,9 @@ namespace eNumismat
             toolTip1.SetToolTip(Btn_CreateContact, res_man.GetString("_addr_btnCreate"));
             toolTip1.SetToolTip(Btn_DeleteContact, res_man.GetString("_addr_btnDelete"));
             toolTip1.SetToolTip(Btn_UpdateContact, res_man.GetString("_addr_btnEdit"));
+
+            toolTip1.SetToolTip(Btn_Save, res_man.GetString("_addr_save"));
+            toolTip1.SetToolTip(Btn_Cancel, res_man.GetString("_addr_cancel"));
         }
 
         //=====================================================================================================================================================================
