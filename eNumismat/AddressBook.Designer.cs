@@ -109,6 +109,7 @@
             this.vCardvcfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsKontaktcontactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.microsoftOutlookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -765,5 +766,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

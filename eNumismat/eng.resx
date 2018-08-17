@@ -118,43 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_addrBook" xml:space="preserve">
-    <value>Addressbook</value>
+    <value>Addressbook:</value>
   </data>
   <data name="_addr_birthdate" xml:space="preserve">
-    <value>Birthdate</value>
+    <value>Birthdate:</value>
   </data>
   <data name="_addr_city" xml:space="preserve">
-    <value>City</value>
+    <value>City:</value>
   </data>
   <data name="_addr_country" xml:space="preserve">
-    <value>Country</value>
+    <value>Country:</value>
   </data>
   <data name="_addr_gender" xml:space="preserve">
-    <value>Gender</value>
+    <value>Gender:</value>
   </data>
   <data name="_addr_hnumber" xml:space="preserve">
-    <value>No.</value>
+    <value>No.:</value>
   </data>
   <data name="_addr_mail" xml:space="preserve">
-    <value>eMail</value>
+    <value>eMail:</value>
   </data>
   <data name="_addr_mobile" xml:space="preserve">
-    <value>Mobile</value>
+    <value>Mobile:</value>
   </data>
   <data name="_addr_Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Name:</value>
   </data>
   <data name="_addr_notes" xml:space="preserve">
-    <value>Notes</value>
+    <value>Notes:</value>
   </data>
   <data name="_addr_phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>Phone:</value>
   </data>
   <data name="_addr_street" xml:space="preserve">
     <value>Street</value>
   </data>
   <data name="_addr_SureName" xml:space="preserve">
-    <value>Surename</value>
+    <value>Surename:</value>
   </data>
   <data name="_addr_tab_contactDetails" xml:space="preserve">
     <value>Contact Details</value>
@@ -163,7 +163,7 @@
     <value>Exchanges</value>
   </data>
   <data name="_addr_zipCode" xml:space="preserve">
-    <value>Zip Code</value>
+    <value>Zip Code:</value>
   </data>
   <data name="_backupDataBase" xml:space="preserve">
     <value>Backup Database</value>
@@ -210,7 +210,34 @@
   <data name="_swapMonitor" xml:space="preserve">
     <value>Swap Monitor</value>
   </data>
+  <data name="_addrBook_Validation_Name" xml:space="preserve">
+    <value>The field "Name" can't be empty!</value>
+  </data>
+  <data name="_addrBook_Validation_SureName" xml:space="preserve">
+    <value>The field "Surename" can't be empty!</value>
+  </data>
+  <data name="_addr_btnCreate" xml:space="preserve">
+    <value>Shows an empty formular for creating a new contact</value>
+  </data>
+  <data name="_addr_btnDelete" xml:space="preserve">
+    <value>deletes the current selected contact</value>
+  </data>
+  <data name="_addr_btnEdit" xml:space="preserve">
+    <value>Shows a formular, prefilled with the data of the selected contact to edit the values</value>
+  </data>
+  <data name="_contactAvailable" xml:space="preserve">
+    <value>Contact available</value>
+  </data>
+  <data name="_contactsAvailable" xml:space="preserve">
+    <value>Contacts available</value>
+  </data>
   <data name="_noDBconnected" xml:space="preserve">
     <value>No Database connected</value>
+  </data>
+  <data name="_swap_incomming" xml:space="preserve">
+    <value>Incomming:</value>
+  </data>
+  <data name="_swap_Outgoing" xml:space="preserve">
+    <value>Outgoing:</value>
   </data>
 </root>

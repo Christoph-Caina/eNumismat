@@ -121,40 +121,40 @@
     <value>Adressbuch</value>
   </data>
   <data name="_addr_birthdate" xml:space="preserve">
-    <value>Geburtstag</value>
+    <value>Geburtstag:</value>
   </data>
   <data name="_addr_city" xml:space="preserve">
-    <value>Ort</value>
+    <value>Ort:</value>
   </data>
   <data name="_addr_country" xml:space="preserve">
-    <value>Land</value>
+    <value>Land:</value>
   </data>
   <data name="_addr_gender" xml:space="preserve">
     <value>Geschlecht</value>
   </data>
   <data name="_addr_hnumber" xml:space="preserve">
-    <value>Hausnummer</value>
+    <value>Nr.:</value>
   </data>
   <data name="_addr_mail" xml:space="preserve">
-    <value>E-Mail</value>
+    <value>E-Mail:</value>
   </data>
   <data name="_addr_mobile" xml:space="preserve">
-    <value>Mobil</value>
+    <value>Mobil:</value>
   </data>
   <data name="_addr_Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Name:</value>
   </data>
   <data name="_addr_notes" xml:space="preserve">
-    <value>Notizen</value>
+    <value>Notizen:</value>
   </data>
   <data name="_addr_phone" xml:space="preserve">
-    <value>Telefon</value>
+    <value>Telefon:</value>
   </data>
   <data name="_addr_street" xml:space="preserve">
     <value>Straße</value>
   </data>
   <data name="_addr_SureName" xml:space="preserve">
-    <value>Vorname</value>
+    <value>Vorname:</value>
   </data>
   <data name="_addr_tab_contactDetails" xml:space="preserve">
     <value>Kontaktdaten</value>
@@ -163,7 +163,7 @@
     <value>Tauschübersicht</value>
   </data>
   <data name="_addr_zipCode" xml:space="preserve">
-    <value>PLZ</value>
+    <value>PLZ:</value>
   </data>
   <data name="_backupDataBase" xml:space="preserve">
     <value>Datenbank sichern</value>
@@ -210,7 +210,34 @@
   <data name="_swapMonitor" xml:space="preserve">
     <value>Tauschmonitor</value>
   </data>
+  <data name="_addrBook_Validation_Name" xml:space="preserve">
+    <value>Das Feld "Name" darf nicht leer sein!</value>
+  </data>
+  <data name="_addrBook_Validation_SureName" xml:space="preserve">
+    <value>Das Feld "Vorname" darf nicht leer sein!</value>
+  </data>
+  <data name="_addr_btnCreate" xml:space="preserve">
+    <value>Zeigt ein leeres Forumlar an, um einen neuen Kontakt anzulegen</value>
+  </data>
+  <data name="_addr_btnDelete" xml:space="preserve">
+    <value>Löscht den aktuell ausgewählten Kontakt</value>
+  </data>
+  <data name="_addr_btnEdit" xml:space="preserve">
+    <value>Zeigt ein Formular, welches mit den Daten des ausgewählten Kontakts befüllt ist, um diesen zu bearbeiten</value>
+  </data>
+  <data name="_contactAvailable" xml:space="preserve">
+    <value>Kontakt vorhanden</value>
+  </data>
+  <data name="_contactsAvailable" xml:space="preserve">
+    <value>Kontakte vorhanden</value>
+  </data>
   <data name="_noDBconnected" xml:space="preserve">
     <value>Keine Datenbank verbunden</value>
+  </data>
+  <data name="_swap_incomming" xml:space="preserve">
+    <value>Eingehend:</value>
+  </data>
+  <data name="_swap_outgoing" xml:space="preserve">
+    <value>Ausgehend:</value>
   </data>
 </root>
