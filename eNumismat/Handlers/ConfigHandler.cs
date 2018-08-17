@@ -140,7 +140,7 @@ namespace eNumismat
             }
 
             Globals.DBFile = DBFileName;
-            Globals.FileBrowserInitDir = DBFilePath;
+            Globals.DBFilePath = DBFilePath;
 
             DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
 
