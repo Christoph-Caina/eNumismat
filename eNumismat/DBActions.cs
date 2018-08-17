@@ -10,7 +10,7 @@ namespace eNumismat
 {
     class DBActions
     {
-        string _DBFile = Path.Combine(Globals.FileBrowserInitDir, Globals.DBFile);
+        string _DBFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
 
         //=====================================================================================================================================================================
         public bool CreateNew()

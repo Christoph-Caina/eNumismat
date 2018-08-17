@@ -162,10 +162,14 @@ namespace eNumismat
             {
                 string[] FileData = { Path.GetFileName(saveFile.FileName), Path.GetDirectoryName(saveFile.FileName) };
 
+                Globals.DBFilePath = FileData[1];
+                Globals.DBFile = FileData[0];
+
                 dbAction = new DBActions();
                 dbAction.CreateNew();
 
                 WriteDBFileToConf(FileData);
+                CheckIfDBFileExists();
             }
             else
             { }
@@ -187,7 +191,11 @@ namespace eNumismat
             {
                 string[] FileData = { Path.GetFileName(openFile.FileName), Path.GetDirectoryName(openFile.FileName) };
 
+                Globals.DBFilePath = FileData[1];
+                Globals.DBFile = FileData[0];
+
                 WriteDBFileToConf(FileData);
+                CheckIfDBFileExists();
             }
         }
 

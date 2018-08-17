@@ -29,7 +29,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void ExcecuteBackup()
         {
-            string SourceFile = Path.Combine(Globals.FileBrowserInitDir, Globals.DBFile);
+            string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
             string DestFile = Path.Combine(Globals.AppDataPath, @"DBBackUps\" + DateTime.Now.ToString("yyyy_MM_dd-HHmmss") + ".encBack");
 
             using (var source = new SQLiteConnection("Data Source=" + SourceFile))
@@ -59,7 +59,7 @@ namespace eNumismat
         {
             if (Database == null)
             {
-                string SourceFile = Path.Combine(Globals.FileBrowserInitDir, Globals.DBFile);
+                string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
                 Database = new SQLiteConnection("DataSource=" + SourceFile);
             }
 

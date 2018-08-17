@@ -14,7 +14,7 @@ namespace eNumismat
         public static string DBFile { get; set; }
 
         //=====================================================================================================================================================================
-        public static string FileBrowserInitDir { get; set; }
+        public static string DBFilePath { get; set; }
 
         //=====================================================================================================================================================================
         public static bool BackupDBOnAppClose { get; set; }
