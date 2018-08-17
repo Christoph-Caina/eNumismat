@@ -12,7 +12,7 @@ namespace eNumismat
     public partial class Form1 : Form
     {
         ResourceManager res_man;
-        
+
         ConfigHandler cfgHandler;
         LogHandler logHandler;
         DBActions dbAction;
@@ -30,19 +30,19 @@ namespace eNumismat
         public Form1()
         {
             InitializeComponent();
-            
+
             res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
             //localization
             dateiToolStripMenuItem.Text = res_man.GetString("_file");
-                neueDatenbankToolStripMenuItem.Text = res_man.GetString("_createNewDataBase");
-                datenbankÖffnenToolStripMenuItem.Text = res_man.GetString("_openExistingDataBase");
-                datenbankSichernToolStripMenuItem.Text = res_man.GetString("_backupDataBase");
-                datenbankKomprimierenToolStripMenuItem.Text = res_man.GetString("_compressDataBase");
-                beendenToolStripMenuItem.Text = res_man.GetString("_exitApplication");
+            neueDatenbankToolStripMenuItem.Text = res_man.GetString("_createNewDataBase");
+            datenbankÖffnenToolStripMenuItem.Text = res_man.GetString("_openExistingDataBase");
+            datenbankSichernToolStripMenuItem.Text = res_man.GetString("_backupDataBase");
+            datenbankKomprimierenToolStripMenuItem.Text = res_man.GetString("_compressDataBase");
+            beendenToolStripMenuItem.Text = res_man.GetString("_exitApplication");
 
 
-    cfgHandler = new ConfigHandler();
+            cfgHandler = new ConfigHandler();
             logHandler = new LogHandler();
 
             Globals.LogLevel = "WARN";

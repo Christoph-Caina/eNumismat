@@ -75,7 +75,27 @@ namespace eNumismat
             attr.Value = "LastDBFilePath";
             LastDBFilePath.Attributes.Append(attr);
             DBConf.AppendChild(LastDBFilePath);
-            
+
+            XmlNode BackupDBFile = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "Database Backup";
+            BackupDBFile.Attributes.Append(attr);
+            DBConf.AppendChild(BackupDBFile);
+
+            XmlNode BackupOnAppExit = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "Backup Database on Application Close";
+            BackupOnAppExit.Attributes.Append(attr);
+            BackupOnAppExit.InnerText = "false";
+            BackupDBFile.AppendChild(BackupOnAppExit);
+
+            XmlNode CompressBeforeBackup = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "Compress Database before Backup";
+            CompressBeforeBackup.Attributes.Append(attr);
+            CompressBeforeBackup.InnerText = "false";
+            BackupDBFile.AppendChild(CompressBeforeBackup);
+
             try
             {
                 xConf.Save(Globals.AppDataPath + @"\config.xml");
