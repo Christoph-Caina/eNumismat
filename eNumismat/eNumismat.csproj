@@ -120,16 +120,6 @@
     <Compile Include="Collection.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="DBActions.cs" />
-    <Compile Include="en.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>en.resx</DependentUpon>
-    </Compile>
-    <Compile Include="de.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>de.resx</DependentUpon>
-    </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="Handlers\ConfigHandler.cs" />
     <Compile Include="Form1.cs">
@@ -139,14 +129,29 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\LogHandler.cs" />
+    <Compile Include="de.Designer.cs">
+      <DependentUpon>de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="en.Designer.cs">
+      <DependentUpon>en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="fr.Designer.cs">
+      <DependentUpon>fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Localization.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FileBackup.cs" />
-    <Compile Include="fr.Designer.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>fr.resx</DependentUpon>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SettingsDialog.cs">
       <SubType>Form</SubType>
@@ -166,33 +171,28 @@
     <EmbeddedResource Include="AddressBook.resx">
       <DependentUpon>AddressBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="en.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>en.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="de.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>de.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.de-DE.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Include="de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+      <LastGenOutput>de.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsDialog.resx">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
@@ -299,7 +299,7 @@
     <None Include="Resources\cancel.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SQL.sql" />
+    <EmbeddedResource Include="SQL\Create.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\female.png" />
@@ -327,6 +327,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="languages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQL\Insert.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets')" />

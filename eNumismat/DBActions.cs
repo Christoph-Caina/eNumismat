@@ -15,35 +15,61 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public bool CreateNew()
         {
+            string _sqlStatement = null;
+
             try
             {
                 using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
                 {
                     dbConnection.Open();
 
-                    string _sqlStatement = Properties.Resources.SQL.ToString();
+                    _sqlStatement = Properties.Resources.Create.ToString();
 
                     using (SQLiteCommand command = new SQLiteCommand(_sqlStatement, dbConnection))
                     {
                         try
                         {
                             command.ExecuteNonQuery();
-                            dbConnection.Close();
-                            dbConnection.Dispose();
-                            return true;
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message);
+
                             dbConnection.Close();
                             dbConnection.Dispose();
+
                             return false;
                         }
                     }
+
+                    _sqlStatement = Properties.Resources.Insert.ToString();
+
+                    using (SQLiteCommand command = new SQLiteCommand(_sqlStatement, dbConnection))
+                    {
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+
+                            dbConnection.Close();
+                            dbConnection.Dispose();
+
+                            return false;
+                        }
+                    }
+                    dbConnection.Close();
+                    dbConnection.Dispose();
+
+                    return true;
                 }
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+
                 return false;
             }
         }

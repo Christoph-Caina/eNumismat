@@ -121,33 +121,29 @@ namespace eNumismat.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CREATE TABLE IF NOT EXISTS `contacts`
+        ///   Looks up a localized string similar to CREATE TABLE IF NOT EXISTS `CURRENCIES`
         ///(
-        ///	`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-        ///	`name` TEXT NOT NULL,
-        ///	`surename` TEXT NOT NULL,
-        ///    `gender` TEXT,
-        ///    `birthdate` TEXT,
-        ///    `street` TEXT,
-        ///    `zip_code` INTEGER,
-        ///    `city` TEXT,
-        ///    `country` TEXT,
-        ///    `phone` TEXT,
-        ///    `mobile` TEXT,
-        ///    `email` TEXT,
-        ///	`notes` TEXT
+        ///  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        ///  `name` TEXT(45) NOT NULL,
+        ///  `short` TEXT(5),
+        ///  `symbol` TEXT(3)
         ///);
         ///
-        ///CREATE TABLE IF NOT EXISTS `swaplist`
+        ///CREATE TABLE IF NOT EXISTS `COINTYPES`
         ///(
-        ///	`id`INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-        ///	`contacts_id` INTEGER NOT NULL,
-        ///	`date` TEXT NOT NULL,
-        ///	`swapdetai [rest of string was truncated]&quot;;.
+        ///  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        ///  `name` TEXT(45) NOT NULL,
+        ///  `diameter` TEXT(45),
+        ///  `thickness` TEXT(45),
+        ///  `weight` TEXT(45),
+        ///  `CURRENCIES_id` INTEGER NOT NULL,
+        ///  CONSTRAINT `fk_COINTYPES_CURRENCIES1`
+        ///    FOREIGN KEY (`CURRENCIES_id`)
+        ///    REFERENCES `CURRENCIES` (`id` [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string CreateTables {
+        internal static string Create {
             get {
-                return ResourceManager.GetString("CreateTables", resourceCulture);
+                return ResourceManager.GetString("Create", resourceCulture);
             }
         }
         
@@ -242,6 +238,36 @@ namespace eNumismat.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BEGIN;
+        ///
+        ///INSERT INTO `CURRENCIES`
+        ///	(`name`, `short`, `symbol`)
+        ///  VALUES
+        ///	(&apos;EURO&apos;, &apos;EUR&apos;, &apos;€&apos;),
+        ///	(&apos;Deutsche Mark&apos;, &apos;DM&apos;, null),
+        ///	(&apos;Reichsmark&apos;, &apos;RM&apos;, &apos;ℛℳ&apos;),
+        ///	(&apos;Mark&apos;, null,&apos;ℳ&apos;),
+        ///	(&apos;Dollar&apos;, null, &apos;$&apos;),
+        ///	(&apos;Dollar (US)&apos;, &apos;USD&apos;, &apos;US$&apos;),
+        ///	(&apos;Dollar (CAN)&apos;, &apos;CAD&apos;, &apos;CA$&apos;),
+        ///	(&apos;Dollar (AUS)&apos;, &apos;AUD&apos;, &apos;AU$&apos;),
+        ///	(&apos;Pfund&apos;, null,&apos;£&apos;),
+        ///	(&apos;Lira&apos;, null,&apos;₤&apos;),
+        ///	(&apos;Yen&apos;, null,&apos;¥&apos;),
+        ///	(&apos;Cruzeiro&apos;, null,&apos;₢&apos;),
+        ///	(&apos;Colón&apos;, null,&apos;₡&apos;),
+        ///	(&apos;Franc&apos;, null,&apos;₣&apos;),
+        ///	(&apos;Rubel&apos;, null,&apos;₽&apos;),
+        ///	(&apos;Drachme&apos;, null, &apos;₯&apos;),
+        ///	(&apos;Rupie (Indi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Insert {
+            get {
+                return ResourceManager.GetString("Insert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap male {
@@ -258,36 +284,6 @@ namespace eNumismat.Properties {
             get {
                 object obj = ResourceManager.GetObject("page_white_gear", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to CREATE TABLE IF NOT EXISTS `CURRENCIES`
-        ///(
-        ///  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-        ///  `name` TEXT(45) NOT NULL,
-        ///  `short` TEXT(5),
-        ///  `symbol` TEXT(3)
-        ///);
-        ///
-        ///BEGIN;
-        ///INSERT INTO `CURRENCIES`
-        ///	(`name`, `short`, `symbol`)
-        ///  VALUES
-        ///	(&apos;EURO&apos;, &apos;EUR&apos;, &apos;€&apos;),
-        ///	(&apos;Deutsche Mark&apos;, &apos;DM&apos;, null),
-        ///	(&apos;Reichsmark&apos;, &apos;RM&apos;, &apos;ℛℳ&apos;),
-        ///	(&apos;Mark&apos;, null,&apos;ℳ&apos;),
-        ///	(&apos;Dollar&apos;, null, &apos;$&apos;),
-        ///	(&apos;Dollar (US)&apos;, &apos;USD&apos;, &apos;US$&apos;),
-        ///	(&apos;Dollar (CAN)&apos;, &apos;CAD&apos;, &apos;CA$&apos;),
-        ///	(&apos;Dollar (AUS)&apos;, &apos;AUD&apos;, &apos;AU$&apos;),
-        ///	(&apos;Pfund&apos;, null,&apos;£&apos;),
-        ///	(&apos;Lira&apos;, [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SQL {
-            get {
-                return ResourceManager.GetString("SQL", resourceCulture);
             }
         }
         
