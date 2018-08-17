@@ -69,6 +69,8 @@ namespace eNumismat
             AdressbuchToolStripMenuItem.Text = res_man.GetString("_addrBook");
             TauschmonitorToolStripMenuItem.Text = res_man.GetString("_swapMonitor");
 
+            toolStripStatusLabel1.Text = res_man.GetString("_noDBconnected");
+
 
             cfgHandler = new ConfigHandler();
             logHandler = new LogHandler();

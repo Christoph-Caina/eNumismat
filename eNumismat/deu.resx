@@ -210,4 +210,7 @@
   <data name="_swapMonitor" xml:space="preserve">
     <value>Tauschmonitor</value>
   </data>
+  <data name="_noDBconnected" xml:space="preserve">
+    <value>Keine Datenbank verbunden</value>
+  </data>
 </root>

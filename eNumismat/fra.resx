@@ -210,4 +210,10 @@
   <data name="_swapMonitor" xml:space="preserve">
     <value>Échange moniteur</value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_noDBconnected" xml:space="preserve">
+    <value>pas de base de données connectée</value>
+  </data>
 </root>
