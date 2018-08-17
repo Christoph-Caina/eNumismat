@@ -141,7 +141,14 @@ namespace eNumismat
                     tb_name.Text = ContactDetails[1];
                     tb_surename.Text = ContactDetails[2];
                     cb_gender.Text = ContactDetails[3];
-                    dtp_birthdate.Text = ContactDetails[4];
+                    if (!String.IsNullOrEmpty(ContactDetails[4]))
+                    {
+                        dtp_birthdate.Value = Convert.ToDateTime(ContactDetails[4]);
+                    }
+                    else
+                    {
+                        //dtp_birthdate.Value;
+                    }
                     tb_street.Text = ContactDetails[5];
                     tb_zipcode.Text = ContactDetails[6];
                     tb_city.Text = ContactDetails[7];
@@ -184,7 +191,14 @@ namespace eNumismat
 
                     label_name.Text = ContactDetails[1];
                     label_surename.Text = ContactDetails[2];
-                    label_birthdate.Text = ContactDetails[4];
+                    if (!String.IsNullOrEmpty(ContactDetails[4]))
+                    {
+                        label_birthdate.Text = Convert.ToDateTime(ContactDetails[4]).ToString("d");
+                    }
+                    else
+                    {
+                        label_birthdate.Text = null;
+                    }
                     label_street.Text = ContactDetails[5];
                     label_zip.Text = ContactDetails[6];
                     label_city.Text = ContactDetails[7];
@@ -310,7 +324,7 @@ namespace eNumismat
                 tb_name.Text,
                 tb_surename.Text,
                 cb_gender.Text,
-                dtp_birthdate.Text,
+                dtp_birthdate.Value.ToShortDateString(),
                 tb_street.Text,
                 tb_zipcode.Text,
                 tb_city.Text,

@@ -61,6 +61,6 @@ INSERT INTO `CONTACTS`
 VALUES
 	('Mustermann', 'Max', 'male', null, 'Musterstraße 23', '12345', 'Musterdorf', 'Deutschland', null, null, null, null),
 	('Mustermann', 'Marta', 'female', null, 'Musterstraße 23', '12345', 'Musterdorf', 'Deutschland', null, null, null, null),
-	('Caina', 'Christoph', 'male', '25.03.1986', 'Quellenstraße 21', '71272', 'Renningen', 'Deutschland', null, null, 'christoph@caina.de', 'Developer of eNumismat');
+	('Caina', 'Christoph', 'male', '1986-03-25', 'Quellenstraße 21', '71272', 'Renningen', 'Deutschland', null, null, 'christoph@caina.de', 'Developer of eNumismat');
 
 COMMIT;
