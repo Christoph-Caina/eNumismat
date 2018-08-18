@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Xml;
 using System.Reflection;
@@ -86,14 +85,14 @@ namespace eNumismat
             attr = xConf.CreateAttribute("name");
             attr.Value = "DbBackupOnAppExit";
             BackupOnAppExit.Attributes.Append(attr);
-            BackupOnAppExit.InnerText = "true";
+            BackupOnAppExit.InnerText = "false";
             BackupDBFile.AppendChild(BackupOnAppExit);
 
             XmlNode CompressBeforeBackup = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
             attr.Value = "DbCompressionBeforeBackup";
             CompressBeforeBackup.Attributes.Append(attr);
-            CompressBeforeBackup.InnerText = "true";
+            CompressBeforeBackup.InnerText = "false";
             BackupDBFile.AppendChild(CompressBeforeBackup);
 
             XmlNode ApplicationSettings = xConf.CreateElement("group");
@@ -106,7 +105,7 @@ namespace eNumismat
             attr = xConf.CreateAttribute("name");
             attr.Value = "MinimizeToTray";
             MinimizeToTray.Attributes.Append(attr);
-            MinimizeToTray.InnerText = "true";
+            MinimizeToTray.InnerText = "false";
             ApplicationSettings.AppendChild(MinimizeToTray);
 
             try
@@ -252,13 +251,13 @@ namespace eNumismat
             {
                 MessageBox.Show(ex.Message);
             }
-
+            ReadXmlConf();
         }
 
         //=====================================================================================================================================================================
         private bool ConvertToBool(string ParamValue)
         {
-            string[] BoolValues = { "true", "1", "false", "0" };
+            string[] BoolValues = { "true", "True" ,"1", "false", "False", "0" };
 
             foreach (string BValue in BoolValues)
             {
@@ -266,7 +265,6 @@ namespace eNumismat
                 {
                     return Convert.ToBoolean(ParamValue);
                 }
-                //return null;
             }
             return false;
         }

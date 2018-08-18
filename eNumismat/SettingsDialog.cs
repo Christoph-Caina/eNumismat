@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using System.Linq;
-using System.Globalization;
-using System.Data;
-using System.Text.RegularExpressions;
-
 
 namespace eNumismat
 {
@@ -22,13 +17,6 @@ namespace eNumismat
 
             // First of all, Read the Configuration
             cfgHandler.ReadXmlConf();
-
-            // We need to define, what should be possible within the settings dialog.
-            // Change LastDBFileName?
-            // Change Default SAVE / OPEN Dialog Boxes?
-            // Move Default AppDataPath?
-            // Change other Parameters for the Database?
-            // Change Collection Parameters - like Country, etc.?
         }
 
         //=====================================================================================================================================================================
@@ -37,6 +25,10 @@ namespace eNumismat
             // load current settings from GLOBAL VARS
             label2.Text = Globals.DBFile;
             label4.Text = Globals.DBFilePath;
+
+            //ConfigParam.Add("MinimizeToTray", Globals.MinimizeToTray);
+            //ConfigParam.Add("DbBackupOnAppExit", Globals.BackupDBOnAppClose);
+            //ConfigParam.Add("DbCompressionBeforeBackup", Globals.CompressDBBeforeBackup);
 
             if (Globals.BackupDBOnAppClose == true)
             {
@@ -99,11 +91,9 @@ namespace eNumismat
             foreach (KeyValuePair<string, bool> kv in ConfigParam)
             {
                 cfgHandler.UpdateXmlConf(kv.Key, kv.Value.ToString());
-                //MessageBox.Show(kv.Key + Environment.NewLine + kv.Value.ToString());
-
-                
-
             }
+
+            this.Hide();
         }
 
         //=====================================================================================================================================================================
