@@ -249,4 +249,13 @@
   <data name="_dialog_DBBackupSuccessful" xml:space="preserve">
     <value>La sauvegarde a réussi</value>
   </data>
+  <data name="_about" xml:space="preserve">
+    <value>à propos de eNumismat</value>
+  </data>
+  <data name="_help" xml:space="preserve">
+    <value>Aide pour eNumismat</value>
+  </data>
+  <data name="_searchForUpdates" xml:space="preserve">
+    <value>Recherche de mises à jour</value>
+  </data>
 </root>

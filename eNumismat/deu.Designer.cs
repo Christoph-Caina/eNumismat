@@ -61,6 +61,15 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Über eNumismat ähnelt.
+        /// </summary>
+        internal static string _about {
+            get {
+                return ResourceManager.GetString("_about", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Geburtstag: ähnelt.
         /// </summary>
         internal static string _addr_birthdate {
@@ -367,6 +376,15 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hilfe zu eNumismat ähnelt.
+        /// </summary>
+        internal static string _help {
+            get {
+                return ResourceManager.GetString("_help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Englisch ähnelt.
         /// </summary>
         internal static string _langEnglish {
@@ -417,6 +435,15 @@ namespace eNumismat {
         internal static string _openExistingDataBase {
             get {
                 return ResourceManager.GetString("_openExistingDataBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Nach Updates suchen ähnelt.
+        /// </summary>
+        internal static string _searchForUpdates {
+            get {
+                return ResourceManager.GetString("_searchForUpdates", resourceCulture);
             }
         }
         
