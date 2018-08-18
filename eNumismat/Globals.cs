@@ -22,6 +22,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public static bool CompressDBBeforeBackup { get; set; }
         
+        public static bool MinimizeToTray { get; set; }
         
         /// <summary>
             /// Definition of Log Levels

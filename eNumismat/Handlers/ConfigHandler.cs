@@ -130,58 +130,69 @@ namespace eNumismat
 
             xConf.Load(ConfFile);
 
-            XmlNodeList DBConfNode;
+            XmlNodeList ConfNode;
             XmlNode root = xConf.DocumentElement;
 
+            
+
             //Read DataBase Config 
-            DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
 
             string DBFileName = null;
             string DBFilePath = null;
 
-            foreach (XmlNode DBConf in DBConfNode)
+            foreach (XmlNode Conf in ConfNode)
             {
-                if (DBConf.Attributes["name"].Value == "LastDBFile")
+                if (Conf.Attributes["name"].Value == "LastDBFile")
                 {
-                    DBFileName = DBConf.InnerText;
+                    DBFileName = Conf.InnerText;
                 }
 
-                if (DBConf.Attributes["name"].Value == "LastDBFilePath")
+                if (Conf.Attributes["name"].Value == "LastDBFilePath")
                 {
-                    DBFilePath = DBConf.InnerText;
+                    DBFilePath = Conf.InnerText;
                 }
             }
 
             Globals.DBFile = DBFileName;
             Globals.DBFilePath = DBFilePath;
 
-            DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
+            //Read DataBase Backup Config
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
 
             string BackupDBonAppClose = null;
             string CompressDBbeforeBackup = null;
 
-            foreach (XmlNode DBConf in DBConfNode)
+            foreach (XmlNode Conf in ConfNode)
             {
-                if (DBConf.Attributes["name"].Value == "Backup Database on Application Close")
+                if (Conf.Attributes["name"].Value == "Backup Database on Application Close")
                 {
-                    BackupDBonAppClose = DBConf.InnerText;
+                    BackupDBonAppClose = Conf.InnerText;
                 }
 
-                if (DBConf.Attributes["name"].Value == "Compress Database before Backup")
+                if (Conf.Attributes["name"].Value == "Compress Database before Backup")
                 {
-                    CompressDBbeforeBackup = DBConf.InnerText;
+                    CompressDBbeforeBackup = Conf.InnerText;
                 }
             }
 
-            if(BackupDBonAppClose == "true" || BackupDBonAppClose == "false" || BackupDBonAppClose == "1" || BackupDBonAppClose == "0")
+            Globals.BackupDBOnAppClose = ConvertToBool(BackupDBonAppClose);
+            Globals.CompressDBBeforeBackup = ConvertToBool(CompressDBbeforeBackup);
+
+            // Read MinimizeToTray Config
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/parameter");
+
+            string MinimizeToTray = null;
+
+            foreach (XmlNode Conf in ConfNode)
             {
-                Globals.BackupDBOnAppClose = Convert.ToBoolean(BackupDBonAppClose);
+                if (Conf.Attributes["name"].Value == "MinimizeToTray")
+                {
+                    MinimizeToTray = Conf.InnerText;
+                }
             }
 
-            if(CompressDBbeforeBackup == "true" || CompressDBbeforeBackup == "false" || CompressDBbeforeBackup == "1" || CompressDBbeforeBackup == "0")
-            {
-                Globals.CompressDBBeforeBackup = Convert.ToBoolean(CompressDBbeforeBackup);
-            }
+            Globals.MinimizeToTray = ConvertToBool(MinimizeToTray);
         }
 
         //=====================================================================================================================================================================
@@ -221,6 +232,21 @@ namespace eNumismat
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private bool ConvertToBool(string ParamValue)
+        {
+            string[] BoolValues = { "true", "1", "false", "0" };
+
+            foreach (string BValue in BoolValues)
+            {
+                if (ParamValue == BValue)
+                {
+                    return Convert.ToBoolean(ParamValue);
+                }
+                //return null;
+            }
+            return false;
         }
     }
 }
