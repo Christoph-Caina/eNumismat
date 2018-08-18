@@ -197,7 +197,6 @@
     <EmbeddedResource Include="SwapMonitor.resx">
       <DependentUpon>SwapMonitor.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DBTableLayout.pdf" />
     <None Include="eNumismat.ruleset" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -273,9 +272,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="CreateTables.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\group.png" />
