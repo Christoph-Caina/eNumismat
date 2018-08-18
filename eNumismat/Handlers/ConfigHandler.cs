@@ -84,14 +84,14 @@ namespace eNumismat
 
             XmlNode BackupOnAppExit = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
-            attr.Value = "Backup Database on Application Close";
+            attr.Value = "DbBackupOnAppExit";
             BackupOnAppExit.Attributes.Append(attr);
             BackupOnAppExit.InnerText = "true";
             BackupDBFile.AppendChild(BackupOnAppExit);
 
             XmlNode CompressBeforeBackup = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
-            attr.Value = "Compress Database before Backup";
+            attr.Value = "DbCompressionBeforeBackup";
             CompressBeforeBackup.Attributes.Append(attr);
             CompressBeforeBackup.InnerText = "true";
             BackupDBFile.AppendChild(CompressBeforeBackup);
@@ -165,12 +165,12 @@ namespace eNumismat
 
             foreach (XmlNode Conf in ConfNode)
             {
-                if (Conf.Attributes["name"].Value == "Backup Database on Application Close")
+                if (Conf.Attributes["name"].Value == "DbBackupOnAppExit")
                 {
                     BackupDBonAppClose = Conf.InnerText;
                 }
 
-                if (Conf.Attributes["name"].Value == "Compress Database before Backup")
+                if (Conf.Attributes["name"].Value == "DbCompressionBeforeBackup")
                 {
                     CompressDBbeforeBackup = Conf.InnerText;
                 }
@@ -196,8 +196,10 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        public void UpdateXmlConf(string GroupName, string ParamName, string ParamValue)
+        public void UpdateXmlConf(string ParamName, string ParamValue)
         {
+            MessageBox.Show(ParamName + ", " + ParamValue);
+
             xConf = new XmlDocument();
 
             xConf.Load(ConfFile);
@@ -210,16 +212,35 @@ namespace eNumismat
                 xConfN.Attributes["LastModified"].Value = DateTime.Now.ToString(@"yyyy/MM/dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
             }
 
-            XmlNodeList DBConfNode;
-            XmlNode root = xConf.DocumentElement;
-
-            DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
-
-            foreach (XmlNode DBConf in DBConfNode)
+            if (ParamName == "LastDBFile" || ParamName == "LastDBFilePath")
             {
-                if (DBConf.Attributes["name"].Value == ParamName)
+                XmlNodeList DBConfNode;
+                XmlNode root = xConf.DocumentElement;
+
+                DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+
+                foreach (XmlNode DBConf in DBConfNode)
                 {
-                    DBConf.InnerText = ParamValue;
+                    if (DBConf.Attributes["name"].Value == ParamName)
+                    {
+                        DBConf.InnerText = ParamValue;
+                    }
+                }
+            }
+
+            if (ParamName == "DbBackupOnAppExit" || ParamName == "DbCompressionBeforeBackup")
+            {
+                XmlNodeList DBConfNode;
+                XmlNode root = xConf.DocumentElement;
+
+                DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
+
+                foreach (XmlNode DBConf in DBConfNode)
+                {
+                    if (DBConf.Attributes["name"].Value == ParamName)
+                    {
+                        DBConf.InnerText = ParamValue;
+                    }
                 }
             }
 
@@ -234,6 +255,7 @@ namespace eNumismat
 
         }
 
+        //=====================================================================================================================================================================
         private bool ConvertToBool(string ParamValue)
         {
             string[] BoolValues = { "true", "1", "false", "0" };

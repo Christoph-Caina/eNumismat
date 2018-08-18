@@ -226,8 +226,8 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void WriteDBFileToConf(string[] FileData)
         {
-            cfgHandler.UpdateXmlConf("Database", "LastDBFile", FileData[0]);
-            cfgHandler.UpdateXmlConf("Database", "LastDBFilePath", FileData[1]);
+            cfgHandler.UpdateXmlConf("LastDBFile", FileData[0]);
+            cfgHandler.UpdateXmlConf("LastDBFilePath", FileData[1]);
         }
 
         //=====================================================================================================================================================================
