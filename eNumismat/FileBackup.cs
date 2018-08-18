@@ -2,11 +2,16 @@
 using System.Data.SQLite;
 using System.IO;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Resources;
+using System.Reflection;
 
 namespace eNumismat
 {
     class FileBackup
     {
+        ResourceManager res_man;
+
         //=====================================================================================================================================================================
         public void RunBackup()
         {
@@ -29,6 +34,8 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void ExcecuteBackup()
         {
+            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName, Assembly.GetExecutingAssembly());
+
             string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
             string DestFile = Path.Combine(Globals.AppDataPath, @"DBBackUps\" + DateTime.Now.ToString("yyyy_MM_dd-HHmmss") + ".encBack");
 
@@ -44,7 +51,7 @@ namespace eNumismat
 
                         source.BackupDatabase(destination, "main", "main", -1, null, 0);
 
-                        MessageBox.Show("Backup erfolgreich erstellt!");
+                        MessageBox.Show(res_man.GetString("_dialog_DBBackupSuccessful"));
                     }
                     catch (Exception ex)
                     {
