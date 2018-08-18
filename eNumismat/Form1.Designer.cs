@@ -58,9 +58,12 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.TrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.datenbankSichernToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -255,9 +258,23 @@
             // 
             // TrayIcon
             // 
+            this.TrayIcon.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.TrayIcon, "TrayIcon");
             this.TrayIcon.DoubleClick += new System.EventHandler(this.TrayIcon_DoubleClick);
             this.TrayIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.TryIcon_MouseDoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.datenbankSichernToolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            // 
+            // datenbankSichernToolStripMenuItem1
+            // 
+            this.datenbankSichernToolStripMenuItem1.Image = global::eNumismat.Properties.Resources.database_save;
+            this.datenbankSichernToolStripMenuItem1.Name = "datenbankSichernToolStripMenuItem1";
+            resources.ApplyResources(this.datenbankSichernToolStripMenuItem1, "datenbankSichernToolStripMenuItem1");
             // 
             // Form1
             // 
@@ -276,6 +293,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,6 +329,8 @@
         private System.Windows.Forms.ToolStripMenuItem französischToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.NotifyIcon TrayIcon;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem datenbankSichernToolStripMenuItem1;
     }
 }
 

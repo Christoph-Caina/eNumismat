@@ -55,6 +55,10 @@ namespace eNumismat
             datenbankSichernToolStripMenuItem.Text = res_man.GetString("_backupDataBase");
             datenbankKomprimierenToolStripMenuItem.Text = res_man.GetString("_compressDataBase");
             beendenToolStripMenuItem.Text = res_man.GetString("_exitApplication");
+            hilfeToolStripMenuItem.Text = null;                                                         // needs to be translated
+            nachUpdatesSuchenToolStripMenuItem.Text = null;                                             // needs to be translated
+            überENumismatToolStripMenuItem.Text = null;                                                 // needs to be translated
+            hilfeZuENumismatToolStripMenuItem.Text = null;                                              // needs to be translated
 
             einstellungenToolStripMenuItem.Text = res_man.GetString("_settings");
             einstellungenBearbeitenToolStripMenuItem.Text = res_man.GetString("_editSettings");
@@ -68,6 +72,8 @@ namespace eNumismat
             TauschmonitorToolStripMenuItem.Text = res_man.GetString("_swapMonitor");
 
             toolStripStatusLabel1.Text = res_man.GetString("_noDBconnected");
+
+            datenbankSichernToolStripMenuItem1.Text = res_man.GetString("_backupDataBase");
 
 
             cfgHandler = new ConfigHandler();

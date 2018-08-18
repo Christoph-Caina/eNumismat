@@ -73,6 +73,26 @@ namespace eNumismat.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_left {
+            get {
+                object obj = ResourceManager.GetObject("arrow_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_right {
+            get {
+                object obj = ResourceManager.GetObject("arrow_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_addresses {
             get {
                 object obj = ResourceManager.GetObject("book_addresses", resourceCulture);
@@ -121,25 +141,28 @@ namespace eNumismat.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die CREATE TABLE IF NOT EXISTS `CURRENCIES`
+        ///   Sucht eine lokalisierte Zeichenfolge, die CREATE TABLE IF NOT EXISTS `CONTACTS`
         ///(
-        ///  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        ///  `id` INTEGER NOT NULL PRIMARY KEY  AUTOINCREMENT,
         ///  `name` TEXT(45) NOT NULL,
-        ///  `short` TEXT(5),
-        ///  `symbol` TEXT(3)
+        ///  `surename` TEXT(45) NOT NULL,
+        ///  `gender` TEXT(45),
+        ///  `birthdate` TEXT,
+        ///  `street` TEXT(45),
+        ///  `zipcode` TEXT(5),
+        ///  `city` TEXT(45),
+        ///  `country` TEXT(45),
+        ///  `phone` TEXT(45),
+        ///  `mobile` TEXT(45),
+        ///  `email` TEXT(45),
+        ///  `notes` TEXT
         ///);
         ///
-        ///CREATE TABLE IF NOT EXISTS `COINTYPES`
+        ///CREATE TABLE IF NOT EXISTS `CURRENCIES`
         ///(
         ///  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
         ///  `name` TEXT(45) NOT NULL,
-        ///  `diameter` TEXT(45),
-        ///  `thickness` TEXT(45),
-        ///  `weight` TEXT(45),
-        ///  `CURRENCIES_id` INTEGER NOT NULL,
-        ///  CONSTRAINT `fk_COINTYPES_CURRENCIES1`
-        ///    FOREIGN KEY (`CURRENCIES_id`)
-        ///    REFERENCES `CURRENCIES` (`id` [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        ///  `short` TEXT [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         internal static string Create {
             get {
