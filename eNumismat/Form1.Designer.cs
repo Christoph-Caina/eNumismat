@@ -275,6 +275,7 @@
             this.datenbankSichernToolStripMenuItem1.Image = global::eNumismat.Properties.Resources.database_save;
             this.datenbankSichernToolStripMenuItem1.Name = "datenbankSichernToolStripMenuItem1";
             resources.ApplyResources(this.datenbankSichernToolStripMenuItem1, "datenbankSichernToolStripMenuItem1");
+            this.datenbankSichernToolStripMenuItem1.Click += new System.EventHandler(this.datenbankSichernToolStripMenuItem1_Click);
             // 
             // Form1
             // 

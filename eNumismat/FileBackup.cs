@@ -13,56 +13,66 @@ namespace eNumismat
         ResourceManager res_man;
 
         //=====================================================================================================================================================================
-        public void RunBackup()
+        private bool CheckBackupDir()
         {
             if (Directory.Exists(Globals.AppDataPath + @"\DBBackUps\"))
             {
-                ExcecuteBackup();
+                return true;
+                //ExcecuteBackup();
             }
             else
             {
                 try
                 {
                     Directory.CreateDirectory(Globals.AppDataPath + @"\DBBackUps\");
-                    ExcecuteBackup();
+                    return true;
+                    //ExcecuteBackup();
                 }
                 catch(Exception ex)
-                { }
+                {
+                    return false;
+                }
             }
         }
 
         //=====================================================================================================================================================================
-        private void ExcecuteBackup()
+        public bool ExcecuteBackup()
         {
             res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
-            string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
-            string DestFile = Path.Combine(Globals.AppDataPath, @"DBBackUps\" + DateTime.Now.ToString("yyyy_MM_dd-HHmmss") + ".encBack");
+            if (CheckBackupDir())
+            {                string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
+                string DestFile = Path.Combine(Globals.AppDataPath, @"DBBackUps\" + DateTime.Now.ToString("yyyy_MM_dd-HHmmss") + ".encBack");
 
-            using (var source = new SQLiteConnection("Data Source=" + SourceFile))
-            {
-                using (var destination = new SQLiteConnection("Data Source=" + DestFile))
+                using (var source = new SQLiteConnection("Data Source=" + SourceFile))
                 {
-                    try
+                    using (var destination = new SQLiteConnection("Data Source=" + DestFile))
                     {
-                        source.Open();
-                        CompactDatabase(source);
-                        destination.Open();
+                        try
+                        {
+                            source.Open();
+                            CompactDatabase(source);
+                            destination.Open();
 
-                        source.BackupDatabase(destination, "main", "main", -1, null, 0);
+                            source.BackupDatabase(destination, "main", "main", -1, null, 0);
 
-                        MessageBox.Show(res_man.GetString("_dialog_DBBackupSuccessful"));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
+                            //MessageBox.Show(res_man.GetString("_dialog_DBBackupSuccessful"));
+
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            return false;
+                        }
                     }
                 }
             }
+            return false;
         }
 
         //=====================================================================================================================================================================
-        public void CompactDatabase(SQLiteConnection Database = null)
+        public bool CompactDatabase(SQLiteConnection Database = null)
         {
             if (Database == null)
             {
@@ -73,7 +83,16 @@ namespace eNumismat
             using (SQLiteCommand cmd = Database.CreateCommand())
             {
                 cmd.CommandText = "vacuum";
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+
+                return true;
             }
         }
     }

@@ -333,9 +333,18 @@ namespace eNumismat {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Die Sicherung wurde erfolgreich durchgeführt! ähnelt.
         /// </summary>
-        internal static string _dialog_DBBackupSuccessful {
+        internal static string _dbBackup_BallonText {
             get {
-                return ResourceManager.GetString("_dialog_DBBackupSuccessful", resourceCulture);
+                return ResourceManager.GetString("_dbBackup_BallonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Datenbanksicherung ähnelt.
+        /// </summary>
+        internal static string _dbBackup_BalloonTitle {
+            get {
+                return ResourceManager.GetString("_dbBackup_BalloonTitle", resourceCulture);
             }
         }
         

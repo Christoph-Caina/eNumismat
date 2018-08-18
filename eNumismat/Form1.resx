@@ -121,17 +121,95 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="neueDatenbankToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="neueDatenbankToolStripMenuItem.Text" xml:space="preserve">
+    <value>Neue Datenbank</value>
+  </data>
+  <data name="datenbankÖffnenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="datenbankÖffnenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Datenbank öffnen</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 6</value>
+  </data>
+  <data name="datenbankSichernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="datenbankSichernToolStripMenuItem.Text" xml:space="preserve">
+    <value>Datenbank Sichern</value>
+  </data>
+  <data name="datenbankKomprimierenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="datenbankKomprimierenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Datenbank komprimieren</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 6</value>
+  </data>
+  <data name="beendenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="beendenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Beenden</value>
+  </data>
   <data name="dateiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
   </data>
   <data name="dateiToolStripMenuItem.Text" xml:space="preserve">
     <value>Datei</value>
   </data>
+  <data name="einstellungenBearbeitenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="einstellungenBearbeitenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Einstellungen Bearbeiten</value>
+  </data>
+  <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
+  </data>
+  <data name="deutschToolStripMenuItem.Text" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
+  </data>
+  <data name="englischToolStripMenuItem.Text" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
+  <data name="französischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
+  </data>
+  <data name="französischToolStripMenuItem.Text" xml:space="preserve">
+    <value>Französisch</value>
+  </data>
+  <data name="spracheÄndernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="spracheÄndernToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sprache ändern</value>
+  </data>
   <data name="einstellungenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 20</value>
   </data>
   <data name="einstellungenToolStripMenuItem.Text" xml:space="preserve">
     <value>Einstellungen</value>
+  </data>
+  <data name="AdressbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 22</value>
+  </data>
+  <data name="AdressbuchToolStripMenuItem.Text" xml:space="preserve">
+    <value>Adressbuch</value>
+  </data>
+  <data name="TauschmonitorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 22</value>
+  </data>
+  <data name="TauschmonitorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tauschmonitor</value>
   </data>
   <data name="ExtrasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 20</value>
@@ -197,87 +275,18 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="neueDatenbankToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 22</value>
-  </data>
-  <data name="neueDatenbankToolStripMenuItem.Text" xml:space="preserve">
-    <value>Neue Datenbank</value>
-  </data>
-  <data name="datenbankÖffnenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 22</value>
-  </data>
-  <data name="datenbankÖffnenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Datenbank öffnen</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 6</value>
-  </data>
-  <data name="datenbankSichernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 22</value>
-  </data>
-  <data name="datenbankSichernToolStripMenuItem.Text" xml:space="preserve">
-    <value>Datenbank Sichern</value>
-  </data>
-  <data name="datenbankKomprimierenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 22</value>
-  </data>
-  <data name="datenbankKomprimierenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Datenbank komprimieren</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 6</value>
-  </data>
-  <data name="beendenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 22</value>
-  </data>
-  <data name="beendenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Beenden</value>
-  </data>
-  <data name="einstellungenBearbeitenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="einstellungenBearbeitenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Einstellungen Bearbeiten</value>
-  </data>
-  <data name="spracheÄndernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="spracheÄndernToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sprache ändern</value>
-  </data>
-  <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 22</value>
-  </data>
-  <data name="deutschToolStripMenuItem.Text" xml:space="preserve">
-    <value>Deutsch</value>
-  </data>
-  <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 22</value>
-  </data>
-  <data name="englischToolStripMenuItem.Text" xml:space="preserve">
-    <value>Englisch</value>
-  </data>
-  <data name="französischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 22</value>
-  </data>
-  <data name="französischToolStripMenuItem.Text" xml:space="preserve">
-    <value>Französisch</value>
-  </data>
-  <data name="AdressbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
-  </data>
-  <data name="AdressbuchToolStripMenuItem.Text" xml:space="preserve">
-    <value>Adressbuch</value>
-  </data>
-  <data name="TauschmonitorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
-  </data>
-  <data name="TauschmonitorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tauschmonitor</value>
-  </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
+  <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 17</value>
+  </data>
+  <data name="toolStripStatusLabel2.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 17</value>
+  </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 592</value>
   </data>
@@ -301,15 +310,6 @@
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 17</value>
-  </data>
-  <data name="toolStripStatusLabel2.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 17</value>
   </data>
   <metadata name="fileSystemWatcher1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>248, 17</value>
@@ -500,8 +500,14 @@
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>505, 17</value>
   </metadata>
+  <data name="datenbankSichernToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="datenbankSichernToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Datenbank Sichern</value>
+  </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 26</value>
+    <value>181, 48</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
     <value>contextMenuStrip1</value>
@@ -589,11 +595,5 @@
   </data>
   <data name="TrayIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="datenbankSichernToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="datenbankSichernToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Datenbank Sichern</value>
   </data>
 </root>

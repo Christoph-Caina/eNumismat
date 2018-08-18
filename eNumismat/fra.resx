@@ -246,11 +246,14 @@
   <data name="_swap_outgoing" xml:space="preserve">
     <value>Sortant:</value>
   </data>
-  <data name="_dialog_DBBackupSuccessful" xml:space="preserve">
+  <data name="_dbBackup_BallonText" xml:space="preserve">
     <value>La sauvegarde a réussi</value>
   </data>
   <data name="_about" xml:space="preserve">
     <value>à propos de eNumismat</value>
+  </data>
+  <data name="_dbBackup_BalloonTitle" xml:space="preserve">
+    <value>Sauvegarde de base de données</value>
   </data>
   <data name="_help" xml:space="preserve">
     <value>Aide pour eNumismat</value>

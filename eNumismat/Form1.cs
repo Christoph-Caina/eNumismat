@@ -268,11 +268,28 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void DatenbankSichernToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fBackup = new FileBackup();
-
-            fBackup.RunBackup();
+            runDBBackup();
         }
 
+        //=====================================================================================================================================================================
+        private void datenbankSichernToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            runDBBackup();
+        }
+
+        //=====================================================================================================================================================================
+        private void runDBBackup()
+        {
+            fBackup = new FileBackup();
+
+            if (fBackup.ExcecuteBackup())
+            {
+                TrayIcon.BalloonTipTitle = res_man.GetString("_dbBackup_BalloonTitle");
+                TrayIcon.BalloonTipText = res_man.GetString("_dbBackup_BallonText");
+
+                TrayIcon.ShowBalloonTip(2000);
+            }
+        }
         //=====================================================================================================================================================================
         private void datenbankKomprimierenToolStripMenuItem_Click(object sender, EventArgs e)
         {
