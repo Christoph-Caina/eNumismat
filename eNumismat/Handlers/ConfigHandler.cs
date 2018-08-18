@@ -96,6 +96,19 @@ namespace eNumismat
             CompressBeforeBackup.InnerText = "true";
             BackupDBFile.AppendChild(CompressBeforeBackup);
 
+            XmlNode ApplicationSettings = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "Application";
+            ApplicationSettings.Attributes.Append(attr);
+            ConfigNode.AppendChild(ApplicationSettings);
+
+            XmlNode MinimizeToTray = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "MinimizeToTray";
+            MinimizeToTray.Attributes.Append(attr);
+            MinimizeToTray.InnerText = "true";
+            ApplicationSettings.AppendChild(MinimizeToTray);
+
             try
             {
                 xConf.Save(Globals.AppDataPath + @"\config.xml");

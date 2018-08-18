@@ -51,7 +51,7 @@ namespace eNumismat
 
                         source.BackupDatabase(destination, "main", "main", -1, null, 0);
 
-                        MessageBox.Show(res_man.GetString("_dialog_DBBackupSuccessful");
+                        MessageBox.Show(res_man.GetString("_dialog_DBBackupSuccessful"));
                     }
                     catch (Exception ex)
                     {

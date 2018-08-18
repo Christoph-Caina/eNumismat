@@ -107,6 +107,8 @@ namespace eNumismat
                 // if Config Exist: Read Conf.File
                 cfgHandler.ReadXmlConf();
             }
+
+            TrayIcon.Visible = true;
         }
 
         // Default Event Functions Load, Show, Close
@@ -279,6 +281,43 @@ namespace eNumismat
         {
             About about = new About();
             about.ShowDialog();
+        }
+
+        //=====================================================================================================================================================================
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+                WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        //=====================================================================================================================================================================
+        private void TrayIcon_DoubleClick(object sender, EventArgs e)
+        {
+        //    DoubleClickAction();
+        }
+
+        //=====================================================================================================================================================================
+        private void TryIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DoubleClickAction();
+        }
+
+        //=====================================================================================================================================================================
+        private void DoubleClickAction()
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                Show();
+                WindowState = FormWindowState.Normal;
+            }
+            else if (WindowState == FormWindowState.Normal)
+            {
+                Hide();
+                WindowState = FormWindowState.Minimized;
+            }
         }
     }
 }

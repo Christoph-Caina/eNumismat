@@ -1,4 +1,21 @@
-﻿CREATE TABLE IF NOT EXISTS `CURRENCIES`
+﻿CREATE TABLE IF NOT EXISTS `CONTACTS`
+(
+  `id` INTEGER NOT NULL PRIMARY KEY  AUTOINCREMENT,
+  `name` TEXT(45) NOT NULL,
+  `surename` TEXT(45) NOT NULL,
+  `gender` TEXT(45),
+  `birthdate` TEXT,
+  `street` TEXT(45),
+  `zipcode` TEXT(5),
+  `city` TEXT(45),
+  `country` TEXT(45),
+  `phone` TEXT(45),
+  `mobile` TEXT(45),
+  `email` TEXT(45),
+  `notes` TEXT
+);
+
+CREATE TABLE IF NOT EXISTS `CURRENCIES`
 (
   `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   `name` TEXT(45) NOT NULL,
@@ -79,32 +96,11 @@ CREATE TABLE IF NOT EXISTS `COUNTRIES`
   `name` TEXT(45) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `CONTACTS`
-(
-  `id` INTEGER NOT NULL PRIMARY KEY  AUTOINCREMENT,
-  `name` TEXT(45) NOT NULL,
-  `surename` TEXT(45) NOT NULL,
-  `gender` TEXT(45),
-  `birthdate` TEXT,
-  `street` TEXT(45),
-  `zipcode` TEXT(5),
-  `city` TEXT(45),
-  `country` TEXT(45),
-  `phone` TEXT(45),
-  `mobile` TEXT(45),
-  `email` TEXT(45),
-  `notes` TEXT
-);
-
 CREATE TABLE IF NOT EXISTS `SWAPDETAILS`
 (
   `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   `COINS_id` INTEGER NOT NULL,
   `COINS_id1` INTEGER NOT NULL,
-  `date` TEXT,
-  `rating` TEXT(5),
-  `trackingcode_in` TEXT(45),
-  `trackingcode_out` TEXT(45),
   CONSTRAINT `fk_SWAPDETAILS_COINS1`
     FOREIGN KEY (`COINS_id`)
     REFERENCES `COINS` (`id`)
@@ -122,6 +118,11 @@ CREATE TABLE IF NOT EXISTS `SWAPLIST`
   `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   `CONTACTS_id` INTEGER NOT NULL,
   `SWAPDETAILS_id` INTEGER NOT NULL,
+  `swapstatus` TEXT(6),
+  `rating` TEXT(5),
+  `date` TEXT,
+  `trackingcode_in` TEXT(45),
+  `trackingcode_out` TEXT(45),
   CONSTRAINT `fk_SWAPLIST_CONTACTS1`
     FOREIGN KEY (`CONTACTS_id`)
     REFERENCES `CONTACTS` (`id`)
