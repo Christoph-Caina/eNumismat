@@ -40,6 +40,7 @@
             this.MinimizeBox = false;
             this.Name = "About";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Load += new System.EventHandler(this.About_Load);
             this.ResumeLayout(false);
 
         }

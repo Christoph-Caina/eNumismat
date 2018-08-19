@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Globalization;
+using System.Resources;
+using System.Reflection;
 
 namespace eNumismat
 {
@@ -10,10 +13,13 @@ namespace eNumismat
     {
         DBActions dbAction;
 
+        ResourceManager res_man;
         //=====================================================================================================================================================================
         public SwapMonitor()
         {
             InitializeComponent();
+
+            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
         }
 
         //=====================================================================================================================================================================

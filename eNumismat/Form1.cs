@@ -54,9 +54,9 @@ namespace eNumismat
             datenbankSichernToolStripMenuItem.Text = res_man.GetString("_backupDataBase");
             datenbankKomprimierenToolStripMenuItem.Text = res_man.GetString("_compressDataBase");
             beendenToolStripMenuItem.Text = res_man.GetString("_exitApplication");
-            nachUpdatesSuchenToolStripMenuItem.Text = res_man.GetString("_searchForUpdates");                                // needs to be translated
-            überENumismatToolStripMenuItem.Text = res_man.GetString("_about");                                               // needs to be translated
-            hilfeZuENumismatToolStripMenuItem.Text = res_man.GetString("_help");                                            // needs to be translated
+            nachUpdatesSuchenToolStripMenuItem.Text = res_man.GetString("_searchForUpdates");
+            überENumismatToolStripMenuItem.Text = res_man.GetString("_about");
+            hilfeZuENumismatToolStripMenuItem.Text = res_man.GetString("_help");
 
             einstellungenToolStripMenuItem.Text = res_man.GetString("_settings");
             einstellungenBearbeitenToolStripMenuItem.Text = res_man.GetString("_editSettings");
