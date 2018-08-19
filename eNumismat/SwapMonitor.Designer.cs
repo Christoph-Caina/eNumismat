@@ -29,38 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SwapMonitor));
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listView2 = new System.Windows.Forms.ListView();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.statusStrip1.SuspendLayout();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // statusStrip1
-            // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Name = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            // 
-            // menuStrip1
-            // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Name = "menuStrip1";
             // 
             // splitContainer1
             // 
@@ -109,6 +92,23 @@
             this.listView1.Name = "listView1";
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
+            // statusStrip1
+            // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Name = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            // 
+            // menuStrip1
+            // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Name = "menuStrip1";
+            // 
             // SwapMonitor
             // 
             resources.ApplyResources(this, "$this");
@@ -119,13 +119,13 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SwapMonitor";
             this.Load += new System.EventHandler(this.SwapMonitor_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

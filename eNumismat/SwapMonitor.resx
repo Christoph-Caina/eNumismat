@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>Erhaltene Münzen</value>
+    <value>Received Coins</value>
   </data>
   <data name="&gt;&gt;treeView1.Name" xml:space="preserve">
     <value>treeView1</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -133,16 +133,8 @@
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
     <value>statusStrip1</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 530</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SwapMonitor</value>
@@ -154,13 +146,10 @@
     <value>label1</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Gesendete Münzen</value>
+    <value>Sent Coins</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -171,6 +160,7 @@
   <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -179,6 +169,9 @@
   </data>
   <data name="treeView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;treeView1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -211,7 +204,7 @@
     <value>toolStripStatusLabel1</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 13</value>
+    <value>82, 13</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
     <value>splitContainer1</value>
@@ -222,8 +215,8 @@
   <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 17</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;listView2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -235,25 +228,16 @@
     <value>0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 13</value>
+    <value>58, 13</value>
   </data>
-  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 484</value>
+  </data>
+  <data name="listView2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>507, 168</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView2.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 297</value>
-  </data>
-  <data name="&gt;&gt;listView2.Name" xml:space="preserve">
-    <value>listView2</value>
-  </data>
-  <data name="treeView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 484</value>
   </data>
   <data name="listView2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -261,17 +245,29 @@
   <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="listView2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>507, 168</value>
+  <data name="treeView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
   </data>
   <data name="&gt;&gt;listView1.Name" xml:space="preserve">
     <value>listView1</value>
   </data>
+  <data name="&gt;&gt;listView2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>800, 22</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="treeView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 484</value>
+  </data>
+  <data name="&gt;&gt;listView2.Name" xml:space="preserve">
+    <value>listView2</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -285,8 +281,9 @@
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 508</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -324,8 +321,11 @@
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>800, 24</value>
   </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 484</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 297</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="listView2.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 111</value>
@@ -339,20 +339,20 @@
   <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="treeView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;listView2.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
   </data>
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
   </data>
-  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 530</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;listView2.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
     <value>splitContainer1</value>
@@ -374,5 +374,8 @@
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>de</value>
   </metadata>
 </root>

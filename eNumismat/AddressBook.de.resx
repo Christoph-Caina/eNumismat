@@ -122,7 +122,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        CgAAAk1TRnQBSQFMAgEBBAEAAUgBAQFIAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CgAAAk1TRnQBSQFMAgEBBAEAAVQBAQFUAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -170,6 +170,12 @@
         AfABDwHwAQ8C/wH+AQMB+AEfAfgBHwP/AQMG/ws=
 </value>
   </data>
+  <data name="treeView1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Btn_UpdateContact.ToolTip" xml:space="preserve">
     <value>Zeigt ein Formular, welches mit den Daten des ausgewählten Kontakts befüllt ist, um diesen zu bearbeiten</value>
   </data>
@@ -179,8 +185,20 @@
   <data name="Btn_DeleteContact.ToolTip" xml:space="preserve">
     <value>Löscht den aktuell ausgewählten Kontakt</value>
   </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainer1.Panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tb_zipcode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label12.Text" xml:space="preserve">
     <value>Notizen:</value>
+  </data>
+  <data name="label12.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Btn_Cancel.ToolTip" xml:space="preserve">
     <value>Abbruch</value>
@@ -188,32 +206,68 @@
   <data name="Btn_Save.ToolTip" xml:space="preserve">
     <value>Speichern</value>
   </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>E-Mail</value>
+  <data name="label11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rtb_notes.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>Mobiltelefon:</value>
   </data>
+  <data name="label10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label9.Text" xml:space="preserve">
     <value>Telefon:</value>
+  </data>
+  <data name="label9.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Land:</value>
   </data>
+  <data name="label8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tb_mail.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tb_mobile.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Stadt:</value>
+  </data>
+  <data name="label7.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>PLZ:</value>
   </data>
+  <data name="label6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Straße / Nr.:</value>
+  </data>
+  <data name="label5.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Geburtstag:</value>
   </data>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtp_birthdate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Geschlecht:</value>
+  </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="cb_gender.Items" xml:space="preserve">
     <value>männlich</value>
@@ -221,35 +275,134 @@
   <data name="cb_gender.Items1" xml:space="preserve">
     <value>weiblich</value>
   </data>
+  <data name="cb_gender.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Vorname:</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tb_phone.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tb_country.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tb_city.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tb_street.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tb_surename.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tb_name.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PanelEditContactDetails.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label20.Text" xml:space="preserve">
     <value>Notizen:</value>
   </data>
+  <data name="label20.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rtb_notesDisplay.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_city.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_mail.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Straße / Nr.:</value>
+  </data>
+  <data name="label14.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_zip.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label15.Text" xml:space="preserve">
     <value>Geburtstag:</value>
   </data>
+  <data name="label15.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_country.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label16.Text" xml:space="preserve">
     <value>Mobiltelefon:</value>
+  </data>
+  <data name="label16.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_mobile.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label17.Text" xml:space="preserve">
     <value>PLZ / Ort:</value>
   </data>
+  <data name="label17.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_street.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_birthdate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label18.Text" xml:space="preserve">
     <value>Telefon:</value>
+  </data>
+  <data name="label18.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_phone.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label19.Text" xml:space="preserve">
     <value>Land:</value>
   </data>
+  <data name="label19.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pb_gender.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_ID.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_surename.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_name.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Kontaktdaten</value>
   </data>
+  <data name="tabPage1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="AddSwap.Text" xml:space="preserve">
     <value>Neu</value>
+  </data>
+  <data name="AddSwap.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
@@ -258,11 +411,41 @@
   <data name="label22.Text" xml:space="preserve">
     <value>Ausgehend</value>
   </data>
+  <data name="label22.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label21.Text" xml:space="preserve">
     <value>Eingehend:</value>
   </data>
+  <data name="label21.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listView2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listView1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Tauschübersicht</value>
+  </data>
+  <data name="tabPage2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PanelShowContactDetails.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainer1.Panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainer1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="statusStrip1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="neuToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
@@ -314,5 +497,11 @@
   </data>
   <data name="adressenToolStripMenuItem.Text" xml:space="preserve">
     <value>Adressen</value>
+  </data>
+  <data name="menuStrip1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

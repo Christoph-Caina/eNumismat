@@ -138,4 +138,10 @@
   <data name="_noDBconnected" xml:space="preserve">
     <value>keine Datenbank verbunden</value>
   </data>
+  <data name="_swapAvailable" xml:space="preserve">
+    <value>Swap vorhanden</value>
+  </data>
+  <data name="_swapsAvailable" xml:space="preserve">
+    <value>Swaps vorhanden</value>
+  </data>
 </root>

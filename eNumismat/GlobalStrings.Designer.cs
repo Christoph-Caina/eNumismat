@@ -122,5 +122,23 @@ namespace eNumismat {
                 return ResourceManager.GetString("_noDBconnected", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Swap available ähnelt.
+        /// </summary>
+        internal static string _swapAvailable {
+            get {
+                return ResourceManager.GetString("_swapAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Swaps available ähnelt.
+        /// </summary>
+        internal static string _swapsAvailable {
+            get {
+                return ResourceManager.GetString("_swapsAvailable", resourceCulture);
+            }
+        }
     }
 }
