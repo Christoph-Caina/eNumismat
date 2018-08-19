@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsDialog));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cb_DbCompressionBeforeBackup = new System.Windows.Forms.CheckBox();
-            this.cb_DbBackUpOnAppExit = new System.Windows.Forms.CheckBox();
             this.cb_MinimizeToTray = new System.Windows.Forms.CheckBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cb_DbBackUpOnAppExit = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cb_DbCompressionBeforeBackup = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -63,6 +63,13 @@
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // cb_MinimizeToTray
+            // 
+            resources.ApplyResources(this.cb_MinimizeToTray, "cb_MinimizeToTray");
+            this.cb_MinimizeToTray.Name = "cb_MinimizeToTray";
+            this.cb_MinimizeToTray.UseVisualStyleBackColor = true;
+            this.cb_MinimizeToTray.CheckedChanged += new System.EventHandler(this.cb_MinimizeToTray_CheckedChanged);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label4);
@@ -75,32 +82,10 @@
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            // 
-            // cb_DbCompressionBeforeBackup
-            // 
-            resources.ApplyResources(this.cb_DbCompressionBeforeBackup, "cb_DbCompressionBeforeBackup");
-            this.cb_DbCompressionBeforeBackup.Name = "cb_DbCompressionBeforeBackup";
-            this.cb_DbCompressionBeforeBackup.UseVisualStyleBackColor = true;
-            this.cb_DbCompressionBeforeBackup.CheckedChanged += new System.EventHandler(this.cb_DbCompressionBeforeBackup_CheckedChanged);
             // 
             // cb_DbBackUpOnAppExit
             // 
@@ -109,12 +94,27 @@
             this.cb_DbBackUpOnAppExit.UseVisualStyleBackColor = true;
             this.cb_DbBackUpOnAppExit.CheckedChanged += new System.EventHandler(this.cb_DbBackUpOnAppExit_CheckedChanged);
             // 
-            // cb_MinimizeToTray
+            // label3
             // 
-            resources.ApplyResources(this.cb_MinimizeToTray, "cb_MinimizeToTray");
-            this.cb_MinimizeToTray.Name = "cb_MinimizeToTray";
-            this.cb_MinimizeToTray.UseVisualStyleBackColor = true;
-            this.cb_MinimizeToTray.CheckedChanged += new System.EventHandler(this.cb_MinimizeToTray_CheckedChanged);
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // cb_DbCompressionBeforeBackup
+            // 
+            resources.ApplyResources(this.cb_DbCompressionBeforeBackup, "cb_DbCompressionBeforeBackup");
+            this.cb_DbCompressionBeforeBackup.Name = "cb_DbCompressionBeforeBackup";
+            this.cb_DbCompressionBeforeBackup.UseVisualStyleBackColor = true;
+            this.cb_DbCompressionBeforeBackup.CheckedChanged += new System.EventHandler(this.cb_DbCompressionBeforeBackup_CheckedChanged);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // panel1
             // 
@@ -123,18 +123,18 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // SettingsDialog
             // 

@@ -11,8 +11,6 @@ namespace eNumismat
 {
     public partial class Form1 : Form
     {
-        ResourceManager res_man;
-
         ConfigHandler cfgHandler;
         LogHandler logHandler;
         DBActions dbAction;
@@ -24,14 +22,12 @@ namespace eNumismat
         FileBackup fBackup;
 
         public string[] args = Environment.GetCommandLineArgs();
-        public string language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+
 
         //=====================================================================================================================================================================
         public Form1()
         {
             InitializeComponent();
-
-            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
             //localization
             if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "de")
@@ -47,32 +43,6 @@ namespace eNumismat
                 toolStripStatusLabel2.Image = Properties.Resources.flag_france;
             }
             toolStripStatusLabel2.Text = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-
-            dateiToolStripMenuItem.Text = res_man.GetString("_file");
-            neueDatenbankToolStripMenuItem.Text = res_man.GetString("_createNewDataBase");
-            datenbankÖffnenToolStripMenuItem.Text = res_man.GetString("_openExistingDataBase");
-            datenbankSichernToolStripMenuItem.Text = res_man.GetString("_backupDataBase");
-            datenbankKomprimierenToolStripMenuItem.Text = res_man.GetString("_compressDataBase");
-            beendenToolStripMenuItem.Text = res_man.GetString("_exitApplication");
-            nachUpdatesSuchenToolStripMenuItem.Text = res_man.GetString("_searchForUpdates");
-            überENumismatToolStripMenuItem.Text = res_man.GetString("_about");
-            hilfeZuENumismatToolStripMenuItem.Text = res_man.GetString("_help");
-
-            einstellungenToolStripMenuItem.Text = res_man.GetString("_settings");
-            einstellungenBearbeitenToolStripMenuItem.Text = res_man.GetString("_editSettings");
-            spracheÄndernToolStripMenuItem.Text = res_man.GetString("_changeLanguage");
-            deutschToolStripMenuItem.Text = res_man.GetString("_langGerman");
-            englischToolStripMenuItem.Text = res_man.GetString("_langEnglish");
-            französischToolStripMenuItem.Text = res_man.GetString("_langFrench");
-
-            ExtrasToolStripMenuItem.Text = res_man.GetString("_extras");
-            AdressbuchToolStripMenuItem.Text = res_man.GetString("_addrBook");
-            TauschmonitorToolStripMenuItem.Text = res_man.GetString("_swapMonitor");
-
-            toolStripStatusLabel1.Text = res_man.GetString("_noDBconnected");
-
-            datenbankSichernToolStripMenuItem1.Text = res_man.GetString("_backupDataBase");
-
 
             cfgHandler = new ConfigHandler();
             logHandler = new LogHandler();
@@ -283,8 +253,8 @@ namespace eNumismat
 
             if (fBackup.ExcecuteBackup())
             {
-                TrayIcon.BalloonTipTitle = res_man.GetString("_dbBackup_BalloonTitle");
-                TrayIcon.BalloonTipText = res_man.GetString("_dbBackup_BallonText");
+                TrayIcon.BalloonTipTitle = GlobalStrings._dbBackup_BalloonTitle;
+                TrayIcon.BalloonTipText = GlobalStrings._dbBackup_BallonText;
 
                 TrayIcon.ShowBalloonTip(2000);
             }
