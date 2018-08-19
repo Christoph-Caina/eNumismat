@@ -38,11 +38,14 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.swapsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newSwapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -104,8 +107,22 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.swapsToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
+            // 
+            // swapsToolStripMenuItem
+            // 
+            this.swapsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newSwapToolStripMenuItem});
+            this.swapsToolStripMenuItem.Name = "swapsToolStripMenuItem";
+            resources.ApplyResources(this.swapsToolStripMenuItem, "swapsToolStripMenuItem");
+            // 
+            // newSwapToolStripMenuItem
+            // 
+            this.newSwapToolStripMenuItem.Name = "newSwapToolStripMenuItem";
+            resources.ApplyResources(this.newSwapToolStripMenuItem, "newSwapToolStripMenuItem");
             // 
             // SwapMonitor
             // 
@@ -124,6 +141,8 @@
             this.splitContainer1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +159,7 @@
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem swapsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newSwapToolStripMenuItem;
     }
 }

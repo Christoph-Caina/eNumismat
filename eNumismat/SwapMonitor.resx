@@ -166,7 +166,7 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 297</value>
+    <value>18, 212</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -193,7 +193,7 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 96</value>
+    <value>18, 11</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 13</value>
@@ -217,7 +217,7 @@
     <value>1</value>
   </data>
   <data name="listView2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 111</value>
+    <value>11, 26</value>
   </data>
   <data name="listView2.Size" type="System.Drawing.Size, System.Drawing">
     <value>507, 168</value>
@@ -238,7 +238,7 @@
     <value>2</value>
   </data>
   <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 313</value>
+    <value>11, 228</value>
   </data>
   <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>507, 168</value>
@@ -327,6 +327,18 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>133, 17</value>
   </metadata>
+  <data name="newSwapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="newSwapToolStripMenuItem.Text" xml:space="preserve">
+    <value>New exchange</value>
+  </data>
+  <data name="swapsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <data name="swapsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exchanges</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -368,6 +380,18 @@
   </data>
   <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;swapsToolStripMenuItem.Name" xml:space="preserve">
+    <value>swapsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;swapsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newSwapToolStripMenuItem.Name" xml:space="preserve">
+    <value>newSwapToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;newSwapToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SwapMonitor</value>
