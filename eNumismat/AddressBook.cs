@@ -25,6 +25,7 @@ namespace eNumismat
         {
             InitializeComponent();
 
+            
             res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
             adressenToolStripMenuItem.Text = res_man.GetString("_addrBook");
@@ -64,6 +65,7 @@ namespace eNumismat
 
             toolTip1.SetToolTip(Btn_Save, res_man.GetString("_addr_save"));
             toolTip1.SetToolTip(Btn_Cancel, res_man.GetString("_addr_cancel"));
+            
         }
 
         //=====================================================================================================================================================================
