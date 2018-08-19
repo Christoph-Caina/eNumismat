@@ -22,14 +22,14 @@ namespace eNumismat {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class eng {
+    internal class fr {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal eng() {
+        internal fr() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace eNumismat {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("eNumismat.eng", typeof(eng).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("eNumismat.fr", typeof(fr).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die About eNumismat ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die à propos de eNumismat ähnelt.
         /// </summary>
         internal static string _about {
             get {
@@ -70,7 +70,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Birthdate: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Anniversaire: ähnelt.
         /// </summary>
         internal static string _addr_birthdate {
             get {
@@ -79,7 +79,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Shows an empty formular for creating a new contact ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Affiche un forum vide pour créer un nouveau contact ähnelt.
         /// </summary>
         internal static string _addr_btnCreate {
             get {
@@ -88,7 +88,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die deletes the current selected contact ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Supprime le contact actuellement sélectionné ähnelt.
         /// </summary>
         internal static string _addr_btnDelete {
             get {
@@ -97,7 +97,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Shows a formular, prefilled with the data of the selected contact to edit the values ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Affiche un formulaire rempli avec les données du contact sélectionné pour le modifier ähnelt.
         /// </summary>
         internal static string _addr_btnEdit {
             get {
@@ -106,7 +106,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Cancel ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die abandonner ähnelt.
         /// </summary>
         internal static string _addr_cancel {
             get {
@@ -115,7 +115,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die City: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ville: ähnelt.
         /// </summary>
         internal static string _addr_city {
             get {
@@ -124,7 +124,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Country: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pays: ähnelt.
         /// </summary>
         internal static string _addr_country {
             get {
@@ -133,7 +133,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Gender: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sexe: ähnelt.
         /// </summary>
         internal static string _addr_gender {
             get {
@@ -142,7 +142,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die No.: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Numéro: ähnelt.
         /// </summary>
         internal static string _addr_hnumber {
             get {
@@ -151,7 +151,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die eMail: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die E-mail: ähnelt.
         /// </summary>
         internal static string _addr_mail {
             get {
@@ -169,7 +169,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Name: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Nom de famille: ähnelt.
         /// </summary>
         internal static string _addr_Name {
             get {
@@ -187,7 +187,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Phone: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Téléphone: ähnelt.
         /// </summary>
         internal static string _addr_phone {
             get {
@@ -196,7 +196,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Save ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die sauver ähnelt.
         /// </summary>
         internal static string _addr_save {
             get {
@@ -205,7 +205,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Street ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Rue ähnelt.
         /// </summary>
         internal static string _addr_street {
             get {
@@ -214,7 +214,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Surename: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Prénom: ähnelt.
         /// </summary>
         internal static string _addr_SureName {
             get {
@@ -223,7 +223,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Contact Details ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Détails de contact ähnelt.
         /// </summary>
         internal static string _addr_tab_contactDetails {
             get {
@@ -232,7 +232,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Exchanges ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Liste d&apos;échange ähnelt.
         /// </summary>
         internal static string _addr_tab_swaps {
             get {
@@ -241,7 +241,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Zip Code: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Code postal: ähnelt.
         /// </summary>
         internal static string _addr_zipCode {
             get {
@@ -250,7 +250,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Addressbook: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Carnet d&apos;adresses ähnelt.
         /// </summary>
         internal static string _addrBook {
             get {
@@ -259,7 +259,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The field &quot;Name&quot; can&apos;t be empty! ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Le champ &quot;Nom&quot; ne peut pas être vide! ähnelt.
         /// </summary>
         internal static string _addrBook_Validation_Name {
             get {
@@ -268,7 +268,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The field &quot;Surename&quot; can&apos;t be empty! ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Le champ &quot;prénom&quot; ne doit pas être vide! ähnelt.
         /// </summary>
         internal static string _addrBook_Validation_SureName {
             get {
@@ -277,7 +277,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Backup Database ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enregistrer la base de données ähnelt.
         /// </summary>
         internal static string _backupDataBase {
             get {
@@ -286,7 +286,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Change Language ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Changer de langue ähnelt.
         /// </summary>
         internal static string _changeLanguage {
             get {
@@ -295,7 +295,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compress Database ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Base de données compacte ähnelt.
         /// </summary>
         internal static string _compressDataBase {
             get {
@@ -304,7 +304,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Contact available ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contact disponible ähnelt.
         /// </summary>
         internal static string _contactAvailable {
             get {
@@ -313,7 +313,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Contacts available ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contacts disponibles ähnelt.
         /// </summary>
         internal static string _contactsAvailable {
             get {
@@ -322,7 +322,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Create Database ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Nouvelle base de données ähnelt.
         /// </summary>
         internal static string _createNewDataBase {
             get {
@@ -331,7 +331,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The Backup was successful ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die La sauvegarde a réussi ähnelt.
         /// </summary>
         internal static string _dbBackup_BallonText {
             get {
@@ -340,7 +340,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Database Backup ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sauvegarde de base de données ähnelt.
         /// </summary>
         internal static string _dbBackup_BalloonTitle {
             get {
@@ -349,7 +349,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Edit Settings ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Modifier les paramètres ähnelt.
         /// </summary>
         internal static string _editSettings {
             get {
@@ -358,7 +358,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Exit ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Laisser ähnelt.
         /// </summary>
         internal static string _exitApplication {
             get {
@@ -376,7 +376,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die File ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fichier ähnelt.
         /// </summary>
         internal static string _file {
             get {
@@ -385,7 +385,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Help for eNumismat ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aide pour eNumismat ähnelt.
         /// </summary>
         internal static string _help {
             get {
@@ -394,7 +394,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die English ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Anglais ähnelt.
         /// </summary>
         internal static string _langEnglish {
             get {
@@ -403,7 +403,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die French ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Français ähnelt.
         /// </summary>
         internal static string _langFrench {
             get {
@@ -412,7 +412,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die German ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Allemand ähnelt.
         /// </summary>
         internal static string _langGerman {
             get {
@@ -421,7 +421,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die New Contact ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Nouveau contact ähnelt.
         /// </summary>
         internal static string _newContact {
             get {
@@ -430,7 +430,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die No Database connected ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die pas de base de données connectée ähnelt.
         /// </summary>
         internal static string _noDBconnected {
             get {
@@ -439,7 +439,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Open Database ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Base de données ouverte ähnelt.
         /// </summary>
         internal static string _openExistingDataBase {
             get {
@@ -448,7 +448,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Search for Updates ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Recherche de mises à jour ähnelt.
         /// </summary>
         internal static string _searchForUpdates {
             get {
@@ -457,7 +457,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Settings ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Paramètres ähnelt.
         /// </summary>
         internal static string _settings {
             get {
@@ -466,7 +466,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Incomming: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Entrants: ähnelt.
         /// </summary>
         internal static string _swap_incomming {
             get {
@@ -475,16 +475,16 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Outgoing: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sortant: ähnelt.
         /// </summary>
-        internal static string _swap_Outgoing {
+        internal static string _swap_outgoing {
             get {
-                return ResourceManager.GetString("_swap_Outgoing", resourceCulture);
+                return ResourceManager.GetString("_swap_outgoing", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Swap Monitor ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Échange moniteur ähnelt.
         /// </summary>
         internal static string _swapMonitor {
             get {

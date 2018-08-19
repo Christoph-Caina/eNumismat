@@ -31,24 +31,23 @@ namespace eNumismat
         {
             InitializeComponent();
 
-            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName, Assembly.GetExecutingAssembly());
+            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
-            string lang = CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName;
-
-            if (lang == "deu" || lang == "ger")
+            //localization
+            if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "de")
             {
                 toolStripStatusLabel2.Image = Properties.Resources.flag_germany;
             }
-            else if (lang == "eng")
+            else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en")
             {
                 toolStripStatusLabel2.Image = Properties.Resources.flag_usa;
             }
-            else if (lang == "fra" || lang == "fre")
+            else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr")
             {
                 toolStripStatusLabel2.Image = Properties.Resources.flag_france;
             }
+            toolStripStatusLabel2.Text = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
-            //localization
             dateiToolStripMenuItem.Text = res_man.GetString("_file");
             neueDatenbankToolStripMenuItem.Text = res_man.GetString("_createNewDataBase");
             datenbankÖffnenToolStripMenuItem.Text = res_man.GetString("_openExistingDataBase");
