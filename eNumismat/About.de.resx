@@ -117,38 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cb_MinimizeToTray.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 17</value>
-  </data>
-  <data name="cb_MinimizeToTray.Text" xml:space="preserve">
-    <value>In den Tray minimieren</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Programmeinstellungen</value>
-  </data>
-  <data name="cb_DbBackUpOnAppExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 17</value>
-  </data>
-  <data name="cb_DbBackUpOnAppExit.Text" xml:space="preserve">
-    <value>Datenbank beim Beenden sichern</value>
-  </data>
-  <data name="cb_DbCompressionBeforeBackup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 17</value>
-  </data>
-  <data name="cb_DbCompressionBeforeBackup.Text" xml:space="preserve">
-    <value>Datenbank vor dem sichern komprimieren</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Datenbankeinstellungen</value>
-  </data>
-  <data name="btn_Cancel.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <data name="btn_Save.Text" xml:space="preserve">
-    <value>Speichern</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Einstellungen</value>
+    <value>Über</value>
   </data>
 </root>

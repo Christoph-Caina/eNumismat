@@ -160,6 +160,9 @@
     <Compile Include="SwapMonitor.Designer.cs">
       <DependentUpon>SwapMonitor.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About.de.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
