@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_addrBook" xml:space="preserve">
+    <value>Carnet d'adresses</value>
+  </data>
+  <data name="_addr_birthdate" xml:space="preserve">
+    <value>Anniversaire:</value>
+  </data>
+  <data name="_addr_city" xml:space="preserve">
+    <value>Ville:</value>
+  </data>
+  <data name="_addr_country" xml:space="preserve">
+    <value>Pays:</value>
+  </data>
+  <data name="_addr_gender" xml:space="preserve">
+    <value>Sexe:</value>
+  </data>
+  <data name="_addr_hnumber" xml:space="preserve">
+    <value>Numéro:</value>
+  </data>
+  <data name="_addr_mail" xml:space="preserve">
+    <value>E-mail:</value>
+  </data>
+  <data name="_addr_mobile" xml:space="preserve">
+    <value>Mobile:</value>
+  </data>
+  <data name="_addr_Name" xml:space="preserve">
+    <value>Nom de famille:</value>
+  </data>
+  <data name="_addr_notes" xml:space="preserve">
+    <value>Notes:</value>
+  </data>
+  <data name="_addr_phone" xml:space="preserve">
+    <value>Téléphone:</value>
+  </data>
+  <data name="_addr_street" xml:space="preserve">
+    <value>Rue</value>
+  </data>
+  <data name="_addr_SureName" xml:space="preserve">
+    <value>Prénom:</value>
+  </data>
+  <data name="_addr_tab_contactDetails" xml:space="preserve">
+    <value>Détails de contact</value>
+  </data>
+  <data name="_addr_tab_swaps" xml:space="preserve">
+    <value>Liste d'échange</value>
+  </data>
+  <data name="_addr_zipCode" xml:space="preserve">
+    <value>Code postal:</value>
+  </data>
+  <data name="_backupDataBase" xml:space="preserve">
+    <value>Enregistrer la base de données</value>
+  </data>
+  <data name="_changeLanguage" xml:space="preserve">
+    <value>Changer de langue</value>
+  </data>
+  <data name="_compressDataBase" xml:space="preserve">
+    <value>Base de données compacte</value>
+  </data>
+  <data name="_createNewDataBase" xml:space="preserve">
+    <value>Nouvelle base de données</value>
+  </data>
+  <data name="_editSettings" xml:space="preserve">
+    <value>Modifier les paramètres</value>
+  </data>
+  <data name="_exitApplication" xml:space="preserve">
+    <value>Laisser</value>
+  </data>
+  <data name="_extras" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="_file" xml:space="preserve">
+    <value>Fichier</value>
+  </data>
+  <data name="_langEnglish" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="_langFrench" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="_langGerman" xml:space="preserve">
+    <value>Allemand</value>
+  </data>
+  <data name="_newContact" xml:space="preserve">
+    <value>Nouveau contact</value>
+  </data>
+  <data name="_openExistingDataBase" xml:space="preserve">
+    <value>Base de données ouverte</value>
+  </data>
+  <data name="_settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="_swapMonitor" xml:space="preserve">
+    <value>Échange moniteur</value>
+  </data>
+  <data name="_addrBook_Validation_Name" xml:space="preserve">
+    <value>Le champ "Nom" ne peut pas être vide!</value>
+  </data>
+  <data name="_addrBook_Validation_SureName" xml:space="preserve">
+    <value>Le champ "prénom" ne doit pas être vide!</value>
+  </data>
+  <data name="_addr_btnCreate" xml:space="preserve">
+    <value>Affiche un forum vide pour créer un nouveau contact</value>
+  </data>
+  <data name="_addr_btnDelete" xml:space="preserve">
+    <value>Supprime le contact actuellement sélectionné</value>
+  </data>
+  <data name="_addr_btnEdit" xml:space="preserve">
+    <value>Affiche un formulaire rempli avec les données du contact sélectionné pour le modifier</value>
+  </data>
+  <data name="_addr_cancel" xml:space="preserve">
+    <value>abandonner</value>
+  </data>
+  <data name="_addr_save" xml:space="preserve">
+    <value>sauver</value>
+  </data>
+  <data name="_contactAvailable" xml:space="preserve">
+    <value>Contact disponible</value>
+  </data>
+  <data name="_contactsAvailable" xml:space="preserve">
+    <value>Contacts disponibles</value>
+  </data>
+  <data name="_noDBconnected" xml:space="preserve">
+    <value>pas de base de données connectée</value>
+  </data>
+  <data name="_swap_incomming" xml:space="preserve">
+    <value>Entrants:</value>
+  </data>
+  <data name="_swap_outgoing" xml:space="preserve">
+    <value>Sortant:</value>
+  </data>
+  <data name="_dbBackup_BallonText" xml:space="preserve">
+    <value>La sauvegarde a réussi</value>
+  </data>
+  <data name="_about" xml:space="preserve">
+    <value>à propos de eNumismat</value>
+  </data>
+  <data name="_dbBackup_BalloonTitle" xml:space="preserve">
+    <value>Sauvegarde de base de données</value>
+  </data>
+  <data name="_help" xml:space="preserve">
+    <value>Aide pour eNumismat</value>
+  </data>
+  <data name="_searchForUpdates" xml:space="preserve">
+    <value>Recherche de mises à jour</value>
+  </data>
+</root>
