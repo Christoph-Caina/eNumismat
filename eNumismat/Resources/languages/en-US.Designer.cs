@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eNumismat {
+namespace eNumismat.Resources.languages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace eNumismat {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class en {
+    internal class en_US {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal en() {
+        internal en_US() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace eNumismat {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("eNumismat.en", typeof(en).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("eNumismat.Resources.languages.en-US", typeof(en_US).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
