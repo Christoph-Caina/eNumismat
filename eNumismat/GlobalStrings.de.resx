@@ -117,119 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="_addrBook" xml:space="preserve">
-    <value>Adressbuch</value>
-  </data>
-  <data name="_addr_birthdate" xml:space="preserve">
-    <value>Geburtstag:</value>
-  </data>
-  <data name="_addr_city" xml:space="preserve">
-    <value>Ort:</value>
-  </data>
-  <data name="_addr_country" xml:space="preserve">
-    <value>Land:</value>
-  </data>
-  <data name="_addr_gender" xml:space="preserve">
-    <value>Geschlecht</value>
-  </data>
-  <data name="_addr_hnumber" xml:space="preserve">
-    <value>Nr.:</value>
-  </data>
-  <data name="_addr_mail" xml:space="preserve">
-    <value>E-Mail:</value>
-  </data>
-  <data name="_addr_mobile" xml:space="preserve">
-    <value>Mobil:</value>
-  </data>
-  <data name="_addr_Name" xml:space="preserve">
-    <value>Name:</value>
-  </data>
-  <data name="_addr_notes" xml:space="preserve">
-    <value>Notizen:</value>
-  </data>
-  <data name="_addr_phone" xml:space="preserve">
-    <value>Telefon:</value>
-  </data>
-  <data name="_addr_street" xml:space="preserve">
-    <value>Straße</value>
-  </data>
-  <data name="_addr_SureName" xml:space="preserve">
-    <value>Vorname:</value>
-  </data>
-  <data name="_addr_tab_contactDetails" xml:space="preserve">
-    <value>Kontaktdaten</value>
-  </data>
-  <data name="_addr_tab_swaps" xml:space="preserve">
-    <value>Tauschübersicht</value>
-  </data>
-  <data name="_addr_zipCode" xml:space="preserve">
-    <value>PLZ:</value>
-  </data>
-  <data name="_backupDataBase" xml:space="preserve">
-    <value>Datenbank sichern</value>
-  </data>
-  <data name="_changeLanguage" xml:space="preserve">
-    <value>Sprache ändern</value>
-  </data>
-  <data name="_compressDataBase" xml:space="preserve">
-    <value>Datenbank komprimieren</value>
-  </data>
-  <data name="_createNewDataBase" xml:space="preserve">
-    <value>Neue Datenbank</value>
-  </data>
-  <data name="_editSettings" xml:space="preserve">
-    <value>Einstellungen bearbeiten</value>
-  </data>
-  <data name="_exitApplication" xml:space="preserve">
-    <value>Beenden</value>
-  </data>
-  <data name="_extras" xml:space="preserve">
-    <value>Extras</value>
-  </data>
-  <data name="_file" xml:space="preserve">
-    <value>Datei</value>
-  </data>
-  <data name="_langEnglish" xml:space="preserve">
-    <value>Englisch</value>
-  </data>
-  <data name="_langFrench" xml:space="preserve">
-    <value>Französisch</value>
-  </data>
-  <data name="_langGerman" xml:space="preserve">
-    <value>Deutsch</value>
-  </data>
-  <data name="_newContact" xml:space="preserve">
-    <value>Neuer Kontakt</value>
-  </data>
-  <data name="_openExistingDataBase" xml:space="preserve">
-    <value>Datenbank öffnen</value>
-  </data>
-  <data name="_settings" xml:space="preserve">
-    <value>Einstellungen</value>
-  </data>
-  <data name="_swapMonitor" xml:space="preserve">
-    <value>Tauschmonitor</value>
-  </data>
   <data name="_addrBook_Validation_Name" xml:space="preserve">
     <value>Das Feld "Name" darf nicht leer sein!</value>
   </data>
   <data name="_addrBook_Validation_SureName" xml:space="preserve">
     <value>Das Feld "Vorname" darf nicht leer sein!</value>
-  </data>
-  <data name="_addr_btnCreate" xml:space="preserve">
-    <value>Zeigt ein leeres Forumlar an, um einen neuen Kontakt anzulegen</value>
-  </data>
-  <data name="_addr_btnDelete" xml:space="preserve">
-    <value>Löscht den aktuell ausgewählten Kontakt</value>
-  </data>
-  <data name="_addr_btnEdit" xml:space="preserve">
-    <value>Zeigt ein Formular, welches mit den Daten des ausgewählten Kontakts befüllt ist, um diesen zu bearbeiten</value>
-  </data>
-  <data name="_addr_cancel" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <data name="_addr_save" xml:space="preserve">
-    <value>Speichern</value>
   </data>
   <data name="_contactAvailable" xml:space="preserve">
     <value>Kontakt vorhanden</value>
@@ -237,28 +129,13 @@
   <data name="_contactsAvailable" xml:space="preserve">
     <value>Kontakte vorhanden</value>
   </data>
-  <data name="_noDBconnected" xml:space="preserve">
-    <value>Keine Datenbank verbunden</value>
-  </data>
-  <data name="_swap_incomming" xml:space="preserve">
-    <value>Eingehend:</value>
-  </data>
-  <data name="_swap_outgoing" xml:space="preserve">
-    <value>Ausgehend:</value>
-  </data>
   <data name="_dbBackup_BallonText" xml:space="preserve">
     <value>Die Sicherung wurde erfolgreich durchgeführt!</value>
-  </data>
-  <data name="_about" xml:space="preserve">
-    <value>Über eNumismat</value>
   </data>
   <data name="_dbBackup_BalloonTitle" xml:space="preserve">
     <value>Datenbanksicherung</value>
   </data>
-  <data name="_help" xml:space="preserve">
-    <value>Hilfe zu eNumismat</value>
-  </data>
-  <data name="_searchForUpdates" xml:space="preserve">
-    <value>Nach Updates suchen</value>
+  <data name="_noDBconnected" xml:space="preserve">
+    <value>keine Datenbank verbunden</value>
   </data>
 </root>

@@ -40,8 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -118,30 +118,34 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Cancel);
+            this.panel1.Controls.Add(this.btn_Save);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // button2
+            // btn_Cancel
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.btn_Cancel, "btn_Cancel");
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_Save
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.btn_Save, "btn_Save");
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.button1_Click);
             // 
             // SettingsDialog
             // 
+            this.AcceptButton = this.btn_Save;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_Cancel;
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SettingsDialog";
             this.Load += new System.EventHandler(this.SettingsDialog_Load);
             this.tabControl1.ResumeLayout(false);
@@ -166,7 +170,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.Button btn_Save;
     }
 }

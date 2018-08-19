@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Resources;
-using System.Reflection;
+
 
 namespace eNumismat
 {
@@ -13,13 +11,10 @@ namespace eNumismat
         LogHandler logHandler = new LogHandler();
         Dictionary<string, bool> ConfigParam = new Dictionary<string, bool>();
 
-        ResourceManager res_man;
         //=====================================================================================================================================================================
         public SettingsDialog()
         {
             InitializeComponent();
-
-            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
             // First of all, Read the Configuration
             cfgHandler.ReadXmlConf();

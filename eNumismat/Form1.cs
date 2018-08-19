@@ -4,8 +4,6 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
 using System.Globalization;
-using System.Resources;
-using System.Reflection;
 
 namespace eNumismat
 {
@@ -116,6 +114,7 @@ namespace eNumismat
                 AdressbuchToolStripMenuItem.Enabled = false;
                 TauschmonitorToolStripMenuItem.Enabled = false;
                 toolStripStatusLabel1.Image = Properties.Resources.disconnect;
+                toolStripStatusLabel1.Text = GlobalStrings._noDBconnected;
             }
         }
 

@@ -5,9 +5,6 @@ using System.Data;
 using System.Text.RegularExpressions;
 //using Outlook = Microsoft.Office.Interop.Outlook;
 using System.Drawing;
-using System.Globalization;
-using System.Resources;
-using System.Reflection;
 
 namespace eNumismat
 {
