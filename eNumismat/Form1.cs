@@ -31,61 +31,48 @@ namespace eNumismat
         {
             InitializeComponent();
 
-            MessageBox.Show("CurrentCultrureName: " +CultureInfo.CurrentCulture.Name + Environment.NewLine
-                + "CurrentCultrure ISO Two Letters: "+CultureInfo.CurrentCulture.TwoLetterISOLanguageName + Environment.NewLine
-                + "CurrentCulture ISO Three Letters: "+CultureInfo.CurrentCulture.ThreeLetterISOLanguageName);
+            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
+            string lang = CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName;
 
-
-            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentCulture.Name, Assembly.GetExecutingAssembly());
-
-
-            //localization
-            if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "de")
+            if (lang == "deu" || lang == "ger")
             {
                 toolStripStatusLabel2.Image = Properties.Resources.flag_germany;
             }
-            else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en")
+            else if (lang == "eng")
             {
                 toolStripStatusLabel2.Image = Properties.Resources.flag_usa;
             }
-            else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr")
+            else if (lang == "fra" || lang == "fre")
             {
                 toolStripStatusLabel2.Image = Properties.Resources.flag_france;
             }
-            toolStripStatusLabel2.Text = CultureInfo.CurrentUICulture.Name; // CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
-            try
-            {
-                dateiToolStripMenuItem.Text = res_man.GetString("_file");
-                neueDatenbankToolStripMenuItem.Text = res_man.GetString("_createNewDataBase");
-                datenbankÖffnenToolStripMenuItem.Text = res_man.GetString("_openExistingDataBase");
-                datenbankSichernToolStripMenuItem.Text = res_man.GetString("_backupDataBase");
-                datenbankKomprimierenToolStripMenuItem.Text = res_man.GetString("_compressDataBase");
-                beendenToolStripMenuItem.Text = res_man.GetString("_exitApplication");
-                nachUpdatesSuchenToolStripMenuItem.Text = res_man.GetString("_searchForUpdates");
-                überENumismatToolStripMenuItem.Text = res_man.GetString("_about");
-                hilfeZuENumismatToolStripMenuItem.Text = res_man.GetString("_help");
+            //localization
+            dateiToolStripMenuItem.Text = res_man.GetString("_file");
+            neueDatenbankToolStripMenuItem.Text = res_man.GetString("_createNewDataBase");
+            datenbankÖffnenToolStripMenuItem.Text = res_man.GetString("_openExistingDataBase");
+            datenbankSichernToolStripMenuItem.Text = res_man.GetString("_backupDataBase");
+            datenbankKomprimierenToolStripMenuItem.Text = res_man.GetString("_compressDataBase");
+            beendenToolStripMenuItem.Text = res_man.GetString("_exitApplication");
+            nachUpdatesSuchenToolStripMenuItem.Text = res_man.GetString("_searchForUpdates");                                // needs to be translated
+            überENumismatToolStripMenuItem.Text = res_man.GetString("_about");                                               // needs to be translated
+            hilfeZuENumismatToolStripMenuItem.Text = res_man.GetString("_help");                                            // needs to be translated
 
-                einstellungenToolStripMenuItem.Text = res_man.GetString("_settings");
-                einstellungenBearbeitenToolStripMenuItem.Text = res_man.GetString("_editSettings");
-                spracheÄndernToolStripMenuItem.Text = res_man.GetString("_changeLanguage");
-                deutschToolStripMenuItem.Text = res_man.GetString("_langGerman");
-                englischToolStripMenuItem.Text = res_man.GetString("_langEnglish");
-                französischToolStripMenuItem.Text = res_man.GetString("_langFrench");
+            einstellungenToolStripMenuItem.Text = res_man.GetString("_settings");
+            einstellungenBearbeitenToolStripMenuItem.Text = res_man.GetString("_editSettings");
+            spracheÄndernToolStripMenuItem.Text = res_man.GetString("_changeLanguage");
+            deutschToolStripMenuItem.Text = res_man.GetString("_langGerman");
+            englischToolStripMenuItem.Text = res_man.GetString("_langEnglish");
+            französischToolStripMenuItem.Text = res_man.GetString("_langFrench");
 
-                ExtrasToolStripMenuItem.Text = res_man.GetString("_extras");
-                AdressbuchToolStripMenuItem.Text = res_man.GetString("_addrBook");
-                TauschmonitorToolStripMenuItem.Text = res_man.GetString("_swapMonitor");
+            ExtrasToolStripMenuItem.Text = res_man.GetString("_extras");
+            AdressbuchToolStripMenuItem.Text = res_man.GetString("_addrBook");
+            TauschmonitorToolStripMenuItem.Text = res_man.GetString("_swapMonitor");
 
-                toolStripStatusLabel1.Text = res_man.GetString("_noDBconnected");
+            toolStripStatusLabel1.Text = res_man.GetString("_noDBconnected");
 
-                datenbankSichernToolStripMenuItem1.Text = res_man.GetString("_backupDataBase");
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            datenbankSichernToolStripMenuItem1.Text = res_man.GetString("_backupDataBase");
 
 
             cfgHandler = new ConfigHandler();
