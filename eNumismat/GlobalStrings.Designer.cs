@@ -142,7 +142,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Swap available.
+        ///   Looks up a localized string similar to Exchange available.
         /// </summary>
         internal static string _swapAvailable {
             get {
@@ -151,7 +151,7 @@ namespace eNumismat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Swaps available.
+        ///   Looks up a localized string similar to Exchanges available.
         /// </summary>
         internal static string _swapsAvailable {
             get {

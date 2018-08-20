@@ -373,7 +373,7 @@
     <value>800, 530</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Swapmonitor</value>
+    <value>Exchange Monitor</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
     <value>toolStripStatusLabel1</value>

@@ -52,18 +52,18 @@
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage1
             // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.cb_languageSelection);
             this.tabPage1.Controls.Add(this.cb_MinimizeToTray);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -74,8 +74,8 @@
             // 
             // cb_languageSelection
             // 
-            this.cb_languageSelection.FormattingEnabled = true;
             resources.ApplyResources(this.cb_languageSelection, "cb_languageSelection");
+            this.cb_languageSelection.FormattingEnabled = true;
             this.cb_languageSelection.Name = "cb_languageSelection";
             // 
             // cb_MinimizeToTray
@@ -87,13 +87,13 @@
             // 
             // tabPage2
             // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.cb_DbBackUpOnAppExit);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.cb_DbCompressionBeforeBackup);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -133,15 +133,15 @@
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.btn_Cancel);
             this.panel1.Controls.Add(this.btn_Save);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.btn_Cancel, "btn_Cancel");
+            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 

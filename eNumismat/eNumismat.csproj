@@ -213,10 +213,16 @@
     <EmbeddedResource Include="SettingsDialog.de.resx">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsDialog.fr.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SettingsDialog.resx">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SwapMonitor.de.resx">
+      <DependentUpon>SwapMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwapMonitor.fr.resx">
       <DependentUpon>SwapMonitor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SwapMonitor.resx">

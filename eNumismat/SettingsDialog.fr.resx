@@ -117,37 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="_addrBook_Validation_Name" xml:space="preserve">
-    <value>The field "Name" can't be empty!</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
   </data>
-  <data name="_addrBook_Validation_SureName" xml:space="preserve">
-    <value>The field "Surename" can't be empty!</value>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Langue courante:</value>
   </data>
-  <data name="_contactAvailable" xml:space="preserve">
-    <value>Contact available</value>
+  <data name="cb_MinimizeToTray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 17</value>
   </data>
-  <data name="_contactsAvailable" xml:space="preserve">
-    <value>Contacts available</value>
+  <data name="cb_MinimizeToTray.Text" xml:space="preserve">
+    <value>Réduire au plateau</value>
   </data>
-  <data name="_noDBconnected" xml:space="preserve">
-    <value>No Database connected</value>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Paramètres de l'application</value>
   </data>
-  <data name="_dbBackup_BallonText" xml:space="preserve">
-    <value>The Backup was successful</value>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 108</value>
   </data>
-  <data name="_dbBackup_BalloonTitle" xml:space="preserve">
-    <value>Database Backup</value>
+  <data name="cb_DbBackUpOnAppExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 17</value>
   </data>
-  <data name="_swapAvailable" xml:space="preserve">
-    <value>Exchange available</value>
+  <data name="cb_DbBackUpOnAppExit.Text" xml:space="preserve">
+    <value>Sauvegarde de la base de données sur application</value>
   </data>
-  <data name="_swapsAvailable" xml:space="preserve">
-    <value>Exchanges available</value>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 108</value>
   </data>
-  <data name="_dbCompress_BallonText" xml:space="preserve">
-    <value>Compression of the Database was successful</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
   </data>
-  <data name="_dbCompress_BalloonTitle" xml:space="preserve">
-    <value>Database Compression</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Chemin:</value>
+  </data>
+  <data name="cb_DbCompressionBeforeBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 17</value>
+  </data>
+  <data name="cb_DbCompressionBeforeBackup.Text" xml:space="preserve">
+    <value>Compresser la base de données avant la sauvegarde</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 85</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>DB fichier:</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Paramètres de base de données</value>
+  </data>
+  <data name="btn_Cancel.Text" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="btn_Save.Text" xml:space="preserve">
+    <value>Sauvegarder</value>
   </data>
 </root>
