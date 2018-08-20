@@ -106,6 +106,7 @@ namespace eNumismat
 
                     tb_name.Text = ContactDetails[1];
                     tb_surename.Text = ContactDetails[2];
+
                     cb_gender.Text = ContactDetails[3];
 
                     if (!String.IsNullOrEmpty(ContactDetails[4]))
@@ -185,7 +186,11 @@ namespace eNumismat
                     else if (ContactDetails[3] == "female")
                     {
                         pb_gender.BackgroundImage = Properties.Resources.female;
-                    }   
+                    }  
+                    else
+                    {
+                        pb_gender.BackgroundImage = null;
+                    }
                 }
                 Btn_CreateContact.Enabled = true;
                 Btn_UpdateContact.Enabled = true;
@@ -290,17 +295,31 @@ namespace eNumismat
         private void Btn_Save_Click(object sender, EventArgs e)
         {
             string birthdate = null;
+            string gender = null;
 
             if(dtp_birthdate.Value.ToString("yyyy-MM-dd") != "1900-01-01")
             {
                 birthdate = dtp_birthdate.Value.ToString("yyyy-MM-dd");
             }
 
+            if (cb_gender.Text == "männlich" || cb_gender.SelectedItem.ToString() == "männlich")
+            {
+                gender = "male";
+            }
+            else if (cb_gender.Text == "weiblich" || cb_gender.SelectedItem.ToString() == "weiblich")
+            {
+                gender = "female";
+            }
+            else
+            {
+                gender = cb_gender.SelectedItem.ToString();
+            }
+
             List<string> DBContactDetails = new List<string>
             {
                 tb_name.Text,
                 tb_surename.Text,
-                cb_gender.Text,
+                gender,
                 birthdate,
                 tb_street.Text,
                 tb_zipcode.Text,
