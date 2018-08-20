@@ -91,9 +91,6 @@ namespace eNumismat
                 // Write UICulture to XMLConf
                 Globals.UICulture = culture;
                 cfgHandler.UpdateXmlConf("UICulture", culture);
-
-                CheckIfDBFileExists();
-                UpdateStatusText();
             }
 
             // Set Application Language
@@ -125,7 +122,15 @@ namespace eNumismat
                 französischToolStripMenuItem.Checked = true;
                 toolStripStatusLabel2.Image = Properties.Resources.flag_france;
             }
+            else
+            {
+                toolStripStatusLabel2.Image = null;
+            }
+
             toolStripStatusLabel2.Text = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+
+            CheckIfDBFileExists();
+            UpdateStatusText();
         }
 
         //=====================================================================================================================================================================

@@ -215,7 +215,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public void UpdateXmlConf(string ParamName, string ParamValue)
         {
-            MessageBox.Show(ParamName + ", " + ParamValue);
+            //MessageBox.Show(ParamName + ", " + ParamValue);
 
             xConf = new XmlDocument();
 
