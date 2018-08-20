@@ -247,43 +247,9 @@
             // 
             // cb_bundesland
             // 
-            this.cb_bundesland.AutoCompleteCustomSource.AddRange(new string[] {
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource1"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource2"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource3"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource4"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource5"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource6"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource7"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource8"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource9"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource10"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource11"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource12"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource13"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource14"),
-            resources.GetString("cb_bundesland.AutoCompleteCustomSource15")});
             this.cb_bundesland.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_bundesland.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_bundesland.FormattingEnabled = true;
-            this.cb_bundesland.Items.AddRange(new object[] {
-            resources.GetString("cb_bundesland.Items"),
-            resources.GetString("cb_bundesland.Items1"),
-            resources.GetString("cb_bundesland.Items2"),
-            resources.GetString("cb_bundesland.Items3"),
-            resources.GetString("cb_bundesland.Items4"),
-            resources.GetString("cb_bundesland.Items5"),
-            resources.GetString("cb_bundesland.Items6"),
-            resources.GetString("cb_bundesland.Items7"),
-            resources.GetString("cb_bundesland.Items8"),
-            resources.GetString("cb_bundesland.Items9"),
-            resources.GetString("cb_bundesland.Items10"),
-            resources.GetString("cb_bundesland.Items11"),
-            resources.GetString("cb_bundesland.Items12"),
-            resources.GetString("cb_bundesland.Items13"),
-            resources.GetString("cb_bundesland.Items14"),
-            resources.GetString("cb_bundesland.Items15")});
             resources.ApplyResources(this.cb_bundesland, "cb_bundesland");
             this.cb_bundesland.Name = "cb_bundesland";
             // 

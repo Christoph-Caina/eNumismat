@@ -13,7 +13,9 @@ namespace eNumismat
     public partial class AddressBook : Form
     {
         private List<TreeNode> _unselectableNodes = new List<TreeNode>();
-        
+        private List<string> AutoFillCities = new List<string>();
+        private List<string> AutoFillFederalStates = new List<string>();
+
         int ContactID = 0;
 
         DBActions dbAction = new DBActions();
@@ -22,6 +24,24 @@ namespace eNumismat
         public AddressBook()
         {
             InitializeComponent();
+
+            if (Globals.UseAutoFillOnCities == true)
+            {
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
+                {
+                    AutoFillCities.Add(AutoFillItems[1].ToString());
+                }
+                cb_city.DataSource = AutoFillCities;
+            }
+
+            if (Globals.UseAutoFillOnFederalStates == true)
+            {
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
+                {
+                    AutoFillFederalStates.Add(AutoFillItems[1].ToString());
+                }
+                cb_bundesland.DataSource = AutoFillFederalStates;
+            }
         }
 
         //=====================================================================================================================================================================
@@ -130,21 +150,18 @@ namespace eNumismat
                     tb_street.Text = ContactDetails[5];
                     tb_zipcode.Text = ContactDetails[6];
                     
-                    List<string> AutoFill = new List<string>();
-
-                    foreach(DataRow AutoFillItems in dbAction.GetAutoComplete("cities").Rows)
+                    if(AutoFillCities.Contains(ContactDetails[7]))
                     {
-                        AutoFill.Add(AutoFillItems[1].ToString());
+                        cb_city.SelectedItem = ContactDetails[7];
+                        cb_city.Text = ContactDetails[7];
                     }
-                    cb_city.DataSource = AutoFill;
 
-                    if(AutoFill.Contains(ContactDetails[7]))
-                    cb_city.SelectedItem = ContactDetails[7];
-                    cb_city.Text = ContactDetails[7];
+                    if (AutoFillFederalStates.Contains(ContactDetails[8]))
+                    {
+                        cb_bundesland.SelectedItem = ContactDetails[8];
+                        cb_bundesland.Text = ContactDetails[8];
+                    }
 
-
-
-                    cb_bundesland.Text = null;
                     //neu hinzugefügt - IDs passen jetzt nicht mehr!
 
 
@@ -164,15 +181,16 @@ namespace eNumismat
                     tb_zipcode.Text = null;
                     cb_city.Text = null;
 
-                    List<string> AutoFill = new List<string>();
+                    //foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("cities").Rows)
+                    //{
+                        //AutoFillCities.Add(AutoFillItems[1].ToString());
+                    //}
+                    //cb_city.DataSource = AutoFillCities;
 
-                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("cities").Rows)
-                    {
-                        AutoFill.Add(AutoFillItems[1].ToString());
-                    }
-
-                    cb_city.DataSource = AutoFill;
                     cb_bundesland.Text = null;
+
+                    //cb_bundesland.DataSource = AutoFillFederalStates;
+
                     tb_country.Text = null;
                     tb_phone.Text = null;
                     tb_mobile.Text = null;

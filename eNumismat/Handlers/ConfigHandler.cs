@@ -115,6 +115,26 @@ namespace eNumismat
             ApplicationLanguage.InnerText = CultureInfo.CurrentUICulture.ToString();
             ApplicationSettings.AppendChild(ApplicationLanguage);
 
+            XmlNode AutoFill = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "UseAutoFillForContacts";
+            AutoFill.Attributes.Append(attr);
+            ApplicationSettings.AppendChild(AutoFill);
+
+            XmlNode AutoFillCities = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "UseAutoFillOnCities";
+            AutoFillCities.Attributes.Append(attr);
+            AutoFillCities.InnerText = "False";
+            AutoFill.AppendChild(AutoFillCities);
+
+            XmlNode AutoFillFederalStates = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "UseAutoFillOnFederalStates";
+            AutoFillFederalStates.Attributes.Append(attr);
+            AutoFillFederalStates.InnerText = "False";
+            AutoFill.AppendChild(AutoFillFederalStates);
+
             try
             {
                 xConf.Save(Globals.AppDataPath + @"\config.xml");
@@ -210,6 +230,28 @@ namespace eNumismat
             }
 
             Globals.UICulture = UICulture;
+
+            // Read AutoFill Settings
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='UseAutoFillForContacts']/parameter");
+
+            string AutoFillCities = null;
+            string AutoFillFederalStates = null;
+
+            foreach (XmlNode Conf in ConfNode)
+            {
+                if (Conf.Attributes["name"].Value == "UseAutoFillOnCities")
+                {
+                    AutoFillCities = Conf.InnerText;
+                }
+
+                if (Conf.Attributes["name"].Value == "UseAutoFillOnFederalStates")
+                {
+                    AutoFillFederalStates = Conf.InnerText;
+                }
+            }
+
+            Globals.UseAutoFillOnCities = ConvertToBool(AutoFillCities);
+            Globals.UseAutoFillOnFederalStates = ConvertToBool(AutoFillFederalStates);
         }
 
         //=====================================================================================================================================================================
@@ -252,6 +294,13 @@ namespace eNumismat
                 case "UICulture":
 
                     ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/parameter");
+
+                    break;
+
+                case "UseAutoFillOnCities":
+                case "UseAutoFillOnFederalStates":
+
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='UseAutoFillForContacts']/parameter");
 
                     break;
             }

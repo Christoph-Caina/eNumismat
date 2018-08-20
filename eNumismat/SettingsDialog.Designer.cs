@@ -44,6 +44,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
+            this.cb_AutoFillCities = new System.Windows.Forms.CheckBox();
+            this.cb_AutoFillFedStates = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -52,18 +54,20 @@
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Controls.Add(this.cb_AutoFillFedStates);
+            this.tabPage1.Controls.Add(this.cb_AutoFillCities);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.cb_languageSelection);
             this.tabPage1.Controls.Add(this.cb_MinimizeToTray);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -74,8 +78,8 @@
             // 
             // cb_languageSelection
             // 
-            resources.ApplyResources(this.cb_languageSelection, "cb_languageSelection");
             this.cb_languageSelection.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_languageSelection, "cb_languageSelection");
             this.cb_languageSelection.Name = "cb_languageSelection";
             // 
             // cb_MinimizeToTray
@@ -87,13 +91,13 @@
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.cb_DbBackUpOnAppExit);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.cb_DbCompressionBeforeBackup);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -133,15 +137,15 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.btn_Cancel);
             this.panel1.Controls.Add(this.btn_Save);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // btn_Cancel
             // 
-            resources.ApplyResources(this.btn_Cancel, "btn_Cancel");
             this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.btn_Cancel, "btn_Cancel");
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -151,6 +155,18 @@
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cb_AutoFillCities
+            // 
+            resources.ApplyResources(this.cb_AutoFillCities, "cb_AutoFillCities");
+            this.cb_AutoFillCities.Name = "cb_AutoFillCities";
+            this.cb_AutoFillCities.UseVisualStyleBackColor = true;
+            // 
+            // cb_AutoFillFedStates
+            // 
+            resources.ApplyResources(this.cb_AutoFillFedStates, "cb_AutoFillFedStates");
+            this.cb_AutoFillFedStates.Name = "cb_AutoFillFedStates";
+            this.cb_AutoFillFedStates.UseVisualStyleBackColor = true;
             // 
             // SettingsDialog
             // 
@@ -189,5 +205,7 @@
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cb_languageSelection;
+        private System.Windows.Forms.CheckBox cb_AutoFillFedStates;
+        private System.Windows.Forms.CheckBox cb_AutoFillCities;
     }
 }

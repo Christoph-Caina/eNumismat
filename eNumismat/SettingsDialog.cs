@@ -66,6 +66,24 @@ namespace eNumismat
             {
                 cb_MinimizeToTray.Checked = false;
             }
+
+            if (Globals.UseAutoFillOnCities == true)
+            {
+                cb_AutoFillCities.Checked = true;
+            }
+            else
+            {
+                cb_AutoFillCities.Checked = false;
+            }
+
+            if (Globals.UseAutoFillOnFederalStates == true)
+            {
+                cb_AutoFillFedStates.Checked = true;
+            }
+            else
+            {
+                cb_AutoFillFedStates.Checked = false;
+            }
         }
 
         //=====================================================================================================================================================================
@@ -116,6 +134,23 @@ namespace eNumismat
                 ConfigParam.Add("UICulture", cb_languageSelection.Text);
             }
 
+            if (ConfigParam.ContainsKey("UseAutoFillOnCities"))
+            {
+                ConfigParam["UseAutoFillOnCities"] = cb_AutoFillCities.Checked.ToString();
+            }
+            else
+            {
+                ConfigParam.Add("UseAutoFillOnCities", cb_AutoFillCities.Checked.ToString());
+            }
+
+            if (ConfigParam.ContainsKey("UseAutoFillOnFederalStates"))
+            {
+                ConfigParam["UseAutoFillOnFederalStates"] = cb_AutoFillFedStates.Checked.ToString();
+            }
+            else
+            {
+                ConfigParam.Add("UseAutoFillOnFederalStates", cb_AutoFillFedStates.Checked.ToString());
+            }
             foreach (KeyValuePair<string, string> kv in ConfigParam)
             {
                 cfgHandler.UpdateXmlConf(kv.Key, kv.Value);

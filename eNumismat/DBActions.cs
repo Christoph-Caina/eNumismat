@@ -423,7 +423,6 @@ namespace eNumismat
         public DataTable GetAutoComplete(string table)
         {
             string AutoCompleteDBFile = Path.Combine(Globals.AppDataPath, @"AutoComplete.db");
-            //List<string> AutoFillValues = new List<string>();
 
             using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + AutoCompleteDBFile))
             {
@@ -434,19 +433,17 @@ namespace eNumismat
                 catch (Exception ex)
                 { }
 
-                string SQL = "SELECT * FROM CITIES";
+                string SQL = "SELECT * FROM `" + table +"`";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(SQL, dbConnection))
                 {
-                    //cmd.Parameters.AddWithValue("@table", table);
+                    MessageBox.Show(table);
 
                     using (SQLiteDataAdapter daAutoComplete = new SQLiteDataAdapter(cmd))
                     {
                         DataTable dtAutoFill = new DataTable();
 
                         daAutoComplete.Fill(dtAutoFill);
-
-                        //daAutoComplete.Fill(dtAutoComplete);
 
                         return dtAutoFill;
                     }
