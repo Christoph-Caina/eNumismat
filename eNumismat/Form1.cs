@@ -242,6 +242,12 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
+        private void beendenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //=====================================================================================================================================================================
         private void DatenbankSichernToolStripMenuItem_Click(object sender, EventArgs e)
         {
             runDBBackup();
