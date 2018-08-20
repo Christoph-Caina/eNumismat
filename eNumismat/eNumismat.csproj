@@ -228,6 +228,7 @@
     <EmbeddedResource Include="SwapMonitor.resx">
       <DependentUpon>SwapMonitor.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AutoComplete.db" />
     <None Include="eNumismat.ruleset" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
