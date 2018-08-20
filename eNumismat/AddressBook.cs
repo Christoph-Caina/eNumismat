@@ -311,11 +311,11 @@ namespace eNumismat
                 birthdate = dtp_birthdate.Value.ToString("yyyy-MM-dd");
             }
 
-            if (cb_gender.Text == "männlich" || cb_gender.SelectedItem.ToString() == "männlich")
+            if (cb_gender.Text == "männlich" || cb_gender.SelectedItem.ToString() == "männlich" || cb_gender.Text == "mâle" || cb_gender.SelectedItem.ToString() == "mâle")
             {
                 gender = "male";
             }
-            else if (cb_gender.Text == "weiblich" || cb_gender.SelectedItem.ToString() == "weiblich")
+            else if (cb_gender.Text == "weiblich" || cb_gender.SelectedItem.ToString() == "weiblich" || cb_gender.Text == "femelle" || cb_gender.SelectedItem.ToString() == "femelle")
             {
                 gender = "female";
             }

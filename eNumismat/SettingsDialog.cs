@@ -11,7 +11,7 @@ namespace eNumismat
     {
         ConfigHandler cfgHandler = new ConfigHandler();
         LogHandler logHandler = new LogHandler();
-        Dictionary<string, bool> ConfigParam = new Dictionary<string, bool>();
+        Dictionary<string, string> ConfigParam = new Dictionary<string, string>();
 
         //=====================================================================================================================================================================
         public SettingsDialog()
@@ -32,13 +32,13 @@ namespace eNumismat
                 InitializeComponent();
             }
 
+            string[] languages = { "de-DE", "en-US", "fr-FR" };
+            cb_languageSelection.Items.AddRange(languages);
+            cb_languageSelection.SelectedText = Globals.UICulture;
+
             // load current settings from GLOBAL VARS
             label2.Text = Globals.DBFile;
             label4.Text = Globals.DBFilePath;
-
-            //ConfigParam.Add("MinimizeToTray", Globals.MinimizeToTray);
-            //ConfigParam.Add("DbBackupOnAppExit", Globals.BackupDBOnAppClose);
-            //ConfigParam.Add("DbCompressionBeforeBackup", Globals.CompressDBBeforeBackup);
 
             if (Globals.BackupDBOnAppClose == true)
             {
@@ -73,34 +73,44 @@ namespace eNumismat
         {
             if (ConfigParam.ContainsKey("MinimizeToTray"))
             {
-                ConfigParam["MinimizeToTray"] = cb_MinimizeToTray.Checked;
+                ConfigParam["MinimizeToTray"] = cb_MinimizeToTray.Checked.ToString();
             }
             else
             {
-                ConfigParam.Add("MinimizeToTray", cb_MinimizeToTray.Checked);
+                ConfigParam.Add("MinimizeToTray", cb_MinimizeToTray.Checked.ToString());
             }
 
             if (ConfigParam.ContainsKey("DbBackupOnAppExit"))
             {
-                ConfigParam["DbBackupOnAppExit"] = cb_DbBackUpOnAppExit.Checked;
+                ConfigParam["DbBackupOnAppExit"] = cb_DbBackUpOnAppExit.Checked.ToString();
             }
             else
             {
-                ConfigParam.Add("DbBackupOnAppExit", cb_DbBackUpOnAppExit.Checked);
+                ConfigParam.Add("DbBackupOnAppExit", cb_DbBackUpOnAppExit.Checked.ToString());
             }
 
             if (ConfigParam.ContainsKey("DbCompressionBeforeBackup"))
             {
-                ConfigParam["DbCompressionBeforeBackup"] = cb_DbCompressionBeforeBackup.Checked;
+                ConfigParam["DbCompressionBeforeBackup"] = cb_DbCompressionBeforeBackup.Checked.ToString();
             }
             else
             {
-                ConfigParam.Add("DbCompressionBeforeBackup", cb_DbCompressionBeforeBackup.Checked);
+                ConfigParam.Add("DbCompressionBeforeBackup", cb_DbCompressionBeforeBackup.Checked.ToString());
             }
 
-            foreach (KeyValuePair<string, bool> kv in ConfigParam)
+            if (ConfigParam.ContainsKey("UICulture"))
             {
-                cfgHandler.UpdateXmlConf(kv.Key, kv.Value.ToString());
+                ConfigParam["UICulture"] = cb_languageSelection.Text;
+            }
+            else
+            {
+                ConfigParam.Add("UICulture", cb_languageSelection.Text);
+            }
+
+            foreach (KeyValuePair<string, string> kv in ConfigParam)
+            {
+                cfgHandler.UpdateXmlConf(kv.Key, kv.Value);
+                MessageBox.Show(kv.Key + Environment.NewLine + kv.Value);
             }
 
             this.Hide();

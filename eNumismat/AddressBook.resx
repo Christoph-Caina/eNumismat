@@ -698,7 +698,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
-        CgAAAk1TRnQBSQFMAgEBBAEAAagBAQHAAQEBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CgAAAk1TRnQBSQFMAgEBBAEAAagBAQHIAQEBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1769,6 +1769,9 @@
   <data name="neuToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 22</value>
   </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 194</value>
+  </data>
   <data name="&gt;&gt;Btn_Cancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2009,8 +2012,8 @@
   <data name="tabPage2.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 194</value>
+  <data name="AddSwap.Text" xml:space="preserve">
+    <value>New</value>
   </data>
   <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 260</value>
@@ -2074,9 +2077,6 @@
   </data>
   <data name="label21.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
-  </data>
-  <data name="dtp_birthdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 96</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>680, 511</value>
@@ -2171,8 +2171,8 @@
   <data name="&gt;&gt;label_city.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="AddSwap.Text" xml:space="preserve">
-    <value>New</value>
+  <data name="dtp_birthdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 96</value>
   </data>
   <data name="&gt;&gt;rtb_notes.Name" xml:space="preserve">
     <value>rtb_notes</value>

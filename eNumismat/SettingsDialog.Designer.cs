@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsDialog));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_languageSelection = new System.Windows.Forms.ComboBox();
             this.cb_MinimizeToTray = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,10 +60,23 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.cb_languageSelection);
             this.tabPage1.Controls.Add(this.cb_MinimizeToTray);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // cb_languageSelection
+            // 
+            this.cb_languageSelection.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_languageSelection, "cb_languageSelection");
+            this.cb_languageSelection.Name = "cb_languageSelection";
             // 
             // cb_MinimizeToTray
             // 
@@ -172,5 +187,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Save;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cb_languageSelection;
     }
 }
