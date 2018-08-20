@@ -108,6 +108,13 @@ namespace eNumismat
             MinimizeToTray.InnerText = "false";
             ApplicationSettings.AppendChild(MinimizeToTray);
 
+            XmlNode ApplicationLanguage = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "UICulture";
+            ApplicationLanguage.Attributes.Append(attr);
+            ApplicationLanguage.InnerText = CultureInfo.CurrentUICulture.ToString();
+            ApplicationSettings.AppendChild(ApplicationLanguage);
+
             try
             {
                 xConf.Save(Globals.AppDataPath + @"\config.xml");

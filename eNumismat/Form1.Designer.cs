@@ -169,18 +169,21 @@
             this.deutschToolStripMenuItem.Image = global::eNumismat.Properties.Resources.flag_germany;
             this.deutschToolStripMenuItem.Name = "deutschToolStripMenuItem";
             resources.ApplyResources(this.deutschToolStripMenuItem, "deutschToolStripMenuItem");
+            this.deutschToolStripMenuItem.Click += new System.EventHandler(this.deutschToolStripMenuItem_Click);
             // 
             // englischToolStripMenuItem
             // 
             this.englischToolStripMenuItem.Image = global::eNumismat.Properties.Resources.flag_usa;
             this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
             resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
+            this.englischToolStripMenuItem.Click += new System.EventHandler(this.englischToolStripMenuItem_Click);
             // 
             // französischToolStripMenuItem
             // 
             this.französischToolStripMenuItem.Image = global::eNumismat.Properties.Resources.flag_france;
             this.französischToolStripMenuItem.Name = "französischToolStripMenuItem";
             resources.ApplyResources(this.französischToolStripMenuItem, "französischToolStripMenuItem");
+            this.französischToolStripMenuItem.Click += new System.EventHandler(this.französischToolStripMenuItem_Click);
             // 
             // ExtrasToolStripMenuItem
             // 

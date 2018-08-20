@@ -164,31 +164,31 @@
     <value>File</value>
   </data>
   <data name="einstellungenBearbeitenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="einstellungenBearbeitenToolStripMenuItem.Text" xml:space="preserve">
     <value>Change Settings</value>
   </data>
   <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="deutschToolStripMenuItem.Text" xml:space="preserve">
     <value>German</value>
   </data>
   <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="englischToolStripMenuItem.Text" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="französischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="französischToolStripMenuItem.Text" xml:space="preserve">
     <value>French</value>
   </data>
   <data name="spracheÄndernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="spracheÄndernToolStripMenuItem.Text" xml:space="preserve">
     <value>Change Language</value>
@@ -200,13 +200,13 @@
     <value>Settings</value>
   </data>
   <data name="AdressbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="AdressbuchToolStripMenuItem.Text" xml:space="preserve">
     <value>Addressbook</value>
   </data>
   <data name="TauschmonitorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="TauschmonitorToolStripMenuItem.Text" xml:space="preserve">
     <value>Swap Monitor</value>
@@ -537,43 +537,43 @@
     <value>505, 17</value>
   </metadata>
   <data name="swapMonitorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>178, 22</value>
   </data>
   <data name="swapMonitorToolStripMenuItem.Text" xml:space="preserve">
     <value>Swap Monitor</value>
   </data>
   <data name="addressbookToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>178, 22</value>
   </data>
   <data name="addressbookToolStripMenuItem.Text" xml:space="preserve">
     <value>Addressbook</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>175, 6</value>
   </data>
   <data name="datenbankSichernToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>178, 22</value>
   </data>
   <data name="datenbankSichernToolStripMenuItem1.Text" xml:space="preserve">
     <value>Backup Database</value>
   </data>
   <data name="compressDatabaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>178, 22</value>
   </data>
   <data name="compressDatabaseToolStripMenuItem.Text" xml:space="preserve">
     <value>Compress Database</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>175, 6</value>
   </data>
   <data name="beendenToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>178, 22</value>
   </data>
   <data name="beendenToolStripMenuItem1.Text" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 148</value>
+    <value>179, 126</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
     <value>contextMenuStrip1</value>

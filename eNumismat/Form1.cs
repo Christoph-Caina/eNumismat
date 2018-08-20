@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
 using System.Globalization;
+using System.Threading;
 
 namespace eNumismat
 {
@@ -20,7 +21,6 @@ namespace eNumismat
         FileBackup fBackup;
 
         public string[] args = Environment.GetCommandLineArgs();
-
 
         //=====================================================================================================================================================================
         public Form1()
@@ -350,6 +350,42 @@ namespace eNumismat
                 Hide();
                 WindowState = FormWindowState.Minimized;
             }
+        }
+
+        private void deutschToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
+            this.Controls.Clear();
+            this.InitializeComponent();
+            deutschToolStripMenuItem.Checked = true;
+            französischToolStripMenuItem.Checked = false;
+            englischToolStripMenuItem.Checked = false;
+            CheckIfDBFileExists();
+            UpdateStatusText();
+        }
+
+        private void englischToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
+            this.Controls.Clear();
+            this.InitializeComponent();
+            englischToolStripMenuItem.Checked = true;
+            französischToolStripMenuItem.Checked = false;
+            deutschToolStripMenuItem.Checked = false;
+            CheckIfDBFileExists();
+            UpdateStatusText();
+        }
+
+        private void französischToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
+            this.Controls.Clear();
+            this.InitializeComponent();
+            französischToolStripMenuItem.Checked = true;
+            englischToolStripMenuItem.Checked = false;
+            deutschToolStripMenuItem.Checked = false;
+            CheckIfDBFileExists();
+            UpdateStatusText();
         }
     }
 }
