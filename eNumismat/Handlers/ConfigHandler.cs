@@ -229,54 +229,40 @@ namespace eNumismat
                 xConfN.Attributes["LastModified"].Value = DateTime.Now.ToString(@"yyyy/MM/dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
             }
 
-            if (ParamName == "LastDBFile" || ParamName == "LastDBFilePath")
+            XmlNodeList ConfNode = null;
+            XmlNode root = xConf.DocumentElement;
+
+            switch (ParamName)
             {
-                XmlNodeList DBConfNode;
-                XmlNode root = xConf.DocumentElement;
+                case "LastDBFile":
+                case "LastDBFilePath":
+                    
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
 
-                DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+                    break;
 
-                foreach (XmlNode DBConf in DBConfNode)
-                {
-                    if (DBConf.Attributes["name"].Value == ParamName)
-                    {
-                        DBConf.InnerText = ParamValue;
-                    }
-                }
+                case "DbBackupOnAppExit":
+                case "DbCompressionBeforeBackup":
+
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
+
+                    break;
+
+                case "MinimizeToTray":
+                case "UICulture":
+
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/parameter");
+
+                    break;
             }
 
-            if (ParamName == "DbBackupOnAppExit" || ParamName == "DbCompressionBeforeBackup")
+            foreach (XmlNode Conf in ConfNode)
             {
-                XmlNodeList DBConfNode;
-                XmlNode root = xConf.DocumentElement;
-
-                DBConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
-
-                foreach (XmlNode DBConf in DBConfNode)
+                if (Conf.Attributes["name"].Value == ParamName)
                 {
-                    if (DBConf.Attributes["name"].Value == ParamName)
-                    {
-                        DBConf.InnerText = ParamValue;
-                    }
+                    Conf.InnerText = ParamValue;
                 }
             }
-
-            if (ParamName == "UICulture")
-            {
-                XmlNodeList ApplicationConfNode;
-                XmlNode root = xConf.DocumentElement;
-
-                ApplicationConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/parameter");
-
-                foreach (XmlNode ApplicationConf in ApplicationConfNode)
-                {
-                    if (ApplicationConf.Attributes["name"].Value == ParamName)
-                    {
-                        ApplicationConf.InnerText = ParamValue;
-                    }
-                }
-            }
-
 
             try
             {

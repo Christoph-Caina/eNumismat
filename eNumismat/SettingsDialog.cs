@@ -98,6 +98,15 @@ namespace eNumismat
                 ConfigParam.Add("DbCompressionBeforeBackup", cb_DbCompressionBeforeBackup.Checked.ToString());
             }
 
+            if (ConfigParam.ContainsKey("MinimizeToTray"))
+            {
+                ConfigParam["MinimizeToTray"] = cb_MinimizeToTray.Checked.ToString();
+            }
+            else
+            {
+                ConfigParam.Add("MinimizeToTray", cb_MinimizeToTray.Checked.ToString());
+            }
+
             if (ConfigParam.ContainsKey("UICulture"))
             {
                 ConfigParam["UICulture"] = cb_languageSelection.Text;
@@ -110,7 +119,6 @@ namespace eNumismat
             foreach (KeyValuePair<string, string> kv in ConfigParam)
             {
                 cfgHandler.UpdateXmlConf(kv.Key, kv.Value);
-                MessageBox.Show(kv.Key + Environment.NewLine + kv.Value);
             }
 
             this.Hide();

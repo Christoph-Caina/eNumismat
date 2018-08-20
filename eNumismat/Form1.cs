@@ -359,10 +359,13 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Form1_Resize(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Minimized)
+            if (Globals.MinimizeToTray == true)
             {
-                Hide();
-                WindowState = FormWindowState.Minimized;
+                if (WindowState == FormWindowState.Minimized)
+                {
+                    Hide();
+                    WindowState = FormWindowState.Minimized;
+                }
             }
         }
 
