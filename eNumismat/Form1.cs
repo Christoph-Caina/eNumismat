@@ -74,6 +74,28 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Form1_Load(object sender, EventArgs e)
         {
+            DisplayLanguage();
+            CheckIfDBFileExists();
+            UpdateStatusText();
+        }
+
+        //=====================================================================================================================================================================
+        private void DisplayLanguage(string method = null, string culture = null)
+        {
+            if (method == "set" && culture != null)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+                this.Controls.Clear();
+                this.InitializeComponent();
+
+                // Write UICulture to XMLConf
+                Globals.UICulture = culture;
+                cfgHandler.UpdateXmlConf("UICulture", culture);
+
+                CheckIfDBFileExists();
+                UpdateStatusText();
+            }
+
             // Set Application Language
             if (Globals.UICulture != null)
             {
@@ -104,12 +126,6 @@ namespace eNumismat
                 toolStripStatusLabel2.Image = Properties.Resources.flag_france;
             }
             toolStripStatusLabel2.Text = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-
-
-
-            CheckIfDBFileExists();
-            //EnableOrDisableMenueItems();
-            UpdateStatusText();
         }
 
         //=====================================================================================================================================================================
@@ -374,53 +390,17 @@ namespace eNumismat
 
         private void deutschToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
-            this.Controls.Clear();
-            this.InitializeComponent();
-            deutschToolStripMenuItem.Checked = true;
-            französischToolStripMenuItem.Checked = false;
-            englischToolStripMenuItem.Checked = false;
-
-            // Write UICulture to XMLConf
-            Globals.UICulture = "de-DE";
-            cfgHandler.UpdateXmlConf("UICulture", "de-DE");
-
-            CheckIfDBFileExists();
-            UpdateStatusText();
+            DisplayLanguage("set", "de-DE");
         }
 
         private void englischToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
-            this.Controls.Clear();
-            this.InitializeComponent();
-            englischToolStripMenuItem.Checked = true;
-            französischToolStripMenuItem.Checked = false;
-            deutschToolStripMenuItem.Checked = false;
-
-            // Write UICulture to XMLConf
-            Globals.UICulture = "en-US";
-            cfgHandler.UpdateXmlConf("UICulture", "en-US");
-
-            CheckIfDBFileExists();
-            UpdateStatusText();
+            DisplayLanguage("set", "en-US");
         }
 
         private void französischToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
-            this.Controls.Clear();
-            this.InitializeComponent();
-            französischToolStripMenuItem.Checked = true;
-            englischToolStripMenuItem.Checked = false;
-            deutschToolStripMenuItem.Checked = false;
-
-            // Write UICulture to XMLConf
-            Globals.UICulture = "fr-FR";
-            cfgHandler.UpdateXmlConf("UICulture", "fr-FR");
-
-            CheckIfDBFileExists();
-            UpdateStatusText();
+            DisplayLanguage("set", "fr-FR");
         }
     }
 }
