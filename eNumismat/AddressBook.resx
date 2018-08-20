@@ -239,9 +239,6 @@
   <data name="&gt;&gt;tb_city.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
@@ -257,8 +254,8 @@
   <data name="&gt;&gt;tb_mobile.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tb_country.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 20</value>
+  <data name="label21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -366,14 +363,11 @@
   <data name="rtb_notes.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;tb_zipcode.Parent" xml:space="preserve">
-    <value>PanelEditContactDetails</value>
-  </data>
   <data name="label_birthdate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;rtb_notesDisplay.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;Btn_Cancel.Parent" xml:space="preserve">
+    <value>PanelEditContactDetails</value>
   </data>
   <data name="kontaktExportierenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -438,9 +432,6 @@
   <data name="&gt;&gt;tb_name.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 473</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddressBook</value>
   </data>
@@ -486,17 +477,14 @@
   <data name="tb_zipcode.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 20</value>
   </data>
-  <data name="&gt;&gt;kontaktImportierenToolStripMenuItem.Name" xml:space="preserve">
-    <value>kontaktImportierenToolStripMenuItem</value>
-  </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 18</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tb_name.ZOrder" xml:space="preserve">
+    <value>25</value>
   </data>
   <data name="label_zip.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 131</value>
@@ -509,9 +497,6 @@
   </data>
   <data name="label_country.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 18</value>
-  </data>
-  <data name="&gt;&gt;tb_mail.Name" xml:space="preserve">
-    <value>tb_mail</value>
   </data>
   <data name="AddSwap.Location" type="System.Drawing.Point, System.Drawing">
     <value>376, 461</value>
@@ -542,9 +527,6 @@
   </data>
   <data name="&gt;&gt;PanelEditContactDetails.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label22.Text" xml:space="preserve">
-    <value>Outgoing:</value>
   </data>
   <data name="kontaktExportierenToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -627,20 +609,14 @@
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label22.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;label_surename.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
     <value>PanelShowContactDetails</value>
   </data>
   <data name="&gt;&gt;label14.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="Btn_DeleteContact.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 3</value>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
   <data name="&gt;&gt;label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -692,7 +668,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
-        CgAAAk1TRnQBSQFMAgEBBAEAAagBAQGwAQEBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CgAAAk1TRnQBSQFMAgEBBAEAAagBAQG0AQEBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -767,9 +743,6 @@
   <data name="&gt;&gt;label_surename.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>Notes:</value>
-  </data>
   <data name="&gt;&gt;tb_zipcode.Type" xml:space="preserve">
     <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -793,6 +766,9 @@
   </data>
   <data name="&gt;&gt;tb_mail.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="label_birthdate.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 194</value>
@@ -860,6 +836,9 @@
   <data name="rtb_notesDisplay.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
   </data>
+  <data name="tb_country.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 20</value>
+  </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
   </data>
@@ -884,8 +863,8 @@
   <data name="label_mail.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 18</value>
   </data>
-  <data name="&gt;&gt;kontaktExportierenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Outgoing:</value>
   </data>
   <data name="&gt;&gt;label13.Name" xml:space="preserve">
     <value>label13</value>
@@ -1070,14 +1049,14 @@
   <data name="&gt;&gt;pb_gender.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>PanelEditContactDetails</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>680, 557</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
   </data>
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>splitContainer1.Panel1</value>
@@ -1097,8 +1076,8 @@
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 188</value>
+  <data name="&gt;&gt;Btn_Save.Parent" xml:space="preserve">
+    <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label13.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1126,9 +1105,6 @@
   </data>
   <data name="&gt;&gt;cb_gender.Name" xml:space="preserve">
     <value>cb_gender</value>
-  </data>
-  <data name="&gt;&gt;tb_name.ZOrder" xml:space="preserve">
-    <value>25</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1192,6 +1168,9 @@
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 18</value>
+  </data>
+  <data name="label17.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1265,9 +1244,6 @@
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
     <value>454, 490</value>
   </data>
-  <data name="label16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 3, 10</value>
-  </data>
   <data name="&gt;&gt;dtp_birthdate.Parent" xml:space="preserve">
     <value>PanelEditContactDetails</value>
   </data>
@@ -1325,9 +1301,6 @@
   <data name="kontaktImportierenToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;Btn_Save.Parent" xml:space="preserve">
-    <value>PanelEditContactDetails</value>
-  </data>
   <data name="&gt;&gt;label_mail.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
@@ -1357,6 +1330,9 @@
   </data>
   <data name="&gt;&gt;Btn_UpdateContact.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;Btn_Save.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="label_phone.ToolTip" xml:space="preserve">
     <value />
@@ -1388,9 +1364,6 @@
   <data name="label11.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="label17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 3, 10</value>
-  </data>
   <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -1414,9 +1387,6 @@
   </data>
   <data name="&gt;&gt;label20.Parent" xml:space="preserve">
     <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>statusStrip1</value>
@@ -1456,6 +1426,9 @@
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>680, 24</value>
+  </data>
+  <data name="Btn_Cancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
   </data>
   <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 276</value>
@@ -1514,8 +1487,14 @@
   <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
+  </data>
+  <data name="&gt;&gt;rtb_notesDisplay.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
@@ -1598,6 +1577,9 @@
   <data name="label16.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="Btn_DeleteContact.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 3</value>
+  </data>
   <data name="&gt;&gt;label_birthdate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1613,8 +1595,8 @@
   <data name="label_phone.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="treeView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 473</value>
@@ -1645,6 +1627,9 @@
   </data>
   <data name="tabPage1.ToolTip" xml:space="preserve">
     <value />
+  </data>
+  <data name="&gt;&gt;label_city.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tb_surename.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1681,6 +1666,9 @@
   </data>
   <data name="AddSwap.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
+  </data>
+  <data name="PanelShowContactDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;AddSwap.Name" xml:space="preserve">
     <value>AddSwap</value>
@@ -1730,6 +1718,9 @@
   <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 188</value>
+  </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Swap Monitor</value>
   </data>
@@ -1769,14 +1760,14 @@
   <data name="neuToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 22</value>
   </data>
-  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 194</value>
-  </data>
   <data name="&gt;&gt;Btn_Cancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
+  </data>
+  <data name="&gt;&gt;kontaktExportierenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;vCardvcfToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1811,8 +1802,11 @@
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
     <value>454, 490</value>
   </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
+  <data name="label17.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;tb_zipcode.Parent" xml:space="preserve">
+    <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;microsoftOutlookToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1862,6 +1856,12 @@
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>41, 3</value>
   </data>
+  <data name="tb_mail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 20</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;pb_gender.Name" xml:space="preserve">
     <value>pb_gender</value>
   </data>
@@ -1885,9 +1885,6 @@
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
-  </data>
-  <data name="label21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
   </data>
   <data name="label_mail.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 281</value>
@@ -1919,8 +1916,8 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>700, 600</value>
@@ -1973,8 +1970,8 @@
   <data name="tb_phone.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="Btn_Cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+  <data name="label22.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -2012,8 +2009,8 @@
   <data name="tabPage2.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="AddSwap.Text" xml:space="preserve">
-    <value>New</value>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 194</value>
   </data>
   <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 260</value>
@@ -2024,8 +2021,8 @@
   <data name="vCardvcfToolStripMenuItem.Text" xml:space="preserve">
     <value>vCard (*.vcf)</value>
   </data>
-  <data name="tb_mail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 20</value>
+  <data name="&gt;&gt;label_surename.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cb_gender.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -2039,6 +2036,9 @@
   <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
     <value>tabControl1</value>
   </data>
+  <data name="rtb_notesDisplay.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="outlookToolStripMenuItem.Text" xml:space="preserve">
     <value>Microsoft Outlook</value>
   </data>
@@ -2051,8 +2051,8 @@
   <data name="&gt;&gt;tb_phone.Name" xml:space="preserve">
     <value>tb_phone</value>
   </data>
-  <data name="label17.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="label16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 10</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 18</value>
@@ -2063,8 +2063,8 @@
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
-  <data name="label17.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
   </data>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -2077,6 +2077,9 @@
   </data>
   <data name="label21.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
+  </data>
+  <data name="dtp_birthdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 96</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>680, 511</value>
@@ -2111,9 +2114,6 @@
   <data name="Btn_DeleteContact.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="cb_gender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 21</value>
-  </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 18</value>
   </data>
@@ -2132,8 +2132,8 @@
   <data name="&gt;&gt;label19.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;Btn_Cancel.Parent" xml:space="preserve">
-    <value>PanelEditContactDetails</value>
+  <data name="&gt;&gt;kontaktImportierenToolStripMenuItem.Name" xml:space="preserve">
+    <value>kontaktImportierenToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;label15.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2171,8 +2171,8 @@
   <data name="&gt;&gt;label_city.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="dtp_birthdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 96</value>
+  <data name="AddSwap.Text" xml:space="preserve">
+    <value>New</value>
   </data>
   <data name="&gt;&gt;rtb_notes.Name" xml:space="preserve">
     <value>rtb_notes</value>
@@ -2189,23 +2189,23 @@
   <data name="&gt;&gt;label_ID.Name" xml:space="preserve">
     <value>label_ID</value>
   </data>
-  <data name="PanelShowContactDetails.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Notes:</value>
   </data>
-  <data name="rtb_notesDisplay.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 473</value>
   </data>
   <data name="&gt;&gt;label16.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label20.Name" xml:space="preserve">
-    <value>label20</value>
+  <data name="label17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 10</value>
   </data>
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;Btn_Save.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;tb_mail.Name" xml:space="preserve">
+    <value>tb_mail</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>Phone:</value>
@@ -2240,8 +2240,8 @@
   <data name="&gt;&gt;label21.Name" xml:space="preserve">
     <value>label21</value>
   </data>
-  <data name="&gt;&gt;label_city.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cb_gender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 21</value>
   </data>
   <data name="tb_phone.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
