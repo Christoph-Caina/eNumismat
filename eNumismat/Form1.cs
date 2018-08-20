@@ -28,20 +28,7 @@ namespace eNumismat
             InitializeComponent();
 
             //localization
-            if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "de")
-            {
-                toolStripStatusLabel2.Image = Properties.Resources.flag_germany;
-            }
-            else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en")
-            {
-                toolStripStatusLabel2.Image = Properties.Resources.flag_usa;
-            }
-            else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr")
-            {
-                toolStripStatusLabel2.Image = Properties.Resources.flag_france;
-            }
-            toolStripStatusLabel2.Text = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-
+            
             cfgHandler = new ConfigHandler();
             logHandler = new LogHandler();
 
@@ -94,6 +81,31 @@ namespace eNumismat
                 this.Controls.Clear();
                 this.InitializeComponent();
             }
+
+            if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "de")
+            {
+                deutschToolStripMenuItem.Checked = true;
+                englischToolStripMenuItem.Checked = false;
+                französischToolStripMenuItem.Checked = false;
+                toolStripStatusLabel2.Image = Properties.Resources.flag_germany;
+            }
+            else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en")
+            {
+                deutschToolStripMenuItem.Checked = false;
+                englischToolStripMenuItem.Checked = true;
+                französischToolStripMenuItem.Checked = false;
+                toolStripStatusLabel2.Image = Properties.Resources.flag_usa;
+            }
+            else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr")
+            {
+                deutschToolStripMenuItem.Checked = false;
+                englischToolStripMenuItem.Checked = false;
+                französischToolStripMenuItem.Checked = true;
+                toolStripStatusLabel2.Image = Properties.Resources.flag_france;
+            }
+            toolStripStatusLabel2.Text = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+
+
 
             CheckIfDBFileExists();
             //EnableOrDisableMenueItems();
