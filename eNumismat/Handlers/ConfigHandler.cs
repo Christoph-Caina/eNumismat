@@ -139,8 +139,6 @@ namespace eNumismat
             XmlNodeList ConfNode;
             XmlNode root = xConf.DocumentElement;
 
-            
-
             //Read DataBase Config 
             ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
 
@@ -199,6 +197,19 @@ namespace eNumismat
             }
 
             Globals.MinimizeToTray = ConvertToBool(MinimizeToTray);
+
+            // Read Application Language
+            string UICulture = null;
+
+            foreach (XmlNode Conf in ConfNode)
+            {
+                if (Conf.Attributes["name"].Value == "UICulture")
+                {
+                    UICulture = Conf.InnerText;
+                }
+            }
+
+            Globals.UICulture = UICulture;
         }
 
         //=====================================================================================================================================================================
@@ -249,6 +260,23 @@ namespace eNumismat
                     }
                 }
             }
+
+            if (ParamName == "UICulture")
+            {
+                XmlNodeList ApplicationConfNode;
+                XmlNode root = xConf.DocumentElement;
+
+                ApplicationConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/parameter");
+
+                foreach (XmlNode ApplicationConf in ApplicationConfNode)
+                {
+                    if (ApplicationConf.Attributes["name"].Value == ParamName)
+                    {
+                        ApplicationConf.InnerText = ParamValue;
+                    }
+                }
+            }
+
 
             try
             {

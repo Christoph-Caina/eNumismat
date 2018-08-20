@@ -5,6 +5,9 @@ namespace eNumismat
 {
     class Globals
     {
+        //=====================================================================================================================================================================
+        public static string UICulture { get; set; }
+
         //  The default Path for Application Data (cfg, logs, etc.pp)
         //=====================================================================================================================================================================
         public static string AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\" + Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace;

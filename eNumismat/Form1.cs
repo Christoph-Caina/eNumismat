@@ -87,6 +87,14 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Set Application Language
+            if (Globals.UICulture != null)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Globals.UICulture);
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
+
             CheckIfDBFileExists();
             //EnableOrDisableMenueItems();
             UpdateStatusText();
@@ -360,6 +368,11 @@ namespace eNumismat
             deutschToolStripMenuItem.Checked = true;
             französischToolStripMenuItem.Checked = false;
             englischToolStripMenuItem.Checked = false;
+
+            // Write UICulture to XMLConf
+            Globals.UICulture = "de-DE";
+            cfgHandler.UpdateXmlConf("UICulture", "de-DE");
+
             CheckIfDBFileExists();
             UpdateStatusText();
         }
@@ -372,6 +385,11 @@ namespace eNumismat
             englischToolStripMenuItem.Checked = true;
             französischToolStripMenuItem.Checked = false;
             deutschToolStripMenuItem.Checked = false;
+
+            // Write UICulture to XMLConf
+            Globals.UICulture = "en-US";
+            cfgHandler.UpdateXmlConf("UICulture", "en-US");
+
             CheckIfDBFileExists();
             UpdateStatusText();
         }
@@ -384,6 +402,11 @@ namespace eNumismat
             französischToolStripMenuItem.Checked = true;
             englischToolStripMenuItem.Checked = false;
             deutschToolStripMenuItem.Checked = false;
+
+            // Write UICulture to XMLConf
+            Globals.UICulture = "fr-FR";
+            cfgHandler.UpdateXmlConf("UICulture", "fr-FR");
+
             CheckIfDBFileExists();
             UpdateStatusText();
         }
