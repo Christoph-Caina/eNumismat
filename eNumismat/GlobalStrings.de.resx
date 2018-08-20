@@ -135,6 +135,12 @@
   <data name="_dbBackup_BalloonTitle" xml:space="preserve">
     <value>Datenbanksicherung</value>
   </data>
+  <data name="_dbCompress_BallonText" xml:space="preserve">
+    <value>Die Komprimierung der Datenbank war erfolgreich</value>
+  </data>
+  <data name="_dbCompress_BalloonTitle" xml:space="preserve">
+    <value>Datenbankkomprimierung</value>
+  </data>
   <data name="_noDBconnected" xml:space="preserve">
     <value>keine Datenbank verbunden</value>
   </data>

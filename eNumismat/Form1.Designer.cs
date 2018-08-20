@@ -59,7 +59,11 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.TrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.swapMonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addressbookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.datenbankSichernToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.compressDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -267,8 +271,31 @@
             // 
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.datenbankSichernToolStripMenuItem1});
+            this.swapMonitorToolStripMenuItem,
+            this.addressbookToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.datenbankSichernToolStripMenuItem1,
+            this.compressDatabaseToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
+            // 
+            // swapMonitorToolStripMenuItem
+            // 
+            resources.ApplyResources(this.swapMonitorToolStripMenuItem, "swapMonitorToolStripMenuItem");
+            this.swapMonitorToolStripMenuItem.Image = global::eNumismat.Properties.Resources.table_refresh;
+            this.swapMonitorToolStripMenuItem.Name = "swapMonitorToolStripMenuItem";
+            this.swapMonitorToolStripMenuItem.Click += new System.EventHandler(this.swapMonitorToolStripMenuItem_Click);
+            // 
+            // addressbookToolStripMenuItem
+            // 
+            resources.ApplyResources(this.addressbookToolStripMenuItem, "addressbookToolStripMenuItem");
+            this.addressbookToolStripMenuItem.Image = global::eNumismat.Properties.Resources.book_addresses;
+            this.addressbookToolStripMenuItem.Name = "addressbookToolStripMenuItem";
+            this.addressbookToolStripMenuItem.Click += new System.EventHandler(this.addressbookToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
             // 
             // datenbankSichernToolStripMenuItem1
             // 
@@ -276,6 +303,13 @@
             this.datenbankSichernToolStripMenuItem1.Image = global::eNumismat.Properties.Resources.database_save;
             this.datenbankSichernToolStripMenuItem1.Name = "datenbankSichernToolStripMenuItem1";
             this.datenbankSichernToolStripMenuItem1.Click += new System.EventHandler(this.datenbankSichernToolStripMenuItem1_Click);
+            // 
+            // compressDatabaseToolStripMenuItem
+            // 
+            resources.ApplyResources(this.compressDatabaseToolStripMenuItem, "compressDatabaseToolStripMenuItem");
+            this.compressDatabaseToolStripMenuItem.Image = global::eNumismat.Properties.Resources.compress;
+            this.compressDatabaseToolStripMenuItem.Name = "compressDatabaseToolStripMenuItem";
+            this.compressDatabaseToolStripMenuItem.Click += new System.EventHandler(this.compressDatabaseToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -332,6 +366,10 @@
         private System.Windows.Forms.NotifyIcon TrayIcon;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem datenbankSichernToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem swapMonitorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addressbookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem compressDatabaseToolStripMenuItem;
     }
 }
 

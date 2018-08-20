@@ -18,7 +18,6 @@ namespace eNumismat
             if (Directory.Exists(Globals.AppDataPath + @"\DBBackUps\"))
             {
                 return true;
-                //ExcecuteBackup();
             }
             else
             {
@@ -26,7 +25,6 @@ namespace eNumismat
                 {
                     Directory.CreateDirectory(Globals.AppDataPath + @"\DBBackUps\");
                     return true;
-                    //ExcecuteBackup();
                 }
                 catch(Exception ex)
                 {
@@ -41,7 +39,8 @@ namespace eNumismat
             res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName, Assembly.GetExecutingAssembly());
 
             if (CheckBackupDir())
-            {                string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
+            {
+                string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
                 string DestFile = Path.Combine(Globals.AppDataPath, @"DBBackUps\" + DateTime.Now.ToString("yyyy_MM_dd-HHmmss") + ".encBack");
 
                 using (var source = new SQLiteConnection("Data Source=" + SourceFile))
@@ -51,12 +50,15 @@ namespace eNumismat
                         try
                         {
                             source.Open();
-                            CompactDatabase(source);
+
+                            if (Globals.CompressDBBeforeBackup == true)
+                            {
+                                CompactDatabase(source);
+                            }
+
                             destination.Open();
 
                             source.BackupDatabase(destination, "main", "main", -1, null, 0);
-
-                            //MessageBox.Show(res_man.GetString("_dialog_DBBackupSuccessful"));
 
                             return true;
                         }
@@ -86,13 +88,12 @@ namespace eNumismat
                 try
                 {
                     cmd.ExecuteNonQuery();
+                    return true;
                 }
                 catch (Exception ex)
                 {
                     return false;
                 }
-
-                return true;
             }
         }
     }

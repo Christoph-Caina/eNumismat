@@ -125,12 +125,6 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void Form1_Close(object sender, FormClosingEventArgs e)
-        {
-
-        }
-
-        //=====================================================================================================================================================================
         private void EinstellungenBearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Show Settings Dialog
@@ -206,7 +200,21 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
+        private void addressbookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            adrBook = new AddressBook();
+            adrBook.Show();
+        }
+
+        //=====================================================================================================================================================================
         private void TauschmonitorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            swapList = new SwapMonitor();
+            swapList.Show();
+        }
+
+        //=====================================================================================================================================================================
+        private void swapMonitorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             swapList = new SwapMonitor();
             swapList.Show();
@@ -246,6 +254,41 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
+        private void datenbankKomprimierenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            runDBCompression();
+        }
+
+        //=====================================================================================================================================================================
+        private void compressDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            runDBCompression();
+        }
+
+        //=====================================================================================================================================================================
+        private void Form1_Close(object sender, FormClosingEventArgs e)
+        {
+            if (Globals.BackupDBOnAppClose == true)
+            {
+                runDBBackup();
+            }
+        }
+
+        //=====================================================================================================================================================================
+        private void runDBCompression()
+        {
+            fBackup = new FileBackup();
+
+            if(fBackup.CompactDatabase())
+            {
+                TrayIcon.BalloonTipTitle = GlobalStrings._dbCompress_BalloonTitle;
+                TrayIcon.BalloonTipText = GlobalStrings._dbCompress_BallonText;
+
+                TrayIcon.ShowBalloonTip(2000);
+            }
+        }
+
+        //=====================================================================================================================================================================
         private void runDBBackup()
         {
             fBackup = new FileBackup();
@@ -257,13 +300,6 @@ namespace eNumismat
 
                 TrayIcon.ShowBalloonTip(2000);
             }
-        }
-        //=====================================================================================================================================================================
-        private void datenbankKomprimierenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fBackup = new FileBackup();
-
-            fBackup.CompactDatabase();
         }
 
         //=====================================================================================================================================================================
