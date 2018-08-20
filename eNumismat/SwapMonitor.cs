@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Threading;
+using System.Globalization;
 
 namespace eNumismat
 {
@@ -19,6 +21,13 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void SwapMonitor_Load(object sender, EventArgs e)
         {
+            if (Globals.UICulture != null)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Globals.UICulture);
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
+
             GetSwapCount();
         }
 

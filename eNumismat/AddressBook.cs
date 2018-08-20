@@ -5,6 +5,8 @@ using System.Data;
 using System.Text.RegularExpressions;
 //using Outlook = Microsoft.Office.Interop.Outlook;
 using System.Drawing;
+using System.Threading;
+using System.Globalization;
 
 namespace eNumismat
 {
@@ -25,6 +27,13 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void AddressBook_Load(object sender, EventArgs e)
         {
+            if (Globals.UICulture != null)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Globals.UICulture);
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
+
             GenerateAdrBookForm();
         }
 

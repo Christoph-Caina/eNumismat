@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
 
 namespace eNumismat
 {
@@ -19,7 +21,12 @@ namespace eNumismat
 
         private void About_Load(object sender, EventArgs e)
         {
-
+            if (Globals.UICulture != null)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Globals.UICulture);
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
         }
     }
 }

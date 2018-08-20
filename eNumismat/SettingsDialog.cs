@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Threading;
+using System.Globalization;
 
 
 namespace eNumismat
@@ -23,6 +25,13 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void SettingsDialog_Load(object sender, EventArgs e)
         {
+            if (Globals.UICulture != null)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Globals.UICulture);
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
+
             // load current settings from GLOBAL VARS
             label2.Text = Globals.DBFile;
             label4.Text = Globals.DBFilePath;
