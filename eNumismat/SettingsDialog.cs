@@ -28,8 +28,8 @@ namespace eNumismat
             if (Globals.UICulture != null)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Globals.UICulture);
-                this.Controls.Clear();
-                this.InitializeComponent();
+                Controls.Clear();
+                InitializeComponent();
             }
 
             // load current settings from GLOBAL VARS

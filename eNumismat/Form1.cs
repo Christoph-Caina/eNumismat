@@ -85,8 +85,8 @@ namespace eNumismat
             if (method == "set" && culture != null)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
-                this.Controls.Clear();
-                this.InitializeComponent();
+                Controls.Clear();
+                InitializeComponent();
 
                 // Write UICulture to XMLConf
                 Globals.UICulture = culture;
