@@ -129,12 +129,30 @@ namespace eNumismat
 
                     tb_street.Text = ContactDetails[5];
                     tb_zipcode.Text = ContactDetails[6];
-                    tb_city.Text = ContactDetails[7];
-                    tb_country.Text = ContactDetails[8];
-                    tb_phone.Text = ContactDetails[9];
-                    tb_mobile.Text = ContactDetails[10];
-                    tb_mail.Text = ContactDetails[11];
-                    rtb_notes.Text = ContactDetails[12];
+                    
+                    List<string> AutoFill = new List<string>();
+
+                    foreach(DataRow AutoFillItems in dbAction.GetAutoComplete("cities").Rows)
+                    {
+                        AutoFill.Add(AutoFillItems[1].ToString());
+                    }
+                    cb_city.DataSource = AutoFill;
+
+                    if(AutoFill.Contains(ContactDetails[7]))
+                    cb_city.SelectedItem = ContactDetails[7];
+                    cb_city.Text = ContactDetails[7];
+
+
+
+                    cb_bundesland.Text = null;
+                    //neu hinzugefügt - IDs passen jetzt nicht mehr!
+
+
+                    tb_country.Text = ContactDetails[9];
+                    tb_phone.Text = ContactDetails[10];
+                    tb_mobile.Text = ContactDetails[11];
+                    tb_mail.Text = ContactDetails[12];
+                    rtb_notes.Text = ContactDetails[13];
                 }
                 else
                 {
@@ -144,7 +162,17 @@ namespace eNumismat
                     dtp_birthdate.Text = Convert.ToDateTime("01.01.1900").ToString("d");
                     tb_street.Text = null;
                     tb_zipcode.Text = null;
-                    tb_city.Text = null;
+                    cb_city.Text = null;
+
+                    List<string> AutoFill = new List<string>();
+
+                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("cities").Rows)
+                    {
+                        AutoFill.Add(AutoFillItems[1].ToString());
+                    }
+
+                    cb_city.DataSource = AutoFill;
+                    cb_bundesland.Text = null;
                     tb_country.Text = null;
                     tb_phone.Text = null;
                     tb_mobile.Text = null;
@@ -182,11 +210,12 @@ namespace eNumismat
                     label_street.Text = ContactDetails[5];
                     label_zip.Text = ContactDetails[6];
                     label_city.Text = ContactDetails[7];
-                    label_country.Text = ContactDetails[8];
-                    label_phone.Text = ContactDetails[9];
-                    label_mobile.Text = ContactDetails[10];
-                    label_mail.Text = ContactDetails[11];
-                    rtb_notesDisplay.Text = ContactDetails[12];
+                    label_region.Text = ContactDetails[8];
+                    label_country.Text = ContactDetails[9];
+                    label_phone.Text = ContactDetails[10];
+                    label_mobile.Text = ContactDetails[11];
+                    label_mail.Text = ContactDetails[12];
+                    rtb_notesDisplay.Text = ContactDetails[13];
 
                     if (ContactDetails[3] == "male")
                     {
@@ -332,7 +361,8 @@ namespace eNumismat
                 birthdate,
                 tb_street.Text,
                 tb_zipcode.Text,
-                tb_city.Text,
+                cb_city.Text,
+                cb_bundesland.Text,
                 tb_country.Text,
                 tb_phone.Text,
                 tb_mobile.Text,

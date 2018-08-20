@@ -8,6 +8,7 @@
   `street` TEXT(45),
   `zipcode` TEXT(5),
   `city` TEXT(45),
+  `federalstate` TEXT(45),
   `country` TEXT(45),
   `phone` TEXT(45),
   `mobile` TEXT(45),

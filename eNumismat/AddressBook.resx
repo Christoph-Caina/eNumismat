@@ -143,7 +143,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        CgAAAk1TRnQBSQFMAgEBBAEAAeABAQHgAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CgAAAk1TRnQBSQFMAgEBBAEAAfwBAQH8AQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -356,8 +356,176 @@
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="cb_city.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 189</value>
+  </data>
+  <data name="cb_city.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 21</value>
+  </data>
+  <data name="cb_city.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;cb_city.Name" xml:space="preserve">
+    <value>cb_city</value>
+  </data>
+  <data name="&gt;&gt;cb_city.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_city.Parent" xml:space="preserve">
+    <value>PanelEditContactDetails</value>
+  </data>
+  <data name="&gt;&gt;cb_city.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource" xml:space="preserve">
+    <value>Baden-Württemberg</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource1" xml:space="preserve">
+    <value>Bayern</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource2" xml:space="preserve">
+    <value>Berlin</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource3" xml:space="preserve">
+    <value>Brandenburg</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource4" xml:space="preserve">
+    <value>Bremen</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource5" xml:space="preserve">
+    <value>Hamburg</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource6" xml:space="preserve">
+    <value>Hessen</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource7" xml:space="preserve">
+    <value>Mecklenburg-Vorpommern</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource8" xml:space="preserve">
+    <value>Niedersachsen</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource9" xml:space="preserve">
+    <value>Nordrhein-Westfalen</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource10" xml:space="preserve">
+    <value>Rheinland-Pfalz</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource11" xml:space="preserve">
+    <value>Saarland</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource12" xml:space="preserve">
+    <value>Sachsen</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource13" xml:space="preserve">
+    <value>Sachsen-Anhalt</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource14" xml:space="preserve">
+    <value>Schlewig-Holstein</value>
+  </data>
+  <data name="cb_bundesland.AutoCompleteCustomSource15" xml:space="preserve">
+    <value>Thüringen</value>
+  </data>
+  <data name="cb_bundesland.Items" xml:space="preserve">
+    <value>Baden-Württemberg</value>
+  </data>
+  <data name="cb_bundesland.Items1" xml:space="preserve">
+    <value>Bayern</value>
+  </data>
+  <data name="cb_bundesland.Items2" xml:space="preserve">
+    <value>Berlin</value>
+  </data>
+  <data name="cb_bundesland.Items3" xml:space="preserve">
+    <value>Brandenburg</value>
+  </data>
+  <data name="cb_bundesland.Items4" xml:space="preserve">
+    <value>Bremen</value>
+  </data>
+  <data name="cb_bundesland.Items5" xml:space="preserve">
+    <value>Hamburg</value>
+  </data>
+  <data name="cb_bundesland.Items6" xml:space="preserve">
+    <value>Hessen</value>
+  </data>
+  <data name="cb_bundesland.Items7" xml:space="preserve">
+    <value>Mecklenburg-Vorpommern</value>
+  </data>
+  <data name="cb_bundesland.Items8" xml:space="preserve">
+    <value>Niedersachsen</value>
+  </data>
+  <data name="cb_bundesland.Items9" xml:space="preserve">
+    <value>Nordrhein-Westfalen</value>
+  </data>
+  <data name="cb_bundesland.Items10" xml:space="preserve">
+    <value>Rheinland-Pfalz</value>
+  </data>
+  <data name="cb_bundesland.Items11" xml:space="preserve">
+    <value>Saarland</value>
+  </data>
+  <data name="cb_bundesland.Items12" xml:space="preserve">
+    <value>Sachsen</value>
+  </data>
+  <data name="cb_bundesland.Items13" xml:space="preserve">
+    <value>Sachsen-Anhalt</value>
+  </data>
+  <data name="cb_bundesland.Items14" xml:space="preserve">
+    <value>Schlewig-Holstein</value>
+  </data>
+  <data name="cb_bundesland.Items15" xml:space="preserve">
+    <value>Thüringen</value>
+  </data>
+  <data name="cb_bundesland.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 217</value>
+  </data>
+  <data name="cb_bundesland.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 21</value>
+  </data>
+  <data name="cb_bundesland.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;cb_bundesland.Name" xml:space="preserve">
+    <value>cb_bundesland</value>
+  </data>
+  <data name="&gt;&gt;cb_bundesland.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_bundesland.Parent" xml:space="preserve">
+    <value>PanelEditContactDetails</value>
+  </data>
+  <data name="&gt;&gt;cb_bundesland.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 217</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 18</value>
+  </data>
+  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>Federal State:</value>
+  </data>
+  <data name="label24.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>PanelEditContactDetails</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="tb_zipcode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 162</value>
+    <value>170, 163</value>
   </data>
   <data name="tb_zipcode.Mask" xml:space="preserve">
     <value>00000</value>
@@ -378,13 +546,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;tb_zipcode.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 346</value>
+    <value>22, 380</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -405,10 +573,10 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="Btn_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 478</value>
+    <value>284, 479</value>
   </data>
   <data name="Btn_Cancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
@@ -429,10 +597,10 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;Btn_Cancel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="Btn_Save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 478</value>
+    <value>322, 479</value>
   </data>
   <data name="Btn_Save.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
@@ -453,13 +621,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;Btn_Save.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 305</value>
+    <value>22, 345</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -480,13 +648,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="rtb_notes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 346</value>
+    <value>170, 380</value>
   </data>
   <data name="rtb_notes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 126</value>
+    <value>184, 93</value>
   </data>
   <data name="rtb_notes.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -504,13 +672,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;rtb_notes.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 279</value>
+    <value>22, 319</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -531,13 +699,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 253</value>
+    <value>22, 293</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -558,13 +726,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 214</value>
+    <value>22, 254</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -585,10 +753,10 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="tb_mail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 305</value>
+    <value>170, 345</value>
   </data>
   <data name="tb_mail.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -606,10 +774,10 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;tb_mail.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="tb_mobile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 279</value>
+    <value>170, 319</value>
   </data>
   <data name="tb_mobile.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -627,13 +795,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;tb_mobile.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 188</value>
+    <value>22, 189</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -654,13 +822,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 162</value>
+    <value>22, 163</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -681,13 +849,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 136</value>
+    <value>22, 137</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -708,13 +876,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 96</value>
+    <value>22, 97</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -735,13 +903,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <data name="dtp_birthdate.CustomFormat" xml:space="preserve">
     <value />
   </data>
   <data name="dtp_birthdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 96</value>
+    <value>170, 97</value>
   </data>
   <data name="dtp_birthdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 20</value>
@@ -759,13 +927,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;dtp_birthdate.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 69</value>
+    <value>22, 70</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -786,7 +954,7 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="cb_gender.Items" xml:space="preserve">
     <value>male</value>
@@ -795,7 +963,7 @@
     <value>female</value>
   </data>
   <data name="cb_gender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 69</value>
+    <value>170, 70</value>
   </data>
   <data name="cb_gender.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 21</value>
@@ -813,13 +981,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;cb_gender.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 29</value>
+    <value>22, 30</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -840,13 +1008,13 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 3</value>
+    <value>22, 4</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 18</value>
+    <value>138, 18</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -867,10 +1035,10 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
   <data name="tb_phone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 253</value>
+    <value>170, 293</value>
   </data>
   <data name="tb_phone.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -888,10 +1056,10 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;tb_phone.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>23</value>
   </data>
   <data name="tb_country.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 214</value>
+    <value>170, 254</value>
   </data>
   <data name="tb_country.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -909,31 +1077,10 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;tb_country.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="tb_city.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 188</value>
-  </data>
-  <data name="tb_city.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 20</value>
-  </data>
-  <data name="tb_city.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tb_city.Name" xml:space="preserve">
-    <value>tb_city</value>
-  </data>
-  <data name="&gt;&gt;tb_city.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tb_city.Parent" xml:space="preserve">
-    <value>PanelEditContactDetails</value>
-  </data>
-  <data name="&gt;&gt;tb_city.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>24</value>
   </data>
   <data name="tb_street.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 136</value>
+    <value>170, 137</value>
   </data>
   <data name="tb_street.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -951,10 +1098,10 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;tb_street.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>25</value>
   </data>
   <data name="tb_surename.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 29</value>
+    <value>170, 30</value>
   </data>
   <data name="tb_surename.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -972,10 +1119,10 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;tb_surename.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>26</value>
   </data>
   <data name="tb_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 3</value>
+    <value>170, 4</value>
   </data>
   <data name="tb_name.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
@@ -993,7 +1140,7 @@
     <value>PanelEditContactDetails</value>
   </data>
   <data name="&gt;&gt;tb_name.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>27</value>
   </data>
   <data name="PanelEditContactDetails.Location" type="System.Drawing.Point, System.Drawing">
     <value>934, 0</value>
@@ -1016,8 +1163,59 @@
   <data name="&gt;&gt;PanelEditContactDetails.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="label_region.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 140</value>
+  </data>
+  <data name="label_region.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 18</value>
+  </data>
+  <data name="label_region.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="label_region.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label_region.Name" xml:space="preserve">
+    <value>label_region</value>
+  </data>
+  <data name="&gt;&gt;label_region.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_region.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label_region.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 140</value>
+  </data>
+  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 18</value>
+  </data>
+  <data name="label23.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>Federal State:</value>
+  </data>
+  <data name="label23.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label23.Name" xml:space="preserve">
+    <value>label23</value>
+  </data>
+  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 321</value>
+    <value>37, 335</value>
   </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 18</value>
@@ -1041,13 +1239,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="rtb_notesDisplay.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="rtb_notesDisplay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 321</value>
+    <value>149, 335</value>
   </data>
   <data name="rtb_notesDisplay.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 127</value>
@@ -1068,10 +1266,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;rtb_notesDisplay.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="label_city.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 131</value>
+    <value>202, 114</value>
   </data>
   <data name="label_city.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 18</value>
@@ -1092,10 +1290,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_city.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 281</value>
+    <value>7, 295</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 18</value>
@@ -1119,10 +1317,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label_mail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 281</value>
+    <value>149, 295</value>
   </data>
   <data name="label_mail.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 18</value>
@@ -1143,10 +1341,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_mail.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 108</value>
+    <value>7, 91</value>
   </data>
   <data name="label14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 10</value>
@@ -1173,10 +1371,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="label_zip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 131</value>
+    <value>149, 114</value>
   </data>
   <data name="label_zip.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 18</value>
@@ -1197,10 +1395,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_zip.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 194</value>
+    <value>7, 208</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 18</value>
@@ -1224,10 +1422,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label_country.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 157</value>
+    <value>149, 171</value>
   </data>
   <data name="label_country.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 18</value>
@@ -1248,10 +1446,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_country.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 257</value>
+    <value>7, 271</value>
   </data>
   <data name="label16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 10</value>
@@ -1278,10 +1476,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="label_mobile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 257</value>
+    <value>149, 271</value>
   </data>
   <data name="label_mobile.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 18</value>
@@ -1302,10 +1500,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_mobile.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 131</value>
+    <value>7, 114</value>
   </data>
   <data name="label17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 10</value>
@@ -1332,10 +1530,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="label_street.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 108</value>
+    <value>149, 91</value>
   </data>
   <data name="label_street.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 18</value>
@@ -1356,10 +1554,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_street.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="label_birthdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 194</value>
+    <value>149, 208</value>
   </data>
   <data name="label_birthdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 18</value>
@@ -1380,10 +1578,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_birthdate.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 235</value>
+    <value>7, 249</value>
   </data>
   <data name="label18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 10</value>
@@ -1410,10 +1608,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="label_phone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 235</value>
+    <value>149, 249</value>
   </data>
   <data name="label_phone.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 18</value>
@@ -1434,10 +1632,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_phone.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 157</value>
+    <value>7, 171</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 18</value>
@@ -1461,7 +1659,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="pb_gender.Location" type="System.Drawing.Point, System.Drawing">
     <value>431, 6</value>
@@ -1482,7 +1680,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;pb_gender.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="label_ID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1509,7 +1707,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_ID.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="label_surename.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1536,7 +1734,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_surename.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="label_name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1563,7 +1761,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label_name.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1968,7 +2166,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>81</value>
+    <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

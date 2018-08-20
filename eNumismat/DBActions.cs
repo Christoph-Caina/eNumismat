@@ -4,7 +4,7 @@ using System.Data.SQLite;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.IO;
-
+using System.Linq;
 
 namespace eNumismat
 {
@@ -396,6 +396,59 @@ namespace eNumismat
                         dbConnection.Dispose();
 
                         return SwapListDetails;
+                    }
+                }
+            }
+        }
+
+        /*public List<string> GetAutoFill()
+        {
+            string AutoCompleteDBFile = Path.Combine(Globals.AppDataPath, @"AutoComplete.db");
+
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + AutoCompleteDBFile))
+            {
+                //  string connstr = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename =\"D:dbusers.mdf\"; Integrated Security = True";
+                //  SQLiteConnection conn = new SQLiteConnection(connstr);
+
+                string[] restrictions = new string[4] { null, null, "addnewitem", null };
+                dbConnection.Open();
+                var columnList = dbConnection.GetSchema("Columns", restrictions).AsEnumerable().Select(s => s.Field<String>("Column_Name")).ToList();
+                return columnList;
+            }
+        }*/
+
+
+        
+        // GET DATA FROM AUTOCOMPLETE DB...
+        public DataTable GetAutoComplete(string table)
+        {
+            string AutoCompleteDBFile = Path.Combine(Globals.AppDataPath, @"AutoComplete.db");
+            //List<string> AutoFillValues = new List<string>();
+
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + AutoCompleteDBFile))
+            {
+                try
+                {
+                    dbConnection.Open();
+                }
+                catch (Exception ex)
+                { }
+
+                string SQL = "SELECT * FROM CITIES";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(SQL, dbConnection))
+                {
+                    //cmd.Parameters.AddWithValue("@table", table);
+
+                    using (SQLiteDataAdapter daAutoComplete = new SQLiteDataAdapter(cmd))
+                    {
+                        DataTable dtAutoFill = new DataTable();
+
+                        daAutoComplete.Fill(dtAutoFill);
+
+                        //daAutoComplete.Fill(dtAutoComplete);
+
+                        return dtAutoFill;
                     }
                 }
             }

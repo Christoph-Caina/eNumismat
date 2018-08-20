@@ -39,6 +39,9 @@
             this.Btn_CreateContact = new System.Windows.Forms.Button();
             this.Btn_DeleteContact = new System.Windows.Forms.Button();
             this.PanelEditContactDetails = new System.Windows.Forms.Panel();
+            this.cb_city = new System.Windows.Forms.ComboBox();
+            this.cb_bundesland = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.tb_zipcode = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Btn_Cancel = new System.Windows.Forms.Button();
@@ -61,13 +64,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_phone = new System.Windows.Forms.TextBox();
             this.tb_country = new System.Windows.Forms.TextBox();
-            this.tb_city = new System.Windows.Forms.TextBox();
             this.tb_street = new System.Windows.Forms.TextBox();
             this.tb_surename = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.PanelShowContactDetails = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label_region = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.rtb_notesDisplay = new System.Windows.Forms.RichTextBox();
             this.label_city = new System.Windows.Forms.Label();
@@ -202,6 +206,9 @@
             // 
             // PanelEditContactDetails
             // 
+            this.PanelEditContactDetails.Controls.Add(this.cb_city);
+            this.PanelEditContactDetails.Controls.Add(this.cb_bundesland);
+            this.PanelEditContactDetails.Controls.Add(this.label24);
             this.PanelEditContactDetails.Controls.Add(this.tb_zipcode);
             this.PanelEditContactDetails.Controls.Add(this.label12);
             this.PanelEditContactDetails.Controls.Add(this.Btn_Cancel);
@@ -224,15 +231,70 @@
             this.PanelEditContactDetails.Controls.Add(this.label1);
             this.PanelEditContactDetails.Controls.Add(this.tb_phone);
             this.PanelEditContactDetails.Controls.Add(this.tb_country);
-            this.PanelEditContactDetails.Controls.Add(this.tb_city);
             this.PanelEditContactDetails.Controls.Add(this.tb_street);
             this.PanelEditContactDetails.Controls.Add(this.tb_surename);
             this.PanelEditContactDetails.Controls.Add(this.tb_name);
             resources.ApplyResources(this.PanelEditContactDetails, "PanelEditContactDetails");
             this.PanelEditContactDetails.Name = "PanelEditContactDetails";
             // 
+            // cb_city
+            // 
+            this.cb_city.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_city.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_city.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_city, "cb_city");
+            this.cb_city.Name = "cb_city";
+            // 
+            // cb_bundesland
+            // 
+            this.cb_bundesland.AutoCompleteCustomSource.AddRange(new string[] {
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource1"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource2"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource3"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource4"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource5"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource6"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource7"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource8"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource9"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource10"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource11"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource12"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource13"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource14"),
+            resources.GetString("cb_bundesland.AutoCompleteCustomSource15")});
+            this.cb_bundesland.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_bundesland.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_bundesland.FormattingEnabled = true;
+            this.cb_bundesland.Items.AddRange(new object[] {
+            resources.GetString("cb_bundesland.Items"),
+            resources.GetString("cb_bundesland.Items1"),
+            resources.GetString("cb_bundesland.Items2"),
+            resources.GetString("cb_bundesland.Items3"),
+            resources.GetString("cb_bundesland.Items4"),
+            resources.GetString("cb_bundesland.Items5"),
+            resources.GetString("cb_bundesland.Items6"),
+            resources.GetString("cb_bundesland.Items7"),
+            resources.GetString("cb_bundesland.Items8"),
+            resources.GetString("cb_bundesland.Items9"),
+            resources.GetString("cb_bundesland.Items10"),
+            resources.GetString("cb_bundesland.Items11"),
+            resources.GetString("cb_bundesland.Items12"),
+            resources.GetString("cb_bundesland.Items13"),
+            resources.GetString("cb_bundesland.Items14"),
+            resources.GetString("cb_bundesland.Items15")});
+            resources.ApplyResources(this.cb_bundesland, "cb_bundesland");
+            this.cb_bundesland.Name = "cb_bundesland";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            // 
             // tb_zipcode
             // 
+            this.tb_zipcode.Culture = new System.Globalization.CultureInfo("");
             resources.ApplyResources(this.tb_zipcode, "tb_zipcode");
             this.tb_zipcode.Name = "tb_zipcode";
             // 
@@ -354,11 +416,6 @@
             resources.ApplyResources(this.tb_country, "tb_country");
             this.tb_country.Name = "tb_country";
             // 
-            // tb_city
-            // 
-            resources.ApplyResources(this.tb_city, "tb_city");
-            this.tb_city.Name = "tb_city";
-            // 
             // tb_street
             // 
             resources.ApplyResources(this.tb_street, "tb_street");
@@ -392,6 +449,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label_region);
+            this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.label20);
             this.tabPage1.Controls.Add(this.rtb_notesDisplay);
             this.tabPage1.Controls.Add(this.label_city);
@@ -416,6 +475,16 @@
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label_region
+            // 
+            resources.ApplyResources(this.label_region, "label_region");
+            this.label_region.Name = "label_region";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.Name = "label23";
             // 
             // label20
             // 
@@ -718,7 +787,6 @@
         private System.Windows.Forms.Panel PanelEditContactDetails;
         private System.Windows.Forms.TextBox tb_phone;
         private System.Windows.Forms.TextBox tb_country;
-        private System.Windows.Forms.TextBox tb_city;
         private System.Windows.Forms.TextBox tb_street;
         private System.Windows.Forms.TextBox tb_surename;
         private System.Windows.Forms.TextBox tb_name;
@@ -772,5 +840,10 @@
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox cb_city;
+        private System.Windows.Forms.ComboBox cb_bundesland;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label_region;
+        private System.Windows.Forms.Label label23;
     }
 }
