@@ -491,7 +491,7 @@ namespace eNumismat
         {
             if (Globals.UseAutoFillOnCities == true)
             {
-                if (cb_city.Text != null)
+                if (!string.IsNullOrEmpty(cb_city.Text))
                 {
                     foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES", cb_city.Text).Rows)
                     {
