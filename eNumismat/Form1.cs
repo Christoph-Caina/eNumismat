@@ -106,6 +106,7 @@ namespace eNumismat
                 deutschToolStripMenuItem.Checked = true;
                 englischToolStripMenuItem.Checked = false;
                 französischToolStripMenuItem.Checked = false;
+                españolToolStripMenuItem.Checked = false;
                 toolStripStatusLabel2.Image = Properties.Resources.flag_germany;
             }
             else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en")
@@ -113,6 +114,7 @@ namespace eNumismat
                 deutschToolStripMenuItem.Checked = false;
                 englischToolStripMenuItem.Checked = true;
                 französischToolStripMenuItem.Checked = false;
+                españolToolStripMenuItem.Checked = false;
                 toolStripStatusLabel2.Image = Properties.Resources.flag_usa;
             }
             else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr")
@@ -120,10 +122,23 @@ namespace eNumismat
                 deutschToolStripMenuItem.Checked = false;
                 englischToolStripMenuItem.Checked = false;
                 französischToolStripMenuItem.Checked = true;
+                españolToolStripMenuItem.Checked = false;
                 toolStripStatusLabel2.Image = Properties.Resources.flag_france;
+            }
+            else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "es")
+            {
+                deutschToolStripMenuItem.Checked = false;
+                englischToolStripMenuItem.Checked = false;
+                französischToolStripMenuItem.Checked = false;
+                españolToolStripMenuItem.Checked = true;
+                toolStripStatusLabel2.Image = null;
             }
             else
             {
+                deutschToolStripMenuItem.Checked = false;
+                englischToolStripMenuItem.Checked = false;
+                französischToolStripMenuItem.Checked = false;
+                españolToolStripMenuItem.Checked = false;
                 toolStripStatusLabel2.Image = null;
             }
 
@@ -409,6 +424,11 @@ namespace eNumismat
         private void französischToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayLanguage("set", "fr-FR");
+        }
+
+        private void españolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayLanguage("set", "es-ES");
         }
     }
 }

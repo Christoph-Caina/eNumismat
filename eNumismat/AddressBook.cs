@@ -152,6 +152,10 @@ namespace eNumismat
                     case "fr-FR":
                         ContactGender = "malé";
                         break;
+
+                    case "es-ES":
+                        ContactGender = "masculino";
+                        break;
                 }
             }
             else if (ContactDetails[3] == "female" && Globals.UICulture != "en-US")
@@ -164,6 +168,10 @@ namespace eNumismat
 
                     case "fr-FR":
                         ContactGender = "femelle";
+                        break;
+
+                    case "es-ES":
+                        ContactGender = "hembra";
                         break;
                 }
             }
@@ -405,18 +413,36 @@ namespace eNumismat
                 birthdate = dtp_birthdate.Value.ToString("yyyy-MM-dd");
             }
 
-            if (cb_gender.Text == "männlich" || cb_gender.SelectedItem.ToString() == "männlich" || cb_gender.Text == "mâle" || cb_gender.SelectedItem.ToString() == "mâle")
+            switch(cb_gender.Text)
             {
-                gender = "male";
+                case "hembra":
+                case "weiblich":
+                case "femelle":
+                    gender = "female";
+                    break;
+
+                case "masculino":
+                case "männlich":
+                case "mâle":
+                    gender = "male";
+                    break;
+
+                default:
+                    gender = cb_gender.SelectedItem.ToString();
+                    break;
             }
-            else if (cb_gender.Text == "weiblich" || cb_gender.SelectedItem.ToString() == "weiblich" || cb_gender.Text == "femelle" || cb_gender.SelectedItem.ToString() == "femelle")
-            {
-                gender = "female";
-            }
-            else
-            {
-                gender = cb_gender.SelectedItem.ToString();
-            }
+            //if (cb_gender.Text == "männlich" || cb_gender.SelectedItem.ToString() == "männlich" || cb_gender.Text == "mâle" || cb_gender.SelectedItem.ToString() == "mâle" )
+            //{
+            //    gender = "male";
+            //}
+            //else if (cb_gender.Text == "weiblich" || cb_gender.SelectedItem.ToString() == "weiblich" || cb_gender.Text == "femelle" || cb_gender.SelectedItem.ToString() == "femelle")
+            //{
+            //    gender = "female";
+            //}
+            //else
+            //{
+                
+            //}
 
             List<string> DBContactDetails = new List<string>
             {

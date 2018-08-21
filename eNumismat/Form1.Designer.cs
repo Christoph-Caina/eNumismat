@@ -191,6 +191,7 @@
             // 
             resources.ApplyResources(this.españolToolStripMenuItem, "españolToolStripMenuItem");
             this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
+            this.españolToolStripMenuItem.Click += new System.EventHandler(this.españolToolStripMenuItem_Click);
             // 
             // ExtrasToolStripMenuItem
             // 
