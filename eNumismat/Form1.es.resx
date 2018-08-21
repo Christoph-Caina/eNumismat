@@ -160,20 +160,38 @@
   <data name="dateiToolStripMenuItem.Text" xml:space="preserve">
     <value>Archivar</value>
   </data>
+  <data name="einstellungenBearbeitenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
+  </data>
   <data name="einstellungenBearbeitenToolStripMenuItem.Text" xml:space="preserve">
     <value>Cambiar ajustes</value>
+  </data>
+  <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
   </data>
   <data name="deutschToolStripMenuItem.Text" xml:space="preserve">
     <value>Alemán</value>
   </data>
+  <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
   <data name="englischToolStripMenuItem.Text" xml:space="preserve">
     <value>Inglés</value>
+  </data>
+  <data name="französischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
   </data>
   <data name="französischToolStripMenuItem.Text" xml:space="preserve">
     <value>Francés</value>
   </data>
+  <data name="españolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
   <data name="españolToolStripMenuItem.Text" xml:space="preserve">
     <value>Español</value>
+  </data>
+  <data name="spracheÄndernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
   </data>
   <data name="spracheÄndernToolStripMenuItem.Text" xml:space="preserve">
     <value>Cambiar idioma</value>
@@ -204,6 +222,9 @@
   </data>
   <data name="hilfeZuENumismatToolStripMenuItem.Text" xml:space="preserve">
     <value>Ayuda</value>
+  </data>
+  <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 17</value>
   </data>
   <data name="TrayIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -124,11 +124,14 @@
   <data name="cb_AutoFillCities.Text" xml:space="preserve">
     <value>Verwende AutoFill für Städte</value>
   </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 49</value>
+  <data name="cb_AutoFillCities.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>AutoFill ist derzeit nur für deutsche Städte und Bundesländer verfügbar.</value>
+  </data>
+  <data name="label6.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="cb_AutoFillFedStates.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 17</value>
@@ -136,14 +139,35 @@
   <data name="cb_AutoFillFedStates.Text" xml:space="preserve">
     <value>Verwende AutoFill für Bundesländer</value>
   </data>
+  <data name="cb_AutoFillFedStates.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cb_languageSelection.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="cb_MinimizeToTray.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 17</value>
   </data>
   <data name="cb_MinimizeToTray.Text" xml:space="preserve">
     <value>In den Tray minimieren</value>
   </data>
+  <data name="cb_MinimizeToTray.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Programmeinstellungen</value>
+  </data>
+  <data name="tabPage1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="cb_DbBackUpOnAppExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 17</value>
@@ -151,22 +175,70 @@
   <data name="cb_DbBackUpOnAppExit.Text" xml:space="preserve">
     <value>Datenbank beim Beenden sichern</value>
   </data>
+  <data name="cb_DbBackUpOnAppExit.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="cb_DbCompressionBeforeBackup.Size" type="System.Drawing.Size, System.Drawing">
     <value>222, 17</value>
   </data>
   <data name="cb_DbCompressionBeforeBackup.Text" xml:space="preserve">
     <value>Datenbank vor dem sichern komprimieren</value>
   </data>
+  <data name="cb_DbCompressionBeforeBackup.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 328</value>
+  </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Datenbankeinstellungen</value>
   </data>
-  <data name="btn_Cancel.Text" xml:space="preserve">
+  <data name="tabPage2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btn_Cancel.ToolTip" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
-  <data name="btn_Save.Text" xml:space="preserve">
+  <data name="btn_Save.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKpSURBVDhPpZPrS1NhHMf9O3a2HVOQQEYUIkgItVdB
+        IrFpNhTzsixNd/dK24xhMy3KyHkZI6W0zFKrzTmzqVObW1PKxGVHCTH3pgvVhtHFvj3nQJsWBNGLz3Oe
+        5/D7fH/nOc85cQD+iz9uFPkOJObP7NfnetKYrEd7w5KHorDElcxInMn6TPvuxN/rdywKvOlSmSc1pPPI
+        cD1owcBKD0f3UivKXEcg7qdD4j5aut2JTkhXafZESuTyvBHOtUHYXlyBab6ag5071gbQPFuDfTZBJNUm
+        iIZwQ54nLSHbnbLBymxhXaACVf4yaGZPQUeoJNT6TsP+6g7OT1dBZOFviK7yE6IBMneKQTWew3VmZVZU
+        eU9AMVMMxXQR1NPFcK8Pw+BVwkFC8vsOIekS3xANyHooYrqDrbAGW1DlK4XysZyIhVBOETyFmHjtImVA
+        KLKOjmfNsM03I76Rz0QDDtuTNu+t3kR9QAOtt4Q8yRCW3i9ANVmM8fURTv6+9Q0dTy/AMFmKgWA3hEZq
+        MxogvktvDq70wuhXod6vxccvHzjp3ec33JWVLXONULtyoXefxGCwC8K67QF9NHNtoQWdixehm5LD7KtF
+        5OsnTt76sQXLk3OocOZAQwLaAg3o9JpB11CxLaTfEBrkQxmwr95G7aQcavdxNMxUYvntIjrmmlA+fBQK
+        xzHonHmwv+xFpvUg6Goq9hJTrYKEPeRozB4N7jO3UD1WAO1oHlQjMigdLKyciwfLPTCOlEKo5m3Qaip2
+        jCzJLXxpfBMVMbkr4CAh7QEz9GMlODMqRzvZgp3IemcJBOW8CJF3fki/2NXEl9ImKiTpEqPTb0b/cyv6
+        F6yweE3IaEuHUMEL0aqYzLIjgIU+y0+kDZSerqMYoZYXFqp4YdKRIejpcurvP9O/g7ifZ9Cs5cpWSooA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btn_Save.ToolTip" xml:space="preserve">
     <value>Speichern</value>
+  </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Einstellungen</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

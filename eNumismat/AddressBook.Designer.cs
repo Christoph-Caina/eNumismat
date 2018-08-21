@@ -138,32 +138,28 @@
             // 
             // splitContainer1.Panel1
             // 
-            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
             this.splitContainer1.Panel1.Controls.Add(this.panel2);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
-            this.toolTip1.SetToolTip(this.splitContainer1.Panel1, resources.GetString("splitContainer1.Panel1.ToolTip"));
             // 
             // splitContainer1.Panel2
             // 
-            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             this.splitContainer1.Panel2.Controls.Add(this.PanelEditContactDetails);
             this.splitContainer1.Panel2.Controls.Add(this.PanelShowContactDetails);
-            this.toolTip1.SetToolTip(this.splitContainer1.Panel2, resources.GetString("splitContainer1.Panel2.ToolTip"));
-            this.toolTip1.SetToolTip(this.splitContainer1, resources.GetString("splitContainer1.ToolTip"));
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.treeView1);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.toolTip1.SetToolTip(this.panel2, resources.GetString("panel2.ToolTip"));
             // 
             // treeView1
             // 
             resources.ApplyResources(this.treeView1, "treeView1");
+            this.treeView1.FullRowSelect = true;
             this.treeView1.ImageList = this.imageList1;
             this.treeView1.Name = "treeView1";
-            this.toolTip1.SetToolTip(this.treeView1, resources.GetString("treeView1.ToolTip"));
+            this.treeView1.ShowLines = false;
+            this.treeView1.ShowRootLines = false;
             this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.TreeView1_BeforeSelect);
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1_AfterSelect);
             // 
@@ -178,12 +174,11 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.Btn_UpdateContact);
             this.panel1.Controls.Add(this.Btn_CreateContact);
             this.panel1.Controls.Add(this.Btn_DeleteContact);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.toolTip1.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             // 
             // Btn_UpdateContact
             // 
@@ -214,7 +209,6 @@
             // 
             // PanelEditContactDetails
             // 
-            resources.ApplyResources(this.PanelEditContactDetails, "PanelEditContactDetails");
             this.PanelEditContactDetails.Controls.Add(this.cb_city);
             this.PanelEditContactDetails.Controls.Add(this.cb_bundesland);
             this.PanelEditContactDetails.Controls.Add(this.label24);
@@ -243,45 +237,40 @@
             this.PanelEditContactDetails.Controls.Add(this.tb_street);
             this.PanelEditContactDetails.Controls.Add(this.tb_surename);
             this.PanelEditContactDetails.Controls.Add(this.tb_name);
+            resources.ApplyResources(this.PanelEditContactDetails, "PanelEditContactDetails");
             this.PanelEditContactDetails.Name = "PanelEditContactDetails";
-            this.toolTip1.SetToolTip(this.PanelEditContactDetails, resources.GetString("PanelEditContactDetails.ToolTip"));
             // 
             // cb_city
             // 
-            resources.ApplyResources(this.cb_city, "cb_city");
             this.cb_city.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_city.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_city.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_city, "cb_city");
             this.cb_city.Name = "cb_city";
-            this.toolTip1.SetToolTip(this.cb_city, resources.GetString("cb_city.ToolTip"));
             // 
             // cb_bundesland
             // 
-            resources.ApplyResources(this.cb_bundesland, "cb_bundesland");
             this.cb_bundesland.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_bundesland.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_bundesland.FormattingEnabled = true;
+            resources.ApplyResources(this.cb_bundesland, "cb_bundesland");
             this.cb_bundesland.Name = "cb_bundesland";
-            this.toolTip1.SetToolTip(this.cb_bundesland, resources.GetString("cb_bundesland.ToolTip"));
             // 
             // label24
             // 
             resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
-            this.toolTip1.SetToolTip(this.label24, resources.GetString("label24.ToolTip"));
             // 
             // tb_zipcode
             // 
-            resources.ApplyResources(this.tb_zipcode, "tb_zipcode");
             this.tb_zipcode.Culture = new System.Globalization.CultureInfo("");
+            resources.ApplyResources(this.tb_zipcode, "tb_zipcode");
             this.tb_zipcode.Name = "tb_zipcode";
-            this.toolTip1.SetToolTip(this.tb_zipcode, resources.GetString("tb_zipcode.ToolTip"));
             // 
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.toolTip1.SetToolTip(this.label12, resources.GetString("label12.ToolTip"));
             // 
             // Btn_Cancel
             // 
@@ -305,154 +294,130 @@
             // 
             resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.toolTip1.SetToolTip(this.label11, resources.GetString("label11.ToolTip"));
             // 
             // rtb_notes
             // 
             resources.ApplyResources(this.rtb_notes, "rtb_notes");
             this.rtb_notes.Name = "rtb_notes";
-            this.toolTip1.SetToolTip(this.rtb_notes, resources.GetString("rtb_notes.ToolTip"));
             // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.toolTip1.SetToolTip(this.label10, resources.GetString("label10.ToolTip"));
             // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.toolTip1.SetToolTip(this.label9, resources.GetString("label9.ToolTip"));
             // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.toolTip1.SetToolTip(this.label8, resources.GetString("label8.ToolTip"));
             // 
             // tb_mail
             // 
             resources.ApplyResources(this.tb_mail, "tb_mail");
             this.tb_mail.Name = "tb_mail";
-            this.toolTip1.SetToolTip(this.tb_mail, resources.GetString("tb_mail.ToolTip"));
             // 
             // tb_mobile
             // 
             resources.ApplyResources(this.tb_mobile, "tb_mobile");
             this.tb_mobile.Name = "tb_mobile";
-            this.toolTip1.SetToolTip(this.tb_mobile, resources.GetString("tb_mobile.ToolTip"));
             // 
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.toolTip1.SetToolTip(this.label7, resources.GetString("label7.ToolTip"));
             // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.toolTip1.SetToolTip(this.label6, resources.GetString("label6.ToolTip"));
             // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.toolTip1.SetToolTip(this.label5, resources.GetString("label5.ToolTip"));
             // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.toolTip1.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
             // 
             // dtp_birthdate
             // 
             resources.ApplyResources(this.dtp_birthdate, "dtp_birthdate");
             this.dtp_birthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_birthdate.Name = "dtp_birthdate";
-            this.toolTip1.SetToolTip(this.dtp_birthdate, resources.GetString("dtp_birthdate.ToolTip"));
             // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // cb_gender
             // 
-            resources.ApplyResources(this.cb_gender, "cb_gender");
             this.cb_gender.FormattingEnabled = true;
             this.cb_gender.Items.AddRange(new object[] {
             resources.GetString("cb_gender.Items"),
             resources.GetString("cb_gender.Items1")});
+            resources.ApplyResources(this.cb_gender, "cb_gender");
             this.cb_gender.Name = "cb_gender";
-            this.toolTip1.SetToolTip(this.cb_gender, resources.GetString("cb_gender.ToolTip"));
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // tb_phone
             // 
             resources.ApplyResources(this.tb_phone, "tb_phone");
             this.tb_phone.Name = "tb_phone";
-            this.toolTip1.SetToolTip(this.tb_phone, resources.GetString("tb_phone.ToolTip"));
             // 
             // tb_country
             // 
             resources.ApplyResources(this.tb_country, "tb_country");
             this.tb_country.Name = "tb_country";
-            this.toolTip1.SetToolTip(this.tb_country, resources.GetString("tb_country.ToolTip"));
             // 
             // tb_street
             // 
             resources.ApplyResources(this.tb_street, "tb_street");
             this.tb_street.Name = "tb_street";
-            this.toolTip1.SetToolTip(this.tb_street, resources.GetString("tb_street.ToolTip"));
             // 
             // tb_surename
             // 
             resources.ApplyResources(this.tb_surename, "tb_surename");
             this.tb_surename.Name = "tb_surename";
-            this.toolTip1.SetToolTip(this.tb_surename, resources.GetString("tb_surename.ToolTip"));
             this.tb_surename.TextChanged += new System.EventHandler(this.TbSurename_TextChanged);
             // 
             // tb_name
             // 
             resources.ApplyResources(this.tb_name, "tb_name");
             this.tb_name.Name = "tb_name";
-            this.toolTip1.SetToolTip(this.tb_name, resources.GetString("tb_name.ToolTip"));
             this.tb_name.TextChanged += new System.EventHandler(this.TbName_TextChanged);
             // 
             // PanelShowContactDetails
             // 
-            resources.ApplyResources(this.PanelShowContactDetails, "PanelShowContactDetails");
             this.PanelShowContactDetails.Controls.Add(this.tabControl1);
+            resources.ApplyResources(this.PanelShowContactDetails, "PanelShowContactDetails");
             this.PanelShowContactDetails.Name = "PanelShowContactDetails";
-            this.toolTip1.SetToolTip(this.PanelShowContactDetails, resources.GetString("PanelShowContactDetails.ToolTip"));
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.toolTip1.SetToolTip(this.tabControl1, resources.GetString("tabControl1.ToolTip"));
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.label_region);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.label20);
@@ -476,292 +441,264 @@
             this.tabPage1.Controls.Add(this.label_ID);
             this.tabPage1.Controls.Add(this.label_surename);
             this.tabPage1.Controls.Add(this.label_name);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
-            this.toolTip1.SetToolTip(this.tabPage1, resources.GetString("tabPage1.ToolTip"));
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label_region
             // 
             resources.ApplyResources(this.label_region, "label_region");
             this.label_region.Name = "label_region";
-            this.toolTip1.SetToolTip(this.label_region, resources.GetString("label_region.ToolTip"));
             // 
             // label23
             // 
             resources.ApplyResources(this.label23, "label23");
             this.label23.Name = "label23";
-            this.toolTip1.SetToolTip(this.label23, resources.GetString("label23.ToolTip"));
             // 
             // label20
             // 
             resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
-            this.toolTip1.SetToolTip(this.label20, resources.GetString("label20.ToolTip"));
             // 
             // rtb_notesDisplay
             // 
             resources.ApplyResources(this.rtb_notesDisplay, "rtb_notesDisplay");
             this.rtb_notesDisplay.Name = "rtb_notesDisplay";
-            this.toolTip1.SetToolTip(this.rtb_notesDisplay, resources.GetString("rtb_notesDisplay.ToolTip"));
             // 
             // label_city
             // 
             resources.ApplyResources(this.label_city, "label_city");
             this.label_city.Name = "label_city";
-            this.toolTip1.SetToolTip(this.label_city, resources.GetString("label_city.ToolTip"));
             // 
             // label13
             // 
             resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
-            this.toolTip1.SetToolTip(this.label13, resources.GetString("label13.ToolTip"));
             // 
             // label_mail
             // 
             resources.ApplyResources(this.label_mail, "label_mail");
             this.label_mail.Name = "label_mail";
-            this.toolTip1.SetToolTip(this.label_mail, resources.GetString("label_mail.ToolTip"));
             // 
             // label14
             // 
             resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.toolTip1.SetToolTip(this.label14, resources.GetString("label14.ToolTip"));
             // 
             // label_zip
             // 
             resources.ApplyResources(this.label_zip, "label_zip");
             this.label_zip.Name = "label_zip";
-            this.toolTip1.SetToolTip(this.label_zip, resources.GetString("label_zip.ToolTip"));
             // 
             // label15
             // 
             resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.toolTip1.SetToolTip(this.label15, resources.GetString("label15.ToolTip"));
             // 
             // label_country
             // 
             resources.ApplyResources(this.label_country, "label_country");
             this.label_country.Name = "label_country";
-            this.toolTip1.SetToolTip(this.label_country, resources.GetString("label_country.ToolTip"));
             // 
             // label16
             // 
             resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
-            this.toolTip1.SetToolTip(this.label16, resources.GetString("label16.ToolTip"));
             // 
             // label_mobile
             // 
             resources.ApplyResources(this.label_mobile, "label_mobile");
             this.label_mobile.Name = "label_mobile";
-            this.toolTip1.SetToolTip(this.label_mobile, resources.GetString("label_mobile.ToolTip"));
             // 
             // label17
             // 
             resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            this.toolTip1.SetToolTip(this.label17, resources.GetString("label17.ToolTip"));
             // 
             // label_street
             // 
             resources.ApplyResources(this.label_street, "label_street");
             this.label_street.Name = "label_street";
-            this.toolTip1.SetToolTip(this.label_street, resources.GetString("label_street.ToolTip"));
             // 
             // label_birthdate
             // 
             resources.ApplyResources(this.label_birthdate, "label_birthdate");
             this.label_birthdate.Name = "label_birthdate";
-            this.toolTip1.SetToolTip(this.label_birthdate, resources.GetString("label_birthdate.ToolTip"));
             // 
             // label18
             // 
             resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            this.toolTip1.SetToolTip(this.label18, resources.GetString("label18.ToolTip"));
             // 
             // label_phone
             // 
             resources.ApplyResources(this.label_phone, "label_phone");
             this.label_phone.Name = "label_phone";
-            this.toolTip1.SetToolTip(this.label_phone, resources.GetString("label_phone.ToolTip"));
             // 
             // label19
             // 
             resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
-            this.toolTip1.SetToolTip(this.label19, resources.GetString("label19.ToolTip"));
             // 
             // pb_gender
             // 
             resources.ApplyResources(this.pb_gender, "pb_gender");
             this.pb_gender.Name = "pb_gender";
             this.pb_gender.TabStop = false;
-            this.toolTip1.SetToolTip(this.pb_gender, resources.GetString("pb_gender.ToolTip"));
             // 
             // label_ID
             // 
             resources.ApplyResources(this.label_ID, "label_ID");
             this.label_ID.Name = "label_ID";
-            this.toolTip1.SetToolTip(this.label_ID, resources.GetString("label_ID.ToolTip"));
             // 
             // label_surename
             // 
             resources.ApplyResources(this.label_surename, "label_surename");
             this.label_surename.Name = "label_surename";
-            this.toolTip1.SetToolTip(this.label_surename, resources.GetString("label_surename.ToolTip"));
             // 
             // label_name
             // 
             resources.ApplyResources(this.label_name, "label_name");
             this.label_name.Name = "label_name";
-            this.toolTip1.SetToolTip(this.label_name, resources.GetString("label_name.ToolTip"));
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.AddSwap);
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.listView2);
             this.tabPage2.Controls.Add(this.listView1);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
-            this.toolTip1.SetToolTip(this.tabPage2, resources.GetString("tabPage2.ToolTip"));
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // AddSwap
             // 
             resources.ApplyResources(this.AddSwap, "AddSwap");
             this.AddSwap.Name = "AddSwap";
-            this.toolTip1.SetToolTip(this.AddSwap, resources.GetString("AddSwap.ToolTip"));
             this.AddSwap.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
             resources.ApplyResources(this.label22, "label22");
             this.label22.Name = "label22";
-            this.toolTip1.SetToolTip(this.label22, resources.GetString("label22.ToolTip"));
             // 
             // label21
             // 
             resources.ApplyResources(this.label21, "label21");
             this.label21.Name = "label21";
-            this.toolTip1.SetToolTip(this.label21, resources.GetString("label21.ToolTip"));
             // 
             // listView2
             // 
-            resources.ApplyResources(this.listView2, "listView2");
             this.listView2.FullRowSelect = true;
+            resources.ApplyResources(this.listView2, "listView2");
             this.listView2.Name = "listView2";
-            this.toolTip1.SetToolTip(this.listView2, resources.GetString("listView2.ToolTip"));
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // listView1
             // 
-            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.FullRowSelect = true;
+            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
-            this.toolTip1.SetToolTip(this.listView1, resources.GetString("listView1.ToolTip"));
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // statusStrip1
             // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
-            this.toolTip1.SetToolTip(this.statusStrip1, resources.GetString("statusStrip1.ToolTip"));
             // 
             // toolStripStatusLabel1
             // 
-            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adressenToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
-            this.toolTip1.SetToolTip(this.menuStrip1, resources.GetString("menuStrip1.ToolTip"));
             // 
             // adressenToolStripMenuItem
             // 
-            resources.ApplyResources(this.adressenToolStripMenuItem, "adressenToolStripMenuItem");
             this.adressenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.neuToolStripMenuItem,
             this.toolStripSeparator1,
             this.kontaktImportierenToolStripMenuItem,
             this.kontaktExportierenToolStripMenuItem});
             this.adressenToolStripMenuItem.Name = "adressenToolStripMenuItem";
+            resources.ApplyResources(this.adressenToolStripMenuItem, "adressenToolStripMenuItem");
             // 
             // neuToolStripMenuItem
             // 
-            resources.ApplyResources(this.neuToolStripMenuItem, "neuToolStripMenuItem");
             this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
+            resources.ApplyResources(this.neuToolStripMenuItem, "neuToolStripMenuItem");
             this.neuToolStripMenuItem.Click += new System.EventHandler(this.NeuToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // kontaktImportierenToolStripMenuItem
             // 
-            resources.ApplyResources(this.kontaktImportierenToolStripMenuItem, "kontaktImportierenToolStripMenuItem");
             this.kontaktImportierenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vCardToolStripMenuItem,
             this.windowsCONTACTToolStripMenuItem,
             this.outlookToolStripMenuItem});
+            resources.ApplyResources(this.kontaktImportierenToolStripMenuItem, "kontaktImportierenToolStripMenuItem");
             this.kontaktImportierenToolStripMenuItem.Name = "kontaktImportierenToolStripMenuItem";
             // 
             // vCardToolStripMenuItem
             // 
-            resources.ApplyResources(this.vCardToolStripMenuItem, "vCardToolStripMenuItem");
             this.vCardToolStripMenuItem.Name = "vCardToolStripMenuItem";
+            resources.ApplyResources(this.vCardToolStripMenuItem, "vCardToolStripMenuItem");
             // 
             // windowsCONTACTToolStripMenuItem
             // 
-            resources.ApplyResources(this.windowsCONTACTToolStripMenuItem, "windowsCONTACTToolStripMenuItem");
             this.windowsCONTACTToolStripMenuItem.Name = "windowsCONTACTToolStripMenuItem";
+            resources.ApplyResources(this.windowsCONTACTToolStripMenuItem, "windowsCONTACTToolStripMenuItem");
             // 
             // outlookToolStripMenuItem
             // 
-            resources.ApplyResources(this.outlookToolStripMenuItem, "outlookToolStripMenuItem");
             this.outlookToolStripMenuItem.Name = "outlookToolStripMenuItem";
+            resources.ApplyResources(this.outlookToolStripMenuItem, "outlookToolStripMenuItem");
             // 
             // kontaktExportierenToolStripMenuItem
             // 
-            resources.ApplyResources(this.kontaktExportierenToolStripMenuItem, "kontaktExportierenToolStripMenuItem");
             this.kontaktExportierenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vCardvcfToolStripMenuItem,
             this.windowsKontaktcontactToolStripMenuItem,
             this.microsoftOutlookToolStripMenuItem});
+            resources.ApplyResources(this.kontaktExportierenToolStripMenuItem, "kontaktExportierenToolStripMenuItem");
             this.kontaktExportierenToolStripMenuItem.Name = "kontaktExportierenToolStripMenuItem";
             // 
             // vCardvcfToolStripMenuItem
             // 
-            resources.ApplyResources(this.vCardvcfToolStripMenuItem, "vCardvcfToolStripMenuItem");
             this.vCardvcfToolStripMenuItem.Name = "vCardvcfToolStripMenuItem";
+            resources.ApplyResources(this.vCardvcfToolStripMenuItem, "vCardvcfToolStripMenuItem");
             // 
             // windowsKontaktcontactToolStripMenuItem
             // 
-            resources.ApplyResources(this.windowsKontaktcontactToolStripMenuItem, "windowsKontaktcontactToolStripMenuItem");
             this.windowsKontaktcontactToolStripMenuItem.Name = "windowsKontaktcontactToolStripMenuItem";
+            resources.ApplyResources(this.windowsKontaktcontactToolStripMenuItem, "windowsKontaktcontactToolStripMenuItem");
             // 
             // microsoftOutlookToolStripMenuItem
             // 
-            resources.ApplyResources(this.microsoftOutlookToolStripMenuItem, "microsoftOutlookToolStripMenuItem");
             this.microsoftOutlookToolStripMenuItem.Name = "microsoftOutlookToolStripMenuItem";
+            resources.ApplyResources(this.microsoftOutlookToolStripMenuItem, "microsoftOutlookToolStripMenuItem");
             // 
             // AddressBook
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -769,7 +706,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AddressBook";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Load += new System.EventHandler(this.AddressBook_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

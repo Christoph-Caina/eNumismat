@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsDialog));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -48,6 +49,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,6 +64,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
+            this.toolTip1.SetToolTip(this.tabControl1, resources.GetString("tabControl1.ToolTip"));
             // 
             // tabPage1
             // 
@@ -71,6 +74,7 @@
             this.tabPage1.Controls.Add(this.cb_languageSelection);
             this.tabPage1.Controls.Add(this.cb_MinimizeToTray);
             this.tabPage1.Name = "tabPage1";
+            this.toolTip1.SetToolTip(this.tabPage1, resources.GetString("tabPage1.ToolTip"));
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -81,11 +85,13 @@
             this.groupBox1.Controls.Add(this.cb_AutoFillFedStates);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.groupBox1, resources.GetString("groupBox1.ToolTip"));
             // 
             // cb_AutoFillCities
             // 
             resources.ApplyResources(this.cb_AutoFillCities, "cb_AutoFillCities");
             this.cb_AutoFillCities.Name = "cb_AutoFillCities";
+            this.toolTip1.SetToolTip(this.cb_AutoFillCities, resources.GetString("cb_AutoFillCities.ToolTip"));
             this.cb_AutoFillCities.UseVisualStyleBackColor = true;
             // 
             // label6
@@ -94,28 +100,33 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Name = "label6";
+            this.toolTip1.SetToolTip(this.label6, resources.GetString("label6.ToolTip"));
             // 
             // cb_AutoFillFedStates
             // 
             resources.ApplyResources(this.cb_AutoFillFedStates, "cb_AutoFillFedStates");
             this.cb_AutoFillFedStates.Name = "cb_AutoFillFedStates";
+            this.toolTip1.SetToolTip(this.cb_AutoFillFedStates, resources.GetString("cb_AutoFillFedStates.ToolTip"));
             this.cb_AutoFillFedStates.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
+            this.toolTip1.SetToolTip(this.label5, resources.GetString("label5.ToolTip"));
             // 
             // cb_languageSelection
             // 
             resources.ApplyResources(this.cb_languageSelection, "cb_languageSelection");
             this.cb_languageSelection.FormattingEnabled = true;
             this.cb_languageSelection.Name = "cb_languageSelection";
+            this.toolTip1.SetToolTip(this.cb_languageSelection, resources.GetString("cb_languageSelection.ToolTip"));
             // 
             // cb_MinimizeToTray
             // 
             resources.ApplyResources(this.cb_MinimizeToTray, "cb_MinimizeToTray");
             this.cb_MinimizeToTray.Name = "cb_MinimizeToTray";
+            this.toolTip1.SetToolTip(this.cb_MinimizeToTray, resources.GetString("cb_MinimizeToTray.ToolTip"));
             this.cb_MinimizeToTray.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -128,39 +139,46 @@
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Name = "tabPage2";
+            this.toolTip1.SetToolTip(this.tabPage2, resources.GetString("tabPage2.ToolTip"));
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
+            this.toolTip1.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
             // 
             // cb_DbBackUpOnAppExit
             // 
             resources.ApplyResources(this.cb_DbBackUpOnAppExit, "cb_DbBackUpOnAppExit");
             this.cb_DbBackUpOnAppExit.Name = "cb_DbBackUpOnAppExit";
+            this.toolTip1.SetToolTip(this.cb_DbBackUpOnAppExit, resources.GetString("cb_DbBackUpOnAppExit.ToolTip"));
             this.cb_DbBackUpOnAppExit.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
+            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // cb_DbCompressionBeforeBackup
             // 
             resources.ApplyResources(this.cb_DbCompressionBeforeBackup, "cb_DbCompressionBeforeBackup");
             this.cb_DbCompressionBeforeBackup.Name = "cb_DbCompressionBeforeBackup";
+            this.toolTip1.SetToolTip(this.cb_DbCompressionBeforeBackup, resources.GetString("cb_DbCompressionBeforeBackup.ToolTip"));
             this.cb_DbCompressionBeforeBackup.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
+            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // panel1
             // 
@@ -168,18 +186,22 @@
             this.panel1.Controls.Add(this.btn_Cancel);
             this.panel1.Controls.Add(this.btn_Save);
             this.panel1.Name = "panel1";
+            this.toolTip1.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             // 
             // btn_Cancel
             // 
             resources.ApplyResources(this.btn_Cancel, "btn_Cancel");
             this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Cancel.Image = global::eNumismat.Properties.Resources.cancel;
             this.btn_Cancel.Name = "btn_Cancel";
+            this.toolTip1.SetToolTip(this.btn_Cancel, resources.GetString("btn_Cancel.ToolTip"));
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
             // btn_Save
             // 
             resources.ApplyResources(this.btn_Save, "btn_Save");
             this.btn_Save.Name = "btn_Save";
+            this.toolTip1.SetToolTip(this.btn_Save, resources.GetString("btn_Save.ToolTip"));
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -188,11 +210,13 @@
             this.AcceptButton = this.btn_Save;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btn_Cancel;
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SettingsDialog";
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Load += new System.EventHandler(this.SettingsDialog_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -226,5 +250,6 @@
         private System.Windows.Forms.CheckBox cb_AutoFillCities;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

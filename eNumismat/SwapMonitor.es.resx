@@ -131,7 +131,7 @@
     <value>Monedas recibidas</value>
   </data>
   <data name="newSwapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>176, 22</value>
   </data>
   <data name="newSwapToolStripMenuItem.Text" xml:space="preserve">
     <value>Nuevo intercambio</value>

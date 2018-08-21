@@ -117,7 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Paramètres de l'application</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 328</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Paramètres de base de données</value>
+  </data>
   <data name="cb_AutoFillCities.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 17</value>
   </data>
@@ -144,9 +153,6 @@
   </data>
   <data name="cb_MinimizeToTray.Text" xml:space="preserve">
     <value>Réduire au plateau</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Paramètres de l'application</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>77, 108</value>
@@ -181,13 +187,10 @@
   <data name="label1.Text" xml:space="preserve">
     <value>DB fichier:</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Paramètres de base de données</value>
-  </data>
-  <data name="btn_Cancel.Text" xml:space="preserve">
+  <data name="btn_Cancel.ToolTip" xml:space="preserve">
     <value>Annuler</value>
   </data>
-  <data name="btn_Save.Text" xml:space="preserve">
+  <data name="btn_Save.ToolTip" xml:space="preserve">
     <value>Sauvegarder</value>
   </data>
 </root>
