@@ -402,7 +402,7 @@ namespace eNumismat
         }
         
         // GET DATA FROM AUTOCOMPLETE DB...
-        public DataTable GetAutoComplete(string table, string searchtext = null)
+        public DataTable GetAutoComplete(string table, string searchtext=null)
         {
             string AutoCompleteDBFile = Path.Combine(Globals.AppDataPath, @"AutoComplete.db");
 
@@ -415,11 +415,11 @@ namespace eNumismat
                 catch (Exception ex)
                 { }
 
-                string SQL = "SELECT names FROM `" + table +"`";
+                string SQL = "SELECT names FROM `" + table +"` WHERE `names` LIKE @search";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(SQL, dbConnection))
                 {
-                    //cmd.Parameters.AddWithValue("@search", searchtext + "%");
+                    cmd.Parameters.AddWithValue("@search", searchtext + "%");
 
                     using (SQLiteDataAdapter daAutoComplete = new SQLiteDataAdapter(cmd))
                     {

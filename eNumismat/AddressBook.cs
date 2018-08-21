@@ -7,13 +7,15 @@ using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Threading;
 using System.Globalization;
+using System.ComponentModel;
 
 namespace eNumismat
 {
     public partial class AddressBook : Form
     {
         private List<TreeNode> _unselectableNodes = new List<TreeNode>();
-
+        List<string> AutoFillCities = new List<string>();
+        List<string> AutoFillFederalStates = new List<string>();
 
         int ContactID = 0;
 
@@ -23,8 +25,6 @@ namespace eNumismat
         public AddressBook()
         {
             InitializeComponent();
-
-            
         }
 
         //=====================================================================================================================================================================
@@ -36,6 +36,35 @@ namespace eNumismat
                 Controls.Clear();
                 InitializeComponent();
             }
+
+            BackgroundWorker bw = new BackgroundWorker();
+
+            bw.DoWork += new DoWorkEventHandler(delegate
+                (object o, DoWorkEventArgs args)
+            {
+                if (Globals.UseAutoFillOnCities == true)
+                {
+                    //if (cb_city.Text != null) ;
+                    //{
+                        //foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
+                        //{
+                            //AutoFillCities.Add(AutoFillItems[0].ToString());
+                        //}
+                        //cb_city.DataSource = AutoFillCities;
+                    //}
+                }
+
+                if (Globals.UseAutoFillOnFederalStates == true)
+                {
+                    //foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
+                    //{
+                     //   AutoFillFederalStates.Add(AutoFillItems[0].ToString());
+                    //}
+                    //cb_bundesland.DataSource = AutoFillFederalStates;
+                }
+            });
+
+            bw.RunWorkerAsync();
 
             GenerateAdrBookForm();
         }
@@ -75,26 +104,10 @@ namespace eNumismat
         {
             DataTable _ContactDetails = new DataTable();
             List<string> ContactDetails = new List<string>();
-            List<string> AutoFillCities = new List<string>();
-            List<string> AutoFillFederalStates = new List<string>();
 
-            if (Globals.UseAutoFillOnCities == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
-                {
-                    AutoFillCities.Add(AutoFillItems[0].ToString());
-                }
-                cb_city.DataSource = AutoFillCities;
-            }
 
-            if (Globals.UseAutoFillOnFederalStates == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
-                {
-                    AutoFillFederalStates.Add(AutoFillItems[0].ToString());
-                }
-                cb_bundesland.DataSource = AutoFillFederalStates;
-            }
+            
+
 
             if (ContactName == null && ContactId == 0)
             {
@@ -472,6 +485,23 @@ namespace eNumismat
             return true;
         }
 
+        
+
+        private void cb_City_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Globals.UseAutoFillOnCities == true)
+            {
+                if (cb_city.Text != null)
+                {
+                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES", cb_city.Text).Rows)
+                    {
+                        AutoFillCities.Add(AutoFillItems[0].ToString());
+
+                    }
+                    cb_city.DataSource = AutoFillCities;
+                }
+            }
+        }
         //
         //=====================================================================================================================================================================
         //=====================================================================================================================================================================

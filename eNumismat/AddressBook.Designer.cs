@@ -239,11 +239,12 @@
             // 
             // cb_city
             // 
-            this.cb_city.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_city.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cb_city.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_city.FormattingEnabled = true;
             resources.ApplyResources(this.cb_city, "cb_city");
             this.cb_city.Name = "cb_city";
+            this.cb_city.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cb_City_KeyDown);
             // 
             // cb_bundesland
             // 
