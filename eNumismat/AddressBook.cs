@@ -37,31 +37,34 @@ namespace eNumismat
                 InitializeComponent();
             }
 
-            BackgroundWorker bw = new BackgroundWorker();
-
-            bw.DoWork += new DoWorkEventHandler(delegate
-                (object o, DoWorkEventArgs args)
+            if (Globals.UseAutoFillOnCities == true)
             {
-                if (Globals.UseAutoFillOnCities == true)
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES", cb_city.Text).Rows)
                 {
-                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
-                    { 
-                        AutoFillCities.Add(AutoFillItems[0].ToString());
-                    }
-                    cb_city.DataSource = AutoFillCities;
+                    AutoFillCities.Add(AutoFillItems[0].ToString());
                 }
 
-                if (Globals.UseAutoFillOnFederalStates == true)
+                foreach (string item in AutoFillCities)
                 {
-                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
-                    {
-                        AutoFillFederalStates.Add(AutoFillItems[0].ToString());
-                    }
-                    cb_bundesland.DataSource = AutoFillFederalStates;
+                    cb_city.AutoCompleteCustomSource.Add(item);
                 }
-            });
 
-            bw.RunWorkerAsync();
+                cb_city.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            }
+
+            if (Globals.UseAutoFillOnFederalStates == true)
+            {
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES", cb_bundesland.Text).Rows)
+                {
+                    AutoFillFederalStates.Add(AutoFillItems[0].ToString());
+                }
+
+                foreach (string item in AutoFillFederalStates)
+                {
+                    cb_bundesland.AutoCompleteCustomSource.Add(item);
+                }
+                cb_bundesland.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            }
 
             GenerateAdrBookForm();
         }
@@ -480,13 +483,6 @@ namespace eNumismat
                 return false;
             }
             return true;
-        }
-
-        
-
-        private void cb_City_KeyDown(object sender, KeyEventArgs e)
-        {
-            
         }
         //
         //=====================================================================================================================================================================
