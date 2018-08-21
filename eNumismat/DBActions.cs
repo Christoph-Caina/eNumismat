@@ -400,27 +400,9 @@ namespace eNumismat
                 }
             }
         }
-
-        /*public List<string> GetAutoFill()
-        {
-            string AutoCompleteDBFile = Path.Combine(Globals.AppDataPath, @"AutoComplete.db");
-
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + AutoCompleteDBFile))
-            {
-                //  string connstr = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename =\"D:dbusers.mdf\"; Integrated Security = True";
-                //  SQLiteConnection conn = new SQLiteConnection(connstr);
-
-                string[] restrictions = new string[4] { null, null, "addnewitem", null };
-                dbConnection.Open();
-                var columnList = dbConnection.GetSchema("Columns", restrictions).AsEnumerable().Select(s => s.Field<String>("Column_Name")).ToList();
-                return columnList;
-            }
-        }*/
-
-
         
         // GET DATA FROM AUTOCOMPLETE DB...
-        public DataTable GetAutoComplete(string table, string searchtext)
+        public DataTable GetAutoComplete(string table, string searchtext = null)
         {
             string AutoCompleteDBFile = Path.Combine(Globals.AppDataPath, @"AutoComplete.db");
 
@@ -433,12 +415,11 @@ namespace eNumismat
                 catch (Exception ex)
                 { }
 
-                string SQL = "SELECT names FROM `" + table +"` where names LIKE @search";
+                string SQL = "SELECT * FROM `" + table +"`";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(SQL, dbConnection))
                 {
-                    cmd.Parameters.AddWithValue("@search", searchtext + "%");
-                    //MessageBox.Show(table);
+                    //cmd.Parameters.AddWithValue("@search", searchtext + "%");
 
                     using (SQLiteDataAdapter daAutoComplete = new SQLiteDataAdapter(cmd))
                     {
