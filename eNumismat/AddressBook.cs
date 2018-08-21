@@ -25,6 +25,8 @@ namespace eNumismat
         {
             InitializeComponent();
 
+            // Get AutoFill Data for Cities
+            // Only if Parameter is set to true
             if (Globals.UseAutoFillOnCities == true)
             {
                 foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
@@ -34,6 +36,8 @@ namespace eNumismat
                 cb_city.DataSource = AutoFillCities;
             }
 
+            // Get AutoFill Data for Federal States
+            // Only if Parameter is set to true
             if (Globals.UseAutoFillOnFederalStates == true)
             {
                 foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
@@ -47,6 +51,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void AddressBook_Load(object sender, EventArgs e)
         {
+            // Change DisplayLanguage to user-defined language if parameter is not set to null
             if (Globals.UICulture != null)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Globals.UICulture);
@@ -54,12 +59,14 @@ namespace eNumismat
                 InitializeComponent();
             }
 
+            // Genereate the AddressBook Form
             GenerateAdrBookForm();
         }
 
         //=====================================================================================================================================================================
         private void GenerateAdrBookForm(string[] ContactName = null, int ContactId = 0)
         {
+            // Get Count over all Contacts in the Database and show the String in the StatusStrip
             int ContactCounter = GetContactsCount();
 
             if (ContactCounter == 0)
@@ -90,6 +97,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void LoadContactMain(string Type, string[] ContactName = null, int ContactId = 0)
         {
+            // Load ContactData from the Database
             DataTable _ContactDetails = new DataTable();
             List<string> ContactDetails = new List<string>();
 
@@ -123,6 +131,7 @@ namespace eNumismat
                i++;
             }
 
+            // Convert gender "male" and "female" into the translated value for the selected CultureInfo
             string ContactGender = null;
 
             if (ContactDetails[3] == "male" && Globals.UICulture != "en-US")
@@ -134,7 +143,7 @@ namespace eNumismat
                         break;
 
                     case "fr-FR":
-                        ContactGender = "malé";
+                        ContactGender = "mâle";
                         break;
                 }
             }
@@ -172,6 +181,8 @@ namespace eNumismat
                     cb_gender.SelectedItem = ContactGender;
                     cb_gender.Text = ContactGender;
 
+                    // Birthdate should always be displayed in the current date/time format settings f.e. 1980/01/01 or 01.01.80 or 1.Jan.80
+                    // And: if the DB value for birthday is NULL, we will display 01.01.1900 since the datetimepicker needs a valid date time value and can't be null.
                     if (!string.IsNullOrEmpty(ContactDetails[4]))
                     {
                         dtp_birthdate.Value = Convert.ToDateTime(ContactDetails[4]);
@@ -184,12 +195,14 @@ namespace eNumismat
                     tb_street.Text = ContactDetails[5];
                     tb_zipcode.Text = ContactDetails[6];
                     
+                    // if AutoFill for cities is set to true, load the data into the Items List
                     if(AutoFillCities.Contains(ContactDetails[7]))
                     {
                         cb_city.SelectedItem = ContactDetails[7];
                         cb_city.Text = ContactDetails[7];
                     }
 
+                    // if AutoFill for FederalStates is set to true, load the data into the Item List
                     if (AutoFillFederalStates.Contains(ContactDetails[8]))
                     {
                         cb_bundesland.SelectedItem = ContactDetails[8];
@@ -207,21 +220,12 @@ namespace eNumismat
                     tb_name.Text = null;
                     tb_surename.Text = null;
                     cb_gender.Text = null;
+                    // the initial Value for the DTP should be 01.01.1900 since it can't be null - and we don't want to use the "current" date for the default birthday date :)
                     dtp_birthdate.Text = Convert.ToDateTime("01.01.1900").ToString("d");
                     tb_street.Text = null;
                     tb_zipcode.Text = null;
                     cb_city.Text = null;
-
-                    //foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("cities").Rows)
-                    //{
-                        //AutoFillCities.Add(AutoFillItems[1].ToString());
-                    //}
-                    //cb_city.DataSource = AutoFillCities;
-
                     cb_bundesland.Text = null;
-
-                    //cb_bundesland.DataSource = AutoFillFederalStates;
-
                     tb_country.Text = null;
                     tb_phone.Text = null;
                     tb_mobile.Text = null;
@@ -247,8 +251,9 @@ namespace eNumismat
                     label_name.Text = ContactDetails[1];
                     label_surename.Text = ContactDetails[2];
 
-                    if (!String.IsNullOrEmpty(ContactDetails[4]))
+                    if (!string.IsNullOrEmpty(ContactDetails[4]))
                     {
+                        // Convert the Birthday value into the DateTime Format the System is using
                         label_birthdate.Text = Convert.ToDateTime(ContactDetails[4]).ToString("d");
                     }
                     else
@@ -266,6 +271,7 @@ namespace eNumismat
                     label_mail.Text = ContactDetails[12];
                     rtb_notesDisplay.Text = ContactDetails[13];
 
+                    // Load the Image depending on the gender
                     if (ContactDetails[3] == "male")
                     {
                         pb_gender.BackgroundImage = Properties.Resources.male;
@@ -291,6 +297,8 @@ namespace eNumismat
             treeView1.Nodes.Clear();
             TreeNode parents = null;
 
+            // load the Parent Nodes from the DB and count the Items in this node:
+            // C [2] -> 2 Contacts, Name starts with "C"
             foreach (DataRow drParents in dbAction.GetContacts("parents").Rows)
             {
                 parents = treeView1.Nodes.Add(drParents[1].ToString() + " [" + drParents[0] + "]");
@@ -306,6 +314,7 @@ namespace eNumismat
         {
             TreeNode childs;
 
+            // Select the child nodes -> Load our Contacts List
             string[] Nodes = parentNode.ToString().Split(' ');
 
             foreach (DataRow drChilds in dbAction.GetContacts("childs", Nodes[1]).Rows)
@@ -336,6 +345,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void TreeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)
         {
+            // Parent Node can't be selectable
             if (_unselectableNodes.Contains(e.Node))
             {
                 e.Cancel = true;
@@ -345,6 +355,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            // we need to know, what we want to display - so we need the selected name, surename for our db request
             string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
             LoadContactMain("view", names);
         }
@@ -352,6 +363,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Btn_CreateContact_Click(object sender, EventArgs e)
         {
+            // New contact should be created
             ContactID = 0;
             LoadContactMain("new");
         }
@@ -359,6 +371,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void NeuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // New contact should be created
             ContactID = 0;
             LoadContactMain("new");
         }
@@ -366,12 +379,14 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Btn_UpdateContact_Click(object sender, EventArgs e)
         {
+            // existing contact should be edited
             LoadContactMain("edit", null, ContactID);
         }
 
         //=====================================================================================================================================================================
         private void Btn_DeleteContact_Click(object sender, EventArgs e)
         {
+            // selected contact should be deleted
             if (dbAction.DeleteContact(null, ContactID))
             {
                 GenerateAdrBookForm();
@@ -384,11 +399,15 @@ namespace eNumismat
             string birthdate = null;
             string gender = null;
 
+            // Convert the Birthdate value into one predefined string for the Database.
+            // this will make sure, that we will always have the same format stored in our Database and it does not matter, if the user will change the DateTime Format during the runtime or later
             if(dtp_birthdate.Value.ToString("yyyy-MM-dd") != "1900-01-01")
             {
                 birthdate = dtp_birthdate.Value.ToString("yyyy-MM-dd");
             }
 
+            // We should save also the gender in one predefined string (english)
+            // -> this will make sure, that we are alsways able to use the gender Items in the translated values (male -> männlich, männlich -> mâle, etc.)
             if (cb_gender.Text == "männlich" || cb_gender.SelectedItem.ToString() == "männlich" || cb_gender.Text == "mâle" || cb_gender.SelectedItem.ToString() == "mâle")
             {
                 gender = "male";
@@ -402,6 +421,7 @@ namespace eNumismat
                 gender = cb_gender.SelectedItem.ToString();
             }
 
+            // we load all values from the formular into a List
             List<string> DBContactDetails = new List<string>
             {
                 tb_name.Text,
@@ -421,6 +441,7 @@ namespace eNumismat
 
             string[] names = { tb_name.Text, tb_surename.Text };
 
+            // now, we're checking if tb_name and tb_surename are not empty
             if (ValidateTextInputs() == true)
             {
                 if (dbAction.CreateOrUpdateContact(DBContactDetails, ContactID))
@@ -433,25 +454,29 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
+            // reset and abort insertion -> show the normal contact form
             LoadContactMain("view", null, ContactID);
         }
 
         //=====================================================================================================================================================================
         private void TbName_TextChanged(object sender, EventArgs e)
         {
+            // reset the BackColor of tb_name if the user starts input after a failed validation
             tb_name.BackColor = Color.White;
         }
 
         //=====================================================================================================================================================================
         private void TbSurename_TextChanged(object sender, EventArgs e)
         {
+            // reset the BackColor of tb_surename if the user starts input after a failed validation
             tb_surename.BackColor = Color.White;
         }
 
         //=====================================================================================================================================================================
         private bool ValidateTextInputs()
         {
-            if (String.IsNullOrEmpty(tb_name.Text))
+            // Validate tb_name
+            if (string.IsNullOrEmpty(tb_name.Text))
             {
                 MessageBox.Show(GlobalStrings._addrBook_Validation_Name);
                 tb_name.BackColor = Color.MistyRose;
@@ -459,13 +484,20 @@ namespace eNumismat
                 return false;
             }
 
-            if (String.IsNullOrEmpty(tb_surename.Text))
+            // Validate tb_surename
+            if (string.IsNullOrEmpty(tb_surename.Text))
             {
                 MessageBox.Show(GlobalStrings._addrBook_Validation_SureName);
                 tb_surename.BackColor = Color.MistyRose;
                 tb_surename.Select();
                 return false;
             }
+
+            // maybe, we need to implement more validation checks:
+            // --> it is not clear, if we can continue with the masked_text_box for the ZipCode, since it does not support AutoFill / Suggestions
+            // --> validate, if the typed ZipCode is valid for Germany
+            // --> validate, if the ZipCode and City will match
+            // --> validate, if the City and the FederalState will match
             return true;
         }
 
@@ -473,6 +505,10 @@ namespace eNumismat
         //=====================================================================================================================================================================
         //=====================================================================================================================================================================
         //
+
+        // Disabled Contact Export to Outlook.
+        // right now it is not clear, how the software behaves, if no MS-Outlook is installed
+        // also, it would be nice to support also other Email-clients but supporting all different types and detecting what is installed on the client system will break the scope of the software
 
         // Outlook-Test
         //=====================================================================================================================================================================
