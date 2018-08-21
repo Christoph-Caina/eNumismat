@@ -44,23 +44,20 @@ namespace eNumismat
             {
                 if (Globals.UseAutoFillOnCities == true)
                 {
-                    //if (cb_city.Text != null) ;
-                    //{
-                        //foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
-                        //{
-                            //AutoFillCities.Add(AutoFillItems[0].ToString());
-                        //}
-                        //cb_city.DataSource = AutoFillCities;
-                    //}
+                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
+                    { 
+                        AutoFillCities.Add(AutoFillItems[0].ToString());
+                    }
+                    cb_city.DataSource = AutoFillCities;
                 }
 
                 if (Globals.UseAutoFillOnFederalStates == true)
                 {
-                    //foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
-                    //{
-                     //   AutoFillFederalStates.Add(AutoFillItems[0].ToString());
-                    //}
-                    //cb_bundesland.DataSource = AutoFillFederalStates;
+                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
+                    {
+                        AutoFillFederalStates.Add(AutoFillItems[0].ToString());
+                    }
+                    cb_bundesland.DataSource = AutoFillFederalStates;
                 }
             });
 
@@ -489,18 +486,7 @@ namespace eNumismat
 
         private void cb_City_KeyDown(object sender, KeyEventArgs e)
         {
-            if (Globals.UseAutoFillOnCities == true)
-            {
-                if (!string.IsNullOrEmpty(cb_city.Text))
-                {
-                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES", cb_city.Text).Rows)
-                    {
-                        AutoFillCities.Add(AutoFillItems[0].ToString());
-
-                    }
-                    cb_city.DataSource = AutoFillCities;
-                }
-            }
+            
         }
         //
         //=====================================================================================================================================================================
