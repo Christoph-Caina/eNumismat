@@ -120,7 +120,40 @@ namespace eNumismat
                     ContactDetails.Add(drDetails[i].ToString());
                 }
 
-                i++;
+               i++;
+            }
+
+            string ContactGender = null;
+
+            if (ContactDetails[3] == "male" && Globals.UICulture != "en-US")
+            {
+                switch (Globals.UICulture)
+                {
+                    case "de-DE":
+                        ContactGender = "männlich";
+                        break;
+
+                    case "fr-FR":
+                        ContactGender = "malé";
+                        break;
+                }
+            }
+            else if (ContactDetails[3] == "female" && Globals.UICulture != "en-US")
+            {
+                switch (Globals.UICulture)
+                {
+                    case "de-DE":
+                        ContactGender = "weiblich";
+                        break;
+
+                    case "fr-FR":
+                        ContactGender = "femelle";
+                        break;
+                }
+            }
+            else
+            {
+                ContactGender = ContactDetails[3];
             }
 
             if (Type == "new" || Type == "edit")
@@ -136,9 +169,10 @@ namespace eNumismat
                     tb_name.Text = ContactDetails[1];
                     tb_surename.Text = ContactDetails[2];
 
-                    cb_gender.Text = ContactDetails[3];
+                    cb_gender.SelectedItem = ContactGender;
+                    cb_gender.Text = ContactGender;
 
-                    if (!String.IsNullOrEmpty(ContactDetails[4]))
+                    if (!string.IsNullOrEmpty(ContactDetails[4]))
                     {
                         dtp_birthdate.Value = Convert.ToDateTime(ContactDetails[4]);
                     }
@@ -161,9 +195,6 @@ namespace eNumismat
                         cb_bundesland.SelectedItem = ContactDetails[8];
                         cb_bundesland.Text = ContactDetails[8];
                     }
-
-                    //neu hinzugefügt - IDs passen jetzt nicht mehr!
-
 
                     tb_country.Text = ContactDetails[9];
                     tb_phone.Text = ContactDetails[10];
