@@ -10,8 +10,6 @@ namespace eNumismat
 {
     class FileBackup
     {
-        ResourceManager res_man;
-
         //=====================================================================================================================================================================
         private bool CheckBackupDir()
         {
@@ -36,8 +34,6 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public bool ExcecuteBackup()
         {
-            res_man = new ResourceManager(Assembly.GetCallingAssembly().EntryPoint.DeclaringType.Namespace.ToString() + "." + CultureInfo.CurrentUICulture.ThreeLetterISOLanguageName, Assembly.GetExecutingAssembly());
-
             if (CheckBackupDir())
             {
                 string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
