@@ -2,9 +2,6 @@
 using System.Data.SQLite;
 using System.IO;
 using System.Windows.Forms;
-using System.Globalization;
-using System.Resources;
-using System.Reflection;
 
 namespace eNumismat
 {

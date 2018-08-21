@@ -118,6 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cb_AutoFillCities.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 17</value>
+  </data>
+  <data name="cb_AutoFillCities.Text" xml:space="preserve">
+    <value>Verwende AutoFill für Städte</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>AutoFill ist derzeit nur für deutsche Städte und Bundesländer verfügbar.
+Das Adressbuch wird aufgrund der großen Datenmenge langsamer.</value>
+  </data>
+  <data name="cb_AutoFillFedStates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 17</value>
+  </data>
+  <data name="cb_AutoFillFedStates.Text" xml:space="preserve">
+    <value>Verwende AutoFill für Bundesländer</value>
+  </data>
   <data name="cb_MinimizeToTray.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 17</value>
   </data>
