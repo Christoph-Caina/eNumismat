@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Globalization;
 
-
 namespace eNumismat
 {
     public partial class SettingsDialog : Form
@@ -157,24 +156,6 @@ namespace eNumismat
             }
 
             this.Hide();
-        }
-
-        //=====================================================================================================================================================================
-        private void cb_MinimizeToTray_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        //=====================================================================================================================================================================
-        private void cb_DbBackUpOnAppExit_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //=====================================================================================================================================================================
-        private void cb_DbCompressionBeforeBackup_CheckedChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

@@ -156,8 +156,7 @@
     <value>2</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>AutoFill is currently only available for German Cities and Federal States.
-It will also slow dow the Addressbook due to the huge amount of data.</value>
+    <value>AutoFill is currently only available for German Cities and Federal States.</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Path:</value>
@@ -533,7 +532,7 @@ It will also slow dow the Addressbook due to the huge amount of data.</value>
     <value>53, 85</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 72</value>
+    <value>275, 49</value>
   </data>
   <data name="cb_DbBackUpOnAppExit.Text" xml:space="preserve">
     <value>Backup DB on Application Close</value>
@@ -617,7 +616,7 @@ It will also slow dow the Addressbook due to the huge amount of data.</value>
     <value>AutoFill</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 71</value>
+    <value>6, 80</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

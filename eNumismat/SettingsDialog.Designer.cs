@@ -117,7 +117,6 @@
             resources.ApplyResources(this.cb_MinimizeToTray, "cb_MinimizeToTray");
             this.cb_MinimizeToTray.Name = "cb_MinimizeToTray";
             this.cb_MinimizeToTray.UseVisualStyleBackColor = true;
-            this.cb_MinimizeToTray.CheckedChanged += new System.EventHandler(this.cb_MinimizeToTray_CheckedChanged);
             // 
             // tabPage2
             // 
@@ -141,7 +140,6 @@
             resources.ApplyResources(this.cb_DbBackUpOnAppExit, "cb_DbBackUpOnAppExit");
             this.cb_DbBackUpOnAppExit.Name = "cb_DbBackUpOnAppExit";
             this.cb_DbBackUpOnAppExit.UseVisualStyleBackColor = true;
-            this.cb_DbBackUpOnAppExit.CheckedChanged += new System.EventHandler(this.cb_DbBackUpOnAppExit_CheckedChanged);
             // 
             // label3
             // 
@@ -153,7 +151,6 @@
             resources.ApplyResources(this.cb_DbCompressionBeforeBackup, "cb_DbCompressionBeforeBackup");
             this.cb_DbCompressionBeforeBackup.Name = "cb_DbCompressionBeforeBackup";
             this.cb_DbCompressionBeforeBackup.UseVisualStyleBackColor = true;
-            this.cb_DbCompressionBeforeBackup.CheckedChanged += new System.EventHandler(this.cb_DbCompressionBeforeBackup_CheckedChanged);
             // 
             // label2
             // 

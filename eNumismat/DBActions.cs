@@ -400,8 +400,9 @@ namespace eNumismat
                 }
             }
         }
-        
+
         // GET DATA FROM AUTOCOMPLETE DB...
+        //=====================================================================================================================================================================
         public DataTable GetAutoComplete(string table, string searchtext=null)
         {
             string AutoCompleteDBFile = Path.Combine(Globals.AppDataPath, @"AutoComplete.db");

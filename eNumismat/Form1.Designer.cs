@@ -169,27 +169,28 @@
             // deutschToolStripMenuItem
             // 
             resources.ApplyResources(this.deutschToolStripMenuItem, "deutschToolStripMenuItem");
-            this.deutschToolStripMenuItem.Image = global::eNumismat.Properties.Resources.flag_germany;
+            this.deutschToolStripMenuItem.Image = global::eNumismat.Properties.Resources.DE_Germany_Flag_icon;
             this.deutschToolStripMenuItem.Name = "deutschToolStripMenuItem";
             this.deutschToolStripMenuItem.Click += new System.EventHandler(this.deutschToolStripMenuItem_Click);
             // 
             // englischToolStripMenuItem
             // 
             resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
-            this.englischToolStripMenuItem.Image = global::eNumismat.Properties.Resources.flag_usa;
+            this.englischToolStripMenuItem.Image = global::eNumismat.Properties.Resources.US_United_States_Flag_icon;
             this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
             this.englischToolStripMenuItem.Click += new System.EventHandler(this.englischToolStripMenuItem_Click);
             // 
             // französischToolStripMenuItem
             // 
             resources.ApplyResources(this.französischToolStripMenuItem, "französischToolStripMenuItem");
-            this.französischToolStripMenuItem.Image = global::eNumismat.Properties.Resources.flag_france;
+            this.französischToolStripMenuItem.Image = global::eNumismat.Properties.Resources.FR_France_Flag_icon;
             this.französischToolStripMenuItem.Name = "französischToolStripMenuItem";
             this.französischToolStripMenuItem.Click += new System.EventHandler(this.französischToolStripMenuItem_Click);
             // 
             // españolToolStripMenuItem
             // 
             resources.ApplyResources(this.españolToolStripMenuItem, "españolToolStripMenuItem");
+            this.españolToolStripMenuItem.Image = global::eNumismat.Properties.Resources.ES_Spain_Flag_icon;
             this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
             this.españolToolStripMenuItem.Click += new System.EventHandler(this.españolToolStripMenuItem_Click);
             // 
@@ -260,7 +261,6 @@
             // toolStripStatusLabel2
             // 
             resources.ApplyResources(this.toolStripStatusLabel2, "toolStripStatusLabel2");
-            this.toolStripStatusLabel2.Image = global::eNumismat.Properties.Resources.flag_usa;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             // 
             // toolStripStatusLabel1

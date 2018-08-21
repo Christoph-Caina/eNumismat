@@ -107,7 +107,7 @@ namespace eNumismat
                 englischToolStripMenuItem.Checked = false;
                 französischToolStripMenuItem.Checked = false;
                 españolToolStripMenuItem.Checked = false;
-                toolStripStatusLabel2.Image = Properties.Resources.flag_germany;
+                toolStripStatusLabel2.Image = Properties.Resources.DE_Germany_Flag_icon;
             }
             else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en")
             {
@@ -115,7 +115,7 @@ namespace eNumismat
                 englischToolStripMenuItem.Checked = true;
                 französischToolStripMenuItem.Checked = false;
                 españolToolStripMenuItem.Checked = false;
-                toolStripStatusLabel2.Image = Properties.Resources.flag_usa;
+                toolStripStatusLabel2.Image = Properties.Resources.US_United_States_Flag_icon;
             }
             else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr")
             {
@@ -123,7 +123,7 @@ namespace eNumismat
                 englischToolStripMenuItem.Checked = false;
                 französischToolStripMenuItem.Checked = true;
                 españolToolStripMenuItem.Checked = false;
-                toolStripStatusLabel2.Image = Properties.Resources.flag_france;
+                toolStripStatusLabel2.Image = Properties.Resources.FR_France_Flag_icon;
             }
             else if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "es")
             {
@@ -131,7 +131,7 @@ namespace eNumismat
                 englischToolStripMenuItem.Checked = false;
                 französischToolStripMenuItem.Checked = false;
                 españolToolStripMenuItem.Checked = true;
-                toolStripStatusLabel2.Image = null;
+                toolStripStatusLabel2.Image = Properties.Resources.ES_Spain_Flag_icon;
             }
             else
             {
@@ -411,21 +411,25 @@ namespace eNumismat
             }
         }
 
+        //=====================================================================================================================================================================
         private void deutschToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayLanguage("set", "de-DE");
         }
 
+        //=====================================================================================================================================================================
         private void englischToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayLanguage("set", "en-US");
         }
 
+        //=====================================================================================================================================================================
         private void französischToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayLanguage("set", "fr-FR");
         }
 
+        //=====================================================================================================================================================================
         private void españolToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayLanguage("set", "es-ES");

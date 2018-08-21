@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Globalization;
+using System.Reflection;
 
 namespace eNumismat
 {
@@ -26,7 +27,24 @@ namespace eNumismat
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Globals.UICulture);
                 Controls.Clear();
                 InitializeComponent();
+
+                label1.Text = AssemblyCopyright;
             }
         }
+
+        public string AssemblyCopyright
+        {
+            get
+            {
+                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
+                if (attributes.Length == 0)
+                {
+                    return "";
+                }
+                return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
+            }
+        }
+
+
     }
 }

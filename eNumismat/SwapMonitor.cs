@@ -10,6 +10,8 @@ namespace eNumismat
 {
     public partial class SwapMonitor : Form
     {
+        private List<TreeNode> _unselectableNodes = new List<TreeNode>();
+
         DBActions dbAction;
 
         //=====================================================================================================================================================================
@@ -89,10 +91,7 @@ namespace eNumismat
 
             childs = parentNode.Nodes.Add(ChildNode);
             }
-        }
-
-        //=====================================================================================================================================================================
-        private List<TreeNode> _unselectableNodes = new List<TreeNode>();
+        }        
 
         //=====================================================================================================================================================================
         private void TreeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)

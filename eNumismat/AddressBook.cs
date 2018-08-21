@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Threading;
 using System.Globalization;
-using System.ComponentModel;
 
 namespace eNumismat
 {
@@ -104,10 +103,6 @@ namespace eNumismat
         {
             DataTable _ContactDetails = new DataTable();
             List<string> ContactDetails = new List<string>();
-
-
-            
-
 
             if (ContactName == null && ContactId == 0)
             {
@@ -235,17 +230,7 @@ namespace eNumismat
                     tb_street.Text = null;
                     tb_zipcode.Text = null;
                     cb_city.Text = null;
-
-                    //foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("cities").Rows)
-                    //{
-                    //AutoFillCities.Add(AutoFillItems[1].ToString());
-                    //}
-                    //cb_city.DataSource = AutoFillCities;
-
                     cb_bundesland.Text = null;
-
-                    //cb_bundesland.DataSource = AutoFillFederalStates;
-
                     tb_country.Text = null;
                     tb_phone.Text = null;
                     tb_mobile.Text = null;
@@ -431,18 +416,6 @@ namespace eNumismat
                     gender = cb_gender.SelectedItem.ToString();
                     break;
             }
-            //if (cb_gender.Text == "männlich" || cb_gender.SelectedItem.ToString() == "männlich" || cb_gender.Text == "mâle" || cb_gender.SelectedItem.ToString() == "mâle" )
-            //{
-            //    gender = "male";
-            //}
-            //else if (cb_gender.Text == "weiblich" || cb_gender.SelectedItem.ToString() == "weiblich" || cb_gender.Text == "femelle" || cb_gender.SelectedItem.ToString() == "femelle")
-            //{
-            //    gender = "female";
-            //}
-            //else
-            //{
-                
-            //}
 
             List<string> DBContactDetails = new List<string>
             {

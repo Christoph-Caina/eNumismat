@@ -124,9 +124,11 @@
   <data name="cb_AutoFillCities.Text" xml:space="preserve">
     <value>Verwende AutoFill für Städte</value>
   </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 49</value>
+  </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>AutoFill ist derzeit nur für deutsche Städte und Bundesländer verfügbar.
-Das Adressbuch wird aufgrund der großen Datenmenge langsamer.</value>
+    <value>AutoFill ist derzeit nur für deutsche Städte und Bundesländer verfügbar.</value>
   </data>
   <data name="cb_AutoFillFedStates.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 17</value>
