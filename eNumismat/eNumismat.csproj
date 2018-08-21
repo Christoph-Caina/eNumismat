@@ -121,6 +121,11 @@
     <Compile Include="Contact.cs" />
     <Compile Include="DBActions.cs" />
     <Compile Include="Globals.cs" />
+    <Compile Include="GlobalStrings.es.Designer.cs">
+      <DependentUpon>GlobalStrings.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="GlobalStrings.fr.Designer.cs">
       <DependentUpon>GlobalStrings.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -169,6 +174,9 @@
     <EmbeddedResource Include="About.de.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="About.es.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="About.fr.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +184,9 @@
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddressBook.de.resx">
+      <DependentUpon>AddressBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddressBook.es.resx">
       <DependentUpon>AddressBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddressBook.fr.resx">
@@ -187,11 +198,18 @@
     <EmbeddedResource Include="Form1.de.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.es.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.fr.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalStrings.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobalStrings.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="GlobalStrings.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -213,6 +231,9 @@
     <EmbeddedResource Include="SettingsDialog.de.resx">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsDialog.es.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SettingsDialog.fr.resx">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +241,9 @@
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SwapMonitor.de.resx">
+      <DependentUpon>SwapMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwapMonitor.es.resx">
       <DependentUpon>SwapMonitor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SwapMonitor.fr.resx">

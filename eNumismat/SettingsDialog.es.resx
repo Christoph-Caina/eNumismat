@@ -118,25 +118,59 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="cb_AutoFillCities.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 17</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>402, 409</value>
+  <data name="cb_AutoFillCities.Text" xml:space="preserve">
+    <value>Usar Autocompletar para ciudades</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Autocompletar actualmente solo está disponible para ciudades alemanas y estados federales.
+También ralentizará la agenda telefónica debido a la gran cantidad de datos.</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>About</value>
+  <data name="cb_AutoFillFedStates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 17</value>
+  </data>
+  <data name="cb_AutoFillFedStates.Text" xml:space="preserve">
+    <value>Use Autocompletar para estados federales</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Idioma actual:</value>
+  </data>
+  <data name="cb_MinimizeToTray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="cb_MinimizeToTray.Text" xml:space="preserve">
+    <value>Minimizar a la bandeja</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Configuraciones de la aplicación</value>
+  </data>
+  <data name="cb_DbBackUpOnAppExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 17</value>
+  </data>
+  <data name="cb_DbBackUpOnAppExit.Text" xml:space="preserve">
+    <value>Copia de seguridad de la base</value>
+  </data>
+  <data name="cb_DbCompressionBeforeBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 17</value>
+  </data>
+  <data name="cb_DbCompressionBeforeBackup.Text" xml:space="preserve">
+    <value>comprimir la base de datos antes de la copia de seguridad</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Configuración de la base</value>
+  </data>
+  <data name="btn_Cancel.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="btn_Save.Text" xml:space="preserve">
+    <value>Salvar</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>About</value>
+    <value>Configuraciones</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>es</value>
-  </metadata>
 </root>

@@ -55,10 +55,12 @@
             // 
             // splitContainer1.Panel1
             // 
+            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
             this.splitContainer1.Panel1.Controls.Add(this.treeView1);
             // 
             // splitContainer1.Panel2
             // 
+            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.listView2);
@@ -95,34 +97,34 @@
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.swapsToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // swapsToolStripMenuItem
             // 
+            resources.ApplyResources(this.swapsToolStripMenuItem, "swapsToolStripMenuItem");
             this.swapsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newSwapToolStripMenuItem});
             this.swapsToolStripMenuItem.Name = "swapsToolStripMenuItem";
-            resources.ApplyResources(this.swapsToolStripMenuItem, "swapsToolStripMenuItem");
             // 
             // newSwapToolStripMenuItem
             // 
-            this.newSwapToolStripMenuItem.Name = "newSwapToolStripMenuItem";
             resources.ApplyResources(this.newSwapToolStripMenuItem, "newSwapToolStripMenuItem");
+            this.newSwapToolStripMenuItem.Name = "newSwapToolStripMenuItem";
             // 
             // SwapMonitor
             // 

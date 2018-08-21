@@ -117,26 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="_addrBook_Validation_Name" xml:space="preserve">
+    <value>¡El campo "Nombre" no debe estar vacío!</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>402, 409</value>
+  <data name="_addrBook_Validation_SureName" xml:space="preserve">
+    <value>¡El campo "Primer Nombre" no puede estar vacío!</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="_contactAvailable" xml:space="preserve">
+    <value>Contacto disponible</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>About</value>
+  <data name="_contactsAvailable" xml:space="preserve">
+    <value>Contactos disponibles</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>About</value>
+  <data name="_dbBackup_BallonText" xml:space="preserve">
+    <value>¡La copia de seguridad fue exitosa!</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>es</value>
-  </metadata>
+  <data name="_dbBackup_BalloonTitle" xml:space="preserve">
+    <value>Copia de seguridad de base de datos</value>
+  </data>
+  <data name="_dbCompress_BallonText" xml:space="preserve">
+    <value>¡La compresión de la base de datos fue exitosa!</value>
+  </data>
+  <data name="_dbCompress_BalloonTitle" xml:space="preserve">
+    <value>Compresión de la base de datos</value>
+  </data>
+  <data name="_noDBconnected" xml:space="preserve">
+    <value>ninguna base de datos conectada</value>
+  </data>
+  <data name="_swapAvailable" xml:space="preserve">
+    <value>intercambio disponible</value>
+  </data>
+  <data name="_swapsAvailable" xml:space="preserve">
+    <value>intercambios disponibles</value>
+  </data>
 </root>
