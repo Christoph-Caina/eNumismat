@@ -244,6 +244,8 @@
             this.cb_city.FormattingEnabled = true;
             resources.ApplyResources(this.cb_city, "cb_city");
             this.cb_city.Name = "cb_city";
+            this.cb_city.TextChanged += new System.EventHandler(this.cb_City_TextChanged);
+            this.cb_city.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_City_KeyPress);
             // 
             // cb_bundesland
             // 

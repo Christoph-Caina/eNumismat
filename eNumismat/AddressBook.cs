@@ -25,27 +25,16 @@ namespace eNumismat
         {
             InitializeComponent();
 
-            // Get AutoFill Data for Cities
-            // Only if Parameter is set to true
-            if (Globals.UseAutoFillOnCities == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
-                {
-                    AutoFillCities.Add(AutoFillItems[1].ToString());
-                }
-                cb_city.DataSource = AutoFillCities;
-            }
-
             // Get AutoFill Data for Federal States
             // Only if Parameter is set to true
-            if (Globals.UseAutoFillOnFederalStates == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
-                {
-                    AutoFillFederalStates.Add(AutoFillItems[1].ToString());
-                }
-                cb_bundesland.DataSource = AutoFillFederalStates;
-            }
+            //if (Globals.UseAutoFillOnFederalStates == true)
+            //{
+            //    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
+            //    {
+            //        AutoFillFederalStates.Add(AutoFillItems[1].ToString());
+            //    }
+            //    cb_bundesland.DataSource = AutoFillFederalStates;
+            //}
         }
 
         //=====================================================================================================================================================================
@@ -196,18 +185,21 @@ namespace eNumismat
                     tb_zipcode.Text = ContactDetails[6];
                     
                     // if AutoFill for cities is set to true, load the data into the Items List
-                    if(AutoFillCities.Contains(ContactDetails[7]))
-                    {
-                        cb_city.SelectedItem = ContactDetails[7];
-                        cb_city.Text = ContactDetails[7];
-                    }
+                    //if(AutoFillCities.Contains(ContactDetails[7]))
+                    //{
+                        
+                    //}
+
+                    cb_city.SelectedItem = ContactDetails[7];
+                    cb_city.Text = ContactDetails[7];
 
                     // if AutoFill for FederalStates is set to true, load the data into the Item List
-                    if (AutoFillFederalStates.Contains(ContactDetails[8]))
-                    {
-                        cb_bundesland.SelectedItem = ContactDetails[8];
-                        cb_bundesland.Text = ContactDetails[8];
-                    }
+                    //if (AutoFillFederalStates.Contains(ContactDetails[8]))
+                    //{
+                        
+                    //}
+                    cb_bundesland.SelectedItem = ContactDetails[8];
+                    cb_bundesland.Text = ContactDetails[8];
 
                     tb_country.Text = ContactDetails[9];
                     tb_phone.Text = ContactDetails[10];
@@ -499,6 +491,32 @@ namespace eNumismat
             // --> validate, if the ZipCode and City will match
             // --> validate, if the City and the FederalState will match
             return true;
+        }
+
+        private void cb_City_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AutoFillCities.Clear();
+            // Get AutoFill Data for Cities
+            // Only if Parameter is set to true
+
+            if (Globals.UseAutoFillOnCities == true)
+            {
+                if (!string.IsNullOrEmpty(cb_city.Text))
+                {
+                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES", cb_city.Text).Rows)
+                    {
+                        AutoFillCities.Add(AutoFillItems[0].ToString());
+                    }
+                    cb_city.DataSource = AutoFillCities;
+
+                    //MessageBox.Show(cb_city.Text);
+                }
+            }
+        }
+
+        private void cb_City_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         //
