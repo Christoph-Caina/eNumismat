@@ -13,8 +13,7 @@ namespace eNumismat
     public partial class AddressBook : Form
     {
         private List<TreeNode> _unselectableNodes = new List<TreeNode>();
-        private List<string> AutoFillCities = new List<string>();
-        private List<string> AutoFillFederalStates = new List<string>();
+
 
         int ContactID = 0;
 
@@ -25,23 +24,7 @@ namespace eNumismat
         {
             InitializeComponent();
 
-            if (Globals.UseAutoFillOnCities == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
-                {
-                    AutoFillCities.Add(AutoFillItems[1].ToString());
-                }
-                cb_city.DataSource = AutoFillCities;
-            }
-
-            if (Globals.UseAutoFillOnFederalStates == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
-                {
-                    AutoFillFederalStates.Add(AutoFillItems[1].ToString());
-                }
-                cb_bundesland.DataSource = AutoFillFederalStates;
-            }
+            
         }
 
         //=====================================================================================================================================================================
@@ -92,6 +75,26 @@ namespace eNumismat
         {
             DataTable _ContactDetails = new DataTable();
             List<string> ContactDetails = new List<string>();
+            List<string> AutoFillCities = new List<string>();
+            List<string> AutoFillFederalStates = new List<string>();
+
+            if (Globals.UseAutoFillOnCities == true)
+            {
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES").Rows)
+                {
+                    AutoFillCities.Add(AutoFillItems[0].ToString());
+                }
+                cb_city.DataSource = AutoFillCities;
+            }
+
+            if (Globals.UseAutoFillOnFederalStates == true)
+            {
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES").Rows)
+                {
+                    AutoFillFederalStates.Add(AutoFillItems[0].ToString());
+                }
+                cb_bundesland.DataSource = AutoFillFederalStates;
+            }
 
             if (ContactName == null && ContactId == 0)
             {

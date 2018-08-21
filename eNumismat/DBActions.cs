@@ -415,7 +415,7 @@ namespace eNumismat
                 catch (Exception ex)
                 { }
 
-                string SQL = "SELECT * FROM `" + table +"`";
+                string SQL = "SELECT names FROM `" + table +"`";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(SQL, dbConnection))
                 {
