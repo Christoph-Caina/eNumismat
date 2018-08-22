@@ -10,7 +10,12 @@ namespace eNumismat
     class ConfigHandler
     {
         XmlDocument xConf;
-        string ConfFile = Path.Combine(Globals.AppDataPath, @"config.xml");
+        readonly string _ConfFile = Path.Combine(Globals.AppDataPath, @"config.xml");
+
+        public string GetConfFile()
+        {
+            return _ConfFile;
+        }
 
         //=====================================================================================================================================================================
         private bool CheckIfAppDataPathExists()
@@ -193,7 +198,7 @@ namespace eNumismat
         {
             xConf = new XmlDocument();
 
-            xConf.Load(ConfFile);
+            xConf.Load(GetConfFile());
 
             XmlNodeList ConfNode;
             XmlNode root = xConf.DocumentElement;
@@ -315,7 +320,7 @@ namespace eNumismat
 
             xConf = new XmlDocument();
 
-            xConf.Load(ConfFile);
+            xConf.Load(GetConfFile());
 
             XmlNode xConfNode = xConf.DocumentElement;
             xConfNode.SelectNodes("descendant::configuration");
@@ -372,7 +377,7 @@ namespace eNumismat
 
             try
             {
-                xConf.Save(ConfFile);
+                xConf.Save(GetConfFile());
             }
             catch (Exception ex)
             {

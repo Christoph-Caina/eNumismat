@@ -164,7 +164,7 @@
             this.btn_Save.Name = "btn_Save";
             this.toolTip1.SetToolTip(this.btn_Save, resources.GetString("btn_Save.ToolTip"));
             this.btn_Save.UseVisualStyleBackColor = true;
-            this.btn_Save.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Save.Click += new System.EventHandler(this.Button1_Click);
             // 
             // tabPage3
             // 
