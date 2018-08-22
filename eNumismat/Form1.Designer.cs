@@ -128,7 +128,7 @@
             resources.ApplyResources(this.datenbankKomprimierenToolStripMenuItem, "datenbankKomprimierenToolStripMenuItem");
             this.datenbankKomprimierenToolStripMenuItem.Image = global::eNumismat.Properties.Resources.compress;
             this.datenbankKomprimierenToolStripMenuItem.Name = "datenbankKomprimierenToolStripMenuItem";
-            this.datenbankKomprimierenToolStripMenuItem.Click += new System.EventHandler(this.datenbankKomprimierenToolStripMenuItem_Click);
+            this.datenbankKomprimierenToolStripMenuItem.Click += new System.EventHandler(this.DatenbankKomprimierenToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -172,28 +172,28 @@
             resources.ApplyResources(this.deutschToolStripMenuItem, "deutschToolStripMenuItem");
             this.deutschToolStripMenuItem.Image = global::eNumismat.Properties.Resources.DE_Germany_Flag_icon;
             this.deutschToolStripMenuItem.Name = "deutschToolStripMenuItem";
-            this.deutschToolStripMenuItem.Click += new System.EventHandler(this.deutschToolStripMenuItem_Click);
+            this.deutschToolStripMenuItem.Click += new System.EventHandler(this.DeutschToolStripMenuItem_Click);
             // 
             // englischToolStripMenuItem
             // 
             resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
             this.englischToolStripMenuItem.Image = global::eNumismat.Properties.Resources.US_United_States_Flag_icon;
             this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
-            this.englischToolStripMenuItem.Click += new System.EventHandler(this.englischToolStripMenuItem_Click);
+            this.englischToolStripMenuItem.Click += new System.EventHandler(this.EnglischToolStripMenuItem_Click);
             // 
             // französischToolStripMenuItem
             // 
             resources.ApplyResources(this.französischToolStripMenuItem, "französischToolStripMenuItem");
             this.französischToolStripMenuItem.Image = global::eNumismat.Properties.Resources.FR_France_Flag_icon;
             this.französischToolStripMenuItem.Name = "französischToolStripMenuItem";
-            this.französischToolStripMenuItem.Click += new System.EventHandler(this.französischToolStripMenuItem_Click);
+            this.französischToolStripMenuItem.Click += new System.EventHandler(this.FranzösischToolStripMenuItem_Click);
             // 
             // españolToolStripMenuItem
             // 
             resources.ApplyResources(this.españolToolStripMenuItem, "españolToolStripMenuItem");
             this.españolToolStripMenuItem.Image = global::eNumismat.Properties.Resources.ES_Spain_Flag_icon;
             this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
-            this.españolToolStripMenuItem.Click += new System.EventHandler(this.españolToolStripMenuItem_Click);
+            this.españolToolStripMenuItem.Click += new System.EventHandler(this.EspañolToolStripMenuItem_Click);
             // 
             // ExtrasToolStripMenuItem
             // 
@@ -243,7 +243,7 @@
             // 
             resources.ApplyResources(this.überENumismatToolStripMenuItem, "überENumismatToolStripMenuItem");
             this.überENumismatToolStripMenuItem.Name = "überENumismatToolStripMenuItem";
-            this.überENumismatToolStripMenuItem.Click += new System.EventHandler(this.überENumismatToolStripMenuItem_Click);
+            this.überENumismatToolStripMenuItem.Click += new System.EventHandler(this.ÜberENumismatToolStripMenuItem_Click);
             // 
             // hilfeZuENumismatToolStripMenuItem
             // 
@@ -300,14 +300,14 @@
             resources.ApplyResources(this.swapMonitorToolStripMenuItem, "swapMonitorToolStripMenuItem");
             this.swapMonitorToolStripMenuItem.Image = global::eNumismat.Properties.Resources.table_refresh;
             this.swapMonitorToolStripMenuItem.Name = "swapMonitorToolStripMenuItem";
-            this.swapMonitorToolStripMenuItem.Click += new System.EventHandler(this.swapMonitorToolStripMenuItem_Click);
+            this.swapMonitorToolStripMenuItem.Click += new System.EventHandler(this.SwapMonitorToolStripMenuItem_Click);
             // 
             // addressbookToolStripMenuItem
             // 
             resources.ApplyResources(this.addressbookToolStripMenuItem, "addressbookToolStripMenuItem");
             this.addressbookToolStripMenuItem.Image = global::eNumismat.Properties.Resources.book_addresses;
             this.addressbookToolStripMenuItem.Name = "addressbookToolStripMenuItem";
-            this.addressbookToolStripMenuItem.Click += new System.EventHandler(this.addressbookToolStripMenuItem_Click);
+            this.addressbookToolStripMenuItem.Click += new System.EventHandler(this.AddressbookToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -319,14 +319,14 @@
             resources.ApplyResources(this.datenbankSichernToolStripMenuItem1, "datenbankSichernToolStripMenuItem1");
             this.datenbankSichernToolStripMenuItem1.Image = global::eNumismat.Properties.Resources.database_save;
             this.datenbankSichernToolStripMenuItem1.Name = "datenbankSichernToolStripMenuItem1";
-            this.datenbankSichernToolStripMenuItem1.Click += new System.EventHandler(this.datenbankSichernToolStripMenuItem1_Click);
+            this.datenbankSichernToolStripMenuItem1.Click += new System.EventHandler(this.DatenbankSichernToolStripMenuItem1_Click);
             // 
             // compressDatabaseToolStripMenuItem
             // 
             resources.ApplyResources(this.compressDatabaseToolStripMenuItem, "compressDatabaseToolStripMenuItem");
             this.compressDatabaseToolStripMenuItem.Image = global::eNumismat.Properties.Resources.compress;
             this.compressDatabaseToolStripMenuItem.Name = "compressDatabaseToolStripMenuItem";
-            this.compressDatabaseToolStripMenuItem.Click += new System.EventHandler(this.compressDatabaseToolStripMenuItem_Click);
+            this.compressDatabaseToolStripMenuItem.Click += new System.EventHandler(this.CompressDatabaseToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -338,7 +338,7 @@
             resources.ApplyResources(this.beendenToolStripMenuItem1, "beendenToolStripMenuItem1");
             this.beendenToolStripMenuItem1.Image = global::eNumismat.Properties.Resources.door_in;
             this.beendenToolStripMenuItem1.Name = "beendenToolStripMenuItem1";
-            this.beendenToolStripMenuItem1.Click += new System.EventHandler(this.beendenToolStripMenuItem1_Click);
+            this.beendenToolStripMenuItem1.Click += new System.EventHandler(this.BeendenToolStripMenuItem1_Click);
             // 
             // Form1
             // 
