@@ -83,6 +83,33 @@ namespace eNumismat
             {
                 cb_AutoFillFedStates.Checked = false;
             }
+
+            if (Globals.ValidateNames == true)
+            {
+                cb_ValidateNames.Checked = true;
+            }
+            else
+            {
+                cb_ValidateNames.Checked = false;
+            }
+
+            if (Globals.ValidateEmail == true)
+            {
+                cb_ValidateEmail.Checked = true;
+            }
+            else
+            {
+                cb_ValidateEmail.Checked = false;
+            }
+
+            if (Globals.ValidateAddressData == true)
+            {
+                cb_ValidateAddress.Checked = true;
+            }
+            else
+            {
+                cb_ValidateAddress.Checked = false;
+            }
         }
 
         //=====================================================================================================================================================================
@@ -150,6 +177,35 @@ namespace eNumismat
             {
                 ConfigParam.Add("UseAutoFillOnFederalStates", cb_AutoFillFedStates.Checked.ToString());
             }
+
+            if (ConfigParam.ContainsKey("ValidateNames"))
+            {
+                ConfigParam["ValidateNames"] = cb_ValidateNames.Checked.ToString();
+            }
+            else
+            {
+                ConfigParam.Add("ValidateNames", cb_ValidateNames.Checked.ToString());
+            }
+
+            if (ConfigParam.ContainsKey("ValidateEmail"))
+            {
+                ConfigParam["ValidateEmail"] = cb_ValidateEmail.Checked.ToString();
+            }
+            else
+            {
+                ConfigParam.Add("ValidateEmail", cb_ValidateEmail.Checked.ToString());
+            }
+
+            if (ConfigParam.ContainsKey("ValidateAddressData"))
+            {
+                ConfigParam["ValidateAddressData"] = cb_ValidateAddress.Checked.ToString();
+            }
+            else
+            {
+                ConfigParam.Add("ValidateAddressData", cb_ValidateAddress.Checked.ToString());
+            }
+
+
             foreach (KeyValuePair<string, string> kv in ConfigParam)
             {
                 cfgHandler.UpdateXmlConf(kv.Key, kv.Value);

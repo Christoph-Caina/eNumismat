@@ -51,9 +51,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cb_AutoFillFedStates = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.cb_ValidateNames = new System.Windows.Forms.CheckBox();
+            this.cb_ValidateEmail = new System.Windows.Forms.CheckBox();
+            this.cb_ValidateAddress = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -204,30 +204,30 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.cb_ValidateAddress);
+            this.groupBox2.Controls.Add(this.cb_ValidateEmail);
+            this.groupBox2.Controls.Add(this.cb_ValidateNames);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // checkBox1
+            // cb_ValidateNames
             // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.cb_ValidateNames, "cb_ValidateNames");
+            this.cb_ValidateNames.Name = "cb_ValidateNames";
+            this.cb_ValidateNames.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cb_ValidateEmail
             // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.cb_ValidateEmail, "cb_ValidateEmail");
+            this.cb_ValidateEmail.Name = "cb_ValidateEmail";
+            this.cb_ValidateEmail.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cb_ValidateAddress
             // 
-            resources.ApplyResources(this.checkBox3, "checkBox3");
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.cb_ValidateAddress, "cb_ValidateAddress");
+            this.cb_ValidateAddress.Name = "cb_ValidateAddress";
+            this.cb_ValidateAddress.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
@@ -294,9 +294,9 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cb_ValidateAddress;
+        private System.Windows.Forms.CheckBox cb_ValidateEmail;
+        private System.Windows.Forms.CheckBox cb_ValidateNames;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cb_AutoFillCities;
         private System.Windows.Forms.CheckBox cb_AutoFillFedStates;
