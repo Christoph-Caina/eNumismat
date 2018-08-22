@@ -600,37 +600,49 @@ namespace eNumismat
             // but what should we do, if we have invalid input?
             // first, we need to check, if the fields are empty -> only the names are really important, since we need this information to show anything.
             // The Database should also not acceppt NULL values for NAME and SURENAME
-            if (validate.ValidateData(tb_name.Text, "IsNullOrEmpty"))
+            if (Globals.ValidateNames == true)
             {
-                // show a MessageBox with the warning if the field is empty
-                MessageBox.Show(GlobalStrings._addrBook_Validation_Name);
-                // change the BackColor of the field for visual feedback
-                tb_name.BackColor = Color.MistyRose;
-                // set the cursor directly into the field
-                tb_name.Select();
-                return false;
-            }
+                if (validate.ValidateData(tb_name.Text, "IsNullOrEmpty"))
+                {
+                    // show a MessageBox with the warning if the field is empty
+                    MessageBox.Show(GlobalStrings._addrBook_Validation_NameEmpty);
+                    // change the BackColor of the field for visual feedback
+                    tb_name.BackColor = Color.MistyRose;
+                    // set the cursor directly into the field
+                    tb_name.Select();
+                    return false;
+                }
 
-            // the same than above, for other fields...
-            if (validate.ValidateData(tb_surename.Text, "IsNullOrEmpty"))
-            {
-                MessageBox.Show(GlobalStrings._addrBook_Validation_SureName);
-                tb_surename.BackColor = Color.MistyRose;
-                tb_surename.Select();
-                return false;
+                // the same than above, for other fields...
+                if (validate.ValidateData(tb_surename.Text, "IsNullOrEmpty"))
+                {
+                    MessageBox.Show(GlobalStrings._addrBook_Validation_SureNameEmpty);
+                    tb_surename.BackColor = Color.MistyRose;
+                    tb_surename.Select();
+                    return false;
+                }
             }
 
             //MessageBox.Show(validate.ValidateData(tb_mail.Text, "ValidEmail").ToString());
-
-            if (!string.IsNullOrEmpty(tb_mail.Text))
+            if (Globals.ValidateEmail == true)
             {
-                if (!validate.ValidateData(tb_mail.Text, "ValidEmail"))
+                if (validate.ValidateData(tb_mail.Text, "IsNullOrEmpty"))
                 {
-
-                    MessageBox.Show(GlobalStrings._addrBook_Validation_Email);
+                    MessageBox.Show(GlobalStrings._addrBook_Validation_EmailEmpty);
                     tb_mail.BackColor = Color.MistyRose;
                     tb_mail.Select();
                     return false;
+                }
+                else
+                {
+                    if (!validate.ValidateData(tb_mail.Text, "ValidEmail"))
+                    {
+
+                        MessageBox.Show(GlobalStrings._addrBook_Validation_Email);
+                        tb_mail.BackColor = Color.MistyRose;
+                        tb_mail.Select();
+                        return false;
+                    }
                 }
             }
             return true;
