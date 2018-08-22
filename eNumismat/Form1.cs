@@ -367,7 +367,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void überENumismatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            About about = new About();
+            AboutBox1 about = new AboutBox1();
             about.ShowDialog();
         }
 

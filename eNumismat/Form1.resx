@@ -137,7 +137,7 @@
     <value>einstellungenToolStripMenuItem</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 17</value>
+    <value>10, 17</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -173,7 +173,7 @@
     <value>Spanish</value>
   </data>
   <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="&gt;&gt;deutschToolStripMenuItem.Name" xml:space="preserve">
     <value>deutschToolStripMenuItem</value>
@@ -184,8 +184,8 @@
   <data name="&gt;&gt;deutschToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="nachUpdatesSuchenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 22</value>
   </data>
   <data name="dateiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
@@ -354,7 +354,7 @@
     <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="französischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -392,6 +392,9 @@
   <data name="überENumismatToolStripMenuItem.Text" xml:space="preserve">
     <value>about eNumismat</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;beendenToolStripMenuItem1.Name" xml:space="preserve">
     <value>beendenToolStripMenuItem1</value>
   </data>
@@ -400,9 +403,6 @@
   </data>
   <data name="&gt;&gt;AdressbuchToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="datenbankÖffnenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -449,6 +449,9 @@
   <data name="toolStripStatusLabel2.Text" xml:space="preserve">
     <value> </value>
   </data>
+  <data name="&gt;&gt;überENumismatToolStripMenuItem.Name" xml:space="preserve">
+    <value>überENumismatToolStripMenuItem</value>
+  </data>
   <data name="&gt;&gt;datenbankSichernToolStripMenuItem1.Name" xml:space="preserve">
     <value>datenbankSichernToolStripMenuItem1</value>
   </data>
@@ -471,13 +474,13 @@
     <value>0, 0</value>
   </data>
   <data name="españolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="TauschmonitorToolStripMenuItem.Text" xml:space="preserve">
     <value>Exchange Monitor</value>
   </data>
   <data name="einstellungenBearbeitenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>170, 22</value>
   </data>
   <data name="nachUpdatesSuchenToolStripMenuItem.Text" xml:space="preserve">
     <value>Search for Updates</value>
@@ -491,8 +494,8 @@
   <data name="&gt;&gt;toolStripStatusLabel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;einstellungenBearbeitenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AdressbuchToolStripMenuItem.Name" xml:space="preserve">
     <value>AdressbuchToolStripMenuItem</value>
@@ -504,7 +507,7 @@
     <value>französischToolStripMenuItem</value>
   </data>
   <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="&gt;&gt;datenbankKomprimierenToolStripMenuItem.Name" xml:space="preserve">
     <value>datenbankKomprimierenToolStripMenuItem</value>
@@ -530,8 +533,8 @@
   <data name="compressDatabaseToolStripMenuItem.Text" xml:space="preserve">
     <value>Compress Database</value>
   </data>
-  <data name="&gt;&gt;überENumismatToolStripMenuItem.Name" xml:space="preserve">
-    <value>überENumismatToolStripMenuItem</value>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;nachUpdatesSuchenToolStripMenuItem.Name" xml:space="preserve">
     <value>nachUpdatesSuchenToolStripMenuItem</value>
@@ -581,11 +584,11 @@
   <data name="TrayIcon.Text" xml:space="preserve">
     <value>notifyIcon1</value>
   </data>
-  <data name="&gt;&gt;einstellungenBearbeitenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="datenbankÖffnenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
   </data>
   <data name="spracheÄndernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>170, 22</value>
   </data>
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
@@ -638,9 +641,6 @@
   <data name="&gt;&gt;TrayIcon.Type" xml:space="preserve">
     <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="nachUpdatesSuchenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 22</value>
-  </data>
   <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
@@ -675,6 +675,6 @@
     <value>505, 17</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>es</value>
+    <value>fr</value>
   </metadata>
 </root>
