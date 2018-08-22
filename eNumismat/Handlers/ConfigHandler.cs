@@ -199,10 +199,12 @@ namespace eNumismat
             XmlNode root = xConf.DocumentElement;
 
             //Read DataBase Config 
-            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='GeneralSettings']/parameter");
 
             string DBFileName = null;
             string DBFilePath = null;
+            string MinimizeToTray = null;
+            string UICulture = null;
 
             foreach (XmlNode Conf in ConfNode)
             {
@@ -215,13 +217,25 @@ namespace eNumismat
                 {
                     DBFilePath = Conf.InnerText;
                 }
+
+                if (Conf.Attributes["name"].Value == "MinimizeToTray")
+                {
+                    MinimizeToTray = Conf.InnerText;
+                }
+
+                if (Conf.Attributes["name"].Value == "UICulture")
+                {
+                    UICulture = Conf.InnerText;
+                }
             }
 
             Globals.DBFile = DBFileName;
             Globals.DBFilePath = DBFilePath;
+            Globals.MinimizeToTray = ConvertToBool(MinimizeToTray);
+            Globals.UICulture = UICulture;
 
             //Read DataBase Backup Config
-            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='Database']/group[@name='Database Backup']/parameter");
 
             string BackupDBonAppClose = null;
             string CompressDBbeforeBackup = null;
@@ -240,38 +254,10 @@ namespace eNumismat
             }
 
             Globals.BackupDBOnAppClose = ConvertToBool(BackupDBonAppClose);
-            Globals.CompressDBBeforeBackup = ConvertToBool(CompressDBbeforeBackup);
-
-            // Read MinimizeToTray Config
-            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/parameter");
-
-            string MinimizeToTray = null;
-
-            foreach (XmlNode Conf in ConfNode)
-            {
-                if (Conf.Attributes["name"].Value == "MinimizeToTray")
-                {
-                    MinimizeToTray = Conf.InnerText;
-                }
-            }
-
-            Globals.MinimizeToTray = ConvertToBool(MinimizeToTray);
-
-            // Read Application Language
-            string UICulture = null;
-
-            foreach (XmlNode Conf in ConfNode)
-            {
-                if (Conf.Attributes["name"].Value == "UICulture")
-                {
-                    UICulture = Conf.InnerText;
-                }
-            }
-
-            Globals.UICulture = UICulture;
+            Globals.CompressDBBeforeBackup = ConvertToBool(CompressDBbeforeBackup);         
 
             // Read AutoFill Settings
-            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='UseAutoFillForContacts']/parameter");
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='AddressBook']/group[@name='UseAutoFillForContacts']/parameter");
 
             string AutoFillCities = null;
             string AutoFillFederalStates = null;
@@ -291,6 +277,35 @@ namespace eNumismat
 
             Globals.UseAutoFillOnCities = ConvertToBool(AutoFillCities);
             Globals.UseAutoFillOnFederalStates = ConvertToBool(AutoFillFederalStates);
+
+            // Read AutoFill Settings
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='AddressBook']/group[@name='AddressValidation']/parameter");
+
+            string ValidateNames = null;
+            string ValidateEmail = null;
+            string ValidateAddressData = null;
+
+            foreach (XmlNode Conf in ConfNode)
+            {
+                if (Conf.Attributes["name"].Value == "ValidateNames")
+                {
+                    ValidateNames = Conf.InnerText;
+                }
+
+                if (Conf.Attributes["name"].Value == "ValidateEmail")
+                {
+                    ValidateEmail = Conf.InnerText;
+                }
+
+                if (Conf.Attributes["name"].Value == "ValidateAddressData")
+                {
+                    ValidateAddressData = Conf.InnerText;
+                }
+            }
+
+            Globals.ValidateNames = ConvertToBool(ValidateNames);
+            Globals.ValidateEmail = ConvertToBool(ValidateEmail);
+            Globals.ValidateAddressData = ConvertToBool(ValidateAddressData);
         }
 
         //=====================================================================================================================================================================
@@ -317,29 +332,32 @@ namespace eNumismat
             {
                 case "LastDBFile":
                 case "LastDBFilePath":
-                    
-                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+                case "MinimizeToTray":
+                case "UICulture":
+
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='GeneralSettings']/parameter");
 
                     break;
 
                 case "DbBackupOnAppExit":
                 case "DbCompressionBeforeBackup":
 
-                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
-
-                    break;
-
-                case "MinimizeToTray":
-                case "UICulture":
-
-                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/parameter");
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='Database']/group[@name='Database Backup']/parameter");
 
                     break;
 
                 case "UseAutoFillOnCities":
                 case "UseAutoFillOnFederalStates":
 
-                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='UseAutoFillForContacts']/parameter");
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='AddressBook']/group[@name='UseAutoFillForContacts']/parameter");
+
+                    break;
+
+                case "ValidateNames":
+                case "ValidateEmail":
+                case "ValidateAddressData":
+
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='AddressBook']/group[@name='AddressValidation']/parameter");
 
                     break;
             }
