@@ -258,7 +258,7 @@
             resources.ApplyResources(this.btn_DownloadImoportValidationData, "btn_DownloadImoportValidationData");
             this.btn_DownloadImoportValidationData.Name = "btn_DownloadImoportValidationData";
             this.btn_DownloadImoportValidationData.UseVisualStyleBackColor = true;
-            this.btn_DownloadImoportValidationData.Click += new System.EventHandler(this.btn_DownloadImoportValidationData_Click);
+            this.btn_DownloadImoportValidationData.Click += new System.EventHandler(this.Btn_DownloadImoportValidationData_Click);
             // 
             // label7
             // 

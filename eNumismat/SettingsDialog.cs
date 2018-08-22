@@ -6,6 +6,7 @@ using System.Globalization;
 using System.Net;
 using System.IO;
 using System.ComponentModel;
+using System.Data;
 
 namespace eNumismat
 {
@@ -14,6 +15,23 @@ namespace eNumismat
         ConfigHandler cfgHandler = new ConfigHandler();
         LogHandler logHandler = new LogHandler();
         Dictionary<string, string> ConfigParam = new Dictionary<string, string>();
+
+        // The thread inside which the download happens
+        private Thread thrDownload;
+        // The stream of data retrieved from the web server
+        private Stream strResponse;
+        // The stream of data that we write to the harddrive
+        private Stream strLocal;
+        // The request to the web server for file information
+        private HttpWebRequest webRequest;
+        // The response from the web server containing information about the file
+        private HttpWebResponse webResponse;
+        // The progress of the download in percentage
+        private static int PercentProgress;
+        // The delegate which we will call from the thread to update the form
+        private delegate void UpdateProgessCallback(Int64 BytesRead, Int64 TotalBytes);
+
+
 
         //=====================================================================================================================================================================
         public SettingsDialog()
@@ -214,14 +232,14 @@ namespace eNumismat
                 cfgHandler.UpdateXmlConf(kv.Key, kv.Value);
             }
 
-            this.Hide();
+            Hide();
         }
 
-        private void btn_DownloadImoportValidationData_Click(object sender, EventArgs e)
+        private void Btn_DownloadImoportValidationData_Click(object sender, EventArgs e)
         {
             using (WebClient webClient = new WebClient())
             {
-                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadCompleted);
+                webClient.DownloadFileCompleted += DownloadCompleted;
 
                 try
                 {
@@ -235,12 +253,10 @@ namespace eNumismat
             }
         }
 
-        public void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
+        private void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            TrayIcon.BalloonTipTitle = "FileDownload";
-            TrayIcon.BalloonTipText = "File Download finished!";
+            // Define, what we should do with the downloaded csv file
 
-            TrayIcon.ShowBalloonTip(2000);
         }
     }
 }
