@@ -166,14 +166,26 @@
   <data name="einstellungenBearbeitenToolStripMenuItem.Text" xml:space="preserve">
     <value>Einstellungen ändern</value>
   </data>
+  <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
+  </data>
   <data name="deutschToolStripMenuItem.Text" xml:space="preserve">
     <value>Deutsch</value>
+  </data>
+  <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
   </data>
   <data name="englischToolStripMenuItem.Text" xml:space="preserve">
     <value>Englisch</value>
   </data>
+  <data name="französischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
+  </data>
   <data name="französischToolStripMenuItem.Text" xml:space="preserve">
     <value>Französisch</value>
+  </data>
+  <data name="españolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
   </data>
   <data name="españolToolStripMenuItem.Text" xml:space="preserve">
     <value>Spanisch</value>

@@ -256,7 +256,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void addressbookToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddressbookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             adrBook = new AddressBook();
             adrBook.Show();
@@ -270,7 +270,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void swapMonitorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SwapMonitorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             swapList = new SwapMonitor();
             swapList.Show();
@@ -294,37 +294,37 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void BeendenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         //=====================================================================================================================================================================
-        private void beendenToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void BeendenToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         //=====================================================================================================================================================================
         private void DatenbankSichernToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            runDBBackup();
+            RunDBBackup();
         }
 
         //=====================================================================================================================================================================
-        private void datenbankSichernToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void DatenbankSichernToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            runDBBackup();
+            RunDBBackup();
         }
 
         //=====================================================================================================================================================================
-        private void datenbankKomprimierenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DatenbankKomprimierenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            runDBCompression();
+            RunDBCompression();
         }
 
         //=====================================================================================================================================================================
-        private void compressDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CompressDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            runDBCompression();
+            RunDBCompression();
         }
 
         //=====================================================================================================================================================================
@@ -332,12 +332,12 @@ namespace eNumismat
         {
             if (Globals.BackupDBOnAppClose == true)
             {
-                runDBBackup();
+                RunDBBackup();
             }
         }
 
         //=====================================================================================================================================================================
-        private void runDBCompression()
+        private void RunDBCompression()
         {
             fBackup = new FileBackup();
 
@@ -351,7 +351,7 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void runDBBackup()
+        private void RunDBBackup()
         {
             fBackup = new FileBackup();
 
@@ -365,9 +365,9 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void überENumismatToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ÜberENumismatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            About about = new About();
+            AboutBox1 about = new AboutBox1();
             about.ShowDialog();
         }
 
@@ -412,25 +412,25 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void deutschToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeutschToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayLanguage("set", "de-DE");
         }
 
         //=====================================================================================================================================================================
-        private void englischToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EnglischToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayLanguage("set", "en-US");
         }
 
         //=====================================================================================================================================================================
-        private void französischToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FranzösischToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayLanguage("set", "fr-FR");
         }
 
         //=====================================================================================================================================================================
-        private void españolToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EspañolToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayLanguage("set", "es-ES");
         }

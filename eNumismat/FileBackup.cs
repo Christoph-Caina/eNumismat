@@ -33,35 +33,39 @@ namespace eNumismat
         {
             if (CheckBackupDir())
             {
-                string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
-                string DestFile = Path.Combine(Globals.AppDataPath, @"DBBackUps\" + DateTime.Now.ToString("yyyy_MM_dd-HHmmss") + ".encBack");
-
-                using (var source = new SQLiteConnection("Data Source=" + SourceFile))
+                if (!string.IsNullOrEmpty(Globals.DBFile))
                 {
-                    using (var destination = new SQLiteConnection("Data Source=" + DestFile))
+                    string SourceFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
+                    string DestFile = Path.Combine(Globals.AppDataPath, @"DBBackUps\" + DateTime.Now.ToString("yyyy_MM_dd-HHmmss") + ".encBack");
+
+                    using (var source = new SQLiteConnection("Data Source=" + SourceFile))
                     {
-                        try
+                        using (var destination = new SQLiteConnection("Data Source=" + DestFile))
                         {
-                            source.Open();
-
-                            if (Globals.CompressDBBeforeBackup == true)
+                            try
                             {
-                                CompactDatabase(source);
+                                source.Open();
+
+                                if (Globals.CompressDBBeforeBackup == true)
+                                {
+                                    CompactDatabase(source);
+                                }
+
+                                destination.Open();
+
+                                source.BackupDatabase(destination, "main", "main", -1, null, 0);
+
+                                return true;
                             }
-
-                            destination.Open();
-
-                            source.BackupDatabase(destination, "main", "main", -1, null, 0);
-
-                            return true;
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                            return false;
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                                return false;
+                            }
                         }
                     }
                 }
+                return false;
             }
             return false;
         }

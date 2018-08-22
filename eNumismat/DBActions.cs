@@ -10,7 +10,12 @@ namespace eNumismat
 {
     class DBActions
     {
-        string _DBFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
+        readonly string _DBFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
+
+        public string GetDBFile()
+        {
+            return _DBFile;
+        }
 
         //=====================================================================================================================================================================
         public bool CreateNew()
@@ -19,7 +24,7 @@ namespace eNumismat
 
             try
             {
-                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
+                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
                 {
                     dbConnection.Open();
 
@@ -79,7 +84,7 @@ namespace eNumismat
         {
             int _rowCounter = 0;
 
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
             {
                 try
                 {
@@ -118,7 +123,7 @@ namespace eNumismat
         public DataTable GetContacts(string content, string FirstLetter = null, string[] contactDetails = null, int ID = 0)
         {
             
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
             {
                 dbConnection.Open();
                 
@@ -200,7 +205,7 @@ namespace eNumismat
         {
             try
             {
-                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
+                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
                 {
                     dbConnection.Open();
                     string SQL = null;
@@ -263,7 +268,7 @@ namespace eNumismat
         {
             try
             {
-                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
+                using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
                 {
                     dbConnection.Open();
                     string SQL = null;
@@ -327,7 +332,7 @@ namespace eNumismat
         {
             int _rowCounter = 0;
 
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
             {
                 try
                 {
@@ -365,7 +370,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public DataTable GetSwapListDetails(string content, string[] ContactDetails = null)
         {
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + _DBFile))
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
             {
                 dbConnection.Open();
 

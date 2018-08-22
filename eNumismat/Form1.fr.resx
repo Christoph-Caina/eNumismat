@@ -166,14 +166,26 @@
   <data name="einstellungenBearbeitenToolStripMenuItem.Text" xml:space="preserve">
     <value>Modifier les paramètres</value>
   </data>
+  <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
+  </data>
   <data name="deutschToolStripMenuItem.Text" xml:space="preserve">
     <value>Allemand</value>
+  </data>
+  <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
   </data>
   <data name="englischToolStripMenuItem.Text" xml:space="preserve">
     <value>Anglais</value>
   </data>
+  <data name="französischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
+  </data>
   <data name="französischToolStripMenuItem.Text" xml:space="preserve">
     <value>Français</value>
+  </data>
+  <data name="españolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
   </data>
   <data name="españolToolStripMenuItem.Text" xml:space="preserve">
     <value>Espanol</value>
@@ -206,7 +218,7 @@
     <value>Rechercher des mises à jour</value>
   </data>
   <data name="überENumismatToolStripMenuItem.Text" xml:space="preserve">
-    <value>à propos de eNumista</value>
+    <value>À propos d'eNumismat</value>
   </data>
   <data name="hilfeZuENumismatToolStripMenuItem.Text" xml:space="preserve">
     <value>Aider</value>

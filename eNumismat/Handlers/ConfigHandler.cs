@@ -10,7 +10,12 @@ namespace eNumismat
     class ConfigHandler
     {
         XmlDocument xConf;
-        string ConfFile = Path.Combine(Globals.AppDataPath, @"config.xml");
+        readonly string _ConfFile = Path.Combine(Globals.AppDataPath, @"config.xml");
+
+        public string GetConfFile()
+        {
+            return _ConfFile;
+        }
 
         //=====================================================================================================================================================================
         private bool CheckIfAppDataPathExists()
@@ -56,25 +61,19 @@ namespace eNumismat
             attr.Value = DateTime.Now.ToString(@"yyyy/MM/dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
             ConfigNode.Attributes.Append(attr);
             NameSpace.AppendChild(ConfigNode);
+            
+            XmlNode ApplicationSettings = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "Application";
+            ApplicationSettings.Attributes.Append(attr);
+            ConfigNode.AppendChild(ApplicationSettings);
 
             XmlNode DBConf = xConf.CreateElement("group");
             attr = xConf.CreateAttribute("name");
             attr.Value = "Database";
             DBConf.Attributes.Append(attr);
-            ConfigNode.AppendChild(DBConf);
-
-            XmlNode LastDBFileName = xConf.CreateElement("parameter");
-            attr = xConf.CreateAttribute("name");
-            attr.Value = "LastDBFile";
-            LastDBFileName.Attributes.Append(attr);
-            DBConf.AppendChild(LastDBFileName);
-
-            XmlNode LastDBFilePath = xConf.CreateElement("parameter");
-            attr = xConf.CreateAttribute("name");
-            attr.Value = "LastDBFilePath";
-            LastDBFilePath.Attributes.Append(attr);
-            DBConf.AppendChild(LastDBFilePath);
-
+            ApplicationSettings.AppendChild(DBConf);
+            
             XmlNode BackupDBFile = xConf.CreateElement("group");
             attr = xConf.CreateAttribute("name");
             attr.Value = "Database Backup";
@@ -85,41 +84,59 @@ namespace eNumismat
             attr = xConf.CreateAttribute("name");
             attr.Value = "DbBackupOnAppExit";
             BackupOnAppExit.Attributes.Append(attr);
-            BackupOnAppExit.InnerText = "false";
+            BackupOnAppExit.InnerText = "False";
             BackupDBFile.AppendChild(BackupOnAppExit);
 
             XmlNode CompressBeforeBackup = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
             attr.Value = "DbCompressionBeforeBackup";
             CompressBeforeBackup.Attributes.Append(attr);
-            CompressBeforeBackup.InnerText = "false";
+            CompressBeforeBackup.InnerText = "False";
             BackupDBFile.AppendChild(CompressBeforeBackup);
 
-            XmlNode ApplicationSettings = xConf.CreateElement("group");
+            XmlNode GeneralApplicationSettings = xConf.CreateElement("group");
             attr = xConf.CreateAttribute("name");
-            attr.Value = "Application";
-            ApplicationSettings.Attributes.Append(attr);
-            ConfigNode.AppendChild(ApplicationSettings);
+            attr.Value = "GeneralSettings";
+            GeneralApplicationSettings.Attributes.Append(attr);
+            ApplicationSettings.AppendChild(GeneralApplicationSettings);
+
+            XmlNode LastDBFileName = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "LastDBFile";
+            LastDBFileName.Attributes.Append(attr);
+            GeneralApplicationSettings.AppendChild(LastDBFileName);
+
+            XmlNode LastDBFilePath = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "LastDBFilePath";
+            LastDBFilePath.Attributes.Append(attr);
+            GeneralApplicationSettings.AppendChild(LastDBFilePath);
 
             XmlNode MinimizeToTray = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
             attr.Value = "MinimizeToTray";
             MinimizeToTray.Attributes.Append(attr);
-            MinimizeToTray.InnerText = "false";
-            ApplicationSettings.AppendChild(MinimizeToTray);
+            MinimizeToTray.InnerText = "False";
+            GeneralApplicationSettings.AppendChild(MinimizeToTray);
 
             XmlNode ApplicationLanguage = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
             attr.Value = "UICulture";
             ApplicationLanguage.Attributes.Append(attr);
             ApplicationLanguage.InnerText = CultureInfo.CurrentUICulture.ToString();
-            ApplicationSettings.AppendChild(ApplicationLanguage);
+            GeneralApplicationSettings.AppendChild(ApplicationLanguage);
+
+            XmlNode AddressBookSettings = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "AddressBook";
+            AddressBookSettings.Attributes.Append(attr);
+            ApplicationSettings.AppendChild(AddressBookSettings);
 
             XmlNode AutoFill = xConf.CreateElement("group");
             attr = xConf.CreateAttribute("name");
             attr.Value = "UseAutoFillForContacts";
             AutoFill.Attributes.Append(attr);
-            ApplicationSettings.AppendChild(AutoFill);
+            AddressBookSettings.AppendChild(AutoFill);
 
             XmlNode AutoFillCities = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
@@ -134,6 +151,33 @@ namespace eNumismat
             AutoFillFederalStates.Attributes.Append(attr);
             AutoFillFederalStates.InnerText = "False";
             AutoFill.AppendChild(AutoFillFederalStates);
+
+            XmlNode ValidateAddressData = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "AddressValidation";
+            ValidateAddressData.Attributes.Append(attr);
+            AddressBookSettings.AppendChild(ValidateAddressData);
+
+            XmlNode ValidateNameFields = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "ValidateNames";
+            ValidateNameFields.Attributes.Append(attr);
+            ValidateNameFields.InnerText = "False";
+            ValidateAddressData.AppendChild(ValidateNameFields);
+
+            XmlNode ValidateEmailField = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "ValidateEmail";
+            ValidateEmailField.Attributes.Append(attr);
+            ValidateEmailField.InnerText = "False";
+            ValidateAddressData.AppendChild(ValidateEmailField);
+
+            XmlNode ValidateAddressFields = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "ValidateAddressData";
+            ValidateAddressFields.Attributes.Append(attr);
+            ValidateAddressFields.InnerText = "False";
+            ValidateAddressData.AppendChild(ValidateAddressFields);
 
             try
             {
@@ -154,16 +198,18 @@ namespace eNumismat
         {
             xConf = new XmlDocument();
 
-            xConf.Load(ConfFile);
+            xConf.Load(GetConfFile());
 
             XmlNodeList ConfNode;
             XmlNode root = xConf.DocumentElement;
 
             //Read DataBase Config 
-            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='GeneralSettings']/parameter");
 
             string DBFileName = null;
             string DBFilePath = null;
+            string MinimizeToTray = null;
+            string UICulture = null;
 
             foreach (XmlNode Conf in ConfNode)
             {
@@ -176,13 +222,25 @@ namespace eNumismat
                 {
                     DBFilePath = Conf.InnerText;
                 }
+
+                if (Conf.Attributes["name"].Value == "MinimizeToTray")
+                {
+                    MinimizeToTray = Conf.InnerText;
+                }
+
+                if (Conf.Attributes["name"].Value == "UICulture")
+                {
+                    UICulture = Conf.InnerText;
+                }
             }
 
             Globals.DBFile = DBFileName;
             Globals.DBFilePath = DBFilePath;
+            Globals.MinimizeToTray = ConvertToBool(MinimizeToTray);
+            Globals.UICulture = UICulture;
 
             //Read DataBase Backup Config
-            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='Database']/group[@name='Database Backup']/parameter");
 
             string BackupDBonAppClose = null;
             string CompressDBbeforeBackup = null;
@@ -201,38 +259,10 @@ namespace eNumismat
             }
 
             Globals.BackupDBOnAppClose = ConvertToBool(BackupDBonAppClose);
-            Globals.CompressDBBeforeBackup = ConvertToBool(CompressDBbeforeBackup);
-
-            // Read MinimizeToTray Config
-            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/parameter");
-
-            string MinimizeToTray = null;
-
-            foreach (XmlNode Conf in ConfNode)
-            {
-                if (Conf.Attributes["name"].Value == "MinimizeToTray")
-                {
-                    MinimizeToTray = Conf.InnerText;
-                }
-            }
-
-            Globals.MinimizeToTray = ConvertToBool(MinimizeToTray);
-
-            // Read Application Language
-            string UICulture = null;
-
-            foreach (XmlNode Conf in ConfNode)
-            {
-                if (Conf.Attributes["name"].Value == "UICulture")
-                {
-                    UICulture = Conf.InnerText;
-                }
-            }
-
-            Globals.UICulture = UICulture;
+            Globals.CompressDBBeforeBackup = ConvertToBool(CompressDBbeforeBackup);         
 
             // Read AutoFill Settings
-            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='UseAutoFillForContacts']/parameter");
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='AddressBook']/group[@name='UseAutoFillForContacts']/parameter");
 
             string AutoFillCities = null;
             string AutoFillFederalStates = null;
@@ -252,6 +282,35 @@ namespace eNumismat
 
             Globals.UseAutoFillOnCities = ConvertToBool(AutoFillCities);
             Globals.UseAutoFillOnFederalStates = ConvertToBool(AutoFillFederalStates);
+
+            // Read AutoFill Settings
+            ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='AddressBook']/group[@name='AddressValidation']/parameter");
+
+            string ValidateNames = null;
+            string ValidateEmail = null;
+            string ValidateAddressData = null;
+
+            foreach (XmlNode Conf in ConfNode)
+            {
+                if (Conf.Attributes["name"].Value == "ValidateNames")
+                {
+                    ValidateNames = Conf.InnerText;
+                }
+
+                if (Conf.Attributes["name"].Value == "ValidateEmail")
+                {
+                    ValidateEmail = Conf.InnerText;
+                }
+
+                if (Conf.Attributes["name"].Value == "ValidateAddressData")
+                {
+                    ValidateAddressData = Conf.InnerText;
+                }
+            }
+
+            Globals.ValidateNames = ConvertToBool(ValidateNames);
+            Globals.ValidateEmail = ConvertToBool(ValidateEmail);
+            Globals.ValidateAddressData = ConvertToBool(ValidateAddressData);
         }
 
         //=====================================================================================================================================================================
@@ -261,7 +320,7 @@ namespace eNumismat
 
             xConf = new XmlDocument();
 
-            xConf.Load(ConfFile);
+            xConf.Load(GetConfFile());
 
             XmlNode xConfNode = xConf.DocumentElement;
             xConfNode.SelectNodes("descendant::configuration");
@@ -278,29 +337,32 @@ namespace eNumismat
             {
                 case "LastDBFile":
                 case "LastDBFilePath":
-                    
-                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/parameter");
+                case "MinimizeToTray":
+                case "UICulture":
+
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='GeneralSettings']/parameter");
 
                     break;
 
                 case "DbBackupOnAppExit":
                 case "DbCompressionBeforeBackup":
 
-                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Database']/group[@name='Database Backup']/parameter");
-
-                    break;
-
-                case "MinimizeToTray":
-                case "UICulture":
-
-                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/parameter");
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='Database']/group[@name='Database Backup']/parameter");
 
                     break;
 
                 case "UseAutoFillOnCities":
                 case "UseAutoFillOnFederalStates":
 
-                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='UseAutoFillForContacts']/parameter");
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='AddressBook']/group[@name='UseAutoFillForContacts']/parameter");
+
+                    break;
+
+                case "ValidateNames":
+                case "ValidateEmail":
+                case "ValidateAddressData":
+
+                    ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='AddressBook']/group[@name='AddressValidation']/parameter");
 
                     break;
             }
@@ -315,7 +377,7 @@ namespace eNumismat
 
             try
             {
-                xConf.Save(ConfFile);
+                xConf.Save(GetConfFile());
             }
             catch (Exception ex)
             {
