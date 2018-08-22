@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace eNumismat
 {
@@ -21,6 +22,12 @@ namespace eNumismat
                         return true;
                     }
                     
+                    break;
+
+                case "ValidEmail":
+
+                    return Regex.IsMatch(input, @"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+
                     break;
             }
             return false;

@@ -150,4 +150,7 @@
   <data name="_dbCompress_BalloonTitle" xml:space="preserve">
     <value>Database Compression</value>
   </data>
+  <data name="_addrBook_Validation_Email" xml:space="preserve">
+    <value>The email does not seem to have a valid format!</value>
+  </data>
 </root>

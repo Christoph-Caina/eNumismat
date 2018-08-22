@@ -61,6 +61,15 @@ namespace eNumismat {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The email does not seem to have a valid format!.
+        /// </summary>
+        internal static string _addrBook_Validation_Email {
+            get {
+                return ResourceManager.GetString("_addrBook_Validation_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The field &quot;Name&quot; can&apos;t be empty!.
         /// </summary>
         internal static string _addrBook_Validation_Name {

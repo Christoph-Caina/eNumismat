@@ -619,6 +619,20 @@ namespace eNumismat
                 tb_surename.Select();
                 return false;
             }
+
+            //MessageBox.Show(validate.ValidateData(tb_mail.Text, "ValidEmail").ToString());
+
+            if (!string.IsNullOrEmpty(tb_mail.Text))
+            {
+                if (!validate.ValidateData(tb_mail.Text, "ValidEmail"))
+                {
+
+                    MessageBox.Show(GlobalStrings._addrBook_Validation_Email);
+                    tb_mail.BackColor = Color.MistyRose;
+                    tb_mail.Select();
+                    return false;
+                }
+            }
             return true;
         }
         //
