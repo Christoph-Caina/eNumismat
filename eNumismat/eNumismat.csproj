@@ -370,9 +370,7 @@
   <ItemGroup>
     <None Include="Resources\help.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="languages\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="SQL\Insert.sql" />
   </ItemGroup>
