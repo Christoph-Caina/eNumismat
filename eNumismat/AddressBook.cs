@@ -604,16 +604,12 @@ namespace eNumismat
             {
                 if (validate.ValidateData(tb_name.Text, "IsNullOrEmpty"))
                 {
-                    // show a MessageBox with the warning if the field is empty
                     MessageBox.Show(GlobalStrings._addrBook_Validation_NameEmpty);
-                    // change the BackColor of the field for visual feedback
                     tb_name.BackColor = Color.MistyRose;
-                    // set the cursor directly into the field
                     tb_name.Select();
                     return false;
                 }
 
-                // the same than above, for other fields...
                 if (validate.ValidateData(tb_surename.Text, "IsNullOrEmpty"))
                 {
                     MessageBox.Show(GlobalStrings._addrBook_Validation_SureNameEmpty);
@@ -623,7 +619,6 @@ namespace eNumismat
                 }
             }
 
-            //MessageBox.Show(validate.ValidateData(tb_mail.Text, "ValidEmail").ToString());
             if (Globals.ValidateEmail == true)
             {
                 if (validate.ValidateData(tb_mail.Text, "IsNullOrEmpty"))
