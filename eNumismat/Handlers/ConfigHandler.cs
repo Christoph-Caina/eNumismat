@@ -56,25 +56,19 @@ namespace eNumismat
             attr.Value = DateTime.Now.ToString(@"yyyy/MM/dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
             ConfigNode.Attributes.Append(attr);
             NameSpace.AppendChild(ConfigNode);
+            
+            XmlNode ApplicationSettings = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "Application";
+            ApplicationSettings.Attributes.Append(attr);
+            ConfigNode.AppendChild(ApplicationSettings);
 
             XmlNode DBConf = xConf.CreateElement("group");
             attr = xConf.CreateAttribute("name");
             attr.Value = "Database";
             DBConf.Attributes.Append(attr);
-            ConfigNode.AppendChild(DBConf);
-
-            XmlNode LastDBFileName = xConf.CreateElement("parameter");
-            attr = xConf.CreateAttribute("name");
-            attr.Value = "LastDBFile";
-            LastDBFileName.Attributes.Append(attr);
-            DBConf.AppendChild(LastDBFileName);
-
-            XmlNode LastDBFilePath = xConf.CreateElement("parameter");
-            attr = xConf.CreateAttribute("name");
-            attr.Value = "LastDBFilePath";
-            LastDBFilePath.Attributes.Append(attr);
-            DBConf.AppendChild(LastDBFilePath);
-
+            ApplicationSettings.AppendChild(DBConf);
+            
             XmlNode BackupDBFile = xConf.CreateElement("group");
             attr = xConf.CreateAttribute("name");
             attr.Value = "Database Backup";
@@ -85,41 +79,59 @@ namespace eNumismat
             attr = xConf.CreateAttribute("name");
             attr.Value = "DbBackupOnAppExit";
             BackupOnAppExit.Attributes.Append(attr);
-            BackupOnAppExit.InnerText = "false";
+            BackupOnAppExit.InnerText = "False";
             BackupDBFile.AppendChild(BackupOnAppExit);
 
             XmlNode CompressBeforeBackup = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
             attr.Value = "DbCompressionBeforeBackup";
             CompressBeforeBackup.Attributes.Append(attr);
-            CompressBeforeBackup.InnerText = "false";
+            CompressBeforeBackup.InnerText = "False";
             BackupDBFile.AppendChild(CompressBeforeBackup);
 
-            XmlNode ApplicationSettings = xConf.CreateElement("group");
+            XmlNode GeneralApplicationSettings = xConf.CreateElement("group");
             attr = xConf.CreateAttribute("name");
-            attr.Value = "Application";
-            ApplicationSettings.Attributes.Append(attr);
-            ConfigNode.AppendChild(ApplicationSettings);
+            attr.Value = "GeneralSettings";
+            GeneralApplicationSettings.Attributes.Append(attr);
+            ApplicationSettings.AppendChild(GeneralApplicationSettings);
+
+            XmlNode LastDBFileName = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "LastDBFile";
+            LastDBFileName.Attributes.Append(attr);
+            GeneralApplicationSettings.AppendChild(LastDBFileName);
+
+            XmlNode LastDBFilePath = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "LastDBFilePath";
+            LastDBFilePath.Attributes.Append(attr);
+            GeneralApplicationSettings.AppendChild(LastDBFilePath);
 
             XmlNode MinimizeToTray = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
             attr.Value = "MinimizeToTray";
             MinimizeToTray.Attributes.Append(attr);
-            MinimizeToTray.InnerText = "false";
-            ApplicationSettings.AppendChild(MinimizeToTray);
+            MinimizeToTray.InnerText = "False";
+            GeneralApplicationSettings.AppendChild(MinimizeToTray);
 
             XmlNode ApplicationLanguage = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
             attr.Value = "UICulture";
             ApplicationLanguage.Attributes.Append(attr);
             ApplicationLanguage.InnerText = CultureInfo.CurrentUICulture.ToString();
-            ApplicationSettings.AppendChild(ApplicationLanguage);
+            GeneralApplicationSettings.AppendChild(ApplicationLanguage);
+
+            XmlNode AddressBookSettings = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "AddressBook";
+            AddressBookSettings.Attributes.Append(attr);
+            ApplicationSettings.AppendChild(AddressBookSettings);
 
             XmlNode AutoFill = xConf.CreateElement("group");
             attr = xConf.CreateAttribute("name");
             attr.Value = "UseAutoFillForContacts";
             AutoFill.Attributes.Append(attr);
-            ApplicationSettings.AppendChild(AutoFill);
+            AddressBookSettings.AppendChild(AutoFill);
 
             XmlNode AutoFillCities = xConf.CreateElement("parameter");
             attr = xConf.CreateAttribute("name");
@@ -134,6 +146,33 @@ namespace eNumismat
             AutoFillFederalStates.Attributes.Append(attr);
             AutoFillFederalStates.InnerText = "False";
             AutoFill.AppendChild(AutoFillFederalStates);
+
+            XmlNode ValidateAddressData = xConf.CreateElement("group");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "AddressValidation";
+            ValidateAddressData.Attributes.Append(attr);
+            AddressBookSettings.AppendChild(ValidateAddressData);
+
+            XmlNode ValidateNameFields = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "ValidateNames";
+            ValidateNameFields.Attributes.Append(attr);
+            ValidateNameFields.InnerText = "False";
+            ValidateAddressData.AppendChild(ValidateNameFields);
+
+            XmlNode ValidateEmailField = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "ValidateEmail";
+            ValidateEmailField.Attributes.Append(attr);
+            ValidateEmailField.InnerText = "False";
+            ValidateAddressData.AppendChild(ValidateEmailField);
+
+            XmlNode ValidateAddressFields = xConf.CreateElement("parameter");
+            attr = xConf.CreateAttribute("name");
+            attr.Value = "ValidateAddressData";
+            ValidateAddressFields.Attributes.Append(attr);
+            ValidateAddressFields.InnerText = "False";
+            ValidateAddressData.AppendChild(ValidateAddressFields);
 
             try
             {
