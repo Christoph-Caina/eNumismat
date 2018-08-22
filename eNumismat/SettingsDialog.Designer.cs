@@ -42,27 +42,30 @@
             this.cb_DbCompressionBeforeBackup = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cb_ValidateAddress = new System.Windows.Forms.CheckBox();
+            this.cb_ValidateEmail = new System.Windows.Forms.CheckBox();
+            this.cb_ValidateNames = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_AutoFillCities = new System.Windows.Forms.CheckBox();
+            this.cb_AutoFillFedStates = new System.Windows.Forms.CheckBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cb_AutoFillCities = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cb_AutoFillFedStates = new System.Windows.Forms.CheckBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cb_ValidateNames = new System.Windows.Forms.CheckBox();
-            this.cb_ValidateEmail = new System.Windows.Forms.CheckBox();
-            this.cb_ValidateAddress = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btn_DownloadImoportValidationData = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,32 +151,50 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Cancel.Image = global::eNumismat.Properties.Resources.cancel;
-            resources.ApplyResources(this.btn_Cancel, "btn_Cancel");
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.toolTip1.SetToolTip(this.btn_Cancel, resources.GetString("btn_Cancel.ToolTip"));
-            this.btn_Cancel.UseVisualStyleBackColor = true;
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.Image = global::eNumismat.Properties.Resources.accept;
-            resources.ApplyResources(this.btn_Save, "btn_Save");
-            this.btn_Save.Name = "btn_Save";
-            this.toolTip1.SetToolTip(this.btn_Save, resources.GetString("btn_Save.ToolTip"));
-            this.btn_Save.UseVisualStyleBackColor = true;
-            this.btn_Save.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.btn_DownloadImoportValidationData);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.groupBox1);
             resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cb_ValidateAddress);
+            this.groupBox2.Controls.Add(this.cb_ValidateEmail);
+            this.groupBox2.Controls.Add(this.cb_ValidateNames);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // cb_ValidateAddress
+            // 
+            resources.ApplyResources(this.cb_ValidateAddress, "cb_ValidateAddress");
+            this.cb_ValidateAddress.Name = "cb_ValidateAddress";
+            this.cb_ValidateAddress.UseVisualStyleBackColor = true;
+            // 
+            // cb_ValidateEmail
+            // 
+            resources.ApplyResources(this.cb_ValidateEmail, "cb_ValidateEmail");
+            this.cb_ValidateEmail.Name = "cb_ValidateEmail";
+            this.cb_ValidateEmail.UseVisualStyleBackColor = true;
+            // 
+            // cb_ValidateNames
+            // 
+            resources.ApplyResources(this.cb_ValidateNames, "cb_ValidateNames");
+            this.cb_ValidateNames.Name = "cb_ValidateNames";
+            this.cb_ValidateNames.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -189,52 +210,11 @@
             this.cb_AutoFillCities.Name = "cb_AutoFillCities";
             this.cb_AutoFillCities.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
             // cb_AutoFillFedStates
             // 
             resources.ApplyResources(this.cb_AutoFillFedStates, "cb_AutoFillFedStates");
             this.cb_AutoFillFedStates.Name = "cb_AutoFillFedStates";
             this.cb_AutoFillFedStates.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cb_ValidateAddress);
-            this.groupBox2.Controls.Add(this.cb_ValidateEmail);
-            this.groupBox2.Controls.Add(this.cb_ValidateNames);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // cb_ValidateNames
-            // 
-            resources.ApplyResources(this.cb_ValidateNames, "cb_ValidateNames");
-            this.cb_ValidateNames.Name = "cb_ValidateNames";
-            this.cb_ValidateNames.UseVisualStyleBackColor = true;
-            // 
-            // cb_ValidateEmail
-            // 
-            resources.ApplyResources(this.cb_ValidateEmail, "cb_ValidateEmail");
-            this.cb_ValidateEmail.Name = "cb_ValidateEmail";
-            this.cb_ValidateEmail.UseVisualStyleBackColor = true;
-            // 
-            // cb_ValidateAddress
-            // 
-            resources.ApplyResources(this.cb_ValidateAddress, "cb_ValidateAddress");
-            this.cb_ValidateAddress.Name = "cb_ValidateAddress";
-            this.cb_ValidateAddress.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btn_Save);
-            this.flowLayoutPanel1.Controls.Add(this.btn_Cancel);
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
             // tabPage4
             // 
@@ -247,6 +227,48 @@
             resources.ApplyResources(this.tabPage5, "tabPage5");
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.btn_Cancel, "btn_Cancel");
+            this.btn_Cancel.Image = global::eNumismat.Properties.Resources.cancel;
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.toolTip1.SetToolTip(this.btn_Cancel, resources.GetString("btn_Cancel.ToolTip"));
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            // 
+            // btn_Save
+            // 
+            resources.ApplyResources(this.btn_Save, "btn_Save");
+            this.btn_Save.Image = global::eNumismat.Properties.Resources.accept;
+            this.btn_Save.Name = "btn_Save";
+            this.toolTip1.SetToolTip(this.btn_Save, resources.GetString("btn_Save.ToolTip"));
+            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btn_Save);
+            this.flowLayoutPanel1.Controls.Add(this.btn_Cancel);
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            // 
+            // btn_DownloadImoportValidationData
+            // 
+            resources.ApplyResources(this.btn_DownloadImoportValidationData, "btn_DownloadImoportValidationData");
+            this.btn_DownloadImoportValidationData.Name = "btn_DownloadImoportValidationData";
+            this.btn_DownloadImoportValidationData.UseVisualStyleBackColor = true;
+            this.btn_DownloadImoportValidationData.Click += new System.EventHandler(this.btn_DownloadImoportValidationData_Click);
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // TrayIcon
+            // 
+            resources.ApplyResources(this.TrayIcon, "TrayIcon");
             // 
             // SettingsDialog
             // 
@@ -266,10 +288,10 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -303,5 +325,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_DownloadImoportValidationData;
+        private System.Windows.Forms.NotifyIcon TrayIcon;
     }
 }

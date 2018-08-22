@@ -3,6 +3,9 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Threading;
 using System.Globalization;
+using System.Net;
+using System.IO;
+using System.ComponentModel;
 
 namespace eNumismat
 {
@@ -212,6 +215,32 @@ namespace eNumismat
             }
 
             this.Hide();
+        }
+
+        private void btn_DownloadImoportValidationData_Click(object sender, EventArgs e)
+        {
+            using (WebClient webClient = new WebClient())
+            {
+                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadCompleted);
+
+                try
+                {
+                    webClient.DownloadFileAsync(new Uri("https://caina.de/software/data/plz.csv"), Path.Combine(Globals.AppDataPath, @"plz.csv"));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }
+
+        public void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            TrayIcon.BalloonTipTitle = "FileDownload";
+            TrayIcon.BalloonTipText = "File Download finished!";
+
+            TrayIcon.ShowBalloonTip(2000);
         }
     }
 }
