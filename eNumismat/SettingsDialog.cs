@@ -235,6 +235,8 @@ namespace eNumismat
             Hide();
         }
 
+        public string plzData = Path.Combine(Globals.AppDataPath, @"plz.csv");
+
         private void Btn_DownloadImoportValidationData_Click(object sender, EventArgs e)
         {
             using (WebClient webClient = new WebClient())
@@ -243,20 +245,20 @@ namespace eNumismat
 
                 try
                 {
-                    webClient.DownloadFileAsync(new Uri("https://caina.de/software/data/plz.csv"), Path.Combine(Globals.AppDataPath, @"plz.csv"));
+                    webClient.DownloadFileAsync(new Uri("https://caina.de/software/data/plz.csv"), plzData);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-
             }
         }
 
         private void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
         {
             // Define, what we should do with the downloaded csv file
-
+            DataImport import = new DataImport();
+            import.FromFile(plzData);
         }
     }
 }

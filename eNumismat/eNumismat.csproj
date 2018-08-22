@@ -119,6 +119,7 @@
     <Compile Include="Coin.cs" />
     <Compile Include="Collection.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="DataImport.cs" />
     <Compile Include="DBActions.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="GlobalStrings.es.Designer.cs">
