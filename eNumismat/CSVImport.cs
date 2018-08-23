@@ -16,7 +16,6 @@ namespace eNumismat
     public partial class CSVImport : Form
     {
         public string CsvFile { get; set; }
-        List<string> Headers = new List<string>();
 
         TextFieldParser tfp;
 
@@ -24,7 +23,7 @@ namespace eNumismat
         {
             InitializeComponent();
 
-            cb_name1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            /*cb_name1.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cb_name2.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cb_familyname.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cb_gender.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -38,7 +37,7 @@ namespace eNumismat
             cb_phone.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cb_mobile.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cb_email.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_notes.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cb_notes.AutoCompleteSource = AutoCompleteSource.CustomSource;*/
         }
 
         private void CSVImport_Load(object sender, EventArgs e)
@@ -79,13 +78,11 @@ namespace eNumismat
                         if (firstRowContainsFieldNames)
                         {
                             result.Columns.Add(fields[i]);
-                            Headers.Add(fields[i]);
                         }
 
                         else
                         {
                             result.Columns.Add("Col" + i);
-                            Headers.Add("Col" + i);
                         }
                     }
 
@@ -104,7 +101,7 @@ namespace eNumismat
 
         private void cb_separator_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            button1.Enabled = true;
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -136,50 +133,171 @@ namespace eNumismat
 
             resultData.DataSource = NewDataTable(CsvFile, delimiter, cb_HasHeader.Checked);
 
-            cb_name1.SelectedItem = Headers[0];
-            cb_name1.DataSource = Headers;
+            LoadHeadersForCbName1();
+            LoadHeadersForCbName2();
+            LoadHeadersForCbFamilyName();
+            LoadHeadersForCbGender();
+            LoadHeadersForCbBirthDate();
+            LoadHeadersForCbAddrLine1();
+            LoadHeadersForCbAddrLine2();
+            LoadHeadersForCbPostalCode();
+            LoadHeadersForCbCity();
+            LoadHeadersForCbState();
+            LoadHeadersForCbCountry();
+            LoadHeadersForCbPhone();
+            LoadHeadersForCbMobilePhone();
+            LoadHeadersForCbEmail();
+            LoadHeadersForCbNotes();
+        }
 
-            cb_name2.SelectedItem = Headers[0];
-            cb_name1.DataSource = Headers;
+        private void LoadHeadersForCbName1()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_name1.DataSource = colNameList;
+        }
 
-            cb_familyname.SelectedItem = Headers[0];
-            cb_familyname.DataSource = Headers;
+        private void LoadHeadersForCbName2()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_name2.DataSource = colNameList;
+        }
 
-            cb_gender.SelectedItem = Headers[0];
-            cb_gender.DataSource = Headers;
+        private void LoadHeadersForCbFamilyName()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_familyname.DataSource = colNameList;
+        }
 
-            cb_birthdate.SelectedItem = Headers[0];
-            cb_birthdate.DataSource = Headers;
+        private void LoadHeadersForCbGender()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_gender.DataSource = colNameList;
+        }
 
-            cb_addrline1.SelectedItem = Headers[0];
-            cb_addrline1.DataSource = Headers;
+        private void LoadHeadersForCbBirthDate()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_birthdate.DataSource = colNameList;
+        }
 
-            cb_addrline2.SelectedItem = Headers[0];
-            cb_addrline2.DataSource = Headers;
+        private void LoadHeadersForCbAddrLine1()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_addrline1.DataSource = colNameList;
+        }
 
-            cb_postalcode.SelectedItem = Headers[0];
-            cb_postalcode.DataSource = Headers;
+        private void LoadHeadersForCbAddrLine2()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_addrline2.DataSource = colNameList;
+        }
 
-            cb_city.SelectedItem = Headers[0];
-            cb_city.DataSource = Headers;
+        private void LoadHeadersForCbPostalCode()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_postalcode.DataSource = colNameList;
+        }
 
-            cb_state.SelectedItem = Headers[0];
-            cb_state.DataSource = Headers;
+        private void LoadHeadersForCbCity()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_city.DataSource = colNameList;
+        }
 
-            cb_country.SelectedItem = Headers[0];
-            cb_country.DataSource = Headers;
+        private void LoadHeadersForCbState()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_state.DataSource = colNameList;
+        }
 
-            cb_phone.SelectedItem = Headers[0];
-            cb_phone.DataSource = Headers;
+        private void LoadHeadersForCbCountry()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_country.DataSource = colNameList;
+        }
 
-            cb_mobile.SelectedItem = Headers[0];
-            cb_mobile.DataSource = Headers;
+        private void LoadHeadersForCbPhone()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_phone.DataSource = colNameList;
+        }
 
-            cb_email.SelectedItem = Headers[0];
-            cb_email.DataSource = Headers;
+        private void LoadHeadersForCbMobilePhone()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_mobile.DataSource = colNameList;
+        }
 
-            cb_notes.SelectedItem = Headers[0];
-            cb_notes.DataSource = Headers;
+        private void LoadHeadersForCbEmail()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_email.DataSource = colNameList;
+        }
+
+        private void LoadHeadersForCbNotes()
+        {
+            List<string> colNameList = new List<string>();
+            foreach (DataGridViewColumn col in resultData.Columns)
+            {
+                colNameList.Add(col.Name);
+            }
+            cb_notes.DataSource = colNameList;
         }
     }
 }
