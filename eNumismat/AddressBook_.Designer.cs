@@ -47,32 +47,6 @@
             this.Btn_CreateContact = new System.Windows.Forms.Button();
             this.Btn_DeleteContact = new System.Windows.Forms.Button();
             this.PanelShowContactDetails = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rtb_NotesDisplay = new System.Windows.Forms.RichTextBox();
-            this.lb_Mail = new System.Windows.Forms.Label();
-            this.view_label_mail = new System.Windows.Forms.Label();
-            this.lb_MobilePhone = new System.Windows.Forms.Label();
-            this.view_label_mobilephone = new System.Windows.Forms.Label();
-            this.lb_Phone = new System.Windows.Forms.Label();
-            this.view_label_phone = new System.Windows.Forms.Label();
-            this.panel_AddrFormat_german = new System.Windows.Forms.Panel();
-            this.lb_Country = new System.Windows.Forms.Label();
-            this.view_label_country = new System.Windows.Forms.Label();
-            this.lb_City = new System.Windows.Forms.Label();
-            this.lb_State = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lb_PostalCode = new System.Windows.Forms.Label();
-            this.view_label_addressline1 = new System.Windows.Forms.Label();
-            this.view_label_postalcode = new System.Windows.Forms.Label();
-            this.lb_AddrLine1 = new System.Windows.Forms.Label();
-            this.lb_AddrLine2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lb_BirthDate = new System.Windows.Forms.Label();
-            this.view_label_birthdate = new System.Windows.Forms.Label();
-            this.pb_Gender = new System.Windows.Forms.PictureBox();
-            this.lb_Name2 = new System.Windows.Forms.Label();
-            this.lb_FamilyName = new System.Windows.Forms.Label();
-            this.lb_Name1 = new System.Windows.Forms.Label();
             this.PanelEditContactDetails = new System.Windows.Forms.Panel();
             this.Btn_Cancel = new System.Windows.Forms.Button();
             this.Btn_Save = new System.Windows.Forms.Button();
@@ -104,6 +78,35 @@
             this.editor_label_Name = new System.Windows.Forms.Label();
             this.tb_Name2 = new System.Windows.Forms.TextBox();
             this.tb_Name1 = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rtb_NotesDisplay = new System.Windows.Forms.RichTextBox();
+            this.lb_Mail = new System.Windows.Forms.Label();
+            this.view_label_mail = new System.Windows.Forms.Label();
+            this.lb_MobilePhone = new System.Windows.Forms.Label();
+            this.view_label_mobilephone = new System.Windows.Forms.Label();
+            this.lb_Phone = new System.Windows.Forms.Label();
+            this.view_label_phone = new System.Windows.Forms.Label();
+            this.panel_AddrFormat_german = new System.Windows.Forms.Panel();
+            this.lb_Country = new System.Windows.Forms.Label();
+            this.view_label_country = new System.Windows.Forms.Label();
+            this.lb_City = new System.Windows.Forms.Label();
+            this.lb_State = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lb_PostalCode = new System.Windows.Forms.Label();
+            this.view_label_addressline1 = new System.Windows.Forms.Label();
+            this.view_label_postalcode = new System.Windows.Forms.Label();
+            this.lb_AddrLine1 = new System.Windows.Forms.Label();
+            this.lb_AddrLine2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lb_BirthDate = new System.Windows.Forms.Label();
+            this.view_label_birthdate = new System.Windows.Forms.Label();
+            this.pb_Gender = new System.Windows.Forms.PictureBox();
+            this.lb_Name2 = new System.Windows.Forms.Label();
+            this.lb_FamilyName = new System.Windows.Forms.Label();
+            this.lb_Name1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -113,9 +116,11 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PanelShowContactDetails.SuspendLayout();
+            this.PanelEditContactDetails.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.panel_AddrFormat_german.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Gender)).BeginInit();
-            this.PanelEditContactDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -126,7 +131,7 @@
             this.addressesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(804, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(844, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -192,7 +197,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 639);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(804, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(844, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -218,7 +223,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.PanelShowContactDetails);
-            this.splitContainer1.Size = new System.Drawing.Size(804, 615);
+            this.splitContainer1.Panel2.Controls.Add(this.PanelEditContactDetails);
+            this.splitContainer1.Size = new System.Drawing.Size(844, 615);
             this.splitContainer1.SplitterDistance = 217;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -292,274 +298,11 @@
             // 
             // PanelShowContactDetails
             // 
-            this.PanelShowContactDetails.Controls.Add(this.label2);
-            this.PanelShowContactDetails.Controls.Add(this.rtb_NotesDisplay);
-            this.PanelShowContactDetails.Controls.Add(this.lb_Mail);
-            this.PanelShowContactDetails.Controls.Add(this.view_label_mail);
-            this.PanelShowContactDetails.Controls.Add(this.lb_MobilePhone);
-            this.PanelShowContactDetails.Controls.Add(this.view_label_mobilephone);
-            this.PanelShowContactDetails.Controls.Add(this.lb_Phone);
-            this.PanelShowContactDetails.Controls.Add(this.view_label_phone);
-            this.PanelShowContactDetails.Controls.Add(this.panel_AddrFormat_german);
-            this.PanelShowContactDetails.Controls.Add(this.lb_BirthDate);
-            this.PanelShowContactDetails.Controls.Add(this.view_label_birthdate);
-            this.PanelShowContactDetails.Controls.Add(this.pb_Gender);
-            this.PanelShowContactDetails.Controls.Add(this.lb_Name2);
-            this.PanelShowContactDetails.Controls.Add(this.lb_FamilyName);
-            this.PanelShowContactDetails.Controls.Add(this.lb_Name1);
-            this.PanelShowContactDetails.Controls.Add(this.PanelEditContactDetails);
+            this.PanelShowContactDetails.Controls.Add(this.tabControl1);
             this.PanelShowContactDetails.Location = new System.Drawing.Point(756, 4);
             this.PanelShowContactDetails.Name = "PanelShowContactDetails";
             this.PanelShowContactDetails.Size = new System.Drawing.Size(618, 610);
             this.PanelShowContactDetails.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(113, 299);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Notes:";
-            // 
-            // rtb_NotesDisplay
-            // 
-            this.rtb_NotesDisplay.Location = new System.Drawing.Point(160, 296);
-            this.rtb_NotesDisplay.Name = "rtb_NotesDisplay";
-            this.rtb_NotesDisplay.Size = new System.Drawing.Size(320, 132);
-            this.rtb_NotesDisplay.TabIndex = 20;
-            this.rtb_NotesDisplay.Text = "";
-            // 
-            // lb_Mail
-            // 
-            this.lb_Mail.AutoSize = true;
-            this.lb_Mail.Location = new System.Drawing.Point(157, 258);
-            this.lb_Mail.Name = "lb_Mail";
-            this.lb_Mail.Size = new System.Drawing.Size(0, 13);
-            this.lb_Mail.TabIndex = 19;
-            // 
-            // view_label_mail
-            // 
-            this.view_label_mail.AutoSize = true;
-            this.view_label_mail.Location = new System.Drawing.Point(112, 258);
-            this.view_label_mail.Name = "view_label_mail";
-            this.view_label_mail.Size = new System.Drawing.Size(39, 13);
-            this.view_label_mail.TabIndex = 18;
-            this.view_label_mail.Text = "E-Mail:";
-            // 
-            // lb_MobilePhone
-            // 
-            this.lb_MobilePhone.AutoSize = true;
-            this.lb_MobilePhone.Location = new System.Drawing.Point(157, 240);
-            this.lb_MobilePhone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.lb_MobilePhone.Name = "lb_MobilePhone";
-            this.lb_MobilePhone.Size = new System.Drawing.Size(0, 13);
-            this.lb_MobilePhone.TabIndex = 17;
-            // 
-            // view_label_mobilephone
-            // 
-            this.view_label_mobilephone.AutoSize = true;
-            this.view_label_mobilephone.Location = new System.Drawing.Point(76, 240);
-            this.view_label_mobilephone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.view_label_mobilephone.Name = "view_label_mobilephone";
-            this.view_label_mobilephone.Size = new System.Drawing.Size(75, 13);
-            this.view_label_mobilephone.TabIndex = 16;
-            this.view_label_mobilephone.Text = "Mobile Phone:";
-            // 
-            // lb_Phone
-            // 
-            this.lb_Phone.AutoSize = true;
-            this.lb_Phone.Location = new System.Drawing.Point(157, 222);
-            this.lb_Phone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.lb_Phone.Name = "lb_Phone";
-            this.lb_Phone.Size = new System.Drawing.Size(0, 13);
-            this.lb_Phone.TabIndex = 15;
-            // 
-            // view_label_phone
-            // 
-            this.view_label_phone.AutoSize = true;
-            this.view_label_phone.Location = new System.Drawing.Point(110, 222);
-            this.view_label_phone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.view_label_phone.Name = "view_label_phone";
-            this.view_label_phone.Size = new System.Drawing.Size(41, 13);
-            this.view_label_phone.TabIndex = 14;
-            this.view_label_phone.Text = "Phone:";
-            // 
-            // panel_AddrFormat_german
-            // 
-            this.panel_AddrFormat_german.Controls.Add(this.lb_Country);
-            this.panel_AddrFormat_german.Controls.Add(this.view_label_country);
-            this.panel_AddrFormat_german.Controls.Add(this.lb_City);
-            this.panel_AddrFormat_german.Controls.Add(this.lb_State);
-            this.panel_AddrFormat_german.Controls.Add(this.label3);
-            this.panel_AddrFormat_german.Controls.Add(this.lb_PostalCode);
-            this.panel_AddrFormat_german.Controls.Add(this.view_label_addressline1);
-            this.panel_AddrFormat_german.Controls.Add(this.view_label_postalcode);
-            this.panel_AddrFormat_german.Controls.Add(this.lb_AddrLine1);
-            this.panel_AddrFormat_german.Controls.Add(this.lb_AddrLine2);
-            this.panel_AddrFormat_german.Controls.Add(this.label1);
-            this.panel_AddrFormat_german.Location = new System.Drawing.Point(13, 110);
-            this.panel_AddrFormat_german.Name = "panel_AddrFormat_german";
-            this.panel_AddrFormat_german.Size = new System.Drawing.Size(518, 109);
-            this.panel_AddrFormat_german.TabIndex = 13;
-            // 
-            // lb_Country
-            // 
-            this.lb_Country.AutoSize = true;
-            this.lb_Country.Location = new System.Drawing.Point(144, 83);
-            this.lb_Country.Name = "lb_Country";
-            this.lb_Country.Size = new System.Drawing.Size(0, 13);
-            this.lb_Country.TabIndex = 20;
-            // 
-            // view_label_country
-            // 
-            this.view_label_country.AutoSize = true;
-            this.view_label_country.Location = new System.Drawing.Point(92, 83);
-            this.view_label_country.Name = "view_label_country";
-            this.view_label_country.Size = new System.Drawing.Size(46, 13);
-            this.view_label_country.TabIndex = 19;
-            this.view_label_country.Text = "Country:";
-            // 
-            // lb_City
-            // 
-            this.lb_City.AutoSize = true;
-            this.lb_City.Location = new System.Drawing.Point(198, 47);
-            this.lb_City.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.lb_City.Name = "lb_City";
-            this.lb_City.Size = new System.Drawing.Size(0, 13);
-            this.lb_City.TabIndex = 18;
-            // 
-            // lb_State
-            // 
-            this.lb_State.AutoSize = true;
-            this.lb_State.Location = new System.Drawing.Point(144, 65);
-            this.lb_State.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.lb_State.Name = "lb_State";
-            this.lb_State.Size = new System.Drawing.Size(0, 13);
-            this.lb_State.TabIndex = 17;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 65);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "State  / Province:";
-            // 
-            // lb_PostalCode
-            // 
-            this.lb_PostalCode.AutoSize = true;
-            this.lb_PostalCode.Location = new System.Drawing.Point(144, 47);
-            this.lb_PostalCode.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.lb_PostalCode.Name = "lb_PostalCode";
-            this.lb_PostalCode.Size = new System.Drawing.Size(0, 13);
-            this.lb_PostalCode.TabIndex = 13;
-            // 
-            // view_label_addressline1
-            // 
-            this.view_label_addressline1.AutoSize = true;
-            this.view_label_addressline1.Location = new System.Drawing.Point(58, 11);
-            this.view_label_addressline1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.view_label_addressline1.Name = "view_label_addressline1";
-            this.view_label_addressline1.Size = new System.Drawing.Size(80, 13);
-            this.view_label_addressline1.TabIndex = 8;
-            this.view_label_addressline1.Text = "Address Line 1:";
-            // 
-            // view_label_postalcode
-            // 
-            this.view_label_postalcode.AutoSize = true;
-            this.view_label_postalcode.Location = new System.Drawing.Point(43, 47);
-            this.view_label_postalcode.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.view_label_postalcode.Name = "view_label_postalcode";
-            this.view_label_postalcode.Size = new System.Drawing.Size(95, 13);
-            this.view_label_postalcode.TabIndex = 12;
-            this.view_label_postalcode.Text = "Postal Code / City:";
-            // 
-            // lb_AddrLine1
-            // 
-            this.lb_AddrLine1.AutoSize = true;
-            this.lb_AddrLine1.Location = new System.Drawing.Point(144, 11);
-            this.lb_AddrLine1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.lb_AddrLine1.Name = "lb_AddrLine1";
-            this.lb_AddrLine1.Size = new System.Drawing.Size(0, 13);
-            this.lb_AddrLine1.TabIndex = 9;
-            // 
-            // lb_AddrLine2
-            // 
-            this.lb_AddrLine2.AutoSize = true;
-            this.lb_AddrLine2.Location = new System.Drawing.Point(144, 29);
-            this.lb_AddrLine2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.lb_AddrLine2.Name = "lb_AddrLine2";
-            this.lb_AddrLine2.Size = new System.Drawing.Size(0, 13);
-            this.lb_AddrLine2.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Address Line 2:";
-            // 
-            // lb_BirthDate
-            // 
-            this.lb_BirthDate.AutoSize = true;
-            this.lb_BirthDate.Location = new System.Drawing.Point(157, 94);
-            this.lb_BirthDate.Name = "lb_BirthDate";
-            this.lb_BirthDate.Size = new System.Drawing.Size(0, 13);
-            this.lb_BirthDate.TabIndex = 7;
-            // 
-            // view_label_birthdate
-            // 
-            this.view_label_birthdate.AutoSize = true;
-            this.view_label_birthdate.Location = new System.Drawing.Point(99, 94);
-            this.view_label_birthdate.Name = "view_label_birthdate";
-            this.view_label_birthdate.Size = new System.Drawing.Size(52, 13);
-            this.view_label_birthdate.TabIndex = 6;
-            this.view_label_birthdate.Text = "Birthdate:";
-            // 
-            // pb_Gender
-            // 
-            this.pb_Gender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pb_Gender.Location = new System.Drawing.Point(13, 14);
-            this.pb_Gender.Name = "pb_Gender";
-            this.pb_Gender.Size = new System.Drawing.Size(32, 32);
-            this.pb_Gender.TabIndex = 5;
-            this.pb_Gender.TabStop = false;
-            // 
-            // lb_Name2
-            // 
-            this.lb_Name2.AutoSize = true;
-            this.lb_Name2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lb_Name2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lb_Name2.Location = new System.Drawing.Point(139, 14);
-            this.lb_Name2.Name = "lb_Name2";
-            this.lb_Name2.Size = new System.Drawing.Size(0, 16);
-            this.lb_Name2.TabIndex = 4;
-            // 
-            // lb_FamilyName
-            // 
-            this.lb_FamilyName.AutoSize = true;
-            this.lb_FamilyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lb_FamilyName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lb_FamilyName.Location = new System.Drawing.Point(51, 34);
-            this.lb_FamilyName.Name = "lb_FamilyName";
-            this.lb_FamilyName.Size = new System.Drawing.Size(0, 16);
-            this.lb_FamilyName.TabIndex = 3;
-            // 
-            // lb_Name1
-            // 
-            this.lb_Name1.AutoSize = true;
-            this.lb_Name1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lb_Name1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lb_Name1.Location = new System.Drawing.Point(51, 14);
-            this.lb_Name1.Name = "lb_Name1";
-            this.lb_Name1.Size = new System.Drawing.Size(0, 16);
-            this.lb_Name1.TabIndex = 2;
             // 
             // PanelEditContactDetails
             // 
@@ -593,7 +336,7 @@
             this.PanelEditContactDetails.Controls.Add(this.editor_label_Name);
             this.PanelEditContactDetails.Controls.Add(this.tb_Name2);
             this.PanelEditContactDetails.Controls.Add(this.tb_Name1);
-            this.PanelEditContactDetails.Location = new System.Drawing.Point(537, 3);
+            this.PanelEditContactDetails.Location = new System.Drawing.Point(1380, 5);
             this.PanelEditContactDetails.Name = "PanelEditContactDetails";
             this.PanelEditContactDetails.Size = new System.Drawing.Size(618, 610);
             this.PanelEditContactDetails.TabIndex = 1;
@@ -863,12 +606,306 @@
             this.tb_Name1.TabIndex = 1;
             this.tb_Name1.TextChanged += new System.EventHandler(this.TbName_TextChanged);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(618, 610);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.rtb_NotesDisplay);
+            this.tabPage1.Controls.Add(this.lb_Mail);
+            this.tabPage1.Controls.Add(this.view_label_mail);
+            this.tabPage1.Controls.Add(this.lb_MobilePhone);
+            this.tabPage1.Controls.Add(this.view_label_mobilephone);
+            this.tabPage1.Controls.Add(this.lb_Phone);
+            this.tabPage1.Controls.Add(this.view_label_phone);
+            this.tabPage1.Controls.Add(this.panel_AddrFormat_german);
+            this.tabPage1.Controls.Add(this.lb_BirthDate);
+            this.tabPage1.Controls.Add(this.view_label_birthdate);
+            this.tabPage1.Controls.Add(this.pb_Gender);
+            this.tabPage1.Controls.Add(this.lb_Name2);
+            this.tabPage1.Controls.Add(this.lb_FamilyName);
+            this.tabPage1.Controls.Add(this.lb_Name1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(610, 584);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Contact Details";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(610, 584);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Exchange Monitor";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(106, 291);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Notes:";
+            // 
+            // rtb_NotesDisplay
+            // 
+            this.rtb_NotesDisplay.Location = new System.Drawing.Point(153, 288);
+            this.rtb_NotesDisplay.Name = "rtb_NotesDisplay";
+            this.rtb_NotesDisplay.Size = new System.Drawing.Size(320, 132);
+            this.rtb_NotesDisplay.TabIndex = 35;
+            this.rtb_NotesDisplay.Text = "";
+            // 
+            // lb_Mail
+            // 
+            this.lb_Mail.AutoSize = true;
+            this.lb_Mail.Location = new System.Drawing.Point(150, 250);
+            this.lb_Mail.Name = "lb_Mail";
+            this.lb_Mail.Size = new System.Drawing.Size(0, 13);
+            this.lb_Mail.TabIndex = 34;
+            // 
+            // view_label_mail
+            // 
+            this.view_label_mail.AutoSize = true;
+            this.view_label_mail.Location = new System.Drawing.Point(105, 250);
+            this.view_label_mail.Name = "view_label_mail";
+            this.view_label_mail.Size = new System.Drawing.Size(39, 13);
+            this.view_label_mail.TabIndex = 33;
+            this.view_label_mail.Text = "E-Mail:";
+            // 
+            // lb_MobilePhone
+            // 
+            this.lb_MobilePhone.AutoSize = true;
+            this.lb_MobilePhone.Location = new System.Drawing.Point(150, 232);
+            this.lb_MobilePhone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.lb_MobilePhone.Name = "lb_MobilePhone";
+            this.lb_MobilePhone.Size = new System.Drawing.Size(0, 13);
+            this.lb_MobilePhone.TabIndex = 32;
+            // 
+            // view_label_mobilephone
+            // 
+            this.view_label_mobilephone.AutoSize = true;
+            this.view_label_mobilephone.Location = new System.Drawing.Point(69, 232);
+            this.view_label_mobilephone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.view_label_mobilephone.Name = "view_label_mobilephone";
+            this.view_label_mobilephone.Size = new System.Drawing.Size(75, 13);
+            this.view_label_mobilephone.TabIndex = 31;
+            this.view_label_mobilephone.Text = "Mobile Phone:";
+            // 
+            // lb_Phone
+            // 
+            this.lb_Phone.AutoSize = true;
+            this.lb_Phone.Location = new System.Drawing.Point(150, 214);
+            this.lb_Phone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.lb_Phone.Name = "lb_Phone";
+            this.lb_Phone.Size = new System.Drawing.Size(0, 13);
+            this.lb_Phone.TabIndex = 30;
+            // 
+            // view_label_phone
+            // 
+            this.view_label_phone.AutoSize = true;
+            this.view_label_phone.Location = new System.Drawing.Point(103, 214);
+            this.view_label_phone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.view_label_phone.Name = "view_label_phone";
+            this.view_label_phone.Size = new System.Drawing.Size(41, 13);
+            this.view_label_phone.TabIndex = 29;
+            this.view_label_phone.Text = "Phone:";
+            // 
+            // panel_AddrFormat_german
+            // 
+            this.panel_AddrFormat_german.Controls.Add(this.lb_Country);
+            this.panel_AddrFormat_german.Controls.Add(this.view_label_country);
+            this.panel_AddrFormat_german.Controls.Add(this.lb_City);
+            this.panel_AddrFormat_german.Controls.Add(this.lb_State);
+            this.panel_AddrFormat_german.Controls.Add(this.label3);
+            this.panel_AddrFormat_german.Controls.Add(this.lb_PostalCode);
+            this.panel_AddrFormat_german.Controls.Add(this.view_label_addressline1);
+            this.panel_AddrFormat_german.Controls.Add(this.view_label_postalcode);
+            this.panel_AddrFormat_german.Controls.Add(this.lb_AddrLine1);
+            this.panel_AddrFormat_german.Controls.Add(this.lb_AddrLine2);
+            this.panel_AddrFormat_german.Controls.Add(this.label1);
+            this.panel_AddrFormat_german.Location = new System.Drawing.Point(6, 102);
+            this.panel_AddrFormat_german.Name = "panel_AddrFormat_german";
+            this.panel_AddrFormat_german.Size = new System.Drawing.Size(518, 109);
+            this.panel_AddrFormat_german.TabIndex = 28;
+            // 
+            // lb_Country
+            // 
+            this.lb_Country.AutoSize = true;
+            this.lb_Country.Location = new System.Drawing.Point(144, 83);
+            this.lb_Country.Name = "lb_Country";
+            this.lb_Country.Size = new System.Drawing.Size(0, 13);
+            this.lb_Country.TabIndex = 20;
+            // 
+            // view_label_country
+            // 
+            this.view_label_country.AutoSize = true;
+            this.view_label_country.Location = new System.Drawing.Point(92, 83);
+            this.view_label_country.Name = "view_label_country";
+            this.view_label_country.Size = new System.Drawing.Size(46, 13);
+            this.view_label_country.TabIndex = 19;
+            this.view_label_country.Text = "Country:";
+            // 
+            // lb_City
+            // 
+            this.lb_City.AutoSize = true;
+            this.lb_City.Location = new System.Drawing.Point(198, 47);
+            this.lb_City.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.lb_City.Name = "lb_City";
+            this.lb_City.Size = new System.Drawing.Size(0, 13);
+            this.lb_City.TabIndex = 18;
+            // 
+            // lb_State
+            // 
+            this.lb_State.AutoSize = true;
+            this.lb_State.Location = new System.Drawing.Point(144, 65);
+            this.lb_State.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.lb_State.Name = "lb_State";
+            this.lb_State.Size = new System.Drawing.Size(0, 13);
+            this.lb_State.TabIndex = 17;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(47, 65);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "State  / Province:";
+            // 
+            // lb_PostalCode
+            // 
+            this.lb_PostalCode.AutoSize = true;
+            this.lb_PostalCode.Location = new System.Drawing.Point(144, 47);
+            this.lb_PostalCode.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.lb_PostalCode.Name = "lb_PostalCode";
+            this.lb_PostalCode.Size = new System.Drawing.Size(0, 13);
+            this.lb_PostalCode.TabIndex = 13;
+            // 
+            // view_label_addressline1
+            // 
+            this.view_label_addressline1.AutoSize = true;
+            this.view_label_addressline1.Location = new System.Drawing.Point(58, 11);
+            this.view_label_addressline1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.view_label_addressline1.Name = "view_label_addressline1";
+            this.view_label_addressline1.Size = new System.Drawing.Size(80, 13);
+            this.view_label_addressline1.TabIndex = 8;
+            this.view_label_addressline1.Text = "Address Line 1:";
+            // 
+            // view_label_postalcode
+            // 
+            this.view_label_postalcode.AutoSize = true;
+            this.view_label_postalcode.Location = new System.Drawing.Point(43, 47);
+            this.view_label_postalcode.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.view_label_postalcode.Name = "view_label_postalcode";
+            this.view_label_postalcode.Size = new System.Drawing.Size(95, 13);
+            this.view_label_postalcode.TabIndex = 12;
+            this.view_label_postalcode.Text = "Postal Code / City:";
+            // 
+            // lb_AddrLine1
+            // 
+            this.lb_AddrLine1.AutoSize = true;
+            this.lb_AddrLine1.Location = new System.Drawing.Point(144, 11);
+            this.lb_AddrLine1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.lb_AddrLine1.Name = "lb_AddrLine1";
+            this.lb_AddrLine1.Size = new System.Drawing.Size(0, 13);
+            this.lb_AddrLine1.TabIndex = 9;
+            // 
+            // lb_AddrLine2
+            // 
+            this.lb_AddrLine2.AutoSize = true;
+            this.lb_AddrLine2.Location = new System.Drawing.Point(144, 29);
+            this.lb_AddrLine2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.lb_AddrLine2.Name = "lb_AddrLine2";
+            this.lb_AddrLine2.Size = new System.Drawing.Size(0, 13);
+            this.lb_AddrLine2.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(58, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Address Line 2:";
+            // 
+            // lb_BirthDate
+            // 
+            this.lb_BirthDate.AutoSize = true;
+            this.lb_BirthDate.Location = new System.Drawing.Point(150, 86);
+            this.lb_BirthDate.Name = "lb_BirthDate";
+            this.lb_BirthDate.Size = new System.Drawing.Size(0, 13);
+            this.lb_BirthDate.TabIndex = 27;
+            // 
+            // view_label_birthdate
+            // 
+            this.view_label_birthdate.AutoSize = true;
+            this.view_label_birthdate.Location = new System.Drawing.Point(92, 86);
+            this.view_label_birthdate.Name = "view_label_birthdate";
+            this.view_label_birthdate.Size = new System.Drawing.Size(52, 13);
+            this.view_label_birthdate.TabIndex = 26;
+            this.view_label_birthdate.Text = "Birthdate:";
+            // 
+            // pb_Gender
+            // 
+            this.pb_Gender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pb_Gender.Location = new System.Drawing.Point(6, 6);
+            this.pb_Gender.Name = "pb_Gender";
+            this.pb_Gender.Size = new System.Drawing.Size(32, 32);
+            this.pb_Gender.TabIndex = 25;
+            this.pb_Gender.TabStop = false;
+            // 
+            // lb_Name2
+            // 
+            this.lb_Name2.AutoSize = true;
+            this.lb_Name2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lb_Name2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lb_Name2.Location = new System.Drawing.Point(132, 6);
+            this.lb_Name2.Name = "lb_Name2";
+            this.lb_Name2.Size = new System.Drawing.Size(0, 16);
+            this.lb_Name2.TabIndex = 24;
+            // 
+            // lb_FamilyName
+            // 
+            this.lb_FamilyName.AutoSize = true;
+            this.lb_FamilyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lb_FamilyName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lb_FamilyName.Location = new System.Drawing.Point(44, 26);
+            this.lb_FamilyName.Name = "lb_FamilyName";
+            this.lb_FamilyName.Size = new System.Drawing.Size(0, 16);
+            this.lb_FamilyName.TabIndex = 23;
+            // 
+            // lb_Name1
+            // 
+            this.lb_Name1.AutoSize = true;
+            this.lb_Name1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lb_Name1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lb_Name1.Location = new System.Drawing.Point(44, 6);
+            this.lb_Name1.Name = "lb_Name1";
+            this.lb_Name1.Size = new System.Drawing.Size(0, 16);
+            this.lb_Name1.TabIndex = 22;
+            // 
             // AddressBook_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(804, 661);
+            this.ClientSize = new System.Drawing.Size(844, 661);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -887,12 +924,14 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.PanelShowContactDetails.ResumeLayout(false);
-            this.PanelShowContactDetails.PerformLayout();
+            this.PanelEditContactDetails.ResumeLayout(false);
+            this.PanelEditContactDetails.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.panel_AddrFormat_german.ResumeLayout(false);
             this.panel_AddrFormat_german.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Gender)).EndInit();
-            this.PanelEditContactDetails.ResumeLayout(false);
-            this.PanelEditContactDetails.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -950,13 +989,20 @@
         private System.Windows.Forms.Button Btn_UpdateContact;
         private System.Windows.Forms.Button Btn_CreateContact;
         private System.Windows.Forms.Button Btn_DeleteContact;
-        private System.Windows.Forms.PictureBox pb_Gender;
-        private System.Windows.Forms.Label lb_Name2;
-        private System.Windows.Forms.Label lb_FamilyName;
-        private System.Windows.Forms.Label lb_Name1;
-        private System.Windows.Forms.Label lb_BirthDate;
-        private System.Windows.Forms.Label view_label_birthdate;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox rtb_NotesDisplay;
+        private System.Windows.Forms.Label lb_Mail;
+        private System.Windows.Forms.Label view_label_mail;
+        private System.Windows.Forms.Label lb_MobilePhone;
+        private System.Windows.Forms.Label view_label_mobilephone;
+        private System.Windows.Forms.Label lb_Phone;
+        private System.Windows.Forms.Label view_label_phone;
         private System.Windows.Forms.Panel panel_AddrFormat_german;
+        private System.Windows.Forms.Label lb_Country;
+        private System.Windows.Forms.Label view_label_country;
+        private System.Windows.Forms.Label lb_City;
         private System.Windows.Forms.Label lb_State;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lb_PostalCode;
@@ -965,16 +1011,12 @@
         private System.Windows.Forms.Label lb_AddrLine1;
         private System.Windows.Forms.Label lb_AddrLine2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lb_Country;
-        private System.Windows.Forms.Label view_label_country;
-        private System.Windows.Forms.Label lb_City;
-        private System.Windows.Forms.Label lb_Mail;
-        private System.Windows.Forms.Label view_label_mail;
-        private System.Windows.Forms.Label lb_MobilePhone;
-        private System.Windows.Forms.Label view_label_mobilephone;
-        private System.Windows.Forms.Label lb_Phone;
-        private System.Windows.Forms.Label view_label_phone;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox rtb_NotesDisplay;
+        private System.Windows.Forms.Label lb_BirthDate;
+        private System.Windows.Forms.Label view_label_birthdate;
+        private System.Windows.Forms.PictureBox pb_Gender;
+        private System.Windows.Forms.Label lb_Name2;
+        private System.Windows.Forms.Label lb_FamilyName;
+        private System.Windows.Forms.Label lb_Name1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
