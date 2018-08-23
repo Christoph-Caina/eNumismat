@@ -281,7 +281,7 @@ namespace eNumismat
             }
 
             Globals.UseAutoFillOnCities = ConvertToBool(AutoFillCities);
-            Globals.UseAutoFillOnFederalStates = ConvertToBool(AutoFillFederalStates);
+            Globals.UseAutoFillOnStates = ConvertToBool(AutoFillFederalStates);
 
             // Read AutoFill Settings
             ConfNode = root.SelectNodes("descendant::configuration/group[@name='Application']/group[@name='AddressBook']/group[@name='AddressValidation']/parameter");

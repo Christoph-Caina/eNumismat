@@ -57,11 +57,11 @@ VALUES
 	('Australien');
 
 INSERT INTO `CONTACTS`
-	(`name`, `surename`, `gender`, `birthdate`, `street`, `zipcode`, `city`, `federalstate`, `country`, `phone`, `mobile`, `email`, `notes`)
+	(`name1`, `name2`, `familyname`, `gender`, `birthdate`, `addrline1`, `addrline2`, `postalcode`, `city`, `state`, `country`, `phone`, `mobile`, `email`, `notes`)
 VALUES
-	('Mustermann', 'Max', 'male', null, 'Musterstraße 23', '12345', 'Musterdorf', null, 'Deutschland', null, null, null, null),
-	('Mustermann', 'Marta', 'female', null, 'Musterstraße 23', '12345', 'Musterdorf', null, 'Deutschland', null, null, null, null),
-	('Caina', 'Christoph', 'male', '1986-03-25', 'Quellenstraße 21', '71272', 'Renningen', 'Baden-Württemberg', 'Deutschland', null, null, 'christoph@caina.de', 'Developer of eNumismat');
+	('Max', null, 'Mustermann', 'male', null, 'Musterstraße 23', null, '12345', 'Musterdorf', null, 'Deutschland', null, null, null, null),
+	('Marta', null, 'Mustermann', 'female', null, 'Musterstraße 23', null, '12345', 'Musterdorf', null, 'Deutschland', null, null, null, null),
+	('Christoph', 'Daniel', 'Caina', 'male', '1986-03-25', 'Quellenstraße 21', null,  '71272', 'Renningen', 'Baden-Württemberg', 'Deutschland', null, null, 'christoph@caina.de', 'Developer of eNumismat');
 
 INSERT INTO `COINSTATUS`
     (`name`)

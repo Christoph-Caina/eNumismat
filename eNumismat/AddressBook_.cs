@@ -10,24 +10,26 @@ using System.Globalization;
 
 namespace eNumismat
 {
-    public partial class AddressBook : Form
+    public partial class AddressBook_ : Form
     {
         private List<TreeNode> _unselectableNodes = new List<TreeNode>();
         List<string> AutoFillCities = new List<string>();
-        List<string> AutoFillFederalStates = new List<string>();
+        List<string> AutoFillStates = new List<string>();
+        List<string> AutoFillPostalCodes = new List<string>();
+        List<string> AutoFillCountries = new List<string>();
 
         int ContactID = 0;
 
         DBActions dbAction = new DBActions();
 
         //=====================================================================================================================================================================
-        public AddressBook()
+        public AddressBook_()
         {
             InitializeComponent();
         }
 
         //=====================================================================================================================================================================
-        private void AddressBook_Load(object sender, EventArgs e)
+        private void AddressBook__Load(object sender, EventArgs e)
         {
             // Check, if the User has set another Culture / Language for the form.
             // if yes, use the userSettings instead of the System default Culture
@@ -43,33 +45,51 @@ namespace eNumismat
             // ... for Cities
             if (Globals.UseAutoFillOnCities == true)
             {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES", cb_city.Text).Rows)
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("cities", cb_City.Text).Rows)
                 {
                     AutoFillCities.Add(AutoFillItems[0].ToString());
                 }
 
                 foreach (string item in AutoFillCities)
                 {
-                    cb_city.AutoCompleteCustomSource.Add(item);
+                    cb_City.AutoCompleteCustomSource.Add(item);
                 }
 
-                cb_city.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                cb_City.AutoCompleteSource = AutoCompleteSource.CustomSource;
             }
 
             // ... for Federal States
-            //if (Globals.UseAutoFillOnFederalStates == true)
-            //{
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("FEDERALSTATES", cb_bundesland.Text).Rows)
+            if (Globals.UseAutoFillOnStates == true)
+            {
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("states", cb_State.Text).Rows)
                 {
-                    AutoFillFederalStates.Add(AutoFillItems[0].ToString());
+                    AutoFillStates.Add(AutoFillItems[0].ToString());
                 }
 
-                foreach (string item in AutoFillFederalStates)
+                foreach (string item in AutoFillStates)
                 {
-                    cb_bundesland.AutoCompleteCustomSource.Add(item);
+                    cb_State.AutoCompleteCustomSource.Add(item);
                 }
-                cb_bundesland.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            //}
+                cb_State.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            }
+
+            if (Globals.UseAutoFillOnPostalCodes == true)
+            {
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("postalcodes", tb_PostalCode.Text).Rows)
+                {
+                    AutoFillPostalCodes.Add(AutoFillItems[0].ToString());
+                }
+                tb_PostalCode.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            }
+
+            if (Globals.UseAutoFillOnCountries == true)
+            {
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("countries", cb_Country.Text).Rows)
+                {
+                    AutoFillCountries.Add(AutoFillItems[0].ToString());
+                }
+                cb_Country.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            }
 
             // ... for Zip-Codes
             // (Masked Text Box does not support AutoComplete / Suggestions -> maybe, we need to change the control or create our own Control.
@@ -105,7 +125,7 @@ namespace eNumismat
 
             // also, we need to fill our TreeView
             // the parent Nodes first
-            LoadTreeViewParents();
+            LoadTreeViewAlphabet();
         }
 
         //=====================================================================================================================================================================
@@ -120,7 +140,6 @@ namespace eNumismat
         {
             // We're collecting the Data, decide what Select we need to perform on the Database etc.
             DataTable _ContactDetails = new DataTable();
-           
 
             // If we don't have anything in our Database
             if (ContactName == null && ContactId == 0)
@@ -152,6 +171,8 @@ namespace eNumismat
             int DataTableCounter = _ContactDetails.Columns.Count;
             int i = 0;
 
+ // Bis hier hin kommt die Ausführung des Codes nach SELECT
+
             // this is our List with all the Contact Details in it
             List<string> ContactDetails = new List<string>();
 
@@ -160,6 +181,8 @@ namespace eNumismat
             {
                 foreach (DataRow drDetails in _ContactDetails.Rows)
                 {
+                    MessageBox.Show(i.ToString() + " -- " + drDetails[i].ToString());
+
                     ContactDetails.Add(drDetails[i].ToString());
                 }
 
@@ -170,29 +193,31 @@ namespace eNumismat
             // We fill the List by counting the columns of our DB query, but then, after filling up the List, we don't know the size - and we don't really know, which position will be which value.
             // so this is "static" code, and maybe we need to change it to be more dynamically?
 
-            /*
-            [0]  => ID
-            [1]  => Name
-            [2]  => SureName
-            [3]  => Gender
-            [4]  => Birthdate
-            [5]  => Street
-            [6]  => ZipCode
-            [7]  => City
-            [8]  => FederalState
-            [9]  => Country
-            [10] => Phone
-            [11] => Mobile
-            [12] => Email
-            [13] => Notes
+            /*                              
+            [0]  => ID                     
+            [1]  => Name 1                 
+            [2]  => Name 2                  
+            [3]  => SureName                
+            [4]  => Gender                 
+            [5]  => BirthDate            
+            [6]  => Address Line 1        
+            [7]  => Address Line 2      
+            [8]  => Postal Code        
+            [9]  => City
+            [10] => State                   
+            [11] => Country   
+            [12] => Phone                   
+            [13] => Mobile                  
+            [14] => Email                   
+            [15] => Notes
             */
 
             // initiate a new String for the GENDER value
             string ContactGender = null;
-            
+
             // in our Database, we only want to store the Gender as male or female.
             // in the form, we want to use localized strings - so, we need to translate the values from the DB...
-            if (ContactDetails[3] == "male" && Globals.UICulture != "en-US")
+            if (ContactDetails[4] == "male" && Globals.UICulture != "en-US")
             {
                 switch (Globals.UICulture)
                 {
@@ -209,7 +234,7 @@ namespace eNumismat
                         break;
                 }
             }
-            else if (ContactDetails[3] == "female" && Globals.UICulture != "en-US")
+            else if (ContactDetails[4] == "female" && Globals.UICulture != "en-US")
             {
                 switch (Globals.UICulture)
                 {
@@ -229,7 +254,7 @@ namespace eNumismat
             else
             {
                 // if the culture is set to en, we don't need to translate the value, and we can just use it :)
-                ContactGender = ContactDetails[3];
+                ContactGender = ContactDetails[4];
             }
 
             // in this part, we define, what our Form will show.
@@ -248,81 +273,95 @@ namespace eNumismat
                     ContactID = Convert.ToInt32(ContactDetails[0]);
 
                     // We know the Name and Surename
-                    tb_name.Text = ContactDetails[1];
-                    tb_surename.Text = ContactDetails[2];
+                    tb_Name1.Text = ContactDetails[1];
+                    tb_Name2.Text = ContactDetails[2];
+                    tb_FamilyName.Text = ContactDetails[3];
 
-                    // We can display the localized Gender and Preselect the value
-                    cb_gender.SelectedItem = ContactGender;
-                    cb_gender.Text = ContactGender;
+                    cb_Gender.SelectedItem = ContactGender; // [4]
+                    cb_Gender.Text = ContactGender;
 
                     // Here, we need to do a bit of Workaround for the DateTimePicker, since it does not allow NULL Values.
                     // But sometimes, we haven't any Dates for the Birthdate.
                     // So, we need to show a Date, which will be 01.01.1900
                     // also, we want to support localized Date / Time format options...
-                    if (!string.IsNullOrEmpty(ContactDetails[4]))
+                    if (!string.IsNullOrEmpty(ContactDetails[5]))
                     {
                         // we convert the Value from the Database into DateTime Format.
                         // the Database Value should always be yyyy-mm-dd in the Database
-                        dtp_birthdate.Value = Convert.ToDateTime(ContactDetails[4]);
+                        dtp_BirthDate.Value = Convert.ToDateTime(ContactDetails[5]);
                     }
                     else
                     {
                         // if we don't have any date in our Database, show 01.01.1900 in the Current used Cultural Format.
-                        dtp_birthdate.Text = Convert.ToDateTime("01.01.1900").ToString("d");
+                        dtp_BirthDate.Text = Convert.ToDateTime("01.01.1900").ToString("d");
                     }
 
                     // Fill up Street and Zip Code Information
-                    tb_street.Text = ContactDetails[5];
-                    tb_zipcode.Text = ContactDetails[6];
+                    tb_AddrLine1.Text = ContactDetails[6];
+                    tb_AddrLine2.Text = ContactDetails[7];
+                    tb_PostalCode.Text = ContactDetails[8];
+
+                    MessageBox.Show("City: " + ContactDetails[9] + " State: " + ContactDetails[10] + " Country: " + ContactDetails[11]);
 
                     // I think, here we need to do some changes... I haven't figured out any issue yet, but it could be possible, I think...
-                    if (AutoFillCities.Contains(ContactDetails[7]))
+                    if (AutoFillCities.Contains(ContactDetails[9]))
                     {
-                        cb_city.SelectedItem = ContactDetails[7];
-                        cb_city.Text = ContactDetails[7];
+                        cb_City.SelectedItem = ContactDetails[9];
                     }
+                    cb_City.Text = ContactDetails[9];
 
                     // I think, here we need to do some changes... I haven't figured out any issue yet, but it could be possible, I think...
-                    if (AutoFillFederalStates.Contains(ContactDetails[8]))
+                    if (AutoFillStates.Contains(ContactDetails[10]))
                     {
-                        cb_bundesland.SelectedItem = ContactDetails[8];
-                        cb_bundesland.Text = ContactDetails[8];
+                        cb_State.SelectedItem = ContactDetails[10];
                     }
+                    cb_State.Text = ContactDetails[10];
 
-                    // Do the same as above for country, phone, mobile, mail and notes.
-                    tb_country.Text = ContactDetails[9];
-                    tb_phone.Text = ContactDetails[10];
-                    tb_mobile.Text = ContactDetails[11];
-                    tb_mail.Text = ContactDetails[12];
-                    rtb_notes.Text = ContactDetails[13];
+                    if (AutoFillCountries.Contains(ContactDetails[11]))
+                    {
+                        cb_Country.SelectedItem = ContactDetails[11];
+                    }
+                    cb_Country.Text = ContactDetails[11];
+
+                    tb_Phone.Text = ContactDetails[12];
+                    tb_Mobile.Text = ContactDetails[13];
+                    tb_Mail.Text = ContactDetails[14];
+                    rtb_Notes.Text = ContactDetails[15];
                 }
+
                 // if we are not in "EDIT" mode, then we want to CREATE a new Contact.
                 // In this case, we want to clear all cached TXT in the Form.
                 // if we don't set the Text values to NULL here, we always show the Text which was last entered (during the runtime)
                 else
                 {
-                    tb_name.Text = null;
-                    tb_surename.Text = null;
-                    cb_gender.Text = null;
-                    // again, we need to set the default date to 01.01.1900 - this will be interpreted as NULL when we save the data
-                    dtp_birthdate.Text = Convert.ToDateTime("01.01.1900").ToString("d");
-                    tb_street.Text = null;
-                    tb_zipcode.Text = null;
-                    cb_city.Text = null;
-                    cb_bundesland.Text = null;
-                    tb_country.Text = null;
-                    tb_phone.Text = null;
-                    tb_mobile.Text = null;
-                    tb_mail.Text = null;
-                    rtb_notes.Text = null;
-                }
+                    tb_Name1.Text = null;
+                    tb_Name2.Text = null;
+                    tb_FamilyName.Text = null;
 
+                    cb_Gender.Text = null;
+                    // again, we need to set the default date to 01.01.1900 - this will be interpreted as NULL when we save the data
+
+                    dtp_BirthDate.Text = Convert.ToDateTime("01.01.1900").ToString("d");
+
+                    tb_AddrLine1.Text = null;
+                    tb_AddrLine2.Text = null;
+                    tb_PostalCode.Text = null;
+
+                    cb_City.Text = null;
+                    cb_State.Text = null;
+                    cb_Country.Text = null;
+
+                    tb_Phone.Text = null;
+                    tb_Mobile.Text = null;
+                    tb_Mail.Text = null;
+                    rtb_Notes.Text = null;
+                }
                 // If we are already showing our Editors Form, we don't need to activate the Editor Buttons.
                 Btn_CreateContact.Enabled = false;
                 Btn_DeleteContact.Enabled = false;
                 Btn_UpdateContact.Enabled = false;
-
             }
+
             // now, we're handling our VIEW form...
             else if (Type == "view")
             {
@@ -331,50 +370,57 @@ namespace eNumismat
                 splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
                 PanelShowContactDetails.Dock = DockStyle.Fill;
 
+                MessageBox.Show(ContactDetails[0]);
+
                 if (ContactDetails.Count != 0)
                 {
                     ContactID = Convert.ToInt32(ContactDetails[0]);
 
-                    label_name.Text = ContactDetails[1];
-                    label_surename.Text = ContactDetails[2];
-
-                    // if the Date in our Database isn't NULL we need to change the String Format to the Systems current Culture
-                    // f.e. 2018-09-12 will be -> 2018/09/12 or 12.09.2018
-                    if (!string.IsNullOrEmpty(ContactDetails[4]))
-                    {
-                        label_birthdate.Text = Convert.ToDateTime(ContactDetails[4]).ToString("d");
-                    }
-                    else
-                    {
-                        // if the DB Value is NULL, we don't want to show anything
-                        label_birthdate.Text = null;
-                    }
-
-                    label_street.Text = ContactDetails[5];
-                    label_zip.Text = ContactDetails[6];
-                    label_city.Text = ContactDetails[7];
-                    label_region.Text = ContactDetails[8];
-                    label_country.Text = ContactDetails[9];
-                    label_phone.Text = ContactDetails[10];
-                    label_mobile.Text = ContactDetails[11];
-                    label_mail.Text = ContactDetails[12];
-                    rtb_notesDisplay.Text = ContactDetails[13];
+                    lb_Name1.Text = ContactDetails[1];
+                    lb_Name2.Text = ContactDetails[2];
+                    lb_FamilyName.Text = ContactDetails[3];
 
                     // we want to show a nice little graphic for the sex of our Contact
-                    if (ContactDetails[3] == "male")
+                    if (ContactDetails[4] == "male")
                     {
-                        pb_gender.BackgroundImage = Properties.Resources.male;
+                        pb_Gender.BackgroundImage = Properties.Resources.male;
                     }
-                    else if (ContactDetails[3] == "female")
+                    else if (ContactDetails[4] == "female")
                     {
-                        pb_gender.BackgroundImage = Properties.Resources.female;
+                        pb_Gender.BackgroundImage = Properties.Resources.female;
                     }
                     else
                     {
                         // but if we don't have a gender set, we don't want to show any icon :)
-                        pb_gender.BackgroundImage = null;
+                        pb_Gender.BackgroundImage = null;
                     }
+
+                    // if the Date in our Database isn't NULL we need to change the String Format to the Systems current Culture
+                    // f.e. 2018-09-12 will be -> 2018/09/12 or 12.09.2018
+                    if (!string.IsNullOrEmpty(ContactDetails[5]))
+                    {
+                        lb_BirthDate.Text = Convert.ToDateTime(ContactDetails[5]).ToString("d");
+                    }
+                    else
+                    {
+                        // if the DB Value is NULL, we don't want to show anything
+                        lb_BirthDate.Text = null;
+                    }
+
+                    lb_AddrLine1.Text = ContactDetails[6];
+                    lb_AddrLine2.Text = ContactDetails[7];
+                    lb_PostalCode.Text = ContactDetails[8];
+                    lb_City.Text = ContactDetails[9];
+                    lb_State.Text = ContactDetails[10];
+                    lb_Country.Text = ContactDetails[11];
+
+                    lb_Phone.Text = ContactDetails[12];
+                    lb_MobilePhone.Text = ContactDetails[13];
+                    lb_Mail.Text = ContactDetails[14];
+
+                    rtb_NotesDisplay.Text = ContactDetails[15];
                 }
+
                 // also, we can now enable our Editor-Buttons
                 Btn_CreateContact.Enabled = true;
                 Btn_UpdateContact.Enabled = true;
@@ -383,26 +429,45 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void LoadTreeViewParents()
+        /*private void LoadTreeViewCountries()
         {
-            // when we load the TreeNode, we need to "reset" it first.
-            // if we don't do this, we will duplicate all entries every time when we call this function again.
-            // so, after each EDIT or CREATION all Nodes will be duplicated.
             treeView1.Nodes.Clear();
-            TreeNode parents = null;
+            TreeNode Country = null;
 
-            // With the results from our first select, we will create the parent nodes.
-            foreach (DataRow drParents in dbAction.GetContacts("parents").Rows)
+            if (Globals.ShowContactsCountryAsRoot == true)
+            {
+                foreach (DataRow drRoot in dbAction.GetContacts("root").Rows)
+                {
+                    Country = treeView1.Nodes.Add(drRoot[1].ToString());
+
+                    LoadTreeViewAlphabet(Country);
+
+                    _unselectableNodes.Add(Country);
+                }
+            }
+            else
+            {
+                LoadTreeViewAlphabet();
+            }
+        }*/
+
+        //=====================================================================================================================================================================
+        private void LoadTreeViewAlphabet(TreeNode RootNode = null)
+        {
+            treeView1.Nodes.Clear();
+            TreeNode alphabet = null;
+
+            foreach (DataRow drParents in dbAction.GetContacts("alphabet").Rows)
             {
                 // This should be the First letter of the name and how many entries we have in our DB.
                 // f.e. we have 5 Contacts - the name of three of them starting with an A and two with a C, then we will show A [3], C [2]
-                parents = treeView1.Nodes.Add(drParents[1].ToString() + " [" + drParents[0] + "]");
+                alphabet = treeView1.Nodes.Add(drParents[1].ToString() + " [" + drParents[0] + "]");
 
                 // If this is done, we load the Child Nodes (Each contact)
-                LoadTreeViewChilds(parents);
+                LoadTreeViewChilds(alphabet);
 
                 // and we want to make the parent nodes unselectable -> because this will cause issues with our Detail and Edit Page
-                _unselectableNodes.Add(parents);
+                _unselectableNodes.Add(alphabet);
             }
             treeView1.ExpandAll();
         }
@@ -460,7 +525,7 @@ namespace eNumismat
             // this will be done by splitting the Node Value into a string array.
             // The Contact will be shown as Name, Surename -> String1 => Name, String2 => surename
             string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
-            
+
             // Load the Form in View Mode with the selected Names
             LoadContactMain("view", names);
         }
@@ -474,16 +539,9 @@ namespace eNumismat
         }
 
         //=====================================================================================================================================================================
-        private void NeuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // if the user has used the Toolstrip Menu Item "New", do the same as BTN NEW is doing
-            ContactID = 0;
-            LoadContactMain("new");
-        }
-
-        //=====================================================================================================================================================================
         private void Btn_UpdateContact_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(ContactID.ToString());
             // If the Editor Button "Edit" was pressed, show the Editor in Edit mode
             LoadContactMain("edit", null, ContactID);
         }
@@ -509,16 +567,17 @@ namespace eNumismat
             // first, we need to transfer the value from the DateTimePicker into the format we need for our Database.
             // This is yyyy-mm-dd independend from the local settings of the user.
             // Then, we need to check, if the Date is NOT 1900-01-01
-            if (dtp_birthdate.Value.ToString("yyyy-MM-dd") != "1900-01-01")
+            if (dtp_BirthDate.Value.ToString("yyyy-MM-dd") != "1900-01-01")
             {
                 // if it is not 1900-01-01 then we want to save the value
-                birthdate = dtp_birthdate.Value.ToString("yyyy-MM-dd");
+                birthdate = dtp_BirthDate.Value.ToString("yyyy-MM-dd");
             }
+
             // we don't need to handle the ELSE, because the var was already initialized with NULL
-            
+
             // we are showing localized and translated strings for GENDER male and female.
             // in our Database, we only want to save the english values.
-            switch(cb_gender.Text)
+            switch (cb_Gender.Text)
             {
                 case "hembra":
                 case "weiblich":
@@ -533,26 +592,28 @@ namespace eNumismat
                     break;
 
                 default:
-                    gender = cb_gender.Text;
+                    gender = cb_Gender.Text;
                     break;
             }
 
             // we load everything into a LIST which will be given to our DBActions file.
             List<string> DBContactDetails = new List<string>
             {
-                tb_name.Text,
-                tb_surename.Text,
-                gender,
-                birthdate,
-                tb_street.Text,
-                tb_zipcode.Text,
-                cb_city.Text,
-                cb_bundesland.Text,
-                tb_country.Text,
-                tb_phone.Text,
-                tb_mobile.Text,
-                tb_mail.Text,
-                rtb_notes.Text
+                tb_Name1.Text,              // 01
+                tb_Name2.Text,              // 02
+                tb_FamilyName.Text,         // 03 
+                gender,                     // 04
+                birthdate,                  // 05
+                tb_AddrLine1.Text,          // 06
+                tb_AddrLine2.Text,          // 07
+                tb_PostalCode.Text,         // 08
+                cb_City.Text,               // 09
+                cb_State.Text,              // 10
+                cb_Country.Text,            // 11
+                tb_Phone.Text,              // 12
+                tb_Mobile.Text,             // 13
+                tb_Mail.Text,               // 14
+                rtb_Notes.Text              // 15
             };
 
             // before we can save the Values, we want to do some Validations.
@@ -560,7 +621,7 @@ namespace eNumismat
             if (ValidateTextInputs() == true)
             {
                 // names needed to be in a seperate string array, because we want to display the created or edited contact after inserting the values into the Database.
-                string[] names = { tb_name.Text, tb_surename.Text };
+                string[] names = { tb_FamilyName.Text, tb_Name1.Text };
 
                 // If the Validation is OK, we can save everything.
                 if (dbAction.CreateOrUpdateContact(DBContactDetails, ContactID))
@@ -577,18 +638,25 @@ namespace eNumismat
             LoadContactMain("view", null, ContactID);
         }
 
+        // Reset TB Color:
         //=====================================================================================================================================================================
         private void TbName_TextChanged(object sender, EventArgs e)
         {
             // reset the BackColor of the Textbox, after it was showing an Invalid input
-            tb_name.BackColor = Color.White;
+            tb_Name1.BackColor = Color.White;
         }
 
         //=====================================================================================================================================================================
         private void TbSurename_TextChanged(object sender, EventArgs e)
         {
             // reset the BackColor of the Textbox, after it was showing an Invalid input
-            tb_surename.BackColor = Color.White;
+            tb_FamilyName.BackColor = Color.White;
+        }
+
+        //=====================================================================================================================================================================
+        private void TbEmail_TextChanged(object sender, EventArgs e)
+        {
+            tb_Mail.BackColor = Color.White;
         }
 
         //=====================================================================================================================================================================
@@ -602,72 +670,46 @@ namespace eNumismat
             // The Database should also not acceppt NULL values for NAME and SURENAME
             if (Globals.ValidateNames == true)
             {
-                if (validate.ValidateData(tb_name.Text, "IsNullOrEmpty"))
+                if (validate.ValidateData(tb_Name1.Text, "IsNullOrEmpty"))
                 {
                     MessageBox.Show(GlobalStrings._addrBook_Validation_NameEmpty);
-                    tb_name.BackColor = Color.MistyRose;
-                    tb_name.Select();
+                    tb_Name1.BackColor = Color.MistyRose;
+                    tb_Name1.Select();
                     return false;
                 }
 
-                if (validate.ValidateData(tb_surename.Text, "IsNullOrEmpty"))
+                if (validate.ValidateData(tb_FamilyName.Text, "IsNullOrEmpty"))
                 {
                     MessageBox.Show(GlobalStrings._addrBook_Validation_SureNameEmpty);
-                    tb_surename.BackColor = Color.MistyRose;
-                    tb_surename.Select();
+                    tb_FamilyName.BackColor = Color.MistyRose;
+                    tb_FamilyName.Select();
                     return false;
                 }
             }
 
             if (Globals.ValidateEmail == true)
             {
-                if (validate.ValidateData(tb_mail.Text, "IsNullOrEmpty"))
+                if (validate.ValidateData(tb_Mail.Text, "IsNullOrEmpty"))
                 {
                     MessageBox.Show(GlobalStrings._addrBook_Validation_EmailEmpty);
-                    tb_mail.BackColor = Color.MistyRose;
-                    tb_mail.Select();
+                    tb_Mail.BackColor = Color.MistyRose;
+                    tb_Mail.Select();
                     return false;
                 }
                 else
                 {
-                    if (!validate.ValidateData(tb_mail.Text, "ValidEmail"))
+                    if (!validate.ValidateData(tb_Mail.Text, "ValidEmail"))
                     {
 
                         MessageBox.Show(GlobalStrings._addrBook_Validation_Email);
-                        tb_mail.BackColor = Color.MistyRose;
-                        tb_mail.Select();
+                        tb_Mail.BackColor = Color.MistyRose;
+                        tb_Mail.Select();
                         return false;
                     }
                 }
             }
             return true;
         }
-        //
-        //=====================================================================================================================================================================
-        //=====================================================================================================================================================================
-        //
-
-        // Outlook-Test
-        //=====================================================================================================================================================================
-        /*private void MicrosoftOutlookToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Outlook._Application outlookObj = new Outlook.Application();
-
-            Outlook.MAPIFolder fldContacts =
-            (Outlook.MAPIFolder)outlookObj.Session.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderContacts);
-
-            Outlook.ContactItem newContact = (Outlook.ContactItem)fldContacts.Items.Add(Outlook.OlItemType.olContactItem);
-
-            newContact.FirstName = "Max";
-            newContact.LastName = "Mustermann";
-            newContact.Email1Address = "max.mustermann@test.de";
-
-            newContact.Save();
-
-            // Exportiert, bzw. speichert den hinterlegten Kontakt im Outlook Adressbuch ab :)
-            // Funktioniert auch, wenn Outlook geschlossen ist.
-            // eine Überprüfung, ob Outlook installiert ist - und vor allem, ob es auch mit anderen Versionen von Outlook kompatibel ist, wäre Sinnvoll.
-            // ggf. "outlook" als art AddIn bereitstellen?
-        }*/
-        }
     }
+}
+

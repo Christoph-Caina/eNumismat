@@ -32,7 +32,13 @@ namespace eNumismat
         public static bool UseAutoFillOnCities { get; set; }
 
         //=====================================================================================================================================================================
-        public static bool UseAutoFillOnFederalStates { get; set; }
+        public static bool UseAutoFillOnStates { get; set; }
+
+        //=====================================================================================================================================================================
+        public static bool UseAutoFillOnCountries { get; set; }
+
+        //=====================================================================================================================================================================
+        public static bool UseAutoFillOnPostalCodes { get; set; }
 
         //=====================================================================================================================================================================
         public static bool ValidateNames { get; set; }
@@ -43,20 +49,23 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public static bool ValidateAddressData { get; set; }
 
+        //=====================================================================================================================================================================
+        public static bool ShowContactsCountryAsRoot { get; set; }
+
         /// <summary>
-            /// Definition of Log Levels
+        /// Definition of Log Levels
 
-            /// DEBUG
-            /// Fine-grained information about what is going on within the system.
+        /// DEBUG
+        /// Fine-grained information about what is going on within the system.
 
-            /// INFO
-            /// Announcements about the normal operation of the system - scheduled jobs running, services starting and stopping, significant user-triggered processes
+        /// INFO
+        /// Announcements about the normal operation of the system - scheduled jobs running, services starting and stopping, significant user-triggered processes
 
-            /// WARN
-            /// Any condition that, while not an error in itself, may indicate that the system is running sub-optimally
+        /// WARN
+        /// Any condition that, while not an error in itself, may indicate that the system is running sub-optimally
 
-            /// ERROR
-            /// A condition that indicates something has gone wrong with the system
+        /// ERROR
+        /// A condition that indicates something has gone wrong with the system
         /// </summary>
         //=====================================================================================================================================================================
         public static string LogLevel { get; set; }

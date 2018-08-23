@@ -96,7 +96,7 @@ namespace eNumismat
                 cb_AutoFillCities.Checked = false;
             }
 
-            if (Globals.UseAutoFillOnFederalStates == true)
+            if (Globals.UseAutoFillOnStates == true)
             {
                 cb_AutoFillFedStates.Checked = true;
             }

@@ -38,7 +38,9 @@
             this.Btn_UpdateContact = new System.Windows.Forms.Button();
             this.Btn_CreateContact = new System.Windows.Forms.Button();
             this.Btn_DeleteContact = new System.Windows.Forms.Button();
+            this.PanelShowContactDetails = new System.Windows.Forms.Panel();
             this.PanelEditContactDetails = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.cb_city = new System.Windows.Forms.ComboBox();
             this.cb_bundesland = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -67,7 +69,6 @@
             this.tb_street = new System.Windows.Forms.TextBox();
             this.tb_surename = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
-            this.PanelShowContactDetails = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label_region = new System.Windows.Forms.Label();
@@ -120,8 +121,8 @@
             this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.PanelEditContactDetails.SuspendLayout();
             this.PanelShowContactDetails.SuspendLayout();
+            this.PanelEditContactDetails.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_gender)).BeginInit();
@@ -143,7 +144,6 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.PanelEditContactDetails);
             this.splitContainer1.Panel2.Controls.Add(this.PanelShowContactDetails);
             // 
             // panel2
@@ -207,8 +207,16 @@
             this.Btn_DeleteContact.UseVisualStyleBackColor = true;
             this.Btn_DeleteContact.Click += new System.EventHandler(this.Btn_DeleteContact_Click);
             // 
+            // PanelShowContactDetails
+            // 
+            this.PanelShowContactDetails.Controls.Add(this.PanelEditContactDetails);
+            this.PanelShowContactDetails.Controls.Add(this.tabControl1);
+            resources.ApplyResources(this.PanelShowContactDetails, "PanelShowContactDetails");
+            this.PanelShowContactDetails.Name = "PanelShowContactDetails";
+            // 
             // PanelEditContactDetails
             // 
+            this.PanelEditContactDetails.Controls.Add(this.textBox1);
             this.PanelEditContactDetails.Controls.Add(this.cb_city);
             this.PanelEditContactDetails.Controls.Add(this.cb_bundesland);
             this.PanelEditContactDetails.Controls.Add(this.label24);
@@ -239,6 +247,11 @@
             this.PanelEditContactDetails.Controls.Add(this.tb_name);
             resources.ApplyResources(this.PanelEditContactDetails, "PanelEditContactDetails");
             this.PanelEditContactDetails.Name = "PanelEditContactDetails";
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
             // 
             // cb_city
             // 
@@ -401,12 +414,6 @@
             resources.ApplyResources(this.tb_name, "tb_name");
             this.tb_name.Name = "tb_name";
             this.tb_name.TextChanged += new System.EventHandler(this.TbName_TextChanged);
-            // 
-            // PanelShowContactDetails
-            // 
-            this.PanelShowContactDetails.Controls.Add(this.tabControl1);
-            resources.ApplyResources(this.PanelShowContactDetails, "PanelShowContactDetails");
-            this.PanelShowContactDetails.Name = "PanelShowContactDetails";
             // 
             // tabControl1
             // 
@@ -713,9 +720,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.PanelShowContactDetails.ResumeLayout(false);
             this.PanelEditContactDetails.ResumeLayout(false);
             this.PanelEditContactDetails.PerformLayout();
-            this.PanelShowContactDetails.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -817,5 +824,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label_region;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
