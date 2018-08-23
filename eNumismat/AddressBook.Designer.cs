@@ -751,6 +751,8 @@
             // 
             // cb_Country
             // 
+            this.cb_Country.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_Country.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_Country.FormattingEnabled = true;
             this.cb_Country.Location = new System.Drawing.Point(156, 373);
             this.cb_Country.Name = "cb_Country";
@@ -787,6 +789,8 @@
             // 
             // tb_PostalCode
             // 
+            this.tb_PostalCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tb_PostalCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tb_PostalCode.Location = new System.Drawing.Point(156, 320);
             this.tb_PostalCode.Name = "tb_PostalCode";
             this.tb_PostalCode.Size = new System.Drawing.Size(100, 20);

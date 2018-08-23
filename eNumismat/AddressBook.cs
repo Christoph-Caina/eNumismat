@@ -42,6 +42,11 @@ namespace eNumismat
 
             // If the Setting for Using AutoFill is set to true, here we are getting the Data...
 
+            Globals.UseAutoFillOnCities = true;
+            Globals.UseAutoFillOnStates = true;
+            Globals.UseAutoFillOnPostalCodes = true;
+            Globals.UseAutoFillOnCountries = true;
+
             // ... for Cities
             if (Globals.UseAutoFillOnCities == true)
             {
@@ -54,7 +59,6 @@ namespace eNumismat
                 {
                     cb_City.AutoCompleteCustomSource.Add(item);
                 }
-
                 cb_City.AutoCompleteSource = AutoCompleteSource.CustomSource;
             }
 
@@ -79,6 +83,11 @@ namespace eNumismat
                 {
                     AutoFillPostalCodes.Add(AutoFillItems[0].ToString());
                 }
+
+                foreach (string item in AutoFillPostalCodes)
+                {
+                    tb_PostalCode.AutoCompleteCustomSource.Add(item);
+                }
                 tb_PostalCode.AutoCompleteSource = AutoCompleteSource.CustomSource;
             }
 
@@ -87,6 +96,11 @@ namespace eNumismat
                 foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("country", cb_Country.Text).Rows)
                 {
                     AutoFillCountries.Add(AutoFillItems[0].ToString());
+                }
+
+                foreach (string item in AutoFillCountries)
+                {
+                    cb_Country.AutoCompleteCustomSource.Add(item);
                 }
                 cb_Country.AutoCompleteSource = AutoCompleteSource.CustomSource;
             }

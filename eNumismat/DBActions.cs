@@ -431,7 +431,7 @@ namespace eNumismat
                 catch (Exception ex)
                 { }
 
-                string SQL = "SELECT `" + column + "`  FROM `contacts` WHERE `" + column + "` LIKE @search LIMIT 1";
+                string SQL = "SELECT `" + column + "`  FROM `contacts` WHERE `" + column + "` LIKE @search";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(SQL, dbConnection))
                 {
