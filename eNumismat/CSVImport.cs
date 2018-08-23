@@ -30,22 +30,6 @@ namespace eNumismat
         public CSVImport()
         {
             InitializeComponent();
-
-            /*cb_name1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_name2.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_familyname.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_gender.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_birthdate.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_addrline1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_addrline2.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_postalcode.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_city.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_state.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_country.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_phone.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_mobile.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_email.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cb_notes.AutoCompleteSource = AutoCompleteSource.CustomSource;*/
         }
 
         private void CSVImport_Load(object sender, EventArgs e)

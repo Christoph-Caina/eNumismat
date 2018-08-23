@@ -123,13 +123,13 @@
     <Compile Include="Coin.cs" />
     <Compile Include="Collection.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="CsvExport.cs" />
     <Compile Include="CSVImport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CSVImport.Designer.cs">
       <DependentUpon>CSVImport.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataImport.cs" />
     <Compile Include="DBActions.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="GlobalStrings.es.Designer.cs">

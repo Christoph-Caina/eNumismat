@@ -405,7 +405,12 @@ namespace eNumismat
                     {
                         DataTable SwapListDetails = new DataTable();
 
-                        daSwaps.Fill(SwapListDetails);
+                        try
+                        {
+                            daSwaps.Fill(SwapListDetails);
+                        }
+                        catch (Exception ex)
+                        { }
 
                         dbConnection.Close();
                         dbConnection.Dispose();
@@ -441,7 +446,15 @@ namespace eNumismat
                     {
                         DataTable dtAutoFill = new DataTable();
 
-                        daAutoComplete.Fill(dtAutoFill);
+                        try
+                        {
+                            daAutoComplete.Fill(dtAutoFill);
+                        }
+                        catch (Exception ex)
+                        { }
+
+                        dbConnection.Close();
+                        dbConnection.Dispose();
 
                         return dtAutoFill;
                     }

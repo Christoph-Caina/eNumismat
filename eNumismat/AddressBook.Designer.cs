@@ -176,7 +176,7 @@
             // ImportCsvFileToolStripMenuItem
             // 
             this.ImportCsvFileToolStripMenuItem.Name = "ImportCsvFileToolStripMenuItem";
-            this.ImportCsvFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ImportCsvFileToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.ImportCsvFileToolStripMenuItem.Text = "CSV File";
             this.ImportCsvFileToolStripMenuItem.Click += new System.EventHandler(this.ImportCsvFileToolStripMenuItem_Click);
             // 
@@ -193,6 +193,7 @@
             this.ExportCsvFileToolStripMenuItem.Name = "ExportCsvFileToolStripMenuItem";
             this.ExportCsvFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ExportCsvFileToolStripMenuItem.Text = "CSV File";
+            this.ExportCsvFileToolStripMenuItem.Click += new System.EventHandler(this.ExportCsvFileToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 

@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Threading;
 using System.Globalization;
+using Jitbit.Utils;
 
 namespace eNumismat
 {
@@ -104,9 +105,6 @@ namespace eNumismat
                 }
                 cb_Country.AutoCompleteSource = AutoCompleteSource.CustomSource;
             }
-
-            // ... for Zip-Codes
-            // (Masked Text Box does not support AutoComplete / Suggestions -> maybe, we need to change the control or create our own Control.
 
             // Generate our AddressBook form
             GenerateAdrBookForm();
@@ -224,51 +222,7 @@ namespace eNumismat
             [15] => Notes
             */
 
-            // initiate a new String for the GENDER value
-            string ContactGender = null;
-
-            // in our Database, we only want to store the Gender as male or female.
-            // in the form, we want to use localized strings - so, we need to translate the values from the DB...
-            if (ContactDetails[4] == "male" && Globals.UICulture != "en-US")
-            {
-                switch (Globals.UICulture)
-                {
-                    case "de-DE":
-                        ContactGender = "männlich";
-                        break;
-
-                    case "fr-FR":
-                        ContactGender = "malé";
-                        break;
-
-                    case "es-ES":
-                        ContactGender = "masculino";
-                        break;
-                }
-            }
-            else if (ContactDetails[4] == "female" && Globals.UICulture != "en-US")
-            {
-                switch (Globals.UICulture)
-                {
-                    case "de-DE":
-                        ContactGender = "weiblich";
-                        break;
-
-                    case "fr-FR":
-                        ContactGender = "femelle";
-                        break;
-
-                    case "es-ES":
-                        ContactGender = "hembra";
-                        break;
-                }
-            }
-            else
-            {
-                // if the culture is set to en, we don't need to translate the value, and we can just use it :)
-                ContactGender = ContactDetails[4];
-            }
-
+                
             // in this part, we define, what our Form will show.
             // if the Form-Type (we are setting this var sometimes) is NEW or EDIT, we should display the INPUT form
             if (Type == "new" || Type == "edit")
@@ -288,6 +242,51 @@ namespace eNumismat
                     tb_Name1.Text = ContactDetails[1];
                     tb_Name2.Text = ContactDetails[2];
                     tb_FamilyName.Text = ContactDetails[3];
+
+                    // initiate a new String for the GENDER value
+                    string ContactGender = null;
+
+                    // in our Database, we only want to store the Gender as male or female.
+                    // in the form, we want to use localized strings - so, we need to translate the values from the DB...
+                    if (ContactDetails[4] == "male" && Globals.UICulture != "en-US")
+                    {
+                        switch (Globals.UICulture)
+                        {
+                            case "de-DE":
+                                ContactGender = "männlich";
+                                break;
+
+                            case "fr-FR":
+                                ContactGender = "malé";
+                                break;
+
+                            case "es-ES":
+                                ContactGender = "masculino";
+                                break;
+                        }
+                    }
+                    else if (ContactDetails[4] == "female" && Globals.UICulture != "en-US")
+                    {
+                        switch (Globals.UICulture)
+                        {
+                            case "de-DE":
+                                ContactGender = "weiblich";
+                                break;
+
+                            case "fr-FR":
+                                ContactGender = "femelle";
+                                break;
+
+                            case "es-ES":
+                                ContactGender = "hembra";
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        // if the culture is set to en, we don't need to translate the value, and we can just use it :)
+                        ContactGender = ContactDetails[4];
+                    }
 
                     cb_Gender.SelectedItem = ContactGender; // [4]
                     cb_Gender.Text = ContactGender;
@@ -349,8 +348,8 @@ namespace eNumismat
                     tb_FamilyName.Text = null;
 
                     cb_Gender.Text = null;
+                    
                     // again, we need to set the default date to 01.01.1900 - this will be interpreted as NULL when we save the data
-
                     dtp_BirthDate.Text = Convert.ToDateTime("01.01.1900").ToString("d");
 
                     tb_AddrLine1.Text = null;
@@ -739,6 +738,25 @@ namespace eNumismat
                 ImportDialog.CsvFile = ofd.FileName;
                 ImportDialog.Show();
             }
+        }
+
+        private void ExportCsvFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Working on it... :)");
+            /*SaveFileDialog sfd = new SaveFileDialog
+            {
+                InitialDirectory = Globals.DBFilePath,
+                DefaultExt = "*.csv",
+                Filter = "Comma Separated Values (*.csv) | *.csv",
+                AddExtension = true
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                CsvExport csvExport = new CsvExport();
+                
+
+            }*/
         }
     }
 }
