@@ -36,9 +36,9 @@
             this.newAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.importAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fromCSVFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImportCsvFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cSVFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportCsvFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -157,41 +157,42 @@
             // newAddressToolStripMenuItem
             // 
             this.newAddressToolStripMenuItem.Name = "newAddressToolStripMenuItem";
-            this.newAddressToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.newAddressToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newAddressToolStripMenuItem.Text = "New Address";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // importAddressToolStripMenuItem
             // 
             this.importAddressToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fromCSVFileToolStripMenuItem});
+            this.ImportCsvFileToolStripMenuItem});
             this.importAddressToolStripMenuItem.Name = "importAddressToolStripMenuItem";
-            this.importAddressToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.importAddressToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importAddressToolStripMenuItem.Text = "Import Address";
             // 
-            // fromCSVFileToolStripMenuItem
+            // ImportCsvFileToolStripMenuItem
             // 
-            this.fromCSVFileToolStripMenuItem.Name = "fromCSVFileToolStripMenuItem";
-            this.fromCSVFileToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.fromCSVFileToolStripMenuItem.Text = "CSV File";
+            this.ImportCsvFileToolStripMenuItem.Name = "ImportCsvFileToolStripMenuItem";
+            this.ImportCsvFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ImportCsvFileToolStripMenuItem.Text = "CSV File";
+            this.ImportCsvFileToolStripMenuItem.Click += new System.EventHandler(this.ImportCsvFileToolStripMenuItem_Click);
             // 
             // exportAddressToolStripMenuItem
             // 
             this.exportAddressToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cSVFileToolStripMenuItem});
+            this.ExportCsvFileToolStripMenuItem});
             this.exportAddressToolStripMenuItem.Name = "exportAddressToolStripMenuItem";
-            this.exportAddressToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.exportAddressToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportAddressToolStripMenuItem.Text = "Export Address";
             // 
-            // cSVFileToolStripMenuItem
+            // ExportCsvFileToolStripMenuItem
             // 
-            this.cSVFileToolStripMenuItem.Name = "cSVFileToolStripMenuItem";
-            this.cSVFileToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.cSVFileToolStripMenuItem.Text = "CSV File";
+            this.ExportCsvFileToolStripMenuItem.Name = "ExportCsvFileToolStripMenuItem";
+            this.ExportCsvFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ExportCsvFileToolStripMenuItem.Text = "CSV File";
             // 
             // statusStrip1
             // 
@@ -965,9 +966,9 @@
         private System.Windows.Forms.ToolStripMenuItem newAddressToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem importAddressToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fromCSVFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ImportCsvFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportAddressToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cSVFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExportCsvFileToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel PanelEditContactDetails;
         private System.Windows.Forms.Panel PanelShowContactDetails;

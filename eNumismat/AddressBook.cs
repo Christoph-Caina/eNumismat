@@ -717,6 +717,23 @@ namespace eNumismat
             }
             return true;
         }
+
+        private void ImportCsvFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog
+            {
+                InitialDirectory = Globals.DBFilePath,
+                DefaultExt = "*.csv",
+                Filter = "Comma Separated Values(*.csv) | *.csv"
+            };
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                CSVImport ImportDialog = new CSVImport();
+                ImportDialog.CsvFile = ofd.FileName;
+                ImportDialog.Show();
+            }
+        }
     }
 }
 

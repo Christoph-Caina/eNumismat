@@ -10,17 +10,16 @@ namespace eNumismat
 {
     public partial class Form1 : Form
     {
-        ConfigHandler cfgHandler;
-        LogHandler logHandler;
-        DBActions dbAction;
-        SaveFileDialog saveFile;
-        OpenFileDialog openFile;
-        //FolderBrowserDialog folderBrowser;
-        AddressBook adrBook;
-        SwapMonitor swapList;
-        FileBackup fBackup;
-
         public string[] args = Environment.GetCommandLineArgs();
+
+        internal DBActions DbAction { get; set; }
+        public SaveFileDialog SaveFile { get; set; }
+        public OpenFileDialog OpenFile { get; set; }
+        public AddressBook AdrBook { get; set; }
+        internal FileBackup FBackup { get; set; }
+        public SwapMonitor SwapList { get; set; }
+        internal LogHandler LogHandler { get; set; }
+        internal ConfigHandler CfgHandler { get; set; }
 
         //=====================================================================================================================================================================
         public Form1()
@@ -29,8 +28,8 @@ namespace eNumismat
 
             //localization
             
-            cfgHandler = new ConfigHandler();
-            logHandler = new LogHandler();
+            CfgHandler = new ConfigHandler();
+            LogHandler = new LogHandler();
 
             Globals.LogLevel = "WARN";
 
@@ -51,10 +50,10 @@ namespace eNumismat
             if (!File.Exists(Globals.AppDataPath + @"\config.xml"))
             {
                 // if Config does not exist: Create Config
-                if(cfgHandler.CreateDefaultConf())
+                if(CfgHandler.CreateDefaultConf())
                 {
                     // if Config could be created: Read Config
-                    cfgHandler.ReadXmlConf();
+                    CfgHandler.ReadXmlConf();
                 }
                 else
                 {
@@ -64,7 +63,7 @@ namespace eNumismat
             else
             {
                 // if Config Exist: Read Conf.File
-                cfgHandler.ReadXmlConf();
+                CfgHandler.ReadXmlConf();
             }
 
             TrayIcon.Visible = true;
@@ -90,7 +89,7 @@ namespace eNumismat
 
                 // Write UICulture to XMLConf
                 Globals.UICulture = culture;
-                cfgHandler.UpdateXmlConf("UICulture", culture);
+                CfgHandler.UpdateXmlConf("UICulture", culture);
             }
 
             // Set Application Language
@@ -191,7 +190,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void NeueDatenbankToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFile = new SaveFileDialog
+            SaveFile = new SaveFileDialog
             {
                 DefaultExt = "*.enc", // enc = eNumismatCollection
                 AddExtension = true,
@@ -200,15 +199,15 @@ namespace eNumismat
                 Filter = "eNumismatCollection File(*.enc) | *.enc"
             };
 
-            if (saveFile.ShowDialog() == DialogResult.OK)
+            if (SaveFile.ShowDialog() == DialogResult.OK)
             {
-                string[] FileData = { Path.GetFileName(saveFile.FileName), Path.GetDirectoryName(saveFile.FileName) };
+                string[] FileData = { Path.GetFileName(SaveFile.FileName), Path.GetDirectoryName(SaveFile.FileName) };
 
                 Globals.DBFilePath = FileData[1];
                 Globals.DBFile = FileData[0];
 
-                dbAction = new DBActions();
-                dbAction.CreateNew();
+                DbAction = new DBActions();
+                DbAction.CreateNew();
 
                 WriteDBFileToConf(FileData);
                 CheckIfDBFileExists();
@@ -220,7 +219,7 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void DatenbankOeffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFile = new OpenFileDialog
+            OpenFile = new OpenFileDialog
             {
                 DefaultExt = "*.enc", // enc = eNumismatCollection
                 AddExtension = true,
@@ -229,9 +228,9 @@ namespace eNumismat
                 Filter = "eNumismatCollection File (*.enc) | *.enc"
             };
 
-            if (openFile.ShowDialog() == DialogResult.OK)
+            if (OpenFile.ShowDialog() == DialogResult.OK)
             {
-                string[] FileData = { Path.GetFileName(openFile.FileName), Path.GetDirectoryName(openFile.FileName) };
+                string[] FileData = { Path.GetFileName(OpenFile.FileName), Path.GetDirectoryName(OpenFile.FileName) };
 
                 Globals.DBFilePath = FileData[1];
                 Globals.DBFile = FileData[0];
@@ -244,36 +243,36 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void WriteDBFileToConf(string[] FileData)
         {
-            cfgHandler.UpdateXmlConf("LastDBFile", FileData[0]);
-            cfgHandler.UpdateXmlConf("LastDBFilePath", FileData[1]);
+            CfgHandler.UpdateXmlConf("LastDBFile", FileData[0]);
+            CfgHandler.UpdateXmlConf("LastDBFilePath", FileData[1]);
         }
 
         //=====================================================================================================================================================================
         private void AdressbuchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            adrBook = new AddressBook();
-            adrBook.Show();
+            AdrBook = new AddressBook();
+            AdrBook.Show();
         }
 
         //=====================================================================================================================================================================
         private void AddressbookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            adrBook = new AddressBook();
-            adrBook.Show();
+            AdrBook = new AddressBook();
+            AdrBook.Show();
         }
 
         //=====================================================================================================================================================================
         private void TauschmonitorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            swapList = new SwapMonitor();
-            swapList.Show();
+            SwapList = new SwapMonitor();
+            SwapList.Show();
         }
 
         //=====================================================================================================================================================================
         private void SwapMonitorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            swapList = new SwapMonitor();
-            swapList.Show();
+            SwapList = new SwapMonitor();
+            SwapList.Show();
         }
 
         //=====================================================================================================================================================================
@@ -339,9 +338,9 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void RunDBCompression()
         {
-            fBackup = new FileBackup();
+            FBackup = new FileBackup();
 
-            if(fBackup.CompactDatabase())
+            if(FBackup.CompactDatabase())
             {
                 TrayIcon.BalloonTipTitle = GlobalStrings._dbCompress_BalloonTitle;
                 TrayIcon.BalloonTipText = GlobalStrings._dbCompress_BallonText;
@@ -353,9 +352,9 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void RunDBBackup()
         {
-            fBackup = new FileBackup();
+            FBackup = new FileBackup();
 
-            if (fBackup.ExcecuteBackup())
+            if (FBackup.ExcecuteBackup())
             {
                 TrayIcon.BalloonTipTitle = GlobalStrings._dbBackup_BalloonTitle;
                 TrayIcon.BalloonTipText = GlobalStrings._dbBackup_BallonText;
