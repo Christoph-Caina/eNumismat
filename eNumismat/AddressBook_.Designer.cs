@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddressBook_));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,6 +109,7 @@
             this.lb_Name2 = new System.Windows.Forms.Label();
             this.lb_FamilyName = new System.Windows.Forms.Label();
             this.lb_Name1 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -240,8 +243,11 @@
             // treeView1
             // 
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.ImageIndex = 0;
+            this.treeView1.ImageList = this.imageList1;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
+            this.treeView1.SelectedImageIndex = 0;
             this.treeView1.Size = new System.Drawing.Size(217, 576);
             this.treeView1.TabIndex = 0;
             this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.TreeView1_BeforeSelect);
@@ -900,6 +906,15 @@
             this.lb_Name1.Size = new System.Drawing.Size(0, 16);
             this.lb_Name1.TabIndex = 22;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "group.png");
+            this.imageList1.Images.SetKeyName(1, "user_male.png");
+            this.imageList1.Images.SetKeyName(2, "user_female.png");
+            this.imageList1.Images.SetKeyName(3, "transparent.png");
+            // 
             // AddressBook_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1018,5 +1033,6 @@
         private System.Windows.Forms.Label lb_FamilyName;
         private System.Windows.Forms.Label lb_Name1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
