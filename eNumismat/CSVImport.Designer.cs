@@ -36,35 +36,35 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cb_name1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cb_name2 = new System.Windows.Forms.ComboBox();
-            this.cb_familyname = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cb_gender = new System.Windows.Forms.ComboBox();
-            this.cb_birthdate = new System.Windows.Forms.ComboBox();
-            this.cb_addrline1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cb_addrline2 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cb_postalcode = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cb_city = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cb_state = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cb_country = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cb_phone = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.cb_mobile = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cb_email = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cb_notes = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cb_email = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cb_mobile = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cb_phone = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cb_country = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cb_state = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cb_city = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cb_postalcode = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cb_addrline2 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cb_addrline1 = new System.Windows.Forms.ComboBox();
+            this.cb_birthdate = new System.Windows.Forms.ComboBox();
+            this.cb_gender = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_familyname = new System.Windows.Forms.ComboBox();
+            this.cb_name2 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.resultData)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -86,6 +86,7 @@
             this.btn_Save.TabIndex = 1;
             this.btn_Save.Text = "Import";
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Cancel
             // 
@@ -177,218 +178,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Header Assignment";
             // 
-            // label2
+            // label16
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Name1:";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(414, 130);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(38, 13);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "Notes:";
             // 
-            // label3
+            // cb_notes
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Name2:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "FamilyName:";
-            // 
-            // cb_name2
-            // 
-            this.cb_name2.FormattingEnabled = true;
-            this.cb_name2.Location = new System.Drawing.Point(79, 46);
-            this.cb_name2.Name = "cb_name2";
-            this.cb_name2.Size = new System.Drawing.Size(121, 21);
-            this.cb_name2.TabIndex = 10;
-            // 
-            // cb_familyname
-            // 
-            this.cb_familyname.FormattingEnabled = true;
-            this.cb_familyname.Location = new System.Drawing.Point(79, 73);
-            this.cb_familyname.Name = "cb_familyname";
-            this.cb_familyname.Size = new System.Drawing.Size(121, 21);
-            this.cb_familyname.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Gender:";
-            // 
-            // cb_gender
-            // 
-            this.cb_gender.FormattingEnabled = true;
-            this.cb_gender.Location = new System.Drawing.Point(79, 100);
-            this.cb_gender.Name = "cb_gender";
-            this.cb_gender.Size = new System.Drawing.Size(121, 21);
-            this.cb_gender.TabIndex = 13;
-            // 
-            // cb_birthdate
-            // 
-            this.cb_birthdate.FormattingEnabled = true;
-            this.cb_birthdate.Location = new System.Drawing.Point(79, 127);
-            this.cb_birthdate.Name = "cb_birthdate";
-            this.cb_birthdate.Size = new System.Drawing.Size(121, 21);
-            this.cb_birthdate.TabIndex = 14;
-            // 
-            // cb_addrline1
-            // 
-            this.cb_addrline1.FormattingEnabled = true;
-            this.cb_addrline1.Location = new System.Drawing.Point(286, 19);
-            this.cb_addrline1.Name = "cb_addrline1";
-            this.cb_addrline1.Size = new System.Drawing.Size(121, 21);
-            this.cb_addrline1.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 130);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Birthdate:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(206, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "AddressLine1:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(206, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "AddressLine2:";
-            // 
-            // cb_addrline2
-            // 
-            this.cb_addrline2.FormattingEnabled = true;
-            this.cb_addrline2.Location = new System.Drawing.Point(286, 46);
-            this.cb_addrline2.Name = "cb_addrline2";
-            this.cb_addrline2.Size = new System.Drawing.Size(121, 21);
-            this.cb_addrline2.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(206, 76);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 13);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "PostalCode:";
-            // 
-            // cb_postalcode
-            // 
-            this.cb_postalcode.FormattingEnabled = true;
-            this.cb_postalcode.Location = new System.Drawing.Point(286, 73);
-            this.cb_postalcode.Name = "cb_postalcode";
-            this.cb_postalcode.Size = new System.Drawing.Size(121, 21);
-            this.cb_postalcode.TabIndex = 20;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(206, 103);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 13);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "City:";
-            // 
-            // cb_city
-            // 
-            this.cb_city.FormattingEnabled = true;
-            this.cb_city.Location = new System.Drawing.Point(286, 100);
-            this.cb_city.Name = "cb_city";
-            this.cb_city.Size = new System.Drawing.Size(121, 21);
-            this.cb_city.TabIndex = 22;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(206, 130);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 13);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "State:";
-            // 
-            // cb_state
-            // 
-            this.cb_state.FormattingEnabled = true;
-            this.cb_state.Location = new System.Drawing.Point(286, 127);
-            this.cb_state.Name = "cb_state";
-            this.cb_state.Size = new System.Drawing.Size(121, 21);
-            this.cb_state.TabIndex = 24;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(413, 22);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 13);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Country:";
-            // 
-            // cb_country
-            // 
-            this.cb_country.FormattingEnabled = true;
-            this.cb_country.Location = new System.Drawing.Point(493, 19);
-            this.cb_country.Name = "cb_country";
-            this.cb_country.Size = new System.Drawing.Size(121, 21);
-            this.cb_country.TabIndex = 26;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(414, 49);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Phone:";
-            // 
-            // cb_phone
-            // 
-            this.cb_phone.FormattingEnabled = true;
-            this.cb_phone.Location = new System.Drawing.Point(494, 46);
-            this.cb_phone.Name = "cb_phone";
-            this.cb_phone.Size = new System.Drawing.Size(121, 21);
-            this.cb_phone.TabIndex = 28;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(414, 76);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 13);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Mobile Phone:";
-            // 
-            // cb_mobile
-            // 
-            this.cb_mobile.FormattingEnabled = true;
-            this.cb_mobile.Location = new System.Drawing.Point(494, 73);
-            this.cb_mobile.Name = "cb_mobile";
-            this.cb_mobile.Size = new System.Drawing.Size(121, 21);
-            this.cb_mobile.TabIndex = 30;
+            this.cb_notes.FormattingEnabled = true;
+            this.cb_notes.Location = new System.Drawing.Point(494, 127);
+            this.cb_notes.Name = "cb_notes";
+            this.cb_notes.Size = new System.Drawing.Size(121, 21);
+            this.cb_notes.TabIndex = 34;
             // 
             // label15
             // 
@@ -407,22 +212,218 @@
             this.cb_email.Size = new System.Drawing.Size(121, 21);
             this.cb_email.TabIndex = 32;
             // 
-            // label16
+            // label14
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(414, 130);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(38, 13);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "Notes:";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(414, 76);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Mobile Phone:";
             // 
-            // cb_notes
+            // cb_mobile
             // 
-            this.cb_notes.FormattingEnabled = true;
-            this.cb_notes.Location = new System.Drawing.Point(494, 127);
-            this.cb_notes.Name = "cb_notes";
-            this.cb_notes.Size = new System.Drawing.Size(121, 21);
-            this.cb_notes.TabIndex = 34;
+            this.cb_mobile.FormattingEnabled = true;
+            this.cb_mobile.Location = new System.Drawing.Point(494, 73);
+            this.cb_mobile.Name = "cb_mobile";
+            this.cb_mobile.Size = new System.Drawing.Size(121, 21);
+            this.cb_mobile.TabIndex = 30;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(414, 49);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Phone:";
+            // 
+            // cb_phone
+            // 
+            this.cb_phone.FormattingEnabled = true;
+            this.cb_phone.Location = new System.Drawing.Point(494, 46);
+            this.cb_phone.Name = "cb_phone";
+            this.cb_phone.Size = new System.Drawing.Size(121, 21);
+            this.cb_phone.TabIndex = 28;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(413, 22);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 13);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Country:";
+            // 
+            // cb_country
+            // 
+            this.cb_country.FormattingEnabled = true;
+            this.cb_country.Location = new System.Drawing.Point(493, 19);
+            this.cb_country.Name = "cb_country";
+            this.cb_country.Size = new System.Drawing.Size(121, 21);
+            this.cb_country.TabIndex = 26;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(206, 130);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 13);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "State:";
+            // 
+            // cb_state
+            // 
+            this.cb_state.FormattingEnabled = true;
+            this.cb_state.Location = new System.Drawing.Point(286, 127);
+            this.cb_state.Name = "cb_state";
+            this.cb_state.Size = new System.Drawing.Size(121, 21);
+            this.cb_state.TabIndex = 24;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(206, 103);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "City:";
+            // 
+            // cb_city
+            // 
+            this.cb_city.FormattingEnabled = true;
+            this.cb_city.Location = new System.Drawing.Point(286, 100);
+            this.cb_city.Name = "cb_city";
+            this.cb_city.Size = new System.Drawing.Size(121, 21);
+            this.cb_city.TabIndex = 22;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(206, 76);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 13);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "PostalCode:";
+            // 
+            // cb_postalcode
+            // 
+            this.cb_postalcode.FormattingEnabled = true;
+            this.cb_postalcode.Location = new System.Drawing.Point(286, 73);
+            this.cb_postalcode.Name = "cb_postalcode";
+            this.cb_postalcode.Size = new System.Drawing.Size(121, 21);
+            this.cb_postalcode.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(206, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "AddressLine2:";
+            // 
+            // cb_addrline2
+            // 
+            this.cb_addrline2.FormattingEnabled = true;
+            this.cb_addrline2.Location = new System.Drawing.Point(286, 46);
+            this.cb_addrline2.Name = "cb_addrline2";
+            this.cb_addrline2.Size = new System.Drawing.Size(121, 21);
+            this.cb_addrline2.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(206, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "AddressLine1:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 130);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Birthdate:";
+            // 
+            // cb_addrline1
+            // 
+            this.cb_addrline1.FormattingEnabled = true;
+            this.cb_addrline1.Location = new System.Drawing.Point(286, 19);
+            this.cb_addrline1.Name = "cb_addrline1";
+            this.cb_addrline1.Size = new System.Drawing.Size(121, 21);
+            this.cb_addrline1.TabIndex = 15;
+            // 
+            // cb_birthdate
+            // 
+            this.cb_birthdate.FormattingEnabled = true;
+            this.cb_birthdate.Location = new System.Drawing.Point(79, 127);
+            this.cb_birthdate.Name = "cb_birthdate";
+            this.cb_birthdate.Size = new System.Drawing.Size(121, 21);
+            this.cb_birthdate.TabIndex = 14;
+            // 
+            // cb_gender
+            // 
+            this.cb_gender.FormattingEnabled = true;
+            this.cb_gender.Location = new System.Drawing.Point(79, 100);
+            this.cb_gender.Name = "cb_gender";
+            this.cb_gender.Size = new System.Drawing.Size(121, 21);
+            this.cb_gender.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Gender:";
+            // 
+            // cb_familyname
+            // 
+            this.cb_familyname.FormattingEnabled = true;
+            this.cb_familyname.Location = new System.Drawing.Point(79, 73);
+            this.cb_familyname.Name = "cb_familyname";
+            this.cb_familyname.Size = new System.Drawing.Size(121, 21);
+            this.cb_familyname.TabIndex = 11;
+            // 
+            // cb_name2
+            // 
+            this.cb_name2.FormattingEnabled = true;
+            this.cb_name2.Location = new System.Drawing.Point(79, 46);
+            this.cb_name2.Name = "cb_name2";
+            this.cb_name2.Size = new System.Drawing.Size(121, 21);
+            this.cb_name2.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "FamilyName:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Name2:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Name1:";
             // 
             // button1
             // 

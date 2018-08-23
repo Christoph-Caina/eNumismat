@@ -10,12 +10,20 @@ using System.Windows.Forms;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
 using Ude;
+using System.Data.SQLite;
 
 namespace eNumismat
 {
     public partial class CSVImport : Form
     {
         public string CsvFile { get; set; }
+
+        readonly string _DBFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
+
+        public string GetDBFile()
+        {
+            return _DBFile;
+        }
 
         TextFieldParser tfp;
 
@@ -298,6 +306,67 @@ namespace eNumismat
                 colNameList.Add(col.Name);
             }
             cb_notes.DataSource = colNameList;
+        }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            // Import Data into Database
+            // Step1 - Check for Duplicate NAME1 and FAMILYNAME
+            // If record is available, do what???
+
+            // Handle impor with less columns than expected in the database
+
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
+            {
+                dbConnection.Open();
+                string SQL = null;
+
+                for (int i = 0; i < resultData.Rows.Count - 1; i++)
+                {
+                    SQL = @"INSERT INTO `contacts` " +
+                        "(`name1`, `name2`, `familyname`, `gender`, `birthdate`, `addrline1`, `addrline2`, `postalcode`, `city`, `state`, `country`, `phone`, `mobile`, `email`, `notes`)" +
+                        " VALUES " +
+                        "(@ContactName1, @ContactName2, @ContactFamilyName, @ContactGender, @ContactBirthdate, @ContactAddrLine1, @ContactAddrLine2, @ContactPostalCode, @ContactCity, @ContactState, @ContactCountry, @ContactPhone, @ContactMobile, @ContactMail, @ContactNotes); ";
+
+                    using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
+                    {
+                        command.Parameters.AddWithValue("@ContactName1", resultData.Rows[i].Cells[cb_name1.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactName2", resultData.Rows[i].Cells[cb_name2.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactFamilyName", resultData.Rows[i].Cells[cb_familyname.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactGender", resultData.Rows[i].Cells[cb_gender.SelectedItem.ToString()].Value);
+
+                        command.Parameters.AddWithValue("@ContactBirthdate", resultData.Rows[i].Cells[cb_birthdate.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactAddrLine1", resultData.Rows[i].Cells[cb_addrline1.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactAddrLine2", resultData.Rows[i].Cells[cb_addrline2.SelectedItem.ToString()].Value);
+
+                        command.Parameters.AddWithValue("@ContactPostalCode", resultData.Rows[i].Cells[cb_postalcode.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactCity", resultData.Rows[i].Cells[cb_city.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactState", resultData.Rows[i].Cells[cb_state.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactCountry", resultData.Rows[i].Cells[cb_country.SelectedItem.ToString()].Value);
+
+                        command.Parameters.AddWithValue("@ContactPhone", resultData.Rows[i].Cells[cb_phone.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactMobile", resultData.Rows[i].Cells[cb_mobile.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactMail", resultData.Rows[i].Cells[cb_email.SelectedItem.ToString()].Value);
+                        command.Parameters.AddWithValue("@ContactNotes", resultData.Rows[i].Cells[cb_notes.SelectedItem.ToString()].Value);
+
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            dbConnection.Close();
+                            dbConnection.Dispose();
+                        }
+                    }
+                }
+                dbConnection.Close();
+                dbConnection.Dispose();
+
+                MessageBox.Show("Import finished");
+                Hide();
+            }
         }
     }
 }
