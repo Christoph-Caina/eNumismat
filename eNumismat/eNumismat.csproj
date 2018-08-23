@@ -116,12 +116,6 @@
     <Compile Include="AddressBook.Designer.cs">
       <DependentUpon>AddressBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddressBook_.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddressBook_.Designer.cs">
-      <DependentUpon>AddressBook_.cs</DependentUpon>
-    </Compile>
     <Compile Include="Coin.cs" />
     <Compile Include="Collection.cs" />
     <Compile Include="Contact.cs" />
@@ -189,20 +183,8 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddressBook.de.resx">
-      <DependentUpon>AddressBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddressBook.es.resx">
-      <DependentUpon>AddressBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddressBook.fr.resx">
-      <DependentUpon>AddressBook.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddressBook.resx">
       <DependentUpon>AddressBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddressBook_.resx">
-      <DependentUpon>AddressBook_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.de.resx">
       <DependentUpon>Form1.cs</DependentUpon>

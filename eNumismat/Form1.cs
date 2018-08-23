@@ -16,7 +16,7 @@ namespace eNumismat
         SaveFileDialog saveFile;
         OpenFileDialog openFile;
         //FolderBrowserDialog folderBrowser;
-        AddressBook_ adrBook;
+        AddressBook adrBook;
         SwapMonitor swapList;
         FileBackup fBackup;
 
@@ -251,14 +251,14 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void AdressbuchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            adrBook = new AddressBook_();
+            adrBook = new AddressBook();
             adrBook.Show();
         }
 
         //=====================================================================================================================================================================
         private void AddressbookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            adrBook = new AddressBook_();
+            adrBook = new AddressBook();
             adrBook.Show();
         }
 
