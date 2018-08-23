@@ -173,7 +173,6 @@ namespace eNumismat
 
                     if (contactDetails != null)
                     {
-                       // MessageBox.Show("ContactName1: " + contactDetails[1] + " + ContactFamilyName: " + contactDetails[0]);
                         command.Parameters.AddWithValue("@ContactName1", contactDetails[1]);
                         command.Parameters.AddWithValue("@ContactFamilyName", contactDetails[0]);
                     }
@@ -231,11 +230,6 @@ namespace eNumismat
 
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                     {
-                        MessageBox.Show("ContactName1: " + contactDetails[0]);
-                        MessageBox.Show("ContactName2: " + contactDetails[1]);
-                        MessageBox.Show("ContactFamilyName: " + contactDetails[2]);
-                        MessageBox.Show("ContactGender: " + contactDetails[3]);
-
                         command.Parameters.AddWithValue("@ContactName1", contactDetails[0]);
                         command.Parameters.AddWithValue("@ContactName2", contactDetails[1]);
                         command.Parameters.AddWithValue("@ContactFamilyName", contactDetails[2]);
@@ -424,11 +418,11 @@ namespace eNumismat
 
         // GET DATA FROM AUTOCOMPLETE DB...
         //=====================================================================================================================================================================
-        public DataTable GetAutoComplete(string table, string searchtext=null)
+        public DataTable GetAutoComplete(string column, string searchtext = null)
         {
-            string AutoCompleteDBFile = Path.Combine(Globals.AppDataPath, @"AutoComplete.db");
+            //string AutoCompleteDBFile = Globals.DBFile;//Path.Combine(Globals.AppDataPath, @"AutoComplete.db");
 
-            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + AutoCompleteDBFile))
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
             {
                 try
                 {
@@ -437,7 +431,7 @@ namespace eNumismat
                 catch (Exception ex)
                 { }
 
-                string SQL = "SELECT names FROM `" + table +"` WHERE `names` LIKE @search";
+                string SQL = "SELECT '" + column + "'  FROM `CONTACTS` WHERE '" + column + "' LIKE @search";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(SQL, dbConnection))
                 {
@@ -454,6 +448,7 @@ namespace eNumismat
                 }
             }
         }
+
     }
 }
 

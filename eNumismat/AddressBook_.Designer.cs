@@ -204,7 +204,6 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.IsSplitterFixed = true;
@@ -229,7 +228,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(215, 574);
+            this.panel2.Size = new System.Drawing.Size(217, 576);
             this.panel2.TabIndex = 1;
             // 
             // treeView1
@@ -237,7 +236,7 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(215, 574);
+            this.treeView1.Size = new System.Drawing.Size(217, 576);
             this.treeView1.TabIndex = 0;
             this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.TreeView1_BeforeSelect);
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1_AfterSelect);
@@ -248,9 +247,9 @@
             this.panel1.Controls.Add(this.Btn_CreateContact);
             this.panel1.Controls.Add(this.Btn_DeleteContact);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 574);
+            this.panel1.Location = new System.Drawing.Point(0, 576);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 39);
+            this.panel1.Size = new System.Drawing.Size(217, 39);
             this.panel1.TabIndex = 0;
             // 
             // Btn_UpdateContact

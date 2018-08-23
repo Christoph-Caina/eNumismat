@@ -45,7 +45,7 @@ namespace eNumismat
             // ... for Cities
             if (Globals.UseAutoFillOnCities == true)
             {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("cities", cb_City.Text).Rows)
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("city", cb_City.Text).Rows)
                 {
                     AutoFillCities.Add(AutoFillItems[0].ToString());
                 }
@@ -61,7 +61,7 @@ namespace eNumismat
             // ... for Federal States
             if (Globals.UseAutoFillOnStates == true)
             {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("states", cb_State.Text).Rows)
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("state", cb_State.Text).Rows)
                 {
                     AutoFillStates.Add(AutoFillItems[0].ToString());
                 }
@@ -75,7 +75,7 @@ namespace eNumismat
 
             if (Globals.UseAutoFillOnPostalCodes == true)
             {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("postalcodes", tb_PostalCode.Text).Rows)
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("postalcode", tb_PostalCode.Text).Rows)
                 {
                     AutoFillPostalCodes.Add(AutoFillItems[0].ToString());
                 }
@@ -84,7 +84,7 @@ namespace eNumismat
 
             if (Globals.UseAutoFillOnCountries == true)
             {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("countries", cb_Country.Text).Rows)
+                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("country", cb_Country.Text).Rows)
                 {
                     AutoFillCountries.Add(AutoFillItems[0].ToString());
                 }
@@ -181,8 +181,6 @@ namespace eNumismat
             {
                 foreach (DataRow drDetails in _ContactDetails.Rows)
                 {
-                    MessageBox.Show(i.ToString() + " -- " + drDetails[i].ToString());
-
                     ContactDetails.Add(drDetails[i].ToString());
                 }
 
@@ -301,8 +299,6 @@ namespace eNumismat
                     tb_AddrLine2.Text = ContactDetails[7];
                     tb_PostalCode.Text = ContactDetails[8];
 
-                    MessageBox.Show("City: " + ContactDetails[9] + " State: " + ContactDetails[10] + " Country: " + ContactDetails[11]);
-
                     // I think, here we need to do some changes... I haven't figured out any issue yet, but it could be possible, I think...
                     if (AutoFillCities.Contains(ContactDetails[9]))
                     {
@@ -369,8 +365,6 @@ namespace eNumismat
                 splitContainer1.Panel2.Controls.Remove(PanelEditContactDetails);
                 splitContainer1.Panel2.Controls.Add(PanelShowContactDetails);
                 PanelShowContactDetails.Dock = DockStyle.Fill;
-
-                MessageBox.Show(ContactDetails[0]);
 
                 if (ContactDetails.Count != 0)
                 {
@@ -541,7 +535,6 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void Btn_UpdateContact_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(ContactID.ToString());
             // If the Editor Button "Edit" was pressed, show the Editor in Edit mode
             LoadContactMain("edit", null, ContactID);
         }

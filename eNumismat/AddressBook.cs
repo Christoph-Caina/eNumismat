@@ -41,7 +41,7 @@ namespace eNumismat
             // If the Setting for Using AutoFill is set to true, here we are getting the Data...
 
             // ... for Cities
-            if (Globals.UseAutoFillOnCities == true)
+            /*if (Globals.UseAutoFillOnCities == true)
             {
                 foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("CITIES", cb_city.Text).Rows)
                 {
@@ -69,7 +69,7 @@ namespace eNumismat
                     cb_bundesland.AutoCompleteCustomSource.Add(item);
                 }
                 cb_bundesland.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            //}
+            //}*/
 
             // ... for Zip-Codes
             // (Masked Text Box does not support AutoComplete / Suggestions -> maybe, we need to change the control or create our own Control.
