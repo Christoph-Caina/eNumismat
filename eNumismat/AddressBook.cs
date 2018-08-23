@@ -492,13 +492,16 @@ namespace eNumismat
             // now, we have the first letter of our Contacts Name and we can do a db query which will result all contacts, starting with this letter
             foreach (DataRow drChilds in dbAction.GetContacts("childs", Nodes[1]).Rows)
             {
-                // we only want to Display Name and Surename
-                string ChildNode = drChilds[0] + ", " + drChilds[1];
 
+                //MessageBox.Show(drChilds.ToString());
+                
+                // we only want to Display Name and Surename
+                string ChildNode = drChilds[1] + ", " + drChilds[2];
+                
                 // and the Sexual image (female, male, nothing)
                 int ImageIndex;
 
-                switch (drChilds[2])
+                switch (drChilds[3])
                 {
                     case "male":
                         ImageIndex = 1;
@@ -514,6 +517,7 @@ namespace eNumismat
                 }
 
                 childs = parentNode.Nodes.Add(null, ChildNode, ImageIndex, ImageIndex);
+                childs.Tag = drChilds[0];
             }
         }
 
@@ -534,8 +538,10 @@ namespace eNumismat
             // The Contact will be shown as Name, Surename -> String1 => Name, String2 => surename
             string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
 
+            //MessageBox.Show(treeView1.SelectedNode.Tag.ToString());
+
             // Load the Form in View Mode with the selected Names
-            LoadContactMain("view", names);
+            LoadContactMain("view", names, Convert.ToInt32(treeView1.SelectedNode.Tag));
         }
 
         //=====================================================================================================================================================================

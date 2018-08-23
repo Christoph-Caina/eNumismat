@@ -330,6 +330,10 @@ namespace eNumismat
 
                     using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                     {
+                        // each ComboBox needs to be checked, if the selectedItem is NULL or EMPTY
+                        // if YES - we need to insert NULL as value.
+                        // Currently, the CELL ID will be set to NULL; which is not Possible.
+                        // We can onyl take the resultDataValue, if we already have a CELL ID
                         command.Parameters.AddWithValue("@ContactName1", resultData.Rows[i].Cells[cb_name1.SelectedItem.ToString()].Value);
                         command.Parameters.AddWithValue("@ContactName2", resultData.Rows[i].Cells[cb_name2.SelectedItem.ToString()].Value);
                         command.Parameters.AddWithValue("@ContactFamilyName", resultData.Rows[i].Cells[cb_familyname.SelectedItem.ToString()].Value);

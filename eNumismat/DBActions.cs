@@ -140,7 +140,7 @@ namespace eNumismat
                         break;
 
                     case "childs":
-                        SQL = "SELECT familyname, name1, gender FROM contacts WHERE familyname LIKE @FirstLEtter ORDER BY familyname ASC";
+                        SQL = "SELECT id, familyname, name1, gender FROM contacts WHERE familyname LIKE @FirstLEtter ORDER BY familyname ASC";
                         break;
 
                     case "details":
