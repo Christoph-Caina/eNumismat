@@ -49,62 +49,7 @@ namespace eNumismat
             Globals.UseAutoFillOnCountries = true;
 
             // ... for Cities
-            if (Globals.UseAutoFillOnCities == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("city", cb_City.Text).Rows)
-                {
-                    AutoFillCities.Add(AutoFillItems[0].ToString());
-                }
-
-                foreach (string item in AutoFillCities)
-                {
-                    cb_City.AutoCompleteCustomSource.Add(item);
-                }
-                cb_City.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            }
-
-            // ... for Federal States
-            if (Globals.UseAutoFillOnStates == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("state", cb_State.Text).Rows)
-                {
-                    AutoFillStates.Add(AutoFillItems[0].ToString());
-                }
-
-                foreach (string item in AutoFillStates)
-                {
-                    cb_State.AutoCompleteCustomSource.Add(item);
-                }
-                cb_State.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            }
-
-            if (Globals.UseAutoFillOnPostalCodes == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("postalcode", tb_PostalCode.Text).Rows)
-                {
-                    AutoFillPostalCodes.Add(AutoFillItems[0].ToString());
-                }
-
-                foreach (string item in AutoFillPostalCodes)
-                {
-                    tb_PostalCode.AutoCompleteCustomSource.Add(item);
-                }
-                tb_PostalCode.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            }
-
-            if (Globals.UseAutoFillOnCountries == true)
-            {
-                foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("country", cb_Country.Text).Rows)
-                {
-                    AutoFillCountries.Add(AutoFillItems[0].ToString());
-                }
-
-                foreach (string item in AutoFillCountries)
-                {
-                    cb_Country.AutoCompleteCustomSource.Add(item);
-                }
-                cb_Country.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            }
+            
 
             // Generate our AddressBook form
             GenerateAdrBookForm();
@@ -227,6 +172,64 @@ namespace eNumismat
             // if the Form-Type (we are setting this var sometimes) is NEW or EDIT, we should display the INPUT form
             if (Type == "new" || Type == "edit")
             {
+
+                if (Globals.UseAutoFillOnCities == true)
+                {
+                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("city", cb_City.Text).Rows)
+                    {
+                        AutoFillCities.Add(AutoFillItems[0].ToString());
+                    }
+
+                    foreach (string item in AutoFillCities)
+                    {
+                        cb_City.AutoCompleteCustomSource.Add(item);
+                    }
+                    cb_City.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                }
+
+                // ... for Federal States
+                if (Globals.UseAutoFillOnStates == true)
+                {
+                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("state", cb_State.Text).Rows)
+                    {
+                        AutoFillStates.Add(AutoFillItems[0].ToString());
+                    }
+
+                    foreach (string item in AutoFillStates)
+                    {
+                        cb_State.AutoCompleteCustomSource.Add(item);
+                    }
+                    cb_State.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                }
+
+                if (Globals.UseAutoFillOnPostalCodes == true)
+                {
+                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("postalcode", tb_PostalCode.Text).Rows)
+                    {
+                        AutoFillPostalCodes.Add(AutoFillItems[0].ToString());
+                    }
+
+                    foreach (string item in AutoFillPostalCodes)
+                    {
+                        tb_PostalCode.AutoCompleteCustomSource.Add(item);
+                    }
+                    tb_PostalCode.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                }
+
+                if (Globals.UseAutoFillOnCountries == true)
+                {
+                    foreach (DataRow AutoFillItems in dbAction.GetAutoComplete("country", cb_Country.Text).Rows)
+                    {
+                        AutoFillCountries.Add(AutoFillItems[0].ToString());
+                    }
+
+                    foreach (string item in AutoFillCountries)
+                    {
+                        cb_Country.AutoCompleteCustomSource.Add(item);
+                    }
+                    cb_Country.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                }
+
                 // remove the "Show Details" Panel and Add the Editor Panel
                 splitContainer1.Panel2.Controls.Remove(PanelShowContactDetails);
                 splitContainer1.Panel2.Controls.Add(PanelEditContactDetails);
@@ -532,12 +535,11 @@ namespace eNumismat
         //=====================================================================================================================================================================
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            // if a contact Node was selected, we need the Name for getting the Details:
-            // this will be done by splitting the Node Value into a string array.
-            // The Contact will be shown as Name, Surename -> String1 => Name, String2 => surename
+            // for fixing https://github.com/Christoph-Caina/eNumismat/issues/72 we need to give the contact ID when the Contact will be selected.
+            // we are using the "TAG" option for the Node to do this.
+            // see LoadContactMain(..., ..., selectedNode.Tag)
             string[] names = Regex.Split(treeView1.SelectedNode.ToString().Remove(0, 10), ", ");
 
-            //MessageBox.Show(treeView1.SelectedNode.Tag.ToString());
 
             // Load the Form in View Mode with the selected Names
             LoadContactMain("view", names, Convert.ToInt32(treeView1.SelectedNode.Tag));
@@ -680,8 +682,16 @@ namespace eNumismat
             // but what should we do, if we have invalid input?
             // first, we need to check, if the fields are empty -> only the names are really important, since we need this information to show anything.
             // The Database should also not acceppt NULL values for NAME and SURENAME
-            if (Globals.ValidateNames == true)
-            {
+            
+            // Name1 and Surename can't be empty.
+            // So we can't check if the ValidateNames Parameter is set or not.
+            // if this parameter is set to true, we can do some other validation checks.
+            // f.e. Name1, Name2 and Name3 should not be the same
+            // also, a Name should not contain numbers, f.e
+            // I need to do a checklist, what validations we can use and which one not
+            
+            //if (Globals.ValidateNames == true)
+            //{
                 if (validate.ValidateData(tb_Name1.Text, "IsNullOrEmpty"))
                 {
                     MessageBox.Show(GlobalStrings._addrBook_Validation_NameEmpty);
@@ -697,7 +707,7 @@ namespace eNumismat
                     tb_FamilyName.Select();
                     return false;
                 }
-            }
+            //}
 
             if (Globals.ValidateEmail == true)
             {

@@ -72,6 +72,7 @@
             // 
             // resultData
             // 
+            this.resultData.AllowUserToOrderColumns = true;
             this.resultData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.resultData.Location = new System.Drawing.Point(12, 205);
             this.resultData.Name = "resultData";

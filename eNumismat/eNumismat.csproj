@@ -385,7 +385,9 @@
   <ItemGroup>
     <None Include="Resources\help.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="notes.txt" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SQL\Insert.sql" />
   </ItemGroup>

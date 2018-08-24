@@ -304,7 +304,6 @@ namespace eNumismat
             {
                 dbConnection.Open();
                 string SQL = null;
-
                 
                 using (var transaction = dbConnection.BeginTransaction())
                 {
@@ -317,28 +316,149 @@ namespace eNumismat
 
                         using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                         {
-                            // each ComboBox needs to be checked, if the selectedItem is NULL or EMPTY
-                            // if YES - we need to insert NULL as value.
-                            // Currently, the CELL ID will be set to NULL; which is not Possible.
-                            // We can onyl take the resultDataValue, if we already have a CELL ID
-                            command.Parameters.AddWithValue("@ContactName1", resultData.Rows[i].Cells[cb_name1.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactName2", resultData.Rows[i].Cells[cb_name2.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactFamilyName", resultData.Rows[i].Cells[cb_familyname.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactGender", resultData.Rows[i].Cells[cb_gender.Text.ToString()].Value);
+                            // check, if cb Text value is empty or not.
+                            // if it is NULL or EMPTY, we need to set the whole value to NULL
+                            if (!string.IsNullOrEmpty(cb_name1.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactName1", resultData.Rows[i].Cells[cb_name1.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactName1", "--");
+                            }
 
-                            command.Parameters.AddWithValue("@ContactBirthdate", resultData.Rows[i].Cells[cb_birthdate.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactAddrLine1", resultData.Rows[i].Cells[cb_addrline1.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactAddrLine2", resultData.Rows[i].Cells[cb_addrline2.Text.ToString()].Value);
+                            if (!string.IsNullOrEmpty(cb_name2.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactName2", resultData.Rows[i].Cells[cb_name2.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactName2", null);
+                            }
 
-                            command.Parameters.AddWithValue("@ContactPostalCode", resultData.Rows[i].Cells[cb_postalcode.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactCity", resultData.Rows[i].Cells[cb_city.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactState", resultData.Rows[i].Cells[cb_state.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactCountry", resultData.Rows[i].Cells[cb_country.Text.ToString()].Value);
+                            if (!string.IsNullOrEmpty(cb_familyname.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactFamilyName", resultData.Rows[i].Cells[cb_familyname.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactFamilyName", "--");
+                            }
 
-                            command.Parameters.AddWithValue("@ContactPhone", resultData.Rows[i].Cells[cb_phone.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactMobile", resultData.Rows[i].Cells[cb_mobile.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactMail", resultData.Rows[i].Cells[cb_email.Text.ToString()].Value);
-                            command.Parameters.AddWithValue("@ContactNotes", resultData.Rows[i].Cells[cb_notes.Text.ToString()].Value);
+                            if (!string.IsNullOrEmpty(cb_gender.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactGender", resultData.Rows[i].Cells[cb_gender.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactGender", null);
+                            }
+
+                            if (!string.IsNullOrEmpty(cb_birthdate.Text))
+                            {
+                                if (!string.IsNullOrEmpty(resultData.Rows[i].Cells[cb_birthdate.Text.ToString()].Value.ToString()))
+                                {
+                                    command.Parameters.AddWithValue("@ContactBirthdate", Convert.ToDateTime(resultData.Rows[i].Cells[cb_birthdate.Text.ToString()].Value).ToString("yyyy-MM-dd"));
+                                }
+                                else
+                                {
+                                    command.Parameters.AddWithValue("@ContactBirthdate", null);
+                                }
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactBirthdate", null);
+                            }
+                            
+                            if (!string.IsNullOrEmpty(cb_addrline1.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactAddrLine1", resultData.Rows[i].Cells[cb_addrline1.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactAddrLine1", null);
+                            }
+
+                            if (!string.IsNullOrEmpty(cb_addrline2.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactAddrLine2", resultData.Rows[i].Cells[cb_addrline2.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactAddrLine2", null);
+                            }
+
+                            if(!string.IsNullOrEmpty(cb_postalcode.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactPostalCode", resultData.Rows[i].Cells[cb_postalcode.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactPostalCode", null);
+                            }
+
+                            if (!string.IsNullOrEmpty(cb_city.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactCity", resultData.Rows[i].Cells[cb_city.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactCity", null);
+                            }
+
+                            if (!string.IsNullOrEmpty(cb_state.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactState", resultData.Rows[i].Cells[cb_state.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactState", null);
+                            }
+
+                            if (!string.IsNullOrEmpty(cb_country.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactCountry", resultData.Rows[i].Cells[cb_country.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactCountry", null);
+                            }
+
+                            if (!string.IsNullOrEmpty(cb_phone.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactPhone", resultData.Rows[i].Cells[cb_phone.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactPhone", null);
+                            }
+
+                            if (!string.IsNullOrEmpty(cb_mobile.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactMobile", resultData.Rows[i].Cells[cb_mobile.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactMobile", null);
+                            }
+
+                            if (!string.IsNullOrEmpty(cb_email.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactMail", resultData.Rows[i].Cells[cb_email.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactMail", null);
+                            }
+
+                            if (!string.IsNullOrEmpty(cb_notes.Text))
+                            {
+                                command.Parameters.AddWithValue("@ContactNotes", resultData.Rows[i].Cells[cb_notes.Text.ToString()].Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@ContactNotes", null);
+                            }
 
                             try
                             {

@@ -96,7 +96,7 @@ namespace eNumismat
                 }
 
                 string SQL =
-                    "SELECT COUNT (*) FROM `contacts`";
+                    "SELECT COUNT (familyname) FROM `contacts`";
 
                 using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
                 {
@@ -425,8 +425,6 @@ namespace eNumismat
         //=====================================================================================================================================================================
         public DataTable GetAutoComplete(string column, string searchtext = null)
         {
-            //string AutoCompleteDBFile = Globals.DBFile;//Path.Combine(Globals.AppDataPath, @"AutoComplete.db");
-
             using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
             {
                 try
@@ -462,6 +460,70 @@ namespace eNumismat
             }
         }
 
+
+        /*public bool ImportContact(DataTable resultData)
+        {
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
+            {
+                dbConnection.Open();
+                string SQL = null;
+
+                using (var transaction = dbConnection.BeginTransaction())
+                {
+                    for (int i = 0; i < resultData.Rows.Count - 1; i++)
+                    {
+                        SQL = @"INSERT INTO `contacts` " +
+                            "(`name1`, `name2`, `familyname`, `gender`, `birthdate`, `addrline1`, `addrline2`, `postalcode`, `city`, `state`, `country`, `phone`, `mobile`, `email`, `notes`)" +
+                            " VALUES " +
+                            "(@ContactName1, @ContactName2, @ContactFamilyName, @ContactGender, @ContactBirthdate, @ContactAddrLine1, @ContactAddrLine2, @ContactPostalCode, @ContactCity, @ContactState, @ContactCountry, @ContactPhone, @ContactMobile, @ContactMail, @ContactNotes); ";
+
+                        using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
+                        {
+                            // each ComboBox needs to be checked, if the selectedItem is NULL or EMPTY
+                            // if YES - we need to insert NULL as value.
+                            // Currently, the CELL ID will be set to NULL; which is not Possible.
+                            // We can onyl take the resultDataValue, if we already have a CELL ID
+                            command.Parameters.AddWithValue("@ContactName1", resultData.Rows[i].Cells[cb_name1.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactName2", resultData.Rows[i].Cells[cb_name2.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactFamilyName", resultData.Rows[i].Cells[cb_familyname.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactGender", resultData.Rows[i].Cells[cb_gender.Text.ToString()].Value);
+
+                            command.Parameters.AddWithValue("@ContactBirthdate", resultData.Rows[i].Cells[cb_birthdate.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactAddrLine1", resultData.Rows[i].Cells[cb_addrline1.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactAddrLine2", resultData.Rows[i].Cells[cb_addrline2.Text.ToString()].Value);
+
+                            command.Parameters.AddWithValue("@ContactPostalCode", resultData.Rows[i].Cells[cb_postalcode.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactCity", resultData.Rows[i].Cells[cb_city.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactState", resultData.Rows[i].Cells[cb_state.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactCountry", resultData.Rows[i].Cells[cb_country.Text.ToString()].Value);
+
+                            command.Parameters.AddWithValue("@ContactPhone", resultData.Rows[i].Cells[cb_phone.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactMobile", resultData.Rows[i].Cells[cb_mobile.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactMail", resultData.Rows[i].Cells[cb_email.Text.ToString()].Value);
+                            command.Parameters.AddWithValue("@ContactNotes", resultData.Rows[i].Cells[cb_notes.Text.ToString()].Value);
+
+                            try
+                            {
+                                command.ExecuteNonQuery();
+                            }
+                            catch (Exception ex)
+                            {
+                                //dbConnection.Close();
+                                //dbConnection.Dispose();
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                    }
+                    transaction.Commit();
+                }
+
+                dbConnection.Close();
+                dbConnection.Dispose();
+
+                MessageBox.Show("Import finished");
+                Hide();
+            }
+        }*/
     }
 }
 

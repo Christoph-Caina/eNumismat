@@ -257,8 +257,7 @@ namespace eNumismat
         private void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
         {
             // Define, what we should do with the downloaded csv file
-            DataImport import = new DataImport();
-            import.FromFile(plzData);
+            
         }
     }
 }

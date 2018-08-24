@@ -1,0 +1,47 @@
+﻿ToDo:
+
+User Input Validation AddressBook
+	-> Validate Names:
+		-> No numbers ?
+		-> Name1 + Surename should not have the same value / maybe also in combination with Name2 ?
+		-> Check, if Name1 + Surename already exist in the Database ?
+			-> if yes: what should be done?
+				-> alterting the user "should the contact still be created ? Y/N"
+		
+
+	-> Import Contacts:
+		-> Check cb_ for IsNullOrEmpty and if true to enable csv files with less columns than we have in our DB
+		-> Check, if a combination of Name1 + Surename already exists in the Database.
+			-> if yes: how should this be handled?
+				-> is it possible to skip inserting for a specific row?
+				-> is it possible to merge the Data with the existing data in the DB?
+		-> Simplify the Column Check
+			-> how ?
+				-> check, if column names are LIKE the one we need in the DB and if yes assign automatically ?
+					-> then we need to do something like fuzzy search for column names -> and it can only be done if the column name is not "Col_x"
+		-> transform DATE into the expected format yyyy-mm-dd
+		-> translate values like country and gender into english, like we expect this within the Database
+			-> why?
+				-> gender: we only check for "male" & "female" for displaying the image, even if we allow translated values in the combo box.
+				   if we have now other values in the database, we can't select the right image when the contact will be shown
+				-> country: this should prevent, that we will have the same country several times in the database... f.e. Deutschland, Germany, Allemagne, etc.pp.
+				   --> But I can't translate EACH Country Name
+				   --> should we use ISO standard names instead? DE, EN, FR, IN, etc. ?
+				--> Then, we need to make sure, that we only have those values in our Database and not: Deutschland, England, France, India...
+		-> Move DB Part into DBActions
+
+	-> Export Contacts:
+		-> provide a Form
+			- where the user can select the Columns he want to export
+			- where the user can select the Contacts he want to export
+			- show a preview of the exported Data
+		-> Create a valid CSV file...
+			> default separator: ,
+			> values should be in ""
+			> other values like comma in the values should be escaped
+			--> user should be able to select a nother separator like ; or \t
+			--> is this allowed by the Export Class we are using?
+
+	-> Implement a ChangeLog Option
+
+	-> Implement 
