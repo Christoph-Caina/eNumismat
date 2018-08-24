@@ -76,12 +76,13 @@
             this.resultData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.resultData.Location = new System.Drawing.Point(12, 205);
             this.resultData.Name = "resultData";
-            this.resultData.Size = new System.Drawing.Size(629, 416);
+            this.resultData.Size = new System.Drawing.Size(869, 416);
             this.resultData.TabIndex = 0;
+            this.resultData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.resultData_MouseDoubleClick);
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(566, 627);
+            this.btn_Save.Location = new System.Drawing.Point(806, 627);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(75, 23);
             this.btn_Save.TabIndex = 1;
@@ -92,7 +93,7 @@
             // btn_Cancel
             // 
             this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Cancel.Location = new System.Drawing.Point(474, 627);
+            this.btn_Cancel.Location = new System.Drawing.Point(725, 627);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
             this.btn_Cancel.TabIndex = 2;
@@ -178,6 +179,7 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Header Assignment";
+            this.groupBox1.Visible = false;
             // 
             // label16
             // 
@@ -444,7 +446,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btn_Cancel;
-            this.ClientSize = new System.Drawing.Size(654, 662);
+            this.ClientSize = new System.Drawing.Size(891, 662);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);

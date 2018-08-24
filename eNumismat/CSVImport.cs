@@ -17,6 +17,7 @@ namespace eNumismat
     public partial class CSVImport : Form
     {
         public string CsvFile { get; set; }
+        List<string> ColumnHeaders = new List<string>();
 
         readonly string _DBFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
 
@@ -30,6 +31,41 @@ namespace eNumismat
         public CSVImport()
         {
             InitializeComponent();
+
+            /*using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile()))
+            {
+                try
+                {
+                    dbConnection.Open();
+                }
+                catch (Exception ex)
+                {
+                    //return _rowCounter;
+                }
+                string SQL =
+                    "PRAGMA table_info (`contacts`)";
+                using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
+                {
+                    try
+                    {
+                        SQLiteDataReader reader = command.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            if (reader.GetString(1) != "id")
+                            {
+                                ColumnHeaders.Add(reader.GetString(1));
+                            }
+
+                            //MessageBox.Show(reader.GetString(1));
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }*/
         }
 
         private void CSVImport_Load(object sender, EventArgs e)
@@ -52,43 +88,71 @@ namespace eNumismat
             }
         }
 
-        private DataTable NewDataTable(string fileName, char delimiters, bool firstRowContainsFieldNames = true)
-        {
-            DataTable result = new DataTable();
-
+        private void NewDataTable(string fileName, char delimiters, bool firstRowContainsFieldNames = true)
+        {            
             using (tfp)
             {
                 tfp.SetDelimiters(delimiters.ToString());
 
                 // Get Some Column Names
+                GetColumnNamesFromDB();
+
                 if (!tfp.EndOfData)
                 {
                     string[] fields = tfp.ReadFields();
 
                     for (int i = 0; i < fields.Count(); i++)
                     {
-                        if (firstRowContainsFieldNames)
-                        {
-                            result.Columns.Add(fields[i]);
-                        }
+                        resultData.Columns.Add("Col_" + i.ToString(), "UserData_" + i.ToString());
 
-                        else
-                        {
-                            result.Columns.Add("Col" + i);
-                        }
+                        ComboBox comboBoxHeaderCell;
+
+                        int ColumnCounter = resultData.Columns.Count;
+
+                        //for (int i2 = 0; i2 < ColumnCounter; i2++)
+                        //{
+                            comboBoxHeaderCell = new ComboBox();
+                            comboBoxHeaderCell.Name = "Col_" + i.ToString();
+                            comboBoxHeaderCell.DropDownStyle = ComboBoxStyle.DropDownList;
+                            comboBoxHeaderCell.Visible = true;
+
+                            foreach (string Item in ColumnHeaders)
+                            {
+                                comboBoxHeaderCell.Items.Add(Item);
+                                comboBoxHeaderCell.Text = Item;
+                            }
+
+                            resultData.Controls.Add(comboBoxHeaderCell);
+                            comboBoxHeaderCell.Location = this.resultData.GetCellDisplayRectangle(i, -1, true).Location;
+                            comboBoxHeaderCell.Size = this.resultData.Columns[i].HeaderCell.Size;
+                            comboBoxHeaderCell.SelectedIndexChanged += new EventHandler(comboBoxHeaderCell_SelectedIndexChanged);
+                        //}
                     }
-
                     // If first line is data then add it
                     if (!firstRowContainsFieldNames)
-                        result.Rows.Add(fields);
+                        resultData.Rows.Add(fields);
                 }
 
                 // Get Remaining Rows
                 while (!tfp.EndOfData)
-                    result.Rows.Add(tfp.ReadFields());
+                    resultData.Rows.Add(tfp.ReadFields());
             }
-            return result;
+            //return result;
             // Do Something
+        }
+
+        private void comboBoxHeaderCell_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (base.ActiveControl != null)
+            {
+                resultData.Columns[base.ActiveControl.Name.ToString()].HeaderCell.Value = base.ActiveControl.Text;
+                base.ActiveControl.Visible = false;
+            }
+        }
+
+        private void resultData_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //resultData.Controls["Col_" + e.ColumnIndex].Visible = true;
         }
 
         private void cb_separator_SelectedValueChanged(object sender, EventArgs e)
@@ -104,6 +168,42 @@ namespace eNumismat
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void GetColumnNamesFromDB()
+        {
+            string GetDBFile = Path.Combine(@"C: \Users\Christoph.Caina\Documents", @"NewDatabaseStructure.enc");
+
+            using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile))
+            {
+                try
+                {
+                    dbConnection.Open();
+                }
+                catch (Exception ex)
+                { }
+                string SQL =
+                    "PRAGMA table_info (`contacts`)";
+                using (SQLiteCommand command = new SQLiteCommand(SQL, dbConnection))
+                {
+                    try
+                    {
+                        SQLiteDataReader reader = command.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            if (reader.GetString(1) != "id")
+                            {
+                                ColumnHeaders.Add(reader.GetString(1));
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -123,8 +223,12 @@ namespace eNumismat
                 delimiter = '\t';
             }
 
-            resultData.DataSource = NewDataTable(CsvFile, delimiter, cb_HasHeader.Checked);
+            //resultData.DataSource = 
+            NewDataTable(CsvFile, delimiter, cb_HasHeader.Checked);
 
+            
+
+            /*
             LoadHeadersForCbName1();
             LoadHeadersForCbName2();
             LoadHeadersForCbFamilyName();
@@ -140,9 +244,10 @@ namespace eNumismat
             LoadHeadersForCbMobilePhone();
             LoadHeadersForCbEmail();
             LoadHeadersForCbNotes();
+            */
         }
 
-        private void LoadHeadersForCbName1()
+        /*private void LoadHeadersForCbName1()
         {
             List<string> colNameList = new List<string>();
             foreach (DataGridViewColumn col in resultData.Columns)
@@ -290,7 +395,7 @@ namespace eNumismat
                 colNameList.Add(col.Name);
             }
             cb_notes.DataSource = colNameList;
-        }
+        }*/
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -482,5 +587,7 @@ namespace eNumismat
                 Hide();
             }
         }
+
+        
     }
 }
