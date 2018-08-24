@@ -1,5 +1,16 @@
 ﻿ToDo:
 
+SQLite:
+
+auto_vacuum Pragma
+
+The auto_vacuum pragma gets or sets the auto-vacuum mode. Following is the simple syntax.
+
+PRAGMA [database.]auto_vacuum;
+PRAGMA [database.]auto_vacuum = mode;
+
+
+
 User Input Validation AddressBook
 	-> Validate Names:
 		-> No numbers ?
