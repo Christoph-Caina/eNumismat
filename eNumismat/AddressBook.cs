@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Threading;
 using System.Globalization;
 using Jitbit.Utils;
+using System.Diagnostics;
 
 namespace eNumismat
 {
@@ -767,6 +768,11 @@ namespace eNumismat
                 
 
             }*/
+        }
+
+        private void btn_email_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"mailto:" + lb_Mail.Text);
         }
     }
 }

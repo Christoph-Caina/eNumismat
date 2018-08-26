@@ -393,6 +393,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="notes.txt" />
+    <None Include="Resources\email.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SQL\Insert.sql" />

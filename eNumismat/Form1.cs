@@ -433,5 +433,10 @@ namespace eNumismat
         {
             DisplayLanguage("set", "es-ES");
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

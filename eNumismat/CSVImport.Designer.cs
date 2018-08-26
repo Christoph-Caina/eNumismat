@@ -74,11 +74,11 @@
             // 
             this.resultData.AllowUserToOrderColumns = true;
             this.resultData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resultData.GridColor = System.Drawing.SystemColors.Control;
             this.resultData.Location = new System.Drawing.Point(12, 205);
             this.resultData.Name = "resultData";
             this.resultData.Size = new System.Drawing.Size(869, 416);
             this.resultData.TabIndex = 0;
-            this.resultData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.resultData_MouseDoubleClick);
             // 
             // btn_Save
             // 

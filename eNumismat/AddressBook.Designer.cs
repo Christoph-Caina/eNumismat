@@ -52,6 +52,7 @@
             this.PanelShowContactDetails = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_email = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.rtb_NotesDisplay = new System.Windows.Forms.RichTextBox();
             this.lb_Mail = new System.Windows.Forms.Label();
@@ -157,20 +158,20 @@
             // newAddressToolStripMenuItem
             // 
             this.newAddressToolStripMenuItem.Name = "newAddressToolStripMenuItem";
-            this.newAddressToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newAddressToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.newAddressToolStripMenuItem.Text = "New Address";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
             // 
             // importAddressToolStripMenuItem
             // 
             this.importAddressToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ImportCsvFileToolStripMenuItem});
             this.importAddressToolStripMenuItem.Name = "importAddressToolStripMenuItem";
-            this.importAddressToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importAddressToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.importAddressToolStripMenuItem.Text = "Import Address";
             // 
             // ImportCsvFileToolStripMenuItem
@@ -185,13 +186,13 @@
             this.exportAddressToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ExportCsvFileToolStripMenuItem});
             this.exportAddressToolStripMenuItem.Name = "exportAddressToolStripMenuItem";
-            this.exportAddressToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportAddressToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.exportAddressToolStripMenuItem.Text = "Export Address";
             // 
             // ExportCsvFileToolStripMenuItem
             // 
             this.ExportCsvFileToolStripMenuItem.Name = "ExportCsvFileToolStripMenuItem";
-            this.ExportCsvFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ExportCsvFileToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.ExportCsvFileToolStripMenuItem.Text = "CSV File";
             this.ExportCsvFileToolStripMenuItem.Click += new System.EventHandler(this.ExportCsvFileToolStripMenuItem_Click);
             // 
@@ -334,6 +335,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btn_email);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.rtb_NotesDisplay);
             this.tabPage1.Controls.Add(this.lb_Mail);
@@ -356,6 +358,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Contact Details";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btn_email
+            // 
+            this.btn_email.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_email.Image = global::eNumismat.Properties.Resources.email;
+            this.btn_email.Location = new System.Drawing.Point(367, 244);
+            this.btn_email.Name = "btn_email";
+            this.btn_email.Size = new System.Drawing.Size(39, 24);
+            this.btn_email.TabIndex = 37;
+            this.btn_email.UseVisualStyleBackColor = true;
+            this.btn_email.Click += new System.EventHandler(this.btn_email_Click);
             // 
             // label2
             // 
@@ -1040,5 +1053,6 @@
         private System.Windows.Forms.Label lb_Name1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button btn_email;
     }
 }

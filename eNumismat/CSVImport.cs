@@ -97,36 +97,15 @@ namespace eNumismat
                 // Get Some Column Names
                 GetColumnNamesFromDB();
 
+                // resultData.ColumnHeadersDefaultCellStyle = ColumnHeaderStyle.
+
                 if (!tfp.EndOfData)
                 {
                     string[] fields = tfp.ReadFields();
 
                     for (int i = 0; i < fields.Count(); i++)
                     {
-                        resultData.Columns.Add("Col_" + i.ToString(), "UserData_" + i.ToString());
-
-                        ComboBox comboBoxHeaderCell;
-
-                        int ColumnCounter = resultData.Columns.Count;
-
-                        //for (int i2 = 0; i2 < ColumnCounter; i2++)
-                        //{
-                            comboBoxHeaderCell = new ComboBox();
-                            comboBoxHeaderCell.Name = "Col_" + i.ToString();
-                            comboBoxHeaderCell.DropDownStyle = ComboBoxStyle.DropDownList;
-                            comboBoxHeaderCell.Visible = true;
-
-                            foreach (string Item in ColumnHeaders)
-                            {
-                                comboBoxHeaderCell.Items.Add(Item);
-                                comboBoxHeaderCell.Text = Item;
-                            }
-
-                            resultData.Controls.Add(comboBoxHeaderCell);
-                            comboBoxHeaderCell.Location = this.resultData.GetCellDisplayRectangle(i, -1, true).Location;
-                            comboBoxHeaderCell.Size = this.resultData.Columns[i].HeaderCell.Size;
-                            comboBoxHeaderCell.SelectedIndexChanged += new EventHandler(comboBoxHeaderCell_SelectedIndexChanged);
-                        //}
+                        resultData.Columns.Add(fields + i.ToString(), fields + i.ToString());
                     }
                     // If first line is data then add it
                     if (!firstRowContainsFieldNames)
@@ -137,22 +116,6 @@ namespace eNumismat
                 while (!tfp.EndOfData)
                     resultData.Rows.Add(tfp.ReadFields());
             }
-            //return result;
-            // Do Something
-        }
-
-        private void comboBoxHeaderCell_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (base.ActiveControl != null)
-            {
-                resultData.Columns[base.ActiveControl.Name.ToString()].HeaderCell.Value = base.ActiveControl.Text;
-                base.ActiveControl.Visible = false;
-            }
-        }
-
-        private void resultData_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            //resultData.Controls["Col_" + e.ColumnIndex].Visible = true;
         }
 
         private void cb_separator_SelectedValueChanged(object sender, EventArgs e)
@@ -172,7 +135,7 @@ namespace eNumismat
 
         private void GetColumnNamesFromDB()
         {
-            string GetDBFile = Path.Combine(@"C: \Users\Christoph.Caina\Documents", @"NewDatabaseStructure.enc");
+            string GetDBFile = Path.Combine(Globals.DBFilePath, Globals.DBFile);
 
             using (SQLiteConnection dbConnection = new SQLiteConnection("Data Source=" + GetDBFile))
             {
@@ -210,11 +173,11 @@ namespace eNumismat
         {
             char delimiter = (char)0;
 
-            if (cb_separator.SelectedItem.ToString() == ", (comma)")
+            if (cb_separator.SelectedItem.ToString() == ", (comma)" || cb_separator.Text == ",")
             {
                 delimiter = ',';
             }
-            else if (cb_separator.SelectedItem.ToString() == "; (semicolon)")
+            else if (cb_separator.SelectedItem.ToString() == "; (semicolon)" || cb_separator.Text == ";")
             {
                 delimiter = ';';
             }

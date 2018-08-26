@@ -154,14 +154,16 @@ namespace eNumismat.Properties {
         ///   Sucht eine lokalisierte Zeichenfolge, die CREATE TABLE IF NOT EXISTS `CONTACTS`
         ///(
         ///  `id` INTEGER NOT NULL PRIMARY KEY  AUTOINCREMENT,
-        ///  `name` TEXT(45) NOT NULL,
-        ///  `surename` TEXT(45) NOT NULL,
+        ///  `name1` TEXT(45) NOT NULL,
+        ///  `name2` TEXT(45),
+        ///  `familyname` TEXT(45) NOT NULL,
         ///  `gender` TEXT(45),
         ///  `birthdate` TEXT,
-        ///  `street` TEXT(45),
-        ///  `zipcode` TEXT(5),
+        ///  `addrline1` TEXT(45),
+        ///  `addrline2` TEXT(45),
+        ///  `postalcode` TEXT(5),
         ///  `city` TEXT(45),
-        ///  `federalstate` TEXT(45),
+        ///  `state` TEXT(45),
         ///  `country` TEXT(45),
         ///  `phone` TEXT(45),
         ///  `mobile` TEXT(45),
@@ -171,8 +173,7 @@ namespace eNumismat.Properties {
         ///
         ///CREATE TABLE IF NOT EXISTS `CURRENCIES`
         ///(
-        ///  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-        ///  `name` TEXT(4 [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        ///  `id` INTEGER NOT  [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         internal static string Create {
             get {
@@ -246,6 +247,16 @@ namespace eNumismat.Properties {
         internal static System.Drawing.Bitmap door_in {
             get {
                 object obj = ResourceManager.GetObject("door_in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap email {
+            get {
+                object obj = ResourceManager.GetObject("email", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
