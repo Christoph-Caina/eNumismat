@@ -774,6 +774,11 @@ namespace eNumismat
         {
             Process.Start(@"mailto:" + lb_Mail.Text);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"https://www.google.com/maps/place/" + lb_AddrLine1.Text + " " + lb_AddrLine2.Text + " " + lb_PostalCode.Text + " " + lb_City.Text + " " + lb_Country.Text);
+        }
     }
 }
 

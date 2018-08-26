@@ -393,6 +393,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="notes.txt" />
+    <None Include="Resources\house_go.png" />
     <None Include="Resources\email.png" />
   </ItemGroup>
   <ItemGroup>
