@@ -430,6 +430,31 @@ namespace eNumismat
                     lb_Mail.Text = ContactDetails[14];
 
                     rtb_NotesDisplay.Text = ContactDetails[15];
+
+                    if (string.IsNullOrEmpty(lb_Mail.Text))
+                    {
+                        btn_email.Visible = false;
+                    }
+                    else
+                    {
+                        btn_email.Visible = true;
+                    }
+
+                    if (string.IsNullOrEmpty(lb_AddrLine1.Text) && string.IsNullOrEmpty(lb_AddrLine2.Text))
+                    {
+                        if (string.IsNullOrEmpty(lb_PostalCode.Text) || string.IsNullOrEmpty(lb_City.Text))
+                        {
+                            btn_mapslink.Visible = false;
+                        }
+                        else
+                        {
+                            btn_mapslink.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        btn_mapslink.Visible = true;
+                    }
                 }
 
                 // also, we can now enable our Editor-Buttons
@@ -772,12 +797,32 @@ namespace eNumismat
 
         private void btn_email_Click(object sender, EventArgs e)
         {
-            Process.Start(@"mailto:" + lb_Mail.Text);
+            if (!string.IsNullOrEmpty(lb_Mail.Text))
+            {
+                Process.Start(@"mailto:" + lb_Mail.Text);
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_mapslink_Click(object sender, EventArgs e)
         {
-            Process.Start(@"https://www.google.com/maps/place/" + lb_AddrLine1.Text + " " + lb_AddrLine2.Text + " " + lb_PostalCode.Text + " " + lb_City.Text + " " + lb_Country.Text);
+            string AddrLink = null;
+
+            if (!string.IsNullOrEmpty(lb_AddrLine1.Text))
+            { 
+                AddrLink = lb_AddrLine1.Text;
+            }
+            else if (!string.IsNullOrEmpty(lb_AddrLine2.Text))
+            {
+                AddrLink = lb_AddrLine2.Text;
+            }
+
+            if (!string.IsNullOrEmpty(lb_PostalCode.Text) && !string.IsNullOrEmpty(lb_City.Text))
+            {
+                AddrLink = AddrLink + "," + lb_PostalCode.Text + "," + lb_City.Text;
+            }
+
+
+            Process.Start(@"https://www.google.com/maps/place/" + AddrLink);
         }
     }
 }

@@ -62,7 +62,7 @@
             this.lb_Phone = new System.Windows.Forms.Label();
             this.view_label_phone = new System.Windows.Forms.Label();
             this.panel_AddrFormat_german = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_mapslink = new System.Windows.Forms.Button();
             this.lb_Country = new System.Windows.Forms.Label();
             this.view_label_country = new System.Windows.Forms.Label();
             this.lb_City = new System.Windows.Forms.Label();
@@ -445,7 +445,7 @@
             // 
             // panel_AddrFormat_german
             // 
-            this.panel_AddrFormat_german.Controls.Add(this.button1);
+            this.panel_AddrFormat_german.Controls.Add(this.btn_mapslink);
             this.panel_AddrFormat_german.Controls.Add(this.lb_Country);
             this.panel_AddrFormat_german.Controls.Add(this.view_label_country);
             this.panel_AddrFormat_german.Controls.Add(this.lb_City);
@@ -462,16 +462,16 @@
             this.panel_AddrFormat_german.Size = new System.Drawing.Size(518, 109);
             this.panel_AddrFormat_german.TabIndex = 28;
             // 
-            // button1
+            // btn_mapslink
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::eNumismat.Properties.Resources.house_go;
-            this.button1.Location = new System.Drawing.Point(361, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 24);
-            this.button1.TabIndex = 21;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_mapslink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mapslink.Image = global::eNumismat.Properties.Resources.house_go;
+            this.btn_mapslink.Location = new System.Drawing.Point(361, 5);
+            this.btn_mapslink.Name = "btn_mapslink";
+            this.btn_mapslink.Size = new System.Drawing.Size(39, 24);
+            this.btn_mapslink.TabIndex = 21;
+            this.btn_mapslink.UseVisualStyleBackColor = true;
+            this.btn_mapslink.Click += new System.EventHandler(this.btn_mapslink_Click);
             // 
             // lb_Country
             // 
@@ -1067,6 +1067,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btn_email;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_mapslink;
     }
 }
