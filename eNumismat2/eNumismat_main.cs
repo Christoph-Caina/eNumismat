@@ -140,5 +140,11 @@ namespace eNumismat2
         {
             Tray("resize");
         }
+
+        private void kryptonRibbonGroupButton1_Click(object sender, EventArgs e)
+        {
+            eNumismat_addressBook_main adrBook = new eNumismat_addressBook_main();
+            adrBook.Show();
+        }
     }
 }
