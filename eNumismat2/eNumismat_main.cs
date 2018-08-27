@@ -17,6 +17,7 @@ namespace eNumismat2
         public E_Numismat_main()
         {
             InitializeComponent();
+            TrayIcon.Visible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,16 +30,27 @@ namespace eNumismat2
             // Do Work for language Selection >> use Classes/Languages.cs ?
         }
 
-        private void Tray()
+        private void Tray(string method)
         {
-            if (MinimizeToTray == true)
+            if (method == "resize")
+            {
+                if (MinimizeToTray == true)
+                {
+                    if (WindowState == FormWindowState.Minimized)
+                    {
+                        Show();
+                        WindowState = FormWindowState.Normal;
+                    }
+                    else if (WindowState == FormWindowState.Normal)
+                    {
+                        Hide();
+                        WindowState = FormWindowState.Minimized;
+                    }
+                }
+            }
+            else if (method == "minimize")
             {
                 if (WindowState == FormWindowState.Minimized)
-                {
-                    Show();
-                    WindowState = FormWindowState.Normal;
-                }
-                else if (WindowState == FormWindowState.Normal)
                 {
                     Hide();
                     WindowState = FormWindowState.Minimized;
@@ -120,12 +132,12 @@ namespace eNumismat2
 
         private void E_Numismat_main_Resize(object sender, EventArgs e)
         {
-            Tray();
+            Tray("minimize");
         }
 
         private void TrayIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Tray();
+            Tray("resize");
         }
     }
 }

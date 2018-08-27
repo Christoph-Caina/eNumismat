@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(E_Numismat_main));
             this.TrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.MainContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
@@ -67,6 +68,7 @@
             // 
             // TrayIcon
             // 
+            this.TrayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("TrayIcon.Icon")));
             this.TrayIcon.Text = "notifyIcon1";
             this.TrayIcon.Visible = true;
             this.TrayIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.TrayIcon_MouseDoubleClick);
@@ -108,7 +110,7 @@
             // 
             this.newDatabaseToolStripMenuItem.Image = global::eNumismat2.Properties.Resources.database_add;
             this.newDatabaseToolStripMenuItem.Name = "newDatabaseToolStripMenuItem";
-            this.newDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newDatabaseToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.newDatabaseToolStripMenuItem.Text = "New Database";
             this.newDatabaseToolStripMenuItem.Click += new System.EventHandler(this.NewDatabaseToolStripMenuItem_Click);
             // 
@@ -116,20 +118,20 @@
             // 
             this.openDatabaseToolStripMenuItem.Image = global::eNumismat2.Properties.Resources.database_connect;
             this.openDatabaseToolStripMenuItem.Name = "openDatabaseToolStripMenuItem";
-            this.openDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openDatabaseToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.openDatabaseToolStripMenuItem.Text = "Open Database";
             this.openDatabaseToolStripMenuItem.Click += new System.EventHandler(this.OpenDatabaseToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(175, 6);
             // 
             // backupDatabaseToolStripMenuItem
             // 
             this.backupDatabaseToolStripMenuItem.Image = global::eNumismat2.Properties.Resources.database_save;
             this.backupDatabaseToolStripMenuItem.Name = "backupDatabaseToolStripMenuItem";
-            this.backupDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.backupDatabaseToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.backupDatabaseToolStripMenuItem.Text = "Backup Database";
             this.backupDatabaseToolStripMenuItem.Click += new System.EventHandler(this.BackupDatabaseToolStripMenuItem_Click);
             // 
@@ -137,20 +139,20 @@
             // 
             this.compressDatabaseToolStripMenuItem.Image = global::eNumismat2.Properties.Resources.compress;
             this.compressDatabaseToolStripMenuItem.Name = "compressDatabaseToolStripMenuItem";
-            this.compressDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.compressDatabaseToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.compressDatabaseToolStripMenuItem.Text = "Compress Database";
             this.compressDatabaseToolStripMenuItem.Click += new System.EventHandler(this.CompressDatabaseToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(175, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::eNumismat2.Properties.Resources.door_in;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
