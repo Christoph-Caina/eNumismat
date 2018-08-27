@@ -1,6 +1,6 @@
 ﻿namespace eNumismat2
 {
-    partial class Form1
+    partial class eNumismat_main
     {
         /// <summary>
         /// Required designer variable.
@@ -301,7 +301,7 @@
             this.Controls.Add(this.MainStatusStrip);
             this.Controls.Add(this.MainMenuStrip);
             this.MainMenuStrip = this.MainMenuStrip;
-            this.Name = "Form1";
+            this.Name = "eNumismat_main";
             this.Text = "eNumismat";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MainMenuStrip.ResumeLayout(false);

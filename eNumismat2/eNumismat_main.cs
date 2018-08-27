@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace eNumismat2
 {
-    public partial class Form1 : Form
+    public partial class eNumismat_main : Form
     {
-        public Form1()
+        public eNumismat_main()
         {
             InitializeComponent();
         }

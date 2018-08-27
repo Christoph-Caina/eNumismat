@@ -30,14 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // adrBook
+            // eNumismat_adrBook_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(986, 700);
-            this.Name = "adrBook";
+            this.Name = "eNumismat_adrBook_main";
             this.Text = "adrBook";
+            this.Load += new System.EventHandler(this.eNumismat_adrBook_main_Load);
             this.ResumeLayout(false);
 
         }

@@ -16,5 +16,10 @@ namespace eNumismat2
         {
             InitializeComponent();
         }
+
+        private void eNumismat_adrBook_main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
