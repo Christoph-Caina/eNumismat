@@ -1,4 +1,5 @@
-﻿CREATE TABLE IF NOT EXISTS `CONTACTS`
+﻿/*
+CREATE TABLE IF NOT EXISTS `CONTACTS`
 (
   `id` INTEGER NOT NULL PRIMARY KEY  AUTOINCREMENT,
   `name1` TEXT(45) NOT NULL,
@@ -17,7 +18,67 @@
   `email` TEXT(45),
   `notes` TEXT
 );
+*/
 
+-- needs to be completed
+CREATE TABLE [contacts](
+  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+  [name] TEXT(99) NOT NULL, 
+  [gender] TEXT(15));
+
+
+CREATE TABLE [gender](
+  [gender] TEXT(15) PRIMARY KEY NOT NULL UNIQUE, 
+  [symbol] TEXT(1));
+
+CREATE TABLE [labels](
+  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+  [labelname] TEXT(99) NOT NULL, 
+  [labeltype] INTEGER NOT NULL, 
+  [contact_id] INTEGER NOT NULL, 
+  [labelcolor] TEXT(15));
+
+CREATE TABLE [labeltypes](
+  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+  [type] TEXT(99) NOT NULL);
+
+CREATE TABLE "postalcode"([postalcode] TEXT(10) PRIMARY KEY NOT NULL UNIQUE);
+
+CREATE TABLE "state"(
+  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+  [state] TEXT(99) NOT NULL);
+
+CREATE TABLE "city"(
+  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+  [city] TEXT(99) NOT NULL);
+
+CREATE TABLE [country](
+  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+  [name] TEXT(50) NOT NULL, 
+  [ISO_2] TEXT(2) NOT NULL, 
+  [ISO_3] TEXT(3), 
+  [de] TEXT(50), 
+  [es] TEXT(50), 
+  [fr] TEXT(50),
+  [ro] TEXT(50),
+  --[hu] TEXT(50), 
+  --[el] TEXT(50),
+  --[it] TEXT(50), 
+  --[jp] TEXT(50), 
+  --[lt] TEXT(50), 
+  --[nl] TEXT(50), 
+  --[no] TEXT(50), 
+  --[pl] TEXT(50), 
+  --[pt] TEXT(50), 
+  [ar] TEXT(50), 
+  --[cn] TEXT(50), 
+  --[cs] TEXT(50),
+  --[ru] TEXT(50), 
+  --[sk] TEXT(50), 
+  --[th] TEXT(50), 
+  --[uk] TEXT(50));
+
+  
 CREATE TABLE IF NOT EXISTS `CURRENCIES`
 (
   `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -93,11 +154,13 @@ CREATE TABLE IF NOT EXISTS `COINS`
     ON UPDATE NO ACTION
 );
 
+/*
 CREATE TABLE IF NOT EXISTS `COUNTRIES`
 (
   `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   `name` TEXT(45) NOT NULL
 );
+*/
 
 CREATE TABLE IF NOT EXISTS `SWAPDETAILS`
 (

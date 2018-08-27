@@ -275,6 +275,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SQL\country.csv" />
+    <None Include="SQL\gender.csv" />
     <None Include="Unicode_Currencies.pdf" />
   </ItemGroup>
   <ItemGroup>

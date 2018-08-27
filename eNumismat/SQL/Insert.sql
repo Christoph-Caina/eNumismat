@@ -1,5 +1,9 @@
 ﻿BEGIN;
 
+-- new table layout
+
+
+
 INSERT INTO `CURRENCIES`
 	(`name`, `short`, `symbol`)
   VALUES
@@ -42,6 +46,7 @@ INSERT INTO `COINTYPES`
 	('2 € Gedenkmünze', null, null, null, 1),
 	('5 € Sammlermünze', null, null, null, 1);
 
+/*
 INSERT INTO `COUNTRIES`
 	(`name`)
 VALUES
@@ -55,13 +60,16 @@ VALUES
 	('Russland'),
 	('Kanada'),
 	('Australien');
+*/
 
+/*
 INSERT INTO `CONTACTS`
 	(`name1`, `name2`, `familyname`, `gender`, `birthdate`, `addrline1`, `addrline2`, `postalcode`, `city`, `state`, `country`, `phone`, `mobile`, `email`, `notes`)
 VALUES
 	('Max', null, 'Mustermann', 'male', null, 'Musterstraße 23', null, '12345', 'Musterdorf', null, 'Deutschland', null, null, null, null),
 	('Marta', null, 'Mustermann', 'female', null, 'Musterstraße 23', null, '12345', 'Musterdorf', null, 'Deutschland', null, null, null, null),
 	('Christoph', 'Daniel', 'Caina', 'male', '1986-03-25', 'Quellenstraße 21', null,  '71272', 'Renningen', 'Baden-Württemberg', 'Deutschland', null, null, 'christoph@caina.de', 'Developer of eNumismat');
+*/
 
 INSERT INTO `COINSTATUS`
     (`name`)
