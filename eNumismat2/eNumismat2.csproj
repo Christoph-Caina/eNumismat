@@ -58,7 +58,7 @@
     <Compile Include="eNumismat_main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="eNumismat_main.Designer.cs">
       <DependentUpon>eNumismat_main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
