@@ -76,6 +76,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Others\country.csv" />
+    <None Include="Resources\Others\gender.csv" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
