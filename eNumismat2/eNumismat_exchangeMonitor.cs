@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace eNumismat2
 {
-    public partial class eNumismat_adrBook_main : Form
+    public partial class eNumismat_exchangeMonitor : Form
     {
-        public eNumismat_adrBook_main()
+        public eNumismat_exchangeMonitor()
         {
             InitializeComponent();
-        }
-
-        private void eNumismat_adrBook_main_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
