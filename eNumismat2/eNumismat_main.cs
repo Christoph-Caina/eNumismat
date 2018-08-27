@@ -12,6 +12,8 @@ namespace eNumismat2
 {
     public partial class E_Numismat_main : Form
     {
+        bool MinimizeToTray = true;
+
         public E_Numismat_main()
         {
             InitializeComponent();
@@ -24,7 +26,26 @@ namespace eNumismat2
 
         private void DisplayLanguage(string method, string culture)
         {
+            // Do Work for language Selection >> use Classes/Languages.cs ?
+        }
 
+        private void Tray()
+        {
+            if (MinimizeToTray == true)
+            {
+                if (WindowState == FormWindowState.Minimized)
+                {
+                    Show();
+                    WindowState = FormWindowState.Normal;
+                }
+                else if (WindowState == FormWindowState.Normal)
+                {
+                    Hide();
+                    WindowState = FormWindowState.Minimized;
+                }
+            }
+
+            
         }
 
         private void EnglishToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,6 +116,16 @@ namespace eNumismat2
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void E_Numismat_main_Resize(object sender, EventArgs e)
+        {
+            Tray();
+        }
+
+        private void TrayIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Tray();
         }
     }
 }

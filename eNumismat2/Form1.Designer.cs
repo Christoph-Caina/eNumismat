@@ -69,6 +69,7 @@
             // 
             this.TrayIcon.Text = "notifyIcon1";
             this.TrayIcon.Visible = true;
+            this.TrayIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.TrayIcon_MouseDoubleClick);
             // 
             // MainContextMenu
             // 
@@ -172,14 +173,14 @@
             this.russianToolStripMenuItem,
             this.polishToolStripMenuItem});
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            this.languageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.languageToolStripMenuItem.Text = "Language";
             // 
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Image = global::eNumismat2.Properties.Resources.US_United_States_Flag_icon;
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.englishToolStripMenuItem.Text = "English";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.EnglishToolStripMenuItem_Click);
             // 
@@ -187,7 +188,7 @@
             // 
             this.germanToolStripMenuItem.Image = global::eNumismat2.Properties.Resources.DE_Germany_Flag_icon;
             this.germanToolStripMenuItem.Name = "germanToolStripMenuItem";
-            this.germanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.germanToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.germanToolStripMenuItem.Text = "German";
             this.germanToolStripMenuItem.Click += new System.EventHandler(this.GermanToolStripMenuItem_Click);
             // 
@@ -195,7 +196,7 @@
             // 
             this.frenshToolStripMenuItem.Image = global::eNumismat2.Properties.Resources.FR_France_Flag_icon;
             this.frenshToolStripMenuItem.Name = "frenshToolStripMenuItem";
-            this.frenshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.frenshToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.frenshToolStripMenuItem.Text = "Frensh";
             this.frenshToolStripMenuItem.Click += new System.EventHandler(this.FrenshToolStripMenuItem_Click);
             // 
@@ -203,28 +204,28 @@
             // 
             this.spanishToolStripMenuItem.Image = global::eNumismat2.Properties.Resources.ES_Spain_Flag_icon;
             this.spanishToolStripMenuItem.Name = "spanishToolStripMenuItem";
-            this.spanishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.spanishToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.spanishToolStripMenuItem.Text = "Spanish";
             this.spanishToolStripMenuItem.Click += new System.EventHandler(this.SpanishToolStripMenuItem_Click);
             // 
             // portugueseToolStripMenuItem
             // 
             this.portugueseToolStripMenuItem.Name = "portugueseToolStripMenuItem";
-            this.portugueseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.portugueseToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.portugueseToolStripMenuItem.Text = "Portuguese";
             this.portugueseToolStripMenuItem.Click += new System.EventHandler(this.PortugueseToolStripMenuItem_Click);
             // 
             // russianToolStripMenuItem
             // 
             this.russianToolStripMenuItem.Name = "russianToolStripMenuItem";
-            this.russianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.russianToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.russianToolStripMenuItem.Text = "Russian";
             this.russianToolStripMenuItem.Click += new System.EventHandler(this.RussianToolStripMenuItem_Click);
             // 
             // polishToolStripMenuItem
             // 
             this.polishToolStripMenuItem.Name = "polishToolStripMenuItem";
-            this.polishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.polishToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.polishToolStripMenuItem.Text = "Polish";
             this.polishToolStripMenuItem.Click += new System.EventHandler(this.PolishToolStripMenuItem_Click);
             // 
@@ -240,14 +241,14 @@
             // addressBookToolStripMenuItem
             // 
             this.addressBookToolStripMenuItem.Name = "addressBookToolStripMenuItem";
-            this.addressBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addressBookToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.addressBookToolStripMenuItem.Text = "Address Book";
             this.addressBookToolStripMenuItem.Click += new System.EventHandler(this.AddressBookToolStripMenuItem_Click);
             // 
             // exchangeMonitorToolStripMenuItem
             // 
             this.exchangeMonitorToolStripMenuItem.Name = "exchangeMonitorToolStripMenuItem";
-            this.exchangeMonitorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exchangeMonitorToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.exchangeMonitorToolStripMenuItem.Text = "Exchange Monitor";
             this.exchangeMonitorToolStripMenuItem.Click += new System.EventHandler(this.ExchangeMonitorToolStripMenuItem_Click);
             // 
@@ -306,7 +307,7 @@
             // 
             this.ofd.FileName = "openFileDialog1";
             // 
-            // eNumismat_main
+            // E_Numismat_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -314,9 +315,10 @@
             this.ClientSize = new System.Drawing.Size(1348, 709);
             this.Controls.Add(this.MainStatusStrip);
             this.Controls.Add(this.MainMenuStrip);
-            this.Name = "eNumismat_main";
+            this.Name = "E_Numismat_main";
             this.Text = "eNumismat";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.E_Numismat_main_Resize);
             this.MainMenuStrip.ResumeLayout(false);
             this.MainMenuStrip.PerformLayout();
             this.MainStatusStrip.ResumeLayout(false);
