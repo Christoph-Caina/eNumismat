@@ -163,5 +163,9 @@
   <ItemGroup>
     <None Include="Resources\Flags\US-United-States-Flag-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\SQL\CreateDataBase.sql" />
+    <Content Include="Resources\SQL\InsertDataBase.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
