@@ -28,21 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.kryptonRibbon1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
-            // eNumismat_adrBook_main
+            // kryptonRibbon1
+            // 
+            this.kryptonRibbon1.InDesignHelperMode = true;
+            this.kryptonRibbon1.Name = "kryptonRibbon1";
+            this.kryptonRibbon1.SelectedContext = null;
+            this.kryptonRibbon1.SelectedTab = null;
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1316, 142);
+            this.kryptonRibbon1.TabIndex = 0;
+            // 
+            // eNumismat_addressBook_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(986, 700);
-            this.Name = "eNumismat_adrBook_main";
+            this.ClientSize = new System.Drawing.Size(1316, 746);
+            this.Controls.Add(this.kryptonRibbon1);
+            this.Name = "eNumismat_addressBook_main";
             this.Text = "adrBook";
             this.Load += new System.EventHandler(this.eNumismat_adrBook_main_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbon kryptonRibbon1;
     }
 }

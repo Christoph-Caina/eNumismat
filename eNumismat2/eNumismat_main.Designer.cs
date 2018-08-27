@@ -62,8 +62,14 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
+            this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonCommand1 = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
+            this.kryptonContextMenu1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
+            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.kryptonRibbon1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
             this.MainMenuStrip.SuspendLayout();
             this.MainStatusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
             // TrayIcon
@@ -75,20 +81,23 @@
             // 
             // MainContextMenu
             // 
+            this.MainContextMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.MainContextMenu.Name = "MainContextMenu";
             this.MainContextMenu.Size = new System.Drawing.Size(61, 4);
             // 
             // MainMenuStrip
             // 
             this.MainMenuStrip.BackColor = System.Drawing.Color.Transparent;
+            this.MainMenuStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.MainMenuStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.MainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.extrasToolStripMenuItem,
             this.extrasToolStripMenuItem1,
             this.helpToolStripMenuItem});
-            this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.MainMenuStrip.Location = new System.Drawing.Point(190, 482);
             this.MainMenuStrip.Name = "MainMenuStrip";
-            this.MainMenuStrip.Size = new System.Drawing.Size(1348, 24);
+            this.MainMenuStrip.Size = new System.Drawing.Size(183, 24);
             this.MainMenuStrip.TabIndex = 1;
             this.MainMenuStrip.Text = "menuStrip1";
             // 
@@ -175,7 +184,7 @@
             this.russianToolStripMenuItem,
             this.polishToolStripMenuItem});
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            this.languageToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.languageToolStripMenuItem.Text = "Language";
             // 
             // englishToolStripMenuItem
@@ -243,14 +252,14 @@
             // addressBookToolStripMenuItem
             // 
             this.addressBookToolStripMenuItem.Name = "addressBookToolStripMenuItem";
-            this.addressBookToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.addressBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addressBookToolStripMenuItem.Text = "Address Book";
             this.addressBookToolStripMenuItem.Click += new System.EventHandler(this.AddressBookToolStripMenuItem_Click);
             // 
             // exchangeMonitorToolStripMenuItem
             // 
             this.exchangeMonitorToolStripMenuItem.Name = "exchangeMonitorToolStripMenuItem";
-            this.exchangeMonitorToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.exchangeMonitorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exchangeMonitorToolStripMenuItem.Text = "Exchange Monitor";
             this.exchangeMonitorToolStripMenuItem.Click += new System.EventHandler(this.ExchangeMonitorToolStripMenuItem_Click);
             // 
@@ -309,12 +318,30 @@
             // 
             this.ofd.FileName = "openFileDialog1";
             // 
+            // kryptonContextMenuItem1
+            // 
+            this.kryptonContextMenuItem1.Text = "Menu Item";
+            // 
+            // kryptonCommand1
+            // 
+            this.kryptonCommand1.Text = "kryptonCommand1";
+            // 
+            // kryptonRibbon1
+            // 
+            this.kryptonRibbon1.InDesignHelperMode = true;
+            this.kryptonRibbon1.Name = "kryptonRibbon1";
+            this.kryptonRibbon1.SelectedContext = null;
+            this.kryptonRibbon1.SelectedTab = null;
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1348, 142);
+            this.kryptonRibbon1.TabIndex = 3;
+            // 
             // E_Numismat_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1348, 709);
+            this.Controls.Add(this.kryptonRibbon1);
             this.Controls.Add(this.MainStatusStrip);
             this.Controls.Add(this.MainMenuStrip);
             this.Name = "E_Numismat_main";
@@ -325,6 +352,7 @@
             this.MainMenuStrip.PerformLayout();
             this.MainStatusStrip.ResumeLayout(false);
             this.MainStatusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,6 +392,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem aboutENumismatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
+        private ComponentFactory.Krypton.Toolkit.KryptonCommand kryptonCommand1;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenu kryptonContextMenu1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbon kryptonRibbon1;
     }
 }
 

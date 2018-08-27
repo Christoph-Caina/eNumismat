@@ -22,7 +22,7 @@ namespace eNumismat2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //kryptonDateTimePicker1.Value
         }
 
         private void DisplayLanguage(string method, string culture)
@@ -117,7 +117,8 @@ namespace eNumismat2
 
         private void AddressBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            eNumismat_addressBook_main adrBook = new eNumismat_addressBook_main();
+            adrBook.Show();
         }
 
         private void ExchangeMonitorToolStripMenuItem_Click(object sender, EventArgs e)
