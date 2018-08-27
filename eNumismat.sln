@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNumismat", "eNumismat\eNumismat.csproj", "{1A329EE3-E3BE-4B8B-B1E4-78A279D4A4E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNumismat2", "..\eNumismat2\eNumismat2\eNumismat2.csproj", "{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,14 @@ Global
 		{1A329EE3-E3BE-4B8B-B1E4-78A279D4A4E7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A329EE3-E3BE-4B8B-B1E4-78A279D4A4E7}.Release|x86.ActiveCfg = Release|x86
 		{1A329EE3-E3BE-4B8B-B1E4-78A279D4A4E7}.Release|x86.Build.0 = Release|x86
+		{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}.Debug|x86.Build.0 = Debug|Any CPU
+		{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}.Release|x86.ActiveCfg = Release|Any CPU
+		{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
