@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNumismat", "eNumismat\eNum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNumismat2", "..\eNumismat2\eNumismat2\eNumismat2.csproj", "{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "eNumismat_2", "eNumismat_2", "{C9910246-2A95-478B-AB36-9DE1069F11DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E4FA2D6E-9FB6-41A7-96FB-C12116D33EA9} = {C9910246-2A95-478B-AB36-9DE1069F11DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D1D113B-1C32-4F3C-BD7A-B7B005E4229A}
