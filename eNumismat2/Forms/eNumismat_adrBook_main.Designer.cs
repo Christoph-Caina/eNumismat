@@ -1,6 +1,6 @@
 ﻿namespace eNumismat2
 {
-    partial class adrBook
+    partial class eNumismat_adrBook_main
     {
         /// <summary>
         /// Required designer variable.

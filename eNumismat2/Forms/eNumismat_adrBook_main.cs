@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace eNumismat2
 {
-    public partial class adrBook : Form
+    public partial class eNumismat_adrBook_main : Form
     {
-        public adrBook()
+        public eNumismat_adrBook_main()
         {
             InitializeComponent();
         }
