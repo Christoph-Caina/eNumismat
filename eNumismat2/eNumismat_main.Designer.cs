@@ -63,10 +63,9 @@
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonCommand1 = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
-            this.kryptonContextMenu1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
-            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonRibbon1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
+            this.kryptonContextMenuItem2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem3 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.MainMenuStrip.SuspendLayout();
             this.MainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
@@ -322,18 +321,25 @@
             // 
             this.kryptonContextMenuItem1.Text = "Menu Item";
             // 
-            // kryptonCommand1
-            // 
-            this.kryptonCommand1.Text = "kryptonCommand1";
-            // 
             // kryptonRibbon1
             // 
             this.kryptonRibbon1.InDesignHelperMode = true;
             this.kryptonRibbon1.Name = "kryptonRibbon1";
+            this.kryptonRibbon1.RibbonAppButton.AppButtonMenuItems.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItem2,
+            this.kryptonContextMenuItem3});
             this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = null;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1348, 142);
             this.kryptonRibbon1.TabIndex = 3;
+            // 
+            // kryptonContextMenuItem2
+            // 
+            this.kryptonContextMenuItem2.Text = "New Database";
+            // 
+            // kryptonContextMenuItem3
+            // 
+            this.kryptonContextMenuItem3.Text = "Open Database";
             // 
             // E_Numismat_main
             // 
@@ -393,10 +399,9 @@
         private System.Windows.Forms.ToolStripMenuItem aboutENumismatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
-        private ComponentFactory.Krypton.Toolkit.KryptonCommand kryptonCommand1;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenu kryptonContextMenu1;
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbon kryptonRibbon1;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem2;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem3;
     }
 }
 
