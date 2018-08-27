@@ -46,25 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\eNumismat_adrBook_main.cs">
+    <Compile Include="eNumismat_adrBook_main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\eNumismat_adrBook_main.Designer.cs">
+    <Compile Include="eNumismat_adrBook_main.Designer.cs">
       <DependentUpon>eNumismat_adrBook_main.cs</DependentUpon>
     </Compile>
-    <None Include="Forms\eNumismat_main">
+    <Compile Include="eNumismat_main.cs">
       <SubType>Form</SubType>
-    </None>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>eNumismat_main</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>eNumismat_main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\eNumismat_adrBook_main.resx">
+    <EmbeddedResource Include="eNumismat_adrBook_main.resx">
       <DependentUpon>eNumismat_adrBook_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>eNumismat_main</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>eNumismat_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
